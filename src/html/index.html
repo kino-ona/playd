@@ -1,0 +1,140 @@
+@@include('../inc/pagehead.inc',{
+	"webroot": "..",
+	"pagetitle": "PLAYD",
+})
+<link rel="stylesheet" href="../assets/css/ui.css" />
+<!-- <link rel="stylesheet" href="../assets/css/main.css" /> -->
+</head>
+<style>
+  /* 임시 스타일링 */
+  section {height: 1080px;}
+  .section--belt {height: auto; background-color: grey;}
+  .section--banner {height: auto; background-color: #D12327;}
+  .bg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat; 
+    background-position: 0 0; 
+    background-size: 100%;
+  }
+  .box-item {height: 100%;}
+  .box-item--left {background-color: #6DCA7B;}
+  .box-item--center {background-color: #ffffff;}
+  .box-item--right {background-color: orange;}
+  .section__content {padding: 25px 0;}
+</style>
+<body class="main">
+<div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
+
+<div class="wrap">
+
+	<!-- header -->
+	<!-- @@include('../inc/header.inc',{
+		"webroot": "..",
+		"headertype": "default",
+	}) -->
+	<!-- //header -->
+
+  <!-- keyvisual -->
+  <section class="keyvisual">
+    <div class="bg" style="background-image:url(../assets/images/dummy/@main.jpg);"></div>
+    <!-- <div class="keyvisual__inner">
+      <h3 class="keyvisual___slogan">고객의 성장을 위한 파트너</h3>
+      <h2 class="keyvisual__title">PLAY.<span class="a11y">플레이디</span></h2>
+    </div> -->
+  </section>
+  <!--// keyvisual -->
+
+	<div id="container" class="container">
+		<section class="section">
+			<div class="section__inner">
+				<div class="section__head">
+          <h3 class="section__title"><span class="section__label">SERVICE</span>플레이디에서 한번에 <br>통합 마케팅 캠페인을 <br>집행하세요.</h3>
+          <p class="section__desc">ON/OFF 매체를 구분하지 않고 기획, 제작, 운영을 포함한 모든 마케팅 솔루션을 제공합니다.</p>
+          <div class="button__wrap">
+            <a href="#" class="button__radius button__radius__colored-red">통합 마케팅 서비스 보기</a>
+          </div>
+        </div>
+        <div class="section__content">
+          scrollable brick-style list - vertical
+        </div>
+			</div>
+		</section>
+    
+    <section class="box">
+      <div class="box-item box-item--left">
+        <div class="box__head">
+          <p class="box__title">Data <span class="button__arrow--circle-big"><span class="a11y">펼쳐보기</span></span></p>
+        </div>
+        <div class="box__content">
+          accordion list
+          01
+          02
+          03
+          04
+        </div>
+      </div>
+      <div class="box-item box-item--center">
+        <div class="box__head box__head--center">
+          <p class="box__title box__title--center">Performance Growth<span class="box__desc">데이터에 공감을 더해 확실한 성과를 만듭니다.</span></p>
+        </div>
+      </div>
+      <div class="box-item box-item--right">
+        <div class="box__head">
+          <p class="box__title">Creative <span class="button__arrow--circle-big"><span class="a11y">펼쳐보기</span></span></p>
+        </div>
+        <div class="box__content">
+          <p class="box__slogan">branded contents</p>
+          <p class="box__slogan box__slogan--small">콘텐츠에 브랜드 이미지를 녹이다.</p>
+          image
+          btn
+        </div>
+      </div>
+    </section>
+
+		<section class="section">
+			<div class="section__inner">
+				<div class="section__head">
+          <h3 class="section__title"><span class="section__label">PARTNERS</span>이미 성장한 많은 기업들이 <br>플레이디와 함께하였습니다.</h3>
+          <p class="section__desc">온라인 마케팅의 처음부터 끝까지! 필요한 모든 것을 지원합니다.</p>
+        </div>
+        <div class="section__content">
+          animated bar graph
+        </div>
+			</div>
+		</section>
+
+    <section class="section section--belt">
+      <div class="section__inner section__inner--full">
+        <div class="section__head">
+          <p class="section__title section__title--banner"><span class="a11y">협력사 목록</span></p>
+        </div>
+        <div class="section__content">
+          infinite auto-rolling list - horizontal
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--banner">
+      <div class="section__inner">
+        <div class="section__head">
+          <p class="section__title section__title--banner">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
+        </div>
+        <div class="section__content">
+          <div class="button__wrap">
+            <a href="#" class="button__radius button__radius__lined-white">프로젝트 문의하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+	</div>
+</div>
+
+<!-- footer -->
+@@include('../inc/footer.inc')
+<!-- //footer -->
+
+<!-- <script src="../assets/js/main.js"></script> -->
+
+</body>
+</html>
