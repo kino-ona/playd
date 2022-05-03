@@ -22,5 +22,4 @@
 
 	<title>@@pagetitle</title>
 	<link rel="stylesheet" href="@@webroot/assets/css/ui.css">
-	<script defer src="@@webroot/assets/js/ui.js"></script>
 </head>
