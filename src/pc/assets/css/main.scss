@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* start 임시 스타일링-------------------------------------- */
+/* start 임시 스타일링 (border width 때문에 가로 스크롤 생김) ------------------ */
 
 .section {
   border: 3px solid blue;
@@ -58,7 +58,7 @@
   }
 }
 
-/* ---------------------------------------end 임시 스타일링 */
+/* --------------------------------------------------------end 임시 스타일링 */
 
 
 /*** KEYVISUAL ***/
@@ -67,54 +67,56 @@
   width: 100%;
   position: relative;
 
-  &__ {
+  &__inner {
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    &inner {
-      width: 100%;
-      max-width: 1200px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  
-    &title {
-      font-size: 300px;
-    }
-  
-    &slogan {
-      font-size: 26px;
-    }
-  
-    &image {
-      width: 100%;
-      position: static;
-      margin: 0 auto;
-      text-align: center;
-    }
+  &__title {
+    font-size: 300px;
+  }
+
+  &__slogan {
+    font-size: 26px;
+  }
+
+  &__image {
+    width: 100%;
+    position: static;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
 /**** MAIN ****/
 
 .section__inner--row {
+
   .section__head {
     flex: 1;
   }
+
   .section__content {
     flex: 2;
     max-width: 740px;
-    &--row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+  }
+
+  .section__content--row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
+
 .image-block {
   width: 100%;
   max-width: 350px;
   height: 450px;
+  
   &:nth-of-type(2n) {
     margin-top: 40px;
     transform: translateY(20px);
