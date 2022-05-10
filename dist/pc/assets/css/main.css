@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* start 임시 스타일링-------------------------------------- */
+.section {
+	border: 3px solid blue;
+}
+.section__inner {
+	border: 1px dotted blue;
+}
+.section__content {
+	border: 1px dotted blue;
+}
+
+.visual {
+	border: 3px solid violet;
+}
+.visual__image {
+	border: 3px solid violet;
+}
+
+.box {
+	border: 3px solid blue;
+}
+.box-item {
+	min-height: 1080px;
+}
+.box__content {
+	text-align: center;
+	padding-top: 500px;
+	border: 3px solid red;
+	background-color: rgba(90, 90, 90, 0.4);
+	-webkit-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+.banner {
+	border: 3px solid #6DCA7B;
+}
+.banner--belt {
+	padding: 25px 0;
+	background-color: grey !important;
+}
+.banner__content {
+	border: 1px dotted #6DCA7B;
+}
+
+.image-block {
+	border: 1px dotted violet;
+}
+
+.header {
+	border: 3px solid red;
+}
+.header__inner {
+	border: 3px solid red;
+}
+
+.footer {
+	border: 3px solid green;
+}
+.footer__inner {
+	border: 3px solid green;
+}
+
+/* ---------------------------------------end 임시 스타일링 */
+/*** KEYVISUAL ***/
+.visual {
+	width: 100%;
+	position: relative;
+}
+.visual__inner {
+	width: 100%;
+	max-width: 1200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.visual__title {
+	font-size: 300px;
+}
+.visual__slogan {
+	font-size: 26px;
+}
+.visual__image {
+	width: 100%;
+	position: static;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/**** MAIN ****/
+.section__inner--row .section__head {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.section__inner--row .section__content {
+	-webkit-box-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
+	max-width: 740px;
+}
+.section__inner--row .section__content--row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.image-block {
+	width: 100%;
+	max-width: 350px;
+	height: 450px;
+}
+.image-block:nth-of-type(2n) {
+	margin-top: 40px;
+	-webkit-transform: translateY(20px);
+	        transform: translateY(20px);
+}
+
+.banner {
+	background-color: #D12327;
+}
