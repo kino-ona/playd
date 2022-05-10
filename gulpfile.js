@@ -8,7 +8,6 @@ const
 	*********/
 
 	devBuild  = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'development'),
-	setting = 'pc' || 'mo',
 
 	// paths
 	paths = {

@@ -191,9 +191,150 @@
 	}
 }
 
-.icon {
+.box__content {}
+
+.input {
+	&__button {
+		width: 232px;
 	
-	&__ {
-		&arrow {}
+		letter-spacing: -.02px;
+		color: #666666;
+		border: 1px solid #DDDDDD;
+		background-color: #ffffff;
+	}
+
+	&__button--active {
+		color: #ffffff;
+		font-weight: 500;
+		background-color: #EA2126;
+		border: 1px solid #EA2126;
+	}
+
+	&__square-button {
+		height: 60px;
+		font-size: 18px;
+		line-height: 60px;
+		border-radius: 5px;
+	}
+
+	&__round-button {
+		height: 50px;
+		font-size: 16px;
+		line-height: 50px;
+		border-radius: 28px;
 	}
 }
+
+.name-radio {
+	position: relative;
+	float: left;
+	
+	&__input {
+		position: absolute;
+		opacity: 0;
+		z-index: 9;
+	}
+
+	&__input + &__label {
+		padding-left: 26px;
+	}
+
+	&__input + &__label span {
+		line-height: 25px;
+	}
+
+	&__input + &__label span::before {
+		display: inline-block;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #DDDDDD;
+		content: '';
+	}
+
+	&__input + &__label span::after {
+		display: inline-block;
+		position: absolute;
+		top: 9px;
+		left: 9px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		content: '';
+	}
+
+	&__input:checked + &__label span::before {
+		display: inline-block;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #000000;
+		content: '';
+	}
+
+	&__input:checked + &__label span::after {
+		display: inline-block;
+		position: absolute;
+		top: 9px;
+		left: 9px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		content: '';
+	}
+}
+
+.drop-box {
+	position: relative;
+
+	&__title {
+		height: 60px;
+		color: #999999;
+		font-size: 16px;
+		line-height: 60px;
+		letter-spacing: -.03px;
+		border: 1px solid #DDDDDD;
+		border-radius: 5px;
+
+		&::before {
+			position: absolute;
+			top: 20px;
+			right: 31px;
+			width: 10px;
+			height: 10px;
+			transform: rotate(45deg);
+			border-right: 1.5px solid #000000;
+			border-bottom: 1.5px solid #000000;
+			content: '';
+		}
+	}
+
+	&__wrap {
+		overflow: hidden;
+		height: 0;
+	}
+	&__wrap p {
+		padding: 7px 0;
+	}
+
+	&--active &__wrap {
+		height: auto;
+		padding: 15px;
+		box-shadow: 3px 3px 3px 3px #DDDDDD;
+	}
+
+	p {
+		color: #000000;
+		font-size: 16px;
+		letter-spacing: -.03px;
+	}
+}
+
