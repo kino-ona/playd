@@ -4,6 +4,7 @@ gulpfile.js
 .DS_Store
 package-lock.json
 package.json
+dist/
 dist/html
 dist/guide
 dist/assets/css

@@ -8,18 +8,19 @@ const
 	*********/
 
 	devBuild  = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'development'),
+	setting = 'pc' || 'mo',
 
 	// paths
 	paths = {
 		html: 'src/**/*.html',
-		css: 'src/assets/css/**/*.scss',
-		js: 'src/assets/js/**/*.js',
-		inc: 'src/inc/*.inc'
+		css: 'src/**/assets/css/*.scss',
+		js: 'src/**/assets/js/*.js',
+		inc: 'src/**/inc/*.inc'
 	},
 	dist = {
 		html: 'dist/',
-		css: 'dist/assets/css',
-		js: 'dist/assets/js'
+		css: 'dist/',
+		js: 'dist/'
 	},
 
 	// modules
@@ -125,7 +126,7 @@ function watchs(done) {
 
 // clean
 function clean(done) {
-	del.sync(['dist/*/', '!dist/path/**', '!dist/path.html', '!dist/assets/']);
+	del.sync(['dist/*']);
 	done();
 }
 
