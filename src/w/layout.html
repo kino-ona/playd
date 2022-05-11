@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="ko_KR">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="keywords" content=""/>
-  <meta name="description" content=""/>  
-  <meta property="og:locale" content="ko_KR" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="" />
-  <meta property="og:keywords" content="" />
-  <meta property="og:description" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="PlayD" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:title" content="" />
-  <link rel="icon" href="" sizes="32x32" />
-  <link rel="icon" href="" sizes="192x192" />
-  <link rel="apple-touch-icon" href="" />
-
-	<title>PLAYD</title>
-	<link rel="stylesheet" href="../assets/css/ui.css">
-</head>
+@@include('./inc/pagehead.inc', {
+	"webroot": "..",
+	"pagetitle": "PLAYD",
+})
 <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body class="main">
@@ -31,20 +10,10 @@
 <div class="wrap">
 
 	<!-- header -->
-	<header id="header" class="header header__default">
-	<div class="header__inner header__inner--full">
-		<h1 class="header__title">
-			<a href="#" class="logo logo__default">플레이디<span class="a11y">플레이디</span></a>
-		</h1>
-		<nav class="gnb">
-			<div class="gnb__list"><span class="gnb__list--link">사업영역</span></div>
-      <div class="gnb__list"><span class="gnb__list--link">솔루션</span></div>
-      <div class="gnb__list"><span class="gnb__list--link">인사이트</span></div>
-      <div class="gnb__list"><span class="gnb__list--link">플레이디</span></div>
-      <div class="gnb__list"><span class="gnb__list--link">CONTACT</span></div>
-		</nav>
-	</div>
-</header>
+	@@include('./inc/header.inc', {
+		"webroot": "..",
+		"headertype": "header__default",
+	})
 	<!-- //header -->
 
   <!-- keyvisual -->
@@ -192,45 +161,9 @@
 </div>
 
 <!-- footer -->
-<footer class="footer">
-	<div class="footer-top">
-		<div class="footer-top__inner">
-			<p class="logo logo__footer">logo<a href="#"><span class="a11y">플레이디</span></a></p>
-			<ul class="footer__nav">
-				<li><a href="#">윤리신고</a></li>
-				<li><a href="#">뉴스레터</a></li>
-				<li><a href="#">오시는길</a></li>
-				<li><a href="#">무료광고진단</a></li>
-				<li><a href="#">개인정보처리방침</a></li>
-			</ul>
-			<nav class="footer__nav--right">
-				<a href="#" class="">1<img src="" /><span class="a11y">네이버</span></a>
-				<a href="#" class="">2<img src="" /><span class="a11y">인스타그램</span></a>
-				<a href="#" class="">3<img src="" /><span class="a11y">유투브</span></a>
-				<a href="#" class="">4<img src="" /><span class="a11y">페이스북</span></a>
-			</nav>
-		</div>
-	</div>
-	<div class="footer-bottom">
-		<ul class="footer__util">
-			<li>(주)플레이디</li>
-			<li>대표자 : 이준용 | 사업자등록번호 : 129-86-43885</li>
-			<li>주소 : 경기도 성남시 분당구 황새울로 359번길 11, 5층</li>
-			<li>이메일 : <a href="mailto:master@playd.com">master@playd.com</a></li>
-			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
-		</ul>
-		<nav class="footer__util--right">
-			<p class="infomation"><span class="infomation__title">대표전화</span>1566-3265</p>
-			<ul class="infomation__desc">
-				<li>MON - FRI 09 : 00 - 18:00</li>
-				<li>주말, 공휴일 휴무</li>
-				<li>BREAK TIME : 12:30 - 13:30</li>
-			</ul>
-		</nav>
-	</div>
-</footer>
-<script src="../assets/js/ui.js"></script>
-
+@@include('./inc/footer.inc', {
+	"webroot": "..",
+})
 <!-- //footer -->
 <!-- <script src="../assets/js/main.js"></script> -->
 

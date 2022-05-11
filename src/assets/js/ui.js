@@ -71,11 +71,6 @@ accordionItem.forEach((item) => {
 	})
 })
 
-
-
-
-
-
 //layerPopup
 let isOpen = false;
 const layerOpen = (layerId) =>{
