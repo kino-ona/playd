@@ -154,14 +154,14 @@ $sqrt_2: 1.41421356237;
 @mixin FontDL {
 	font-family: 'NS DL','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
 }
+@mixin FontRG {
+	font-family: 'NS RG','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
+}
 @mixin FontMD {
 	font-family: 'NS MD','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
 }
 @mixin FontBD {
 	font-family: 'NS BD','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
-}
-@mixin Roboto {
-	font-family: 'Roboto', 'NS BD', 'Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
 }
 
 // text color

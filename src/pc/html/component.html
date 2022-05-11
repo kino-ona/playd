@@ -22,9 +22,30 @@
         <p><a href="/">400</a></p>
       </div>  
     </div>
-   
   </div>
 
+
+  <div id="box_event-wrap" class="box_content-wrapper">
+    <div class="button" onclick="layerOpen('clothingcare-terms_pop')">
+      <p><i></i>Layer Popup</p>
+    </div>
+  </div>
+
+  <div class="layer__body popup" id="clothingcare-terms_pop" aria-hidden="true" role="dialog">
+    <div class="layer__wrap">
+      <div class="layer__close">
+        <button onclick="layerClose('clothingcare-terms_pop')" class="close_btn">close</button>
+      </div>
+      <div class="layer__inner">
+        <div class="layer__cont">
+          <dl>
+            <dt>title</dt>
+            <dd>contents</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="name-radio">
     <input type="radio" id="name" name="name" class="name-radio__input" checked>
