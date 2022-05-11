@@ -22,6 +22,8 @@ inputButton.forEach((item) => {
 //dropdown
 const dropBox = document.querySelectorAll('.drop-box');
 const dropBoxWrap = document.querySelectorAll('.drop-box__wrap');
+const dropBoxItem = document.querySelectorAll('.drop-box__wrap a');
+const dropBoxTitle = document.querySelector('.drop-box__title');
 
 dropBox.forEach((item) => {
 	item.addEventListener('click', () => {
@@ -32,6 +34,47 @@ dropBox.forEach((item) => {
 		}
 	})
 })
+
+dropBoxItem.forEach((item) => {
+	item.addEventListener('click', (event) => {
+		event.preventDefault();
+		dropBoxTitle.innerHTML = item.innerHTML;
+	})
+})
+
+
+//tab
+const subTabs = document.querySelectorAll('.sub-tabs a');
+
+subTabs.forEach((item) => {
+	item.addEventListener('click', (event) => { 
+		event.preventDefault();
+		subTabs.forEach(element => {
+			element.classList.contains('sub-tabs__item--active') ? 
+			element.classList.remove('sub-tabs__item--active') : null;
+		});
+			
+		item.classList.add('sub-tabs__item--active');
+	});
+
+})
+
+const accordionItem = document.querySelectorAll('.accordian__item');
+accordionItem.forEach((item) => {
+	item.addEventListener('click', (event) => {
+		event.preventDefault();
+		if(item.classList.contains('accordian__item--active')) {
+			item.classList.remove('accordian__item--active')
+		} else {
+			item.classList.add('accordian__item--active')
+		}
+	})
+})
+
+
+
+
+
 
 //layerPopup
 let isOpen = false;
