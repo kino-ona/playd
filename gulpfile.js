@@ -12,14 +12,14 @@ const
 	// paths
 	paths = {
 		html: 'src/**/*.html',
-		css: 'src/**/assets/css/*.scss',
-		js: 'src/**/assets/js/*.js',
+		css: 'src/assets/css/**/*.scss',
+		js: 'src/assets/js/**/*.js',
 		inc: 'src/**/inc/*.inc'
 	},
 	dist = {
 		html: 'dist/',
-		css: 'dist/',
-		js: 'dist/'
+		css: 'dist/assets/css',
+		js: 'dist/assets/js'
 	},
 
 	// modules

@@ -35,4 +35,4 @@
 		</nav>
 	</div>
 </footer>
-<script src="@@webroot/assets/js/w/ui.js"></script>
+<script src="@@webroot/assets/m/js/ui.js"></script>

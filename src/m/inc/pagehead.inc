@@ -21,5 +21,5 @@
   <link rel="apple-touch-icon" href="" />
 
 	<title>@@pagetitle</title>
-	<link rel="stylesheet" href="@@webroot/assets/css/w/ui.css">
+	<link rel="stylesheet" href="@@webroot/assets/css/m/ui.css">
 </head>
