@@ -26,7 +26,6 @@ const
 	{
 		src,
 		series,
-		parallel,
 		dest,
 		watch,
 		lastRun
