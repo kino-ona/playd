@@ -153,7 +153,6 @@
 
 .name-radio {
 	position: relative;
-	float: left;
 	
 	&__input {
 		position: absolute;
@@ -223,7 +222,7 @@
 
 	&__title {
 		height: 60px;
-		color: #999999;
+		color: #000000;
 		font-size: 16px;
 		line-height: 60px;
 		letter-spacing: -.03px;
@@ -251,6 +250,10 @@
 		padding: 7px 0;
 	}
 
+	&__wrap a {
+		display: block;
+	}
+
 	&--active &__wrap {
 		height: auto;
 		padding: 15px;
@@ -264,3 +267,114 @@
 	}
 }
 
+.sub-tabs {
+	display:block;
+
+	&__item {
+		display: inline-block;
+		text-align: center;
+		width: 250px;
+		height: 50px;
+		color: #666666;
+		line-height: 50px;
+		font-size: 18px;
+		letter-spacing: -.02px;
+		background-color: #F7F7F7;
+		border-radius: 30px;
+	}
+
+	&__item--active {
+		background-color: #000000;
+		color: #ffffff;
+	}
+}
+
+.form-info {
+	display: block;
+	margin-top: 30px;
+
+	&__label {
+		display: block;
+		padding-bottom: 5px;
+		font-size: 16;
+		letter-spacing: -.02px;
+	}
+
+	&__input {
+		padding-bottom: 15px;
+		font-size: 20px;
+		letter-spacing: -.02px;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: #DDDDDD;
+	}
+
+	&__must-label::after {
+		display: inline-block;
+		color: #FF0000;
+		font-size: 16px;
+		content: '*';
+	}
+}
+
+.form-info--version2 {
+	margin-top: 30px;
+	
+	.form-info__input  {
+		padding: 16px 25px;
+		font-size: 16px;
+		border: 1px solid #EEEEEE;
+		border-radius: 12px;
+	}
+	.form-info__input::placeholder {
+		color: #999999;
+	}
+}
+
+.accordian {
+	width: 240px;
+
+	&__title {
+		position: relative;
+		font-size: 20px;
+		letter-spacing: -.02px;
+		border-bottom: 1px solid #DDDDDD;
+
+		a {
+			display: block;
+			padding-bottom: 30px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 10px;
+			height: 10px;
+			transform: rotate(45deg);
+			border-right: 1.5px solid #000000;
+			border-bottom: 1.5px solid #000000;
+			content: '';
+		}
+	}
+
+	&__item {
+		margin-top: 30px;
+	}
+
+	&__item--active {
+		.accordian__content {
+			height: 100%;
+		}
+		.accordian__title::before {
+			transform: rotate(225deg);
+		}
+	}
+
+	&__content {
+		overflow: hidden;
+		height: 0;
+		font-size: 20px;
+		letter-spacing: -.02px;
+	}
+}
