@@ -24,20 +24,19 @@
     </div>
   </div>
 
-
-  <div id="box_event-wrap" class="box_content-wrapper">
-    <div class="button" onclick="layerOpen('clothingcare-terms_pop')">
+  <div id="layer-popup">
+    <div class="button" onclick="layerOpen('layer_popup')">
       <p><i></i>Layer Popup</p>
     </div>
   </div>
 
-  <div class="layer__body popup" id="clothingcare-terms_pop" aria-hidden="true" role="dialog">
+  <div class="layer__body popup" id="layer_popup" aria-hidden="true" role="dialog">
     <div class="layer__wrap">
       <div class="layer__close">
-        <button onclick="layerClose('clothingcare-terms_pop')" class="close_btn">close</button>
+        <button onclick="layerClose('layer_popup')" class="close_btn">close</button>
       </div>
       <div class="layer__inner">
-        <div class="layer__cont">
+        <div class="layer__content">
           <dl>
             <dt>title</dt>
             <dd>contents</dd>
@@ -58,10 +57,27 @@
 
   <div class="drop-list">
     <div class=""></div>
-
   </div>
-  
-  <!-- footer -->
+
+  <form action="#" method="post" id="form">
+    <div class="form-field">
+      <label for="userid">이메일</label>
+      <input type="text" id="" name="" value="crazybrain@naver.com" readonly>
+    </div>
+    <div class="form-field">
+      <label for="username">이름</label>
+      <input type="text" id="username" name="username" value="kino" readonly>
+    </div>
+    <div class="form-field">
+      <label for="loginroot">로그인 정보</label>
+      <input type="text" id="loginroot" name="loginroot" value="네이버" readonly>
+    </div>
+    <div class="form-field">
+      <label for="reg_date">가입일</label>
+      <input type="text" id="reg_date" name="reg_date" value="2020-12-11" readonly>
+    </div>
+  </form>
+
   <script src="../assets/js/ui.js"></script>
 </body>
 </html>

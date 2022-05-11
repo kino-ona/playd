@@ -43,7 +43,6 @@ const layerOpen = (layerId) =>{
 	let layerID = document.querySelector('#' + layerId);
 	layerID.setAttribute('aria-hidden', 'false');
 	if(document.querySelector('[role="dialog"].is-visible') && isOpen == false) {
-		// document.querySelector('.popup').css.top = "-" + curPos + "px";
 		isOpen = true;
 	}
 	const delay = setTimeout( function() {
