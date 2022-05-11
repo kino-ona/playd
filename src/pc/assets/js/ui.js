@@ -32,3 +32,35 @@ dropBox.forEach((item) => {
 		}
 	})
 })
+
+//layerPopup
+let isOpen = false;
+const layerOpen = (layerId) =>{
+	let curPos = window.pageYOffset;
+	console.log(curPos);
+	document.documentElement.classList.add("noscroll");
+	document.querySelector('#' + layerId).classList.add("is-visible");
+	let layerID = document.querySelector('#' + layerId);
+	layerID.setAttribute('aria-hidden', 'false');
+	if(document.querySelector('[role="dialog"].is-visible') && isOpen == false) {
+		// document.querySelector('.popup').css.top = "-" + curPos + "px";
+		isOpen = true;
+	}
+	const delay = setTimeout( function() {
+		if(!document.documentElement.classList.contains('noscroll')){
+			document.documentElement.classList.add('noscroll');
+		}
+		clearTimeout(delay);
+	}, 50);
+}
+const layerClose = (layerId) => {
+	let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
+	document.querySelector('#' + layerId).classList.remove("is-visible");
+	document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
+	document.documentElement.classList.remove("noscroll");
+	if (document.querySelector('[role="dialog"].is-visible')) {
+		document.documentElement.classList.remove("noscroll");
+		window.scrollTop = curPos;
+		isOpen = false;
+	}
+}
