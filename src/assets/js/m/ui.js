@@ -42,7 +42,6 @@ dropBoxItem.forEach((item) => {
 	})
 })
 
-
 //tab
 const subTabs = document.querySelectorAll('.sub-tabs a');
 

@@ -26,8 +26,8 @@
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
 		<nav class="footer__util--right">
-			<p class="infomation"><span class="infomation__title">대표전화</span>1566-3265</p>
-			<ul class="infomation__desc">
+			<p class="information"><span class="information__title">대표전화</span>1566-3265</p>
+			<ul class="information__desc">
 				<li>MON - FRI 09 : 00 - 18:00</li>
 				<li>주말, 공휴일 휴무</li>
 				<li>BREAK TIME : 12:30 - 13:30</li>

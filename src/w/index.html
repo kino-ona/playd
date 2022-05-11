@@ -6,7 +6,7 @@
 <body class="main">
 <div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
 
-<div class="wrap layout">
+<div class="wrap">
 
 	<!-- header -->
 	@@include('./inc/header.inc', {
@@ -26,7 +26,7 @@
   <!--// keyvisual -->
 
 	<div id="container" class="container">
-		<section class="section">
+		<section class="section" data-section="service">
 			<div class="section__inner section__inner--row">
 				<div class="section__head">
           <h3 class="section__title"><span class="section__label">SERVICE</span>플레이디에서 한번에 <br>통합 마케팅 캠페인을 <br>집행하세요.</h3>
@@ -95,7 +95,7 @@
 			</div>
 		</section>
     
-    <section class="box">
+    <section class="box" data-section="performance">
       <div class="box-item box-item--left">
         <p class="box__title">
           Data
@@ -129,30 +129,41 @@
       </div>
     </section>
 
-		<section class="section section--full">
+		<section class="section section--full" data-section="partners" style="background-image:url(../assets/images/dummy/@bg_partners.jpg)">
 			<div class="section__inner section__inner--full">
         <div class="section__head">
           <h3 class="section__title"><span class="section__label">PARTNERS</span>이미 성장한 많은 기업들이 <br>플레이디와 함께하였습니다.</h3>
           <p class="section__desc">온라인 마케팅의 처음부터 끝까지! 필요한 모든 것을 지원합니다.</p>
         </div>
         <div class="section__content">
-          animated bar graph
+          <dl class="graph">
+            <dt class="graph__title">누적 취급액</dt>
+            <dd class="graph__bar"><p class="graph__info">3,424<span class="graph__info--unit">건</span></p></dd>
+          </dl>
+          <dl class="graph">
+            <dt class="graph__title">연간 프로젝트 수</dt>
+            <dd class="graph__bar"><p class="graph__info">13,424<span class="graph__info--unit">원</span></p></dd>
+          </dl>
+          <dl class="graph">
+            <dt class="graph__title">활성 계정 수</dt>
+            <dd class="graph__bar"><p class="graph__info">39,342,435<span class="graph__info--unit">개</span></p></dd>
+          </dl>
         </div>
       </div>
 		</section>
 
-    <section class="banner banner--belt">
+    <section class="banner banner--belt" data-section="contractors">
       <div class="banner__content banner__content--belt">
         <div class="banner__title"><span class="a11y">협력사 목록</span></div>
         infinite auto-rolling list - horizontal
       </div>
     </section>
 
-    <section class="banner">
+    <section class="banner" data-section="cta">
       <div class="banner__content">
         <p class="banner__title">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
         <div class="button__wrap">
-          <a href="#" class="button__radius button__lined-white">프로젝트 문의하기</a>
+          <a href="#" class="button button__radius button__lined-white">프로젝트 문의하기</a>
         </div>
       </div>
     </section>

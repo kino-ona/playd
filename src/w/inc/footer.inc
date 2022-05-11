@@ -1,7 +1,7 @@
 <footer class="footer">
 	<div class="footer-top">
 		<div class="footer-top__inner">
-			<p class="logo logo__footer">logo<a href="#"><span class="a11y">플레이디</span></a></p>
+			<a href="#" class="logo logo__footer"><span class="a11y">플레이디</span></a>
 			<ul class="footer__nav">
 				<li><a href="#">윤리신고</a></li>
 				<li><a href="#">뉴스레터</a></li>
@@ -10,10 +10,10 @@
 				<li><a href="#">개인정보처리방침</a></li>
 			</ul>
 			<nav class="footer__nav--right">
-				<a href="#" class="">1<img src="" /><span class="a11y">네이버</span></a>
-				<a href="#" class="">2<img src="" /><span class="a11y">인스타그램</span></a>
-				<a href="#" class="">3<img src="" /><span class="a11y">유투브</span></a>
-				<a href="#" class="">4<img src="" /><span class="a11y">페이스북</span></a>
+				<a href="#" class="sns-link"><img src="../../assets/images/common/icons/footer_sns-naver.png" /><span class="a11y">네이버</span></a>
+				<a href="#" class="sns-link"><img src="../../assets/images/common/icons/footer_sns-instagram.png" /><span class="a11y">인스타그램</span></a>
+				<a href="#" class="sns-link"><img src="../../assets/images/common/icons/footer_sns-youtube.png" /><span class="a11y">유투브</span></a>
+				<a href="#" class="sns-link"><img src="../../assets/images/common/icons/footer_sns-facebook.png" /><span class="a11y">페이스북</span></a>
 			</nav>
 		</div>
 	</div>
@@ -26,8 +26,8 @@
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
 		<nav class="footer__util--right">
-			<p class="infomation"><span class="infomation__title">대표전화</span>1566-3265</p>
-			<ul class="infomation__desc">
+			<p class="information"><span class="information__title">대표전화</span>1566-3265</p>
+			<ul class="information__desc">
 				<li>MON - FRI 09 : 00 - 18:00</li>
 				<li>주말, 공휴일 휴무</li>
 				<li>BREAK TIME : 12:30 - 13:30</li>
