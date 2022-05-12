@@ -4,12 +4,11 @@ const header = document.querySelector('#header');
 
 window.addEventListener('scroll', () => {
 	let sct = window.pageYOffset;
-	let threshold = 300;
+	let threshold = 10;
 
 	sct > threshold ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
 })
 
-//inputButton
 const inputButton = document.querySelectorAll('.input__button');
 
 inputButton.forEach((item) => {
@@ -100,3 +99,19 @@ const layerClose = (layerId) => {
 		isOpen = false;
 	}
 }
+
+const gnbButton = document.querySelector('.header__button');
+const gnb = document.querySelector('.gnb');
+const body = document.querySelector('body');
+
+gnbButton.addEventListener('click', (item) => {
+	if (body.classList.contains('open-gnb')) {
+		body.classList.remove('open-gnb');
+	} else {
+		gnb.classList.add('open-gnb');
+		body.classList.add('open-gnb');
+	}
+
+
+
+})

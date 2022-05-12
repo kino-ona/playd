@@ -2,19 +2,45 @@
 
 /** LAYOUTS **/
 
+.open-gnb {
+  overflow: hidden; 
+
+  .burger-sticks:nth-child(1) {
+    transform: rotate(-45deg) translate(-4px, 7px);
+  }
+
+  .burger-sticks:nth-child(2) {
+    background: transparent;
+  }
+
+  .burger-sticks:nth-child(3) {
+    transform: rotate(45deg) translate(-4px, -7px);
+  }
+
+  .gnb {
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  .header__button {
+    z-index: 999;
+  }
+
+}
+
 .section {
-  border: 3px solid violet;
   text-align: center;
 
   &__head {
     margin: 0 25px;
-    border: 1px solid red;
   }
 
   &__title {
     font-size: 23px;
     letter-spacing: -.03px;
     font-weight: bold;
+    font-family: basic-sans;
     line-height: 35px;
   }
 
@@ -39,14 +65,95 @@
 }
 
 .header {
-  padding: 0;
-  margin: 0 25px;
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  padding: 0 25px;
+  transition: all .2s ease-out;
+  z-index: 9;
+  box-sizing: border-box;
+
+  &__button {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    width: 23px;
+    height: 18px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__inner {
+    padding-top: 18px;
+  }
 }
 
-.header__inner, 
-.footer-bottom, 
-.footer-top__inner {
-  max-width: 100%;
+.burger-sticks {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  transition: all .2s ease-out;
+  content: '';
+
+  &:nth-child(1) {
+    position: absolute;
+    top:0;
+  }
+
+  &:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  &:nth-child(3) {
+    position: absolute;
+    bottom: 0
+  }
+
+}
+
+.visual {
+  position: relative;
+  min-width: 320px;
+
+  &__inner {
+    position: absolute;
+    top: 18.7%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.gnb {
+  position: absolute;
+  top: 0;
+  right: -101%;
+  width: 100%;
+  height: 100vh;
+  background-color: #666666;
+  transition: all .2s ease-out;
+  z-index: 9;
+}
+
+.card-box {
+  &__item {
+    margin: 0 25px;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    text-align: left;
+  }
+
+  &__content {
+    text-align: right;
+    margin-top: 13px;
+  }
 }
 
 .image-block {
@@ -54,18 +161,15 @@
   width: 250px;
   min-height: 330px;
   border-radius: 24px;
-  border: 1px solid red;
   text-align: left;
 }
 
 .banner {
   height: 265px;
-  border: 3px solid violet;
   
   &__content {
     margin: 0 25px;
     height: 100%;
-    border: 1px solid #EA2126;
   }
 }
 
@@ -118,12 +222,29 @@
   &__nav {
     display: block;
   }
-  
+
+}
+
+.footer-top {
+  margin: 0 25px;
+}
+
+.footer-bottom {
+  margin: 0 25px;
 }
 
 .logo {
   &__footer {
     display: block;
+  }
+
+  &__default {
+    display: inline-block;
+    width: 82px;
+    height: 15.5px;
+    background: url('../../images/m/logo_color.png') 0 0 no-repeat;
+    background-size: contain;
+    transition: all .2s ease-out;
   }
 }
 
