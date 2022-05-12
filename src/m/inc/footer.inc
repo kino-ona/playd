@@ -44,4 +44,4 @@
 		</nav>
 	</div>
 </footer>
-<script src="@@webroot/assets/m/js/ui.js"></script>
+<script src="@@webroot/assets/js/m/ui.js"></script>

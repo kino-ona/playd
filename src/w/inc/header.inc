@@ -11,4 +11,5 @@
       <div class="gnb__link"><a href="#">CONTACT</a></div>
 		</nav>
 	</div>
+	<link rel="stylesheet" href="https://use.typekit.net/gjs0snj.css">
 </header>
