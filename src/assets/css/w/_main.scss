@@ -66,6 +66,7 @@
 .main {
 
   /*** KEYVISUAL ***/
+  
   .visual {
     width: 100%;
     position: relative;
@@ -94,62 +95,418 @@
       text-align: center;
     }
   }
-  
-  [data-section="service"] {
 
-    .section__head {
-      flex: 1;
+  /* COMMON */
+
+  .section {
+
+    &__label {
+      margin-bottom: 30px;
     }
-  
-    .section__content {
-      flex: 2;
-      max-width: 740px;
-    }
-  
-    .section__content--row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+
+    &__desc {
+      margin-top: 15px;
     }
   }
-  
+
   .image-block {
     width: 100%;
-    max-width: 350px;
-    height: 450px;
-    
-    &:nth-of-type(2n) {
-      margin-top: 40px;
-      transform: translateY(20px);
+    background: {
+      size: cover;
+      position: center 0;
+      repeat: no-repeat;
     }
+    border-radius: 24px;
+    overflow: hidden;
   }
-  
-  [data-section="cta"] {
-    background-color: #D12327;
 
-    .banner__title {
-      position: relative;
-      display: inline-block;
-      margin: 0 auto;
-      
-      &::after {
-        content: '';
-        position: absolute;
-        left: 100%;
-        bottom: 75%;
-        width: 39px;
-        height: 33px;
-        background: {
-          image: url(../../../assets/images/dummy/@icon-contact_us.png);
-          size: 100%;
-          position: 0 0;
-          repeat: no-repeat;
-        }
+  /* SECTIONS */
+
+  [data-section="service"] {
+
+    .section {
+
+      &__head {
+        flex: 1;
+      }
+    
+      &__content {
+        flex: 2;
+        max-width: 740px;
+      }
+    
+      &__content--row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
     }
 
     .button__wrap {
-      margin-top: 34px;
+      color: #ffffff;
+      margin-top: 50px;
+    }
+
+    .image-block {
+      max-width: 350px;
+      height: 450px;
+      padding: 48px;
+      box-sizing: border-box;
+      color: #ffffff;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .32), 25%,rgba(0, 0, 0, 0));
+      
+      &:nth-of-type(2n) {
+        margin-top: 40px;
+        transform: translateY(20px);
+      }
+
+      &__title {
+        font-size: 22px;
+        @include FontBD;
+      }
+
+      &__slogan {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.03em;
+        @include FontRG;
+        margin-top: 12px;
+      }
+    }
+
+    .button__icon-out {
+      font-size: 14px;
+      @include FontMD;
+      margin-top: 100%;
+
+      i {
+        width: 8px;
+        height: 8px;
+        margin-left: 6px;
+
+        &:after {
+          width: 6px;
+          height: 6px;
+          border-color: #ffffff;
+        }
+      }
+    }
+  }
+
+  [data-section="partners"] {
+    min-height: 960px;
+    background: {
+      image: url(../../images/dummy/@bg_partners.jpg);
+      size: cover;
+      position: 0 0;
+      repeat: no-repeat;
+    }
+
+    &.approached {
+
+      .graph__bar {
+        animation-name: graphbar;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+      }
+  
+      .graph__bar--red {
+        animation-delay: 0.5s;
+      }
+  
+      .graph__bar--grey {
+        animation-delay: 0.75s;
+      }
+      
+      @keyframes graphbar {
+        0% {
+          width: 0;
+          opacity: .2;
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      .graph__info { 
+        animation-name: graphinfo;
+        animation-duration: 2.5s;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+      }
+  
+      @keyframes graphinfo {
+        0% {
+          opacity: 0;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .section__content {
+      margin-top: 70px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  [data-section="performance"] {
+
+    .box__inner {
+      height: 630px;
+    }
+
+    .image-block {
+      max-width: 460px;
+      height: 100%;
+      margin-left: auto;
+    }
+  }
+
+  [data-section="contractors"] {
+  
+    .swiper-container {
+      height: auto;
+    }
+  
+    .swiper-wrapper {
+      padding: 25px 0;
+      transition-timing-function : linear;
+    }
+    
+    .swiper-slide {
+      width: 211px;
+      height: 62px;
+      align-self: center;
+      overflow: hidden;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  .graph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-basis: 100%;
+    flex-shrink: 0;
+
+    &__title {
+      flex-basis: 100%;
+      flex-shrink: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+      @include FontMD;
+      text-align: end;
+    }
+
+    &__info {
+      position: absolute;
+      right: calc(100% + 45px);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      @include FontBD;
+    }
+
+    &__info--unit {
+      position: absolute;
+      left: 105%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      @include FontDL;
+    }
+
+    &__bar {
+      position: relative;
+      max-width: 100%;
+      height: 40px;
+      flex-shrink: 0;
+      margin-bottom: 50px;
+      margin-left: auto;
+      border-radius: 20px;
+    }
+
+    &__bar--black {
+      background-color: #000000;
+      color: #000000;
+    }
+
+    &__bar--red {
+      background-color: #D12327;
+      color: #D12327;
+    }
+
+    &__bar--grey {
+      background-color: #666666;
+      color: #666666;
+    }
+  }
+
+  .box {
+
+    &__title {
+      font-size: 60px;
+      line-height: 90px;
+      color: #ffffff;
+      @include FontBD;
+      text-align: center;
+    }
+      
+    &__title--center {
+      color: #000000;
+    }
+  
+    &__desc {
+      display: block;
+      font-size: 28px;
+      line-height: 30px;
+      @include FontDL;
+      margin-top: 30px;
+    }
+
+    &__content {
+      color: #ffffff;
+      transition: all 0.4s;
+    }
+
+    &__inner {
+      padding-top: 230px;
+      padding-bottom: 230px;
+    }
+
+    &__content--row {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    &__slogan {
+      font-size: 50px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      @include FontBD;
+      margin-bottom: 30px;
+    }
+  
+    &__slogan--small {
+      font-size: 32px;
+      letter-spacing: -0.03em;
+      @include FontBD;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      display: block;
+      max-width: 470px;
+      @include FontRG;
+      
+      &--1 {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.03em;
+        opacity: 0.8;
+      }
+
+      &--2 {
+        font-size: 14px;
+        margin-top: 40px;
+      }
+    }
+  }
+  
+  .box-item {
+    flex: 1.55;
+    min-height: 1080px;
+  
+    &--center {
+      flex: 1.7;
+      background-color: #ffffff;
+    }
+  
+    &:hover {
+      > .box__content {
+        left: 0;
+        right: 0;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .box-item--left {
+    background: {
+      image: url(../../images/dummy/@bg_box-1.jpg);
+      size: cover;
+      position: center 0;
+      repeat: no-repeat;
+    }
+
+    .button__icon-arrow {
+      margin-left: 15px;
+    }
+
+    .box__content {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      background-color: #F7F7F7;
+    }
+  }
+
+  .box-item--right {
+    background: {
+      image: url(../../images/dummy/@bg_box-2.jpg);
+      size: cover;
+      position: center 0;
+      repeat: no-repeat;
+    }
+
+    .box__content {
+      left: 0;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      background-color: #D12327;
+    }
+
+    .button {
+      
+      &__wrap {
+        margin-top: 80px;
+        font-size: 18px;
+        line-height: 25px;
+        @include FontMD;
+      }
+
+      &__icon-arrow {
+        margin-right: 15px;
+      }
+
+      &__icon-back {
+
+        i {
+          width: 25px;
+          height: 25px;
+          margin-right: 6px;
+  
+          &:after {
+            width: 6px;
+            height: 6px;
+            border-color: #D12327;
+          }
+        }
+      }
     }
   }
 }

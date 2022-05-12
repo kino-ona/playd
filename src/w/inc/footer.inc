@@ -1,3 +1,12 @@
+<section class="banner banner__footer">
+	<div class="banner__content">
+		<p class="banner__title">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
+		<div class="button__wrap">
+			<a href="#" class="button button__radius button__lined-white">프로젝트 문의하기</a>
+			<a href="#" class="button button__radius button__filled-white">회사소개서 다운로드</a>
+		</div>
+	</div>
+</section>
 <footer class="footer">
 	<div class="footer-top">
 		<div class="footer-top__inner">

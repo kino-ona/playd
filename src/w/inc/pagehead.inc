@@ -22,4 +22,5 @@
 
 	<title>@@pagetitle</title>
 	<link rel="stylesheet" href="@@webroot/assets/css/w/ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
 </head>

@@ -70,8 +70,48 @@
 }
 
 .box-item {
-  height:  225px;
-  border: 3px solid green
+	height: 100%;
+	flex: 1.55;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&--center {
+		flex: 1.7;
+		background-color: #ffffff;
+	}
+
+	&:hover {
+		> .box__content {
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.button {
+
+	&__wrap {
+		display: inline-block;
+		margin: 0 auto;
+	}
+
+	&__radius {
+
+	}
+
+	&__colored-red {
+
+	}
+
+	&__lined-white {
+
+	}
+
+	&__icon {
+
+	}
 }
 
 .footer {
