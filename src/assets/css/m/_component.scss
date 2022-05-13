@@ -26,7 +26,18 @@
   .header__button {
     z-index: 999;
   }
+}
 
+.scrolled {
+  background-color: #ffffff;
+
+  .burger-sticks {
+    background: #000000;
+  }
+  .logo__default {
+    background: url('../../images/m/logo_gray.png') 0 0 no-repeat;
+    background-size: contain;
+  }
 }
 
 .section {
@@ -40,8 +51,7 @@
     font-size: 23px;
     letter-spacing: -.03px;
     font-weight: bold;
-    font-family: basic-sans;
-    line-height: 35px;
+    line-height: 32px;
   }
 
   &__desc {
@@ -55,6 +65,7 @@
     color: #EA2126;
     font-size: 15px;
     font-weight: bold;
+    line-height: 1;
   }
 
   &__desc {
@@ -116,18 +127,6 @@
 
 }
 
-.visual {
-  position: relative;
-  min-width: 320px;
-
-  &__inner {
-    position: absolute;
-    top: 18.7%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-}
-
 .gnb {
   position: absolute;
   top: 0;
@@ -156,14 +155,6 @@
   }
 }
 
-.image-block {
-  display: inline-block;
-  width: 250px;
-  min-height: 330px;
-  border-radius: 24px;
-  text-align: left;
-}
-
 .banner {
   height: 265px;
   
@@ -173,29 +164,7 @@
   }
 }
 
-.box-item {
-	height: 100%;
-	flex: 1.55;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	&--center {
-		flex: 1.7;
-		background-color: #ffffff;
-	}
-
-	&:hover {
-		> .box__content {
-			left: 0;
-			right: 0;
-		}
-	}
-}
-
 .button {
-
 	&__wrap {
 		display: inline-block;
 		margin: 0 auto;
@@ -205,9 +174,17 @@
 
 	}
 
-	&__colored-red {
-
-	}
+	&__radius--filled-red {
+    display: inline-block;
+    padding: 9px 25px;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 22.5px;
+    letter-spacing: -.03px;
+    font-weight: bold;
+    background-color: #EA2126;
+    border-radius: 45px;
+  }
 
 	&__lined-white {
 
@@ -231,6 +208,7 @@
 
 .footer-bottom {
   margin: 0 25px;
+  flex-basis: auto;
 }
 
 .logo {
