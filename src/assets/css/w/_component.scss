@@ -2,6 +2,7 @@
 
 /** LAYOUTS **/
 
+
 /** GLOBAL **/
 
 .logo {
@@ -34,7 +35,7 @@
   top: 0;
   height: 100px;
   padding: 0 50px;
-	transition: height 0.4s;
+	transition: all 0.4s;
 
 	.logo {
 		transition: all 0.4s;
@@ -46,6 +47,7 @@
 
 	&.scrolled {
 		height: 60px;
+		background-color: rgba(0, 0, 0, 0.2);
 
 		.logo {
 			width: 108px;
@@ -74,6 +76,36 @@
 
 	&__link {
 		margin-left: 50px;
+	}
+}
+
+.banner__footer {
+	color: #EA2126;
+	background-color: #D12327;
+
+	.banner__title {
+		position: relative;
+		display: inline-block;
+		margin: 0 auto;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			bottom: 75%;
+			width: 39px;
+			height: 33px;
+			background: {
+				image: url(../../../assets/images/dummy/@icon-contact_us.png);
+				size: 100%;
+				position: 0 0;
+				repeat: no-repeat;
+			}
+		}
+	}
+
+	.button__wrap {
+		margin-top: 35px;
 	}
 }
 
