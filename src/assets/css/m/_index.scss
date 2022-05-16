@@ -185,13 +185,18 @@
 
   .banner {
     &__list {
-      margin: 16px -3.8% 90px 0;
+      margin: 30px -13px 90px 0;
       
     }
-    &__list img{
-      margin: 12.5% 3.8% 0 0;
-      min-width: 95px;
-      width: 13.1%;
+    &__list img {
+      max-width: 95px;
+      margin: 25px 0;
+    }
+
+    &__list img:nth-child(2),
+    &__list img:nth-child(5),
+    &__list img:nth-child(8){
+      margin: 25px 23px;
     }
   }
 }

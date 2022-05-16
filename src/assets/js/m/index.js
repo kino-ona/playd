@@ -17,7 +17,7 @@
 	}
 
 	const timer = setInterval(setVisual, 300);
-	setTimeout(stopVisual, 1500);
+	setTimeout(stopVisual, 1600);
 
   
   //aos
@@ -31,7 +31,6 @@
 	const countUp3 = document.querySelectorAll('.card-box__content p > span')[2];
   const options = {
     duration: 10,
-    enableScrollSpy : true
   }
 	const count1 = new countUp.CountUp(countUp1, 123456, options);
 	const count2 = new countUp.CountUp(countUp2, 3424, options);
