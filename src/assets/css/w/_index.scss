@@ -559,11 +559,19 @@ $elemT: 150px;
     }
   }
 
-  .accordian__item--active {
-    .accordian__title {
-      a {
-        font-weight: 500;
-        color: #000000;
+  .accordian__item {
+    &:not(:last-of-type) { 
+      margin-bottom: 50px;
+    }
+
+    &--active {
+
+      .accordian__title {
+        
+        a {
+          font-weight: 500;
+          color: #000000;
+        }
       }
     }
   }
