@@ -19,43 +19,53 @@ const swip2 = new Swiper("#swip2", swiperOptions);
 
 anime1 = () => {
   const main = document.querySelector('body.main');
-  const mainFullpage = main.querySelector('[data-section="service"]');
-  const mainFullpageInner = mainFullpage.querySelector('.section__inner');
-  const mainFullpageInnerHead = mainFullpageInner.querySelector('.section__head');
+  const area = main.querySelector('[data-section="service"]');
+  const areaInner = area.querySelector('.section__inner');
+  const areaHead = area.querySelector('.section__head');
+  const areaCont = area.querySelector('.section__content');
+  const areaContImgs = area.querySelectorAll('.section__content .image-block');
   let wdH = window.innerHeight;
-  let wdW = window.innerWidth;
+  let wdW = parseInt(document.body.clientWidth);
   let scT;
   let elemT = 150;
   let innerW = 1200;
-  let abTmainFullpage;
+  let ch = 1620;
+  let wdm = ((wdW - innerW)*0.5);
 
-  // mainFullpage.style.height = wdH + 'px';
+  area.style.height = ch + 'px';
+  areaInner.style.left = wdm + 'px';
 
   window.addEventListener('scroll', () => {
     scT = window.pageYOffset;
-    let reached = mainFullpage.getBoundingClientRect().top;
-    abTmainFullpage = scT + mainFullpage.getBoundingClientRect().top;
+    
+    for (i = 0; i < areaContImgs.length; i++) { 
+      if (areaContImgs[i].getBoundingClientRect().top <= wdH + elemT) {
+        areaContImgs[i].classList.add('slidein');
+      }
+    }
 
     setTimeout((delay) => {
-      if (reached <= elemT) {
-        mainFullpage.classList.add('approached');
-        window.addEventListener('resize', () => {
-          wdH = window.innerHeight;
-          wdW = window.innerWidth;
-          mainFullpage.style.height = wdH + 'px';
-
-          mainFullpageInner.style.left = ((wdW - innerW)/2) + 'px';
-        })
+      let areaReach = area.getBoundingClientRect(true).top;
+      let areaEndReach = area.getBoundingClientRect(true).bottom;
+      let headReach = areaHead.getBoundingClientRect().top;
+      let headEndReach = areaHead.getBoundingClientRect().bottom;
+    
+      console.log(areaReach, areaEndReach, headReach, headEndReach);
   
-        mainFullpageInner.style.left = ((wdW - innerW)/2) + 'px';
-        console.log(wdW, innerW, elemT);
+      if (areaReach <= elemT) {
+        area.classList.add('approached');
+        areaHead.style.left = wdm + 'px';
       } else {
-        mainFullpage.classList.remove('approached');
+        area.classList.remove('approached');
+        areaHead.style.left = 0;
+      }
+      if (areaEndReach <= 580) { 
+        area.classList.remove('approached');
+        areaHead.style.top = 'auto';
+        areaHead.style.left = 0;
+        areaHead.style.bottom = 0;
       }
 
-      if (scT > (abTmainFullpage + wdH - elemT)) { 
-        mainFullpage.classList.remove('approached') 
-      }
       clearTimeout(delay);
     }, 50);
   })
@@ -64,18 +74,18 @@ anime1();
 
 anime2 = () => {
   const main = document.querySelector('body.main');
-  const mainGraph = main.querySelector('[data-section="partners"]');  
+  const graph = main.querySelector('[data-section="partners"]');  
   let wdH = window.innerHeight;
   let scT;
-  let abTmainGraph;
+  let abTgraph;
   window.addEventListener('resize', () => {
     wdH = window.innerHeight;
   })
   window.addEventListener('scroll', () => {
     scT = window.pageYOffset;
-    abTmainGraph = scT + mainGraph.getBoundingClientRect().top;
+    abTgraph = scT + graph.getBoundingClientRect().top;
     setTimeout((delay) => {
-      scT > (abTmainGraph - wdH) ? mainGraph.classList.add('approached') : mainGraph.classList.remove('approached') ;
+      scT > (abTgraph - wdH) ? graph.classList.add('approached') : graph.classList.remove('approached') ;
       clearTimeout(delay);
     }, 50);
   })

@@ -355,37 +355,38 @@ $duration2: 1.25s;
 
 $elemT: 150px;
 
+@mixin imgContentIn($distance) {
+	opacity: 0;
+	margin-top: ($distance*500 + px);
+}
+
 [data-section="service"] {
 	position: relative;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 150px;
-	padding-bottom: 150px;
-  transition: all $duration2 ease;
-
-	* {
-		transition: all $duration2 ease;
-	}
+  margin: $elemT 0 $elemT 0;
 
 	.section {
 
 		&__inner {
-			position: static;
-      top: $elemT;
-      // left: auto // (window - 100%)/2 + 'px';
-			width: 100%;
-      display: flex;
-			flex-wrap: nowrap;
-      flex-direction: row;
+      margin: 0;
+			position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid blue;
+      overflow: hidden;
 		}
 
 		&__head {
-			position: static;
-			width: 33.3%;
+      position: absolute;
+      top: 0;  //load default
+      left: 0; //load default
+      // transition: all $duration2 ease;
 		}
 	
 		&__content {
-			position: static;
+			position: absolute;
+      top: $elemT;
+      right: 0;
 			width: 66.7%;
 		}
 	
@@ -426,14 +427,16 @@ $elemT: 150px;
 		max-width: 350px;
 		height: 450px;
 		padding: 48px;
-    margin-left: 40px;
+    margin-left: 40px; 
+    margin-bottom: 40px;
+    @include imgContentIn(1);
 		box-sizing: border-box;
 		color: #ffffff;
 		background: linear-gradient(to bottom, rgba(0, 0, 0, .32), 25%,rgba(0, 0, 0, 0));
+    transition: margin $duration2 ease;
 		
 		&:nth-of-type(2n) {
-			margin-top: 40px;
-			transform: translateY(20px);
+			transform: translateY(40px);
 		}
 
 		&__title {
@@ -449,27 +452,20 @@ $elemT: 150px;
 			margin-top: 12px;
 		}
 	}
+
+  .image-block.slidein {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 
 [data-section="service"].approached {
 
 	.section {
 
-		&__inner {
-      position: fixed;
-      // top: // $elemT;
-      // left: // (window - 100%)/2 + 'px';
-		}
-
 		&__head {
-			position: absolute;
-      top: 0;
-      left: 0;
-		}
-	
-		&__content {
-			position: static;
-      max-width: fit-content;
+			position: fixed;
+      top: 150px;
 		}
 	}
 }
@@ -523,47 +519,64 @@ $elemT: 150px;
       right: 0!important;
       max-width: 67.708%;
 
-      * {
-        color: #000000;
-      }
-    }
-
-    .accordian {
-      max-width: 840px;
-      width: 100%;
-
-      * {
-        transition: none;
-      }
-    }
-
-    .accordian__title {
-
-      &::before {
-        top: 15px;
-      }
-      
-      a {
-        font-size: 28px;
-        line-height: 40px;
-        font-weight: 300;
-        @include FontBasicSans;
-        color: #666666;
-      }
-
-      span {
-        font-size: 40px;
-        line-height: inherit;
-        font-weight: 500;
-        letter-spacing: -0.02em;
-        @include FontBasicSans;
-        margin-right: 48px;
+      .accordian {
+        max-width: 840px;
+        width: 100%;
+    
+        * {
+          transition: none;
+        }
       }
     }
   
     // .box__inner {
     //   @include boxContentIn(-1);
     // }
+  }
+
+  .accordian__title {
+
+    &::before {
+      top: 15px;
+    }
+    
+    a {
+      font-size: 28px;
+      line-height: 40px;
+      font-weight: 300;
+      @include FontBasicSans;
+      color: #666666;
+    }
+
+    span {
+      font-size: 40px;
+      line-height: inherit;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      @include FontBasicSans;
+      color: #000000;
+      margin-right: 48px;
+    }
+  }
+
+  .accordian__item--active {
+    .accordian__title {
+      a {
+        font-weight: 500;
+        color: #000000;
+      }
+    }
+  }
+
+  .accordian__content {
+    font-size: 16px;
+    line-height: 24px;
+    @include FontDL;
+
+    p {
+      @include FontInherit;
+      color: #666666;
+    }
   }
 }
 
