@@ -27,24 +27,6 @@
 	transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
 	transition-delay: 0ms;
 }
-@mixin transition($sec, $motion) {
-	-webkit-transition: all $sec $motion;
-	-moz-transition: all $sec $motion;
-	-o-transition: all $sec $motion;
-	transition: all $sec $motion;
-}
-%easing {
-	-webkit-transition: 0.5s ease-in-out;
-	-moz-transition: 0.5s ease-in-out;
-	-o-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
-}
-@mixin easing_mixin {
-	-webkit-transition: 0.5s ease-in-out;
-	-moz-transition: 0.5s ease-in-out;
-	-o-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
-}
 
 // clear floating
 %clearer {

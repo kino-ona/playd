@@ -28,7 +28,7 @@
 }
 
 .header {
-  z-index: 1;
+  z-index: 9;
   position: fixed;
   left: 0;
   right: 0;
@@ -265,10 +265,6 @@
 	&--full {
 		max-width: 1200px;
 	}
-	&--row {
-		justify-content: space-between;
-		flex-direction: row;
-	}
 }
 
 /** COMPONENTS **/
@@ -342,7 +338,7 @@
 	}
   
 	&__content--left {
-		left: -100%;
+		right: 100%;
 	}
 
 	&__content--right {
@@ -497,7 +493,7 @@
 	&__input {
 		position: absolute;
 		opacity: 0;
-		z-index: 9;
+		z-index: 1;
 	}
 
 	&__input + &__label {
@@ -679,7 +675,6 @@
 		position: relative;
 		font-size: 20px;
 		letter-spacing: -.02px;
-		border-bottom: 1px solid #DDDDDD;
 
 		a {
 			display: block;
@@ -704,19 +699,22 @@
 	}
 
 	&__item--active {
+
 		.accordian__content {
 			height: 100%;
 		}
+
 		.accordian__title::before {
 			transform: rotate(225deg);
 		}
 	}
 
 	&__content {
+		border-top: 1px solid #DDDDDD;
 		overflow: hidden;
-		height: 0;
+		height: 0%;
 		font-size: 20px;
-		letter-spacing: -.02px;
+		letter-spacing: -0.02em;
 	}
 }
 
@@ -725,7 +723,7 @@
 	&__body {
 		position: fixed;
 		min-height: 100vh;
-		z-index: 30001;
+		z-index: 99;
 		top: 0;
 		left: 0;
 		display: none;
@@ -736,7 +734,7 @@
 	
 	&__wrap {
 		position: absolute;
-		z-index: 999;
+		z-index: 99;
 		top:50%;
 		left:50%;
 		max-width: 950px;
@@ -753,7 +751,7 @@
 	
 	&__close {
 		position: absolute;
-		z-index: 1000;
+		z-index: 100;
 		max-width: 950px;
 		width: 100%;
 		top: 20px;

@@ -26,8 +26,8 @@
   <!--// keyvisual -->
 
 	<div id="container" class="container">
-		<section class="section" data-section="service">
-			<div class="section__inner section__inner--row">
+		<section class="section section--wide" data-section="service" style="height: 960px;">
+			<div class="section__inner section__inner--wide">
 				<div class="section__head">
           <h3 class="section__title"><span class="section__label">SERVICE</span>플레이디에서 한번에 <br>통합 마케팅 캠페인을 <br>집행하세요.</h3>
           <p class="section__desc">ON/OFF 매체를 구분하지 않고 기획, 제작, 운영을 <br>포함한 모든 마케팅 솔루션을 제공합니다.</p>
@@ -35,22 +35,7 @@
             <a href="#" class="button button__radius button__filled-red">회사소개서 다운로드</a>
           </div>
         </div>
-        <div class="section__content section__content--row" style="height: 960px; overflow-y: scroll;">
-          <div class="image-block">
-            <h4 class="image-block__title">통합 마케팅 캠페인</h4>
-            <p class="image-block__slogan">목표 KPI 달성을 위한 TOTAL<br>MARKETING 진행</p>
-            <a href="#" class="button button__icon-out">자세히보기<i></i></a>
-          </div>
-          <div class="image-block">
-            <h4 class="image-block__title">통합 마케팅 캠페인</h4>
-            <p class="image-block__slogan">목표 KPI 달성을 위한 TOTAL<br>MARKETING 진행</p>
-            <a href="#" class="button button__icon-out">자세히보기<i></i></a>
-          </div>
-          <div class="image-block">
-            <h4 class="image-block__title">통합 마케팅 캠페인</h4>
-            <p class="image-block__slogan">목표 KPI 달성을 위한 TOTAL<br>MARKETING 진행</p>
-            <a href="#" class="button button__icon-out">자세히보기<i></i></a>
-          </div>
+        <div class="section__content section__content--row">
           <div class="image-block">
             <h4 class="image-block__title">통합 마케팅 캠페인</h4>
             <p class="image-block__slogan">목표 KPI 달성을 위한 TOTAL<br>MARKETING 진행</p>
@@ -85,16 +70,22 @@
         <p class="box__title">Data<span class="button button__icon-arrow"><span class="a11y">펼쳐보기</span></span></p>
         <div class="box__content box__content--left">
           <div class="box__inner">
-            accordion list
-            01
-            02
-            03
-            04
+            <div class="accordian">
+              <div class="accordian__item accordian__item--active">
+                <div class="accordian__title">
+                  <a href="/"><span>01</span>Big Data Analysis</a>
+                </div>
+                <div class="accordian__content">
+                  <p>데이터 연동 및 자동 분석을 통해 자료 가공에 드는 리소스를 최소화할 수 있고, 체계적인 데이터 분석 관리로 광고 효율을 극대화하는 전략 수립이 가능합니다. 데이터 연동 및 자동 분석을 통해 자료 가공에 드는 리소스를 최소화할 수 있고, 체계적인 데이터 분석 관리로 광고 효율을 극대화하는 전략 수립이 가능합니다. </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="box-item box-item--center">
         <p class="box__title box__title--center">
+          <i> </i>
           Performance <br>Growth
           <span class="box__desc">데이터에 공감을 더해 확실한 성과를 만듭니다.</span>
         </p>
@@ -123,24 +114,30 @@
       </div>
     </section>
 
-		<section class="section section--full" data-section="partners">
+		<section class="section section--full" data-section="partners" style="min-height: 960px;">
 			<div class="section__inner section__inner--full">
         <div class="section__head">
           <h3 class="section__title"><span class="section__label">PARTNERS</span>이미 성장한 많은 기업들이 <br>플레이디와 함께하였습니다.</h3>
           <p class="section__desc">온라인 마케팅의 처음부터 끝까지! 필요한 모든 것을 지원합니다.</p>
         </div>
         <div class="section__content">
-          <dl class="graph">
+          <dl class="graph graph--1">
             <dt class="graph__title">누적 취급액</dt>
-            <dd class="graph__bar graph__bar--black" style="max-width: 20%;"><p class="graph__info">3,424<span class="graph__info--unit">건</span></p></dd>
+            <dd class="graph__bar graph__bar--black" style="max-width: 20%;">
+              <p class="graph__info">3,424<span class="graph__info--unit">건</span></p>
+            </dd>
           </dl>
-          <dl class="graph">
+          <dl class="graph graph--2">
             <dt class="graph__title">연간 프로젝트 수</dt>
-            <dd class="graph__bar graph__bar--red" style="max-width: 63%;"><p class="graph__info">13,424<span class="graph__info--unit">원</span></p></dd>
+            <dd class="graph__bar graph__bar--red" style="max-width: 63%;">
+              <p class="graph__info">13,424<span class="graph__info--unit">원</span></p>
+            </dd>
           </dl>
-          <dl class="graph">
+          <dl class="graph graph--3">
             <dt class="graph__title">활성 계정 수</dt>
-            <dd class="graph__bar graph__bar--grey" style="max-width: 39%;"><p class="graph__info">39,342,435<span class="graph__info--unit">개</span></p></dd>
+            <dd class="graph__bar graph__bar--grey" style="max-width: 39%;">
+              <p class="graph__info">39,342,435<span class="graph__info--unit">개</span></p>
+            </dd>
           </dl>
         </div>
       </div>
@@ -149,7 +146,7 @@
     <section class="banner banner--belt" data-section="contractors">
       <div class="banner__content banner__content--belt">
         <div class="banner__title"><span class="a11y">협력사 목록</span></div>
-        <div class="swiper-container">
+        <div id="swip2" class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide" style="background-image:url(../assets/images/dummy/logo_01.png)"></div>
             <div class="swiper-slide" style="background-image:url(../assets/images/dummy/logo_02.png)"></div>
@@ -172,21 +169,6 @@
 	"webroot": "..",
 })
 <!-- //footer -->
-<script>
-  const swiperOptions = {
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    speed: 24000,
-    grabCursor: true,
-    mousewheelControl: true,
-    keyboardControl: true,
-  };
-  const swiper = new Swiper(".swiper-container", swiperOptions);
-</script>
+<script src="../assets/js/w/index.js"></script>
 </body>
 </html>
