@@ -529,9 +529,14 @@ $elemT: 150px;
       }
     }
   
-    // .box__inner {
-    //   @include boxContentIn(-1);
-    // }
+    .box__inner {
+      padding-bottom: 0;
+      @include boxContentIn(-1);
+    }
+  }
+
+  .accordian {
+    margin: 0 auto;
   }
 
   .accordian__title {
@@ -566,12 +571,13 @@ $elemT: 150px;
 
     &--active {
 
-      .accordian__title {
-        
-        a {
-          font-weight: 500;
-          color: #000000;
-        }
+      .accordian__title a {
+        font-weight: 500;
+        color: #000000;
+      }
+
+      .accordian__content {
+        border-color: transparent;
       }
     }
   }
