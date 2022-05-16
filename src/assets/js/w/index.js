@@ -91,3 +91,31 @@ anime2 = () => {
   })
 }
 anime2();
+
+const dataAnalysis = () => {
+  const accordianItem = document.querySelectorAll('.accordian__item');
+  accordianItem.forEach(targets => {
+    targets.classList.remove('accordian__item--active')
+  })
+
+  accordianItem.forEach(item => {
+    item.addEventListener('click', () => {
+      
+      accordianItem.forEach(targets => {
+        targets.classList.remove('accordian__item--active')
+      })
+
+      if(item.classList.contains('accordian__item--active')) {
+        item.classList.remove('accordian__item--active')
+      }else {
+        item.classList.add('accordian__item--active');
+      }
+    });
+  });
+ 
+
+  
+
+};
+
+dataAnalysis();
