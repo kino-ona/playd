@@ -5,6 +5,15 @@
 .open-gnb {
   overflow: hidden; 
 
+  .header {
+    background-color:#ffffff;
+    border-bottom: 1px solid #DDDDDD;
+  }
+
+  .burger-sticks {
+    background: #000000;
+  }
+
   .burger-sticks:nth-child(1) {
     transform: rotate(-45deg) translate(-4px, 7px);
   }
@@ -18,12 +27,20 @@
   }
 
   .gnb {
-    top: 0;
+    top: 55px;
     right: 0;
     z-index: 99;
+    overflow: scroll;
   }
 
   .header__button {
+    z-index: 999;
+  }
+
+  .logo__default {
+    position: absolute;
+    background: url('../../images/m/common/logo_gray.png') 0 0 no-repeat;
+    background-size: contain;
     z-index: 999;
   }
 }
@@ -35,7 +52,7 @@
     background: #000000;
   }
   .logo__default {
-    background: url('../../images/m/logo_gray.png') 0 0 no-repeat;
+    background: url('../../images/m/common/logo_gray.png') 0 0 no-repeat;
     background-size: contain;
   }
 }
@@ -129,13 +146,74 @@
 
 .gnb {
   position: absolute;
-  top: 0;
   right: -101%;
   width: 100%;
   height: 100vh;
-  background-color: #666666;
+  background-color: #FFFFFF;
   transition: all .2s ease-out;
   z-index: 9;
+
+  &__list--link {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    height: 68px;
+    line-height: 68px;
+  }
+  &__list--link::after {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 10px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #000000;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    content: '';
+  }
+
+  &__wrap {
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+  }
+
+  &__wrap a {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -.03px;
+  }
+
+  &__item--active .gnb__wrap {
+    height: auto;
+    padding: 4px 40px 23px;
+    border-top: 1px solid #EA2126;
+  }
+
+  &__item--active > a {
+    color: #EA2126;
+  }
+
+  &__button {
+    padding: 25px 25px 100px;
+  }
+
+  &__button--link {
+    display: block;
+    height: 50px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #EA2126;
+    border-radius: 60px;
+    
+  }
 }
 
 .card-box {
@@ -151,13 +229,11 @@
 
   &__content {
     text-align: right;
-    margin-top: 13px;
+    margin-top: 25px;
   }
 }
 
 .banner {
-  height: 265px;
-  
   &__content {
     margin: 0 25px;
     height: 100%;
@@ -171,7 +247,7 @@
 	}
 
 	&__radius {
-
+    border-radius: 50px;
 	}
 
 	&__radius--filled-red {
@@ -187,17 +263,190 @@
   }
 
 	&__lined-white {
-
+    display: inline-block;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -.03px;
 	}
 
-	&__icon {
-
+	&__filled-white {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #EA2126;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -.03px;
 	}
+
+  &__link {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__link::after {
+    display: inline-block;
+    width: 6px;
+    height: 6px; 
+    border-width: 0 1.5px 1.5px 0;
+    border-style: solid;
+    border-color: #ffffff;
+    transform: rotate(-45deg) translate(5px, 1px);
+    box-sizing: border-box;
+    content: '';
+  }
 }
 
 .footer {
+  position: relative;
+  background-color: #000000;
+  color: #ffffff;
+
   &__nav {
     display: block;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 107px;
+    border-top: 1px solid rgba(112,112,112,.2);
+  }
+
+  &__nav li {
+    float: left;
+    margin-top: 13px;
+    margin-left: 8.2%;
+    margin-right: 5.2%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__nav li::after {
+    display: inline-block;
+    width: 1px;
+    height: 5px;
+    background-color: rgba(112,112,112,.2);
+    transform: translate(20px, -1px);
+    content: '';
+  }
+
+  &__nav li:nth-child(1) {
+    margin-left: 0;
+  }
+
+  &__nav li:nth-child(4) {
+    margin-right: 0;
+  }
+
+  &__nav li:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  &__nav li:nth-child(4)::after,
+  &__nav li:last-child::after {
+    display: none;
+  }
+
+  &__nav--right {
+    position: absolute;
+    bottom: 40px;
+  }
+
+  &__nav--right img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    opacity: .6;
+  }
+
+  &__banner {
+    height: 325px;
+    background-color: #EA2126;
+  }
+
+  &__util {
+    margin-bottom: 35px;
+    font-size: 12px;
+    letter-spacing: -.03px;
+    line-height: 18px;
+  }
+
+  &__util li {
+    margin-top: 7.5px;
+  }
+
+  &__number {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__nav--right {
+    position: absolute;
+    bottom: 52px;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 20px;
+    color: #666666;
+    font-size: 11px;
+  }
+
+  .information {
+    padding-bottom: 10px;
+    color: #999999;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.03px;
+  }
+
+  .information__title {
+    display: block;
+  }
+
+  .information__desc {
+    padding-bottom: 187px;
+  }
+
+  .information__desc li{
+    margin-top: 6px;
+    color: #999999;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .banner__title {
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: -.03px;
+    text-align: center;
+  }
+
+  .banner__title::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    padding-top: 44px;
+    padding-bottom: 10px;
+    background: url('../../images/m/common/icon_talk.png') 0 44px no-repeat;
+    background-size: 24px;
+    content: '';
+  }
+
+  .button__wrap {
+    display: block;
+    padding-top: 17px;
+  }
+
+  .button__radius {
+    display: block;
+    margin-top: 10px;
+    padding: 13px 0;
+    text-align: center;
   }
 
 }
@@ -214,13 +463,16 @@
 .logo {
   &__footer {
     display: block;
+    width: 82px;
+    margin-top: 41px;
+    margin-bottom: 27px;
   }
 
   &__default {
     display: inline-block;
     width: 82px;
     height: 15.5px;
-    background: url('../../images/m/logo_color.png') 0 0 no-repeat;
+    background: url('../../images/m/common/logo_color.png') 0 0 no-repeat;
     background-size: contain;
     transition: all .2s ease-out;
   }
