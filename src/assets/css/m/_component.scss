@@ -478,3 +478,376 @@
   }
 }
 
+.input {
+	&__button {
+		width: 232px;
+		letter-spacing: -.02px;
+		color: #666666;
+		border: 1px solid #DDDDDD;
+		background-color: #ffffff;
+	}
+
+	&__button--active {
+		color: #ffffff;
+		font-weight: 500;
+		background-color: #EA2126;
+		border: 1px solid #EA2126;
+	}
+
+	&__square-button {
+		height: 60px;
+		font-size: 18px;
+		line-height: 60px;
+		border-radius: 4px;
+  }
+}
+
+.name-radio {
+	position: relative;
+	
+	&__input {
+		position: absolute;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	&__input + &__label {
+		padding-left: 26px;
+	}
+
+	&__input + &__label span {
+		line-height: 25px;
+	}
+
+	&__input + &__label span::before {
+		display: inline-block;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #DDDDDD;
+		content: '';
+	}
+
+	&__input + &__label span::after {
+		display: inline-block;
+		position: absolute;
+		top: 9px;
+		left: 9px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		content: '';
+	}
+
+	&__input:checked + &__label span::before {
+		display: inline-block;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #000000;
+		content: '';
+	}
+
+	&__input:checked + &__label span::after {
+		display: inline-block;
+		position: absolute;
+		top: 9px;
+		left: 9px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		content: '';
+	}
+}
+
+.sub-checkbox {
+  &__label {
+    display: block;
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+  }
+
+  &__input + span::before {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    transform: translateY(5px);
+    background-color: #DDDDDD;
+    border-radius: 50%;
+    content: '';
+  }
+
+  &__input:checked + span::before {
+    background-color: #EA2126;
+  }
+
+  &__input + span::after {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 17px;
+    height: 11.5px;
+    background: url('../../images/m/common/icon_check.png') 0 0 no-repeat;
+    background-size: contain;
+    content: '';
+  }
+
+}
+
+.drop-box {
+	position: relative;
+
+	&__title {
+		height: 60px;
+		color: #000000;
+		font-size: 16px;
+		line-height: 60px;
+		letter-spacing: -.03px;
+		border: 1px solid #DDDDDD;
+		border-radius: 5px;
+
+		&::before {
+			position: absolute;
+			top: 20px;
+			right: 31px;
+			width: 6px;
+			height: 6px;
+			transform: rotate(45deg) translateY(6px);
+			border-right: 2px solid #000000;
+			border-bottom: 2px solid #000000;
+			content: '';
+		}
+	}
+
+	&__wrap {
+		overflow: hidden;
+		height: 0;
+	}
+	
+	&__wrap p {
+		padding: 7px 0;
+	}
+
+	&__wrap a {
+		display: block;
+	}
+
+	&--active &__wrap {
+		height: auto;
+		padding: 15px;
+		box-shadow: 3px 3px 3px 3px #DDDDDD;
+	}
+
+	p {
+		color: #000000;
+		font-size: 16px;
+		letter-spacing: -.03px;
+	}
+}
+
+.sub-tabs {
+	display:block;
+
+	&__item {
+		display: inline-block;
+		text-align: center;
+		width: 250px;
+		height: 50px;
+		color: #666666;
+		line-height: 50px;
+		font-size: 18px;
+		letter-spacing: -.02px;
+		background-color: #F7F7F7;
+		border-radius: 30px;
+	}
+
+	&__item--active {
+		background-color: #000000;
+		color: #ffffff;
+	}
+}
+
+.form-info {
+	display: block;
+	margin-top: 30px;
+
+	&__label {
+		display: block;
+		padding-bottom: 5px;
+		font-size: 16;
+		letter-spacing: -.02px;
+	}
+
+	&__input {
+		padding-bottom: 15px;
+		font-size: 20px;
+		letter-spacing: -.02px;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: #DDDDDD;
+	}
+
+	&__must-label::after {
+		display: inline-block;
+		color: #FF0000;
+		font-size: 16px;
+		content: '*';
+	}
+}
+
+.accordian {
+	width: 240px;
+
+	&__title {
+		position: relative;
+		font-size: 20px;
+		letter-spacing: -.02px;
+
+		a {
+			display: block;
+			padding-bottom: 30px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 10px;
+			height: 10px;
+			transform: rotate(45deg);
+			border-right: 1.5px solid #000000;
+			border-bottom: 1.5px solid #000000;
+			content: '';
+		}
+	}
+
+	&__item {
+		margin-top: 30px;
+	}
+
+	&__item--active {
+
+		.accordian__content {
+			height: 100%;
+		}
+
+		.accordian__title::before {
+			transform: rotate(225deg);
+		}
+	}
+
+	&__content {
+		border-top: 1px solid #DDDDDD;
+		overflow: hidden;
+		height: 0;
+		font-size: 20px;
+		letter-spacing: -0.02em;
+	}
+}
+
+.layer {
+
+	&__body {
+		position: fixed;
+		min-height: 100vh;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0, .9);
+	}
+	
+	&__wrap {
+		position: absolute;
+		z-index: 99;
+		top:50%;
+		left:50%;
+		max-width: 950px;
+		width: 100%;
+		background-color: #fff;
+		opacity: 0;
+		@include transform(translate(-50%, -50%));
+		-webkit-transition: visibility 0.2s 0.1s, opacity 0.2;
+		-moz-transition: visibility 0.2s 0.1s, opacity 0.2;
+		-ms-transition: visibility 0.2s 0.1s, opacity 0.2;
+		-o-transition: visibility 0.2s 0.1s, opacity 0.2;
+		transition: visibility 0.2s 0.1s, opacity 0.2;
+	}
+	
+	&__close {
+		position: absolute;
+		z-index: 100;
+		max-width: 950px;
+		width: 100%;
+		top: 20px;
+		right: 0;
+	
+		.close_btn {
+			position: absolute;
+			top: -45px;
+			right: -20px;
+			width: 40px;
+			height: 40px;
+			background: {
+				image: url();
+				size: 40px;
+				repeat: no-repeat;
+				position: center center;
+				color: transparent;
+			}
+			border: 0;
+			border-radius: 50%;
+			text-indent:-9999px;
+			cursor: pointer;
+		}
+	}
+	
+	&__inner {
+		max-height: 85vh;
+		overflow-x: hidden;
+	}
+	
+	&__content {
+		max-width: 100%;
+		height: 100%;
+		padding: 50px;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.form-submit {
+  padding: 13.5px 0;
+  background-color: #000000;
+  border-radius: 8px;
+  border: none;
+
+  span {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: -.15px;
+  }
+}
