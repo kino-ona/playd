@@ -1,15 +1,28 @@
 
-//stickyHeader
-window.addEventListener('scroll', () => {
+//Header
+const globalHeader = () => {
 	const header = document.querySelector('#header');
-	const container = document.querySelector('#container');
-	const abTcontainer =  container.getBoundingClientRect().top;
-	let scT = window.pageYOffset;
-	setTimeout((delay) => {
-		scT > abTcontainer*0.9 ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
-		clearTimeout(delay);
-	}, 50);
-})
+	const logo = header.querySelector('.logo');
+	header.addEventListener('mouseenter', () => {
+		header.classList.replace('header__default', 'header__interact');
+		logo.classList.replace('logo__default', 'logo__interact');
+	})
+	header.addEventListener('mouseleave', () => {
+		header.classList.replace('header__interact', 'header__default');
+		logo.classList.replace('logo__interact', 'logo__default');
+	})
+	
+	window.addEventListener('scroll', () => {
+		let scT = window.pageYOffset;
+		const container = document.querySelector('#container');
+		const abTcontainer =  container.getBoundingClientRect().top;
+		setTimeout((delay) => {
+			scT > abTcontainer*0.9 ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
+			clearTimeout(delay);
+		}, 50);
+	})
+}
+globalHeader();
 
 //inputButton
 const inputButton = document.querySelectorAll('.input__button');

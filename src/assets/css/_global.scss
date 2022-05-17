@@ -48,8 +48,7 @@ article, aside, canvas, details, embed, figure, figcaption, footer, header, hgro
 ruby, section, summary,time, mark, audio, video {
 	margin: 0;padding: 0; vertical-align: top; word-break:keep-all;
 	text-decoration:none; -webkit-tap-highlight-color:transparent;
-	color: inherit;
-	font-weight: normal;
+	color: inherit; font-weight: normal; line-height: 1.6;
 }
 fieldset, img, textarea {border: 0;outline: 0;}
 /* HTML5 display-role reset for older browsers */
