@@ -457,7 +457,6 @@
 }
 
 .input {
-
 	&__button {
 		width: 232px;
 		letter-spacing: -.02px;
@@ -472,6 +471,32 @@
 		background-color: #EA2126;
 		border: 1px solid #EA2126;
 	}
+
+	&__checkbox {
+    position:absolute;
+    width: 232px;
+    height: 45px;
+    opacity: 0;
+	}
+
+  &__checkbox:checked +  &__checkbox-label{
+    color: #ffffff;
+    background-color: #EA2126;
+		border: 1px solid #EA2126;
+  }
+
+  &__checkbox-label {
+    display: inline-block;
+    width: 232px;
+    height: 45px;
+    border: 1px solid #DDDDDD;
+		background-color: #ffffff;
+    letter-spacing: -.02px;
+		color: #666666;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 4px;
+  }
 
 	&__square-button {
 		height: 60px;
