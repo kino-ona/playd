@@ -45,6 +45,11 @@
   }
 }
 
+.sub-page--active {
+  font-size: 15px;
+  letter-spacing: -.02px;
+}
+
 .scrolled {
   background-color: #ffffff;
 
@@ -211,7 +216,7 @@
     line-height: 50px;
     text-align: center;
     background-color: #EA2126;
-    border-radius: 60px;
+    border-radius: 4px;
     
   }
 }
@@ -273,6 +278,7 @@
 
 	&__filled-white {
     display: inline-block;
+    border: 2px solid #ffffff;
     background-color: #ffffff;
     color: #EA2126;
     font-size: 16px;
@@ -296,6 +302,10 @@
     transform: rotate(-45deg) translate(5px, 1px);
     box-sizing: border-box;
     content: '';
+  }
+
+  &__square {
+    border-radius: 4px;
   }
 }
 
@@ -361,7 +371,6 @@
   }
 
   &__banner {
-    height: 325px;
     background-color: #EA2126;
   }
 
@@ -418,37 +427,33 @@
   }
 
   .banner__title {
+    padding-top: 40px;
     color: #ffffff;
-    font-size: 23px;
+    font-size: 16px;
     line-height: 32px;
     letter-spacing: -.03px;
     text-align: center;
   }
 
-  .banner__title::before {
-    display: block;
-    width: 24px;
-    height: 24px;
-    margin: 0 auto;
-    padding-top: 44px;
-    padding-bottom: 10px;
-    background: url('../../images/m/common/icon_talk.png') 0 44px no-repeat;
-    background-size: 24px;
-    content: '';
-  }
-
   .button__wrap {
     display: block;
-    padding-top: 17px;
+    padding-top: 15px;
+    padding-bottom: 40px;
   }
 
-  .button__radius {
-    display: block;
+  .button__square {
+    display: inline-block;
     margin-top: 10px;
-    padding: 13px 0;
+    width: calc(50% - 10px);
+    height: 40px;
+    line-height: 36px;
     text-align: center;
+    box-sizing: border-box;
   }
 
+  .button__square + .button__square {
+    margin-left: 10px;
+  }
 }
 
 .footer-top {

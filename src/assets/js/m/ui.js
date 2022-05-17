@@ -2,6 +2,7 @@
 	//stickyHeader		
 	const header = document.querySelector('#header');
 	const bodyClass = document.querySelector('body').classList[0];
+	const headerTitle = document.querySelector('.header__title');
 	
 	if(bodyClass === 'main') {
 		window.addEventListener('scroll', () => {
@@ -10,7 +11,10 @@
 			sct > threshold ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
 		})
 	}else {
-		header.classList.add('scrolled')
+		header.classList.add('scrolled');
+		headerTitle.innerHTML = bodyClass.toUpperCase();
+		headerTitle.classList.add('sub-page--active')
+
 	}
 
 	//gnb
