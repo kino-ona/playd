@@ -1,58 +1,63 @@
+//index kv
 window.addEventListener('load', () => {
-  const visualSrc = document.querySelector('.visual__image img');
-  let getVisualSrc = visualSrc.getAttribute('src');
-  let visualSrcName = getVisualSrc.split('.')[0];
+  const main = document.querySelector('body.main');
+  const visual = main.querySelector('.visual');
+  const visualSrc = main.querySelector('.visual .visual__image');
+  let getVisualSrc = window.getComputedStyle(visualSrc).backgroundImage;
+  let visualSrcName = getVisualSrc.split('@')[0];
   let i = 0;
 
-  const setVisual = () => {
+  const setKv = () => {
     i++;
     visualSrcName = '@main_' + i  + '.jpg'
-    visualSrc.setAttribute('src', '../assets/images/w/visual/' + visualSrcName);
+    visualSrc.style.cssText = `background-image: url(../../../assets/images/w/visual/${visualSrcName});`;
+    let clone = document.createElement('div');
+    clone.classList.add('visual__image'); 
+    visual.appendChild(clone);
   }
-  const stopVisual = () => {
+  const stopKv = () => {
     clearInterval(timer);
   }
-  const timer = setInterval(setVisual, 300);
-  setTimeout(stopVisual, 1600);
+  const timer = setInterval(setKv, 300);
+  setTimeout(stopKv, 1600);
 })
 
-const swiperOptions = {
-  loop: true,
-  spaceBetween: 20,
-  autoplay: {
-    delay: 1,
-    disableOnInteraction: false
-  },
-  slidesPerView: 'auto',
-  speed: 12000,
-  grabCursor: true,
-  mousewheelControl: true,
-  keyboardControl: true,
-};
-const swiper = new Swiper("#swiper", swiperOptions);
-
-
-minHeight1 = () => {
+//setting min-height to each section needed
+minHeights = () => {
   let wdH = window.innerHeight;
   const main = document.querySelector('body.main');
-  const area = main.querySelector('[data-section="performance"]');
-  const areaInner = area.querySelectorAll('.box .box__title');
+  const kv = main.querySelector('.visual');
+  const area1 = main.querySelector('[data-section="service"]');
+  const area1Cont = area1.querySelector('.section__content')
+  let innerH = parseFloat(window.getComputedStyle(area1Cont).height);
+  const area2 = main.querySelector('[data-section="performance"]');
+  const area2Inner = area2.querySelectorAll('.box-item .box__title');
 
   setTimeout((delay) => {
-    for (i = 0; i < areaInner.length; i++) { 
-      areaInner[i].style.minHeight = wdH + 'px';
+    kv.style.minHeight = wdH + 'px';
+    area1.style.height = innerH*0.5 + 'px';
+
+    for (i = 0; i < area2Inner.length; i++) { 
+      area2Inner[i].style.minHeight = wdH + 'px';
     }
+
     window.addEventListener('resize', () => {
-      let wdH = window.innerHeight;
-      for (i = 0; i < areaInner.length; i++) { 
-        areaInner[i].style.minHeight = wdH + 'px';
+      wdH = window.innerHeight;
+
+      kv.style.minHeight = wdH + 'px';
+      area1.style.height = innerH*0.5 + 'px';
+
+      for (i = 0; i < area2Inner.length; i++) { 
+        area2Inner[i].style.minHeight = wdH + 'px';
       }
     })
+
     clearTimeout(delay);
   }, 50);
 }
-minHeight1();
+minHeights();
 
+//`service` section
 anime1 = () => {
   let scT;
   let wdH = window.innerHeight;
@@ -61,14 +66,11 @@ anime1 = () => {
   const area = main.querySelector('[data-section="service"]');
   const areaInner = area.querySelector('.section__inner');
   const areaHead = area.querySelector('.section__head');
-  const areaCont = area.querySelector('.section__content')
   const areaContImgs = area.querySelectorAll('.section__content .image-block');
   let innerW = parseFloat(window.getComputedStyle(areaInner).width);
-  let innerH = parseFloat(window.getComputedStyle(areaCont).height);
   let elemT = 150;
   let wdP = ((wdW - innerW)*0.5);
 
-  area.style.height = innerH*0.5 + 'px';
   areaInner.style.left = wdP + 'px';
 
   window.addEventListener('scroll', () => {
@@ -84,9 +86,7 @@ anime1 = () => {
       window.addEventListener('resize', () => {
         wdW = document.body.clientWidth;
         innerW = parseFloat(window.getComputedStyle(areaInner).width);
-        innerH = parseFloat(window.getComputedStyle(areaInner).height);
         wdP = ((wdW - innerW)*0.5);
-        area.style.height = innerH*0.5 + 'px';
         areaInner.style.left = wdP + 'px';
       })
 
@@ -110,6 +110,7 @@ anime1 = () => {
 }
 anime1();
 
+//`partners` section
 anime2 = () => {
   let scT;
   let wdH = window.innerHeight;
@@ -133,6 +134,7 @@ anime2 = () => {
 }
 anime2();
 
+//accordion UI in `performance` section
 const dataAnalysis = () => {
   const accordianItem = document.querySelectorAll('.accordian__item');
   accordianItem.forEach(targets => {
@@ -152,3 +154,21 @@ const dataAnalysis = () => {
   });
 }
 dataAnalysis();
+
+//belt-type banner
+const swiperOptions = {
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false
+  },
+  slidesPerView: 'auto',
+  speed: 12000,
+  grabCursor: true,
+  mousewheelControl: true,
+  keyboardControl: true,
+  observer: true,
+  observeParents: true,
+};
+const swiper = new Swiper("#swiper", swiperOptions);

@@ -12,6 +12,7 @@ $elemT: 150px;
   .visual {
     position: relative;
     z-index: 1;
+    width: 100%;
     min-width: 1200px;
   
     &__inner {
@@ -21,10 +22,22 @@ $elemT: 150px;
       transform: translate(-50%, -50%);
     }
 
-    .image {
+    &__image {
       width: 100%;
-      background-size: cover;
+      height: 100%;
+      min-height: inherit;
+      background-image: url(../../../assets/images/w/visual/@main_1.jpg);
+      background: {
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+      }
     }
+
+    // .image {
+    //   width: 100%;
+    //   object-fit: cover;
+    // }
   
     &__title {
       font-size: 300px;
@@ -137,13 +150,16 @@ $elemT: 150px;
   .box {
 
     &__title {
-      z-index: 1;
+      padding-left: 25px;
+      padding-right: 25px;
+      box-sizing: border-box;
       display: flex;
+      flex-basis: 100%;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
       font-size: 60px;
-      line-height: 90px;
+      line-height: 82px;
       @include FontBD;
       text-align: center;
       color: #ffffff;
@@ -162,7 +178,6 @@ $elemT: 150px;
       display: block;
       margin-top: 30px;
       font-size: 28px;
-      line-height: 30px;
       @include FontDL;
     }
 
@@ -276,6 +291,7 @@ $elemT: 150px;
 
     &::before {
       top: 15px;
+      right: 5px;
     }
     
     a {
@@ -361,7 +377,6 @@ $elemT: 150px;
 		&__content--row {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
 		}
 	}
 
@@ -502,14 +517,15 @@ $elemT: 150px;
   }
 
   .box-item--left {
+    min-width: 32.292%;
+
+    .box__content {
+      max-width: 67.708%;
+    }
   
     .box__inner {
       padding-bottom: 0;
       @include boxContentIn(-1);
-    }
-
-    .box__content {
-      max-width: 67.708%;
     }
 
     .accordian * {
@@ -581,8 +597,8 @@ $elemT: 150px;
 	margin-bottom: 0;
 	background: {
 		image: url(../../images/w/dummy/@bg_partners.jpg);
-		size: cover;
-		position: 0 0;
+		size: contain;
+		position: center center;
 		repeat: no-repeat;
 	}
 
@@ -617,6 +633,7 @@ $elemT: 150px;
 }
 
 [data-section="contractors"] {
+  background-color: #ffffff;
 
 	.swiper-container {
 		height: auto;

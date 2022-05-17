@@ -3,8 +3,8 @@
 		<div class="banner__content">
 			<p class="banner__title font--md">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
 			<div class="button__wrap">
-				<a href="#" class="button__radius button__lined-white font--bd">프로젝트 문의하기</a>
-				<a href="#" class="button__radius button__filled-white font--bd">회사소개서 다운로드</a>
+				<a href="#" class="button__square button__lined-white font--bd">프로젝트 문의하기</a>
+				<a href="#" class="button__square button__filled-white font--bd">회사소개서 다운로드</a>
 			</div>
 		</div>
 	</section>

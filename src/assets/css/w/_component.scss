@@ -98,7 +98,7 @@
 					&::after {
 						content: '';
 						position: absolute;
-						bottom: 0;
+						bottom: -1.5px;
 						left: 0;
 						right: 0;
 						width: 100%;
@@ -180,11 +180,11 @@
 	&__nav {
 		display: flex;
 		align-items: center;
-		@include FontMD;
 
 		li {
 			padding-right: 15px;
 			margin-left: 15px;
+			@include FontMD;
 
 			&:not(:last-of-type) {
 				position: relative;
@@ -540,7 +540,6 @@
 }
 
 .input {
-
 	&__button {
 		width: 232px;
 		letter-spacing: -.02px;
@@ -555,6 +554,32 @@
 		background-color: #EA2126;
 		border: 1px solid #EA2126;
 	}
+
+	&__checkbox {
+    position:absolute;
+    width: 232px;
+    height: 45px;
+    opacity: 0;
+	}
+
+  &__checkbox:checked +  &__checkbox-label{
+    color: #ffffff;
+    background-color: #EA2126;
+		border: 1px solid #EA2126;
+  }
+
+  &__checkbox-label {
+    display: inline-block;
+    width: 232px;
+    height: 45px;
+    border: 1px solid #DDDDDD;
+		background-color: #ffffff;
+    letter-spacing: -.02px;
+		color: #666666;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 4px;
+  }
 
 	&__square-button {
 		height: 60px;
@@ -637,6 +662,46 @@
 	}
 }
 
+.sub-checkbox {
+  &__label {
+    display: block;
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+  }
+
+  &__input + span::before {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    transform: translateY(5px);
+    background-color: #DDDDDD;
+    border-radius: 50%;
+    content: '';
+  }
+
+  &__input:checked + span::before {
+    background-color: #EA2126;
+  }
+
+  &__input + span::after {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 17px;
+    height: 11.5px;
+    background: url('../../images/m/common/icon_check.png') 0 0 no-repeat;
+    background-size: contain;
+    content: '';
+  }
+
+}
+
 .drop-box {
 	position: relative;
 
@@ -664,7 +729,13 @@
 
 	&__wrap {
 		overflow: hidden;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
 		height: 0;
+    z-index: 999;
+    background: #ffffff;
 	}
 	
 	&__wrap p {
@@ -735,20 +806,6 @@
 		color: #FF0000;
 		font-size: 16px;
 		content: '*';
-	}
-}
-
-.form-info--version2 {
-	margin-top: 30px;
-	
-	.form-info__input  {
-		padding: 16px 25px;
-		font-size: 16px;
-		border: 1px solid #EEEEEE;
-		border-radius: 12px;
-	}
-	.form-info__input::placeholder {
-		color: #999999;
 	}
 }
 
@@ -891,4 +948,18 @@
 	&[role="dialog"]{
 		display: block;
 	}
+}
+
+.form-submit {
+  padding: 13.5px 0;
+  background-color: #000000;
+  border-radius: 8px;
+  border: none;
+
+  span {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: -.15px;
+  }
 }

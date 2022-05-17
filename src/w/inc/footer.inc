@@ -44,4 +44,5 @@
 		</nav>
 	</div>
 </footer>
+<script src="@@webroot/assets/js/w/swiper.min.js"></script>
 <script src="@@webroot/assets/js/w/ui.js"></script>
