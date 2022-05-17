@@ -621,7 +621,13 @@
 
 	&__wrap {
 		overflow: hidden;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
 		height: 0;
+    z-index: 999;
+    background: #ffffff;
 	}
 	
 	&__wrap p {

@@ -23,41 +23,31 @@
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">솔루션</a>
 					<div class="gnb__wrap">
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
+						<p><a href="/">Tech HUB</a></p>
 					</div>
 				</div>
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">인사이트</a>
 					<div class="gnb__wrap">
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
+						<p><a href="/">뉴스레터</a></p>
+						<p><a href="/">리포트</a></p>
+						<p><a href="/">광고컬럼</a></p>
 					</div>
 				</div>
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">플레이디</a>
 					<div class="gnb__wrap">
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
+						<p><a href="/">ABOUT</a></p>
+						<p><a href="/">IR</a></p>
+						<p><a href="/">윤리경영</a></p>
+						<p><a href="/">ESG</a></p>
 					</div>
 				</div>
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">인재채용</a>
 					<div class="gnb__wrap">
-					<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">캠페인전략</a></p>
+						<p><a href="/">채용</a></p>
+						<p><a href="/">복리후생</a></p>
 					</div>
 				</div>
 			</div>

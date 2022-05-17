@@ -23,16 +23,14 @@ inputButton.forEach((item) => {
 
 //dropdown
 const dropBox = document.querySelectorAll('.drop-box');
-const dropBoxWrap = document.querySelectorAll('.drop-box__wrap');
 const dropBoxItem = document.querySelectorAll('.drop-box__wrap a');
-const dropBoxTitle = document.querySelector('.drop-box__title');
 
 dropBox.forEach((item) => {
 	item.addEventListener('click', () => {
-		if(item.classList.contains('drop-box--active')) {
-			item.classList.remove('drop-box--active')
+		if(item.closest('.drop-box').classList.contains('drop-box--active')) {
+			item.closest('.drop-box').classList.remove('drop-box--active')
 		} else {
-			item.classList.add('drop-box--active')
+			item.closest('.drop-box').classList.add('drop-box--active')
 		}
 	})
 })
@@ -40,7 +38,7 @@ dropBox.forEach((item) => {
 dropBoxItem.forEach((item) => {
 	item.addEventListener('click', (event) => {
 		event.preventDefault();
-		dropBoxTitle.innerHTML = item.innerHTML;
+		item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title').innerHTML = item.innerHTML;
 	})
 })
 

@@ -27,7 +27,7 @@
 		
 	
 		//count
-		const boxoffsetTop = document.querySelector('.box-item--right').offsetTop;
+		const boxoffsetTop = document.querySelector('.box-item--right').offsetTop - document.querySelector('.box-item--right').clientHeight;
 		const countUp1 = document.querySelectorAll('.card-box__content p > span')[0];
 		const countUp2 = document.querySelectorAll('.card-box__content p > span')[1];
 		const countUp3 = document.querySelectorAll('.card-box__content p > span')[2];
@@ -39,9 +39,16 @@
 		const count3 = new countUp.CountUp(countUp3, 39342, options);
 		
 	
-		count1.start();
-		count2.start();
-		count3.start();
+		window.addEventListener('scroll', () => {
+			if(window.scrollY > boxoffsetTop) {
+				setTimeout(() => {
+					count1.start();
+					count2.start();
+					count3.start();
+				},1000)
+			}
+		})
+	
 	
 	
 	
