@@ -3,7 +3,12 @@
 	"pagetitle": "PLAYD",
 })
 </head>
-<body>
+<body class="component sub" style="background: #ffffff">
+  @@include('./inc/header.inc', {
+		"webroot": "..",
+		"headertype": "header__default",
+	})
+  <div style="padding-top: 100px"></div>
   <input type="button" class="input__button input__square-button" value="통합마케팅">
   <input type="button" class="input__button input__square-button input__button--active" value="브랜딩">
 

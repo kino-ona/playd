@@ -49,13 +49,9 @@
 			}
 		})
 	
-	
-	
-	
 		//swiper
 		let swiper = new Swiper(".sectionSwiper", {
 			slidesPerView: "auto",
 		 });
-	
 	}
 })();

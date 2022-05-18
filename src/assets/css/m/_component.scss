@@ -854,7 +854,7 @@
 		display: none;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0, .9);
+		background-color: rgba(0,0,0, .5);
 	}
 	
 	&__wrap {
@@ -868,34 +868,7 @@
 		opacity: 0;
 		@include transform(translate(-50%, -50%));
 		transition: visibility 0.2s 0.1s, opacity 0.2;
-	}
-	
-	&__close {
-		position: absolute;
-		z-index: 100;
-		max-width: calc(100% - 50px);
-		width: 100%;
-		top: 20px;
-		right: 0;
-	
-		.close_btn {
-			position: absolute;
-			top: -45px;
-			right: -20px;
-			width: 40px;
-			height: 40px;
-			background: {
-				image: url();
-				size: 40px;
-				repeat: no-repeat;
-				position: center center;
-				color: transparent;
-			}
-			border: 0;
-			border-radius: 50%;
-			text-indent:-9999px;
-			cursor: pointer;
-		}
+    border-radius: 6px;
 	}
 	
 	&__inner {
@@ -915,7 +888,57 @@
 		> *:last-child {
 			margin-bottom: 0;
 		}
+
+    .close_btn {
+      width: 100%;
+      height: 40px;
+      color: #ffffff;
+      border: none;
+      background-color: #EA2126;
+      border-radius: 4px;
+      line-height: 1;
+    }
 	}
+
+  &__title {
+    position: relative;
+    padding-top: 57px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  &__title::before {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    background-color: #EA2126;
+    border-radius: 50%;
+    content: '';
+  }
+
+  &__title::after {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    width: 23px;
+    height: 17px;
+    margin-left: -7px;
+    background: url('../../images/m/common/icon_check.png') 0 0 no-repeat;
+    background-size: contain;
+    content: '';
+  }
+
+
+  &__description {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: #666666;
+  }
 }
 	
 .layer__body.is-visible {
@@ -929,6 +952,7 @@
 		display: block;
 	}
 }
+
 
 .form-submit {
   padding: 13.5px 0;

@@ -4,6 +4,14 @@
 	const bodyClass = document.querySelector('body').classList[0];
 	const headerTitle = document.querySelector('.header__title');
 	const footerBanner = document.querySelector('.footer__banner')
+
+	const subCommonFunction = () => {
+		header.classList.add('scrolled');
+		headerTitle.classList.add('sub-page--active');
+		headerTitle.classList.add('font--md');
+		header.classList.add('scrolled');
+		footerBanner.classList.add('sub-page--active');
+	}
 	
 	if(bodyClass === 'main') {
 		window.addEventListener('scroll', () => {
@@ -11,12 +19,15 @@
 			let threshold = 10;
 			sct > threshold ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
 		})
-	}else {
-		header.classList.add('scrolled');
+	}else if(bodyClass === 'contact') {
 		headerTitle.innerHTML = bodyClass.toUpperCase();
-		headerTitle.classList.add('sub-page--active');
-		header.classList.add('scrolled');
-		footerBanner.classList.add('sub-page--active');
+		subCommonFunction();
+	
+	} else if(bodyClass === 'recruit') {
+		headerTitle.innerHTML = '인재채용';
+		subCommonFunction();
+	} else {
+
 	}
 
 	//gnb
@@ -142,12 +153,17 @@
 	}
 
 
-	//sub-form
-	const formSubmit = document.querySelector('.form-submit');
-	console.log(formSubmit);
+	//form layerpopup
+	const formSubmit = document.querySelector('.contact .form-submit');
+	const formSubmitClose = document.querySelector('.contact .close_btn');
+	
 	formSubmit.addEventListener('click' , (event) => {
 		event.preventDefault();
-		console.log('b');
+		layerOpen('form_popup');
+	})
+
+	formSubmitClose.addEventListener('click' , (event) => {
+		layerClose('form_popup');
 	})
 
 }) ()
