@@ -754,6 +754,10 @@
 .sub-tabs {
 	display:block;
 
+	p {
+    display: inline-block;
+  }
+
 	&__item {
 		display: inline-block;
 		text-align: center;
@@ -954,4 +958,44 @@
     font-size: 16px;
     letter-spacing: -.15px;
   }
+}
+
+
+.sub-list-category {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+
+  p {
+    float: left;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 27px;
+  }
+
+  &__item::after {
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    margin-top: 5px;
+    margin-left: 13px;
+    margin-right: 13px;
+    background-color: #DDDDDD;
+    content: '';
+  }
+
+  &__item--active {
+    padding-bottom: 7px;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    @include FontBD;
+  }
+
+
 }
