@@ -27,7 +27,7 @@
 			event.preventDefault();
 			if(item.closest('div').classList.contains('gnb__item--active')){ 
 				item.closest('div').classList.remove('gnb__item--active')
-				return false; 
+				return false;
 			};
 
 			headerGnbItem.forEach((targets) => {
@@ -51,8 +51,6 @@
 		}
 	})
 
-
-	
 	//input
 	const inputButton = document.querySelectorAll('.input__button');
 	
@@ -143,5 +141,13 @@
 		}
 	}
 
+
+	//sub-form
+	const formSubmit = document.querySelector('.form-submit');
+	console.log(formSubmit);
+	formSubmit.addEventListener('click' , (event) => {
+		event.preventDefault();
+		console.log('b');
+	})
 
 }) ()

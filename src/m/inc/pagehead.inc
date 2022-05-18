@@ -22,4 +22,6 @@
 
 	<title>@@pagetitle</title>
 	<link rel="stylesheet" href="@@webroot/assets/css/m/ui.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gjs0snj.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
 </head>

@@ -653,7 +653,13 @@
     opacity: 0;
   }
 
+  &__input + span {
+    padding-left: 34px;
+  }
+
   &__input + span::before {
+    position: absolute;
+    left: 0;
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -685,7 +691,7 @@
 	position: relative;
 
 	&__title {
-		height: 60px;
+		height: 50px;
 		color: #000000;
 		font-size: 16px;
 		line-height: 60px;
@@ -697,9 +703,9 @@
 			position: absolute;
 			top: 20px;
 			right: 31px;
-			width: 6px;
-			height: 6px;
-			transform: rotate(45deg) translateY(6px);
+			width: 6.5px;
+			height: 6.5px;
+			transform: rotate(45deg);
 			border-right: 2px solid #000000;
 			border-bottom: 2px solid #000000;
 			content: '';
@@ -709,7 +715,7 @@
 	&__wrap {
 		overflow: hidden;
     position: absolute;
-    top: 62px;
+    top: 52px;
     left: 0;
     right: 0;
 		height: 0;

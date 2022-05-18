@@ -1,4 +1,10 @@
+html {
+  background: #000000;
+}
+
 .main {
+  background: #ffffff;
+
   .visual {
     position: relative;
     min-width: 320px;
@@ -188,6 +194,7 @@
       padding-right: 5px;
       font-size: 27px;
       letter-spacing: -.02px;
+      line-height: 1;
     }
   }
 

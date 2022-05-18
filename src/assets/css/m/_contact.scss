@@ -1,21 +1,23 @@
 .contact {
+  background: #ffffff;
+
   .sub-header {
     padding: 115px 25px 0;
 
-    h2 {
+    &__title {
       font-size: 25px;
       letter-spacing: -.03px;
       line-height: 36px;
     }
 
-    .font--md {
+    &__description {
       padding-top: 20px;
       font-size: 15px;
       line-height: 22px;
       letter-spacing: -.03px;
     }
 
-    .font--dl {
+    &__more-description {
       padding-top: 5px;
       color: #666666;
       font-size: 13px;
@@ -29,7 +31,7 @@
     padding-left: 25px;
     padding-right: 25px;
 
-    h3 {
+    &__title {
       font-size: 16px;
       letter-spacing: -.03px;
       line-height: 21px;
@@ -44,37 +46,37 @@
     }
   }
 
-  .sub-checkbox {
+  .sub-checkbox { 
     display: block;
-    
+    margin: 0 -5px;
+
     &::after {
       display: block;
       content: '';
       clear: both;
     }
-  }
-
-  .sub-checkbox {
-    margin: -10px;
 
     &__item {
-      display: inline-block;
       float: left;
-      width: calc(50% - 2.5px);
-      margin: 5px
+      width: calc(50% - 10px);
+      margin: 5px;
     } 
 
     &__item--full {
-      width: 100%;
-      margin: 5px 0;
-    }
-
-    &__item--full .input__checkbox {
-      width: 90%;
+      width: calc(100% - 10px);
+      margin: 5px 0 5px 5px;
     }
 
     &__item--full .input__checkbox-label {
       width: 100%;
+    }
+
+    &--route {
+      margin-top: 10px;
+    }
+
+    &__label {
+      margin-top: 35px;
     }
   }
 
@@ -84,11 +86,276 @@
     }
 
     &__checkbox-label {
-      width: auto;
+      width: 100%;
     }
   }
 
+  .input-box {
+    &--file {
+      margin-top: 15px;
+      background-color: #FAFAFA;
+      padding: 25px;
+      border-radius: 4px;
+    } 
+  }
 
+  #form-title {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    line-height: 1;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #DDDDDD;
 
+    &::placeholder {
+      color: '#999999';
+      letter-spacing: -.03px;
+      font-size: 15px;
+    }
+  }
 
+  #form-detail {
+    width: 100%;
+    height: 155px;
+    padding: 5px 5px 25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+
+    &::placeholder {
+      color: '#888888';
+      letter-spacing: -.03px;
+      font-size: 15px;
+    }
+  }
+
+  #form-file-button {
+    & + label {
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin-top: 10px;
+      color: #666666;
+      font-size: 14px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #EEEEEE;
+    }
+  }
+
+  .input-box-info {
+    margin-top: 15px;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    padding: 35px 25px 0;
+
+    &__label {
+      display: block;
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+  
+    &__label--necessary::after{
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      padding-left: 4px;
+      color: #EA2126;
+      content: '*';
+    }
+
+    &__input {
+      width: 100%;
+      height: 15px;
+      margin-bottom: 30px;
+      line-height: 1;
+      font-size: 15px;
+      padding-bottom: 8px;
+      border-width: 0 0 1px 0;
+      border-style: solid;
+      border-color: #DDDDDD;
+      background-color: transparent;
+
+      &::placeholder {
+        color: '#888888';
+        letter-spacing: -.03px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+  }
+
+  #form-file-text {
+    width: 100%;
+    height: 50px;
+    padding: 15px 14px;
+    line-height: 50px;
+    border: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: '#999999';
+      letter-spacing: -.03px;
+      font-size: 15px;
+    }
+  }
+
+  .drop-box {
+    margin-top: 15px;
+
+    &__title {
+      letter-spacing: -.03px;
+    }
+
+    &__text {
+      padding-left: 15px;
+      color: #999999;
+      font-size: 15px;
+      line-height: 50px;
+    }
+
+    &__wrap {
+      top: 50px;
+    }
+  }
+
+  .sub-checkboxs {
+    margin: 40px 25px 0;
+    border-top: 1px solid #000000;
+
+    a {
+      position: absolute;
+      margin-top: 6px;
+      margin-left: 32px;
+      color: #222BFF;
+      border-bottom: 1px solid #222BFF;
+      font-size: 15px;
+      line-height: 1;
+      letter-spacing: -.03px;
+   }
+  }
+
+  .form-submit {
+    display: block;
+    width: calc(100% - 50px);
+    height: 50px;
+    margin: 40px 25px 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 4px;
+    
+  }
+
+  .sub-info {
+    margin-top: 75px;
+    padding: 60px 25px;
+    background: linear-gradient(#F8F8F8 0px, #F8F8F8 250px, #ffffff 251px, #ffffff 100%);
+
+    &__title {
+      font-size: 19px;
+      line-height: 28px;
+      letter-spacing: -.03px;
+    }
+
+    &__position {
+      padding-top: 23px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      padding-bottom: 4px;
+      font-size: 27px;
+      line-height: 1;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #000000;
+    }
+
+    a::after {
+      display: inline-block;
+      position: absolute;
+      top: -25px;
+      left: 226px;
+      width: 43px;
+      height: 35px;
+      background: url('../../images/m/sub/icon_mail.png') 0 0 no-repeat;
+      background-size: contain;
+      content: '';
+    }
+
+    &__description {
+      color: #666666;
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+
+  .sub-footer {
+    height: 350px;
+    margin: 0 25px 75px;
+    background: url('../../images/m/sub/img_contact_banner.png') 0 0 no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+    &__title {
+      font-size: 19px;
+      line-height: 28px;
+      color: #ffffff;
+      letter-spacing: -.03px;
+    }
+  }
+
+  .sub-advertise {
+    &__title {
+      padding-top: 155px;
+      padding-left: 28px;
+      padding-right: 28px;
+      color: #ffffff;
+      font-size: 19px;
+      line-height: 28px;
+    }
+
+    &__description {
+      margin-top: 13px;
+      margin-bottom: 15px;
+      padding-left: 28px;
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 19px;
+      letter-spacing: -.03px;
+    }
+
+    &__button {
+      display: inline-block;
+      width: 150px;
+      height: 40px;
+      margin-left: 28px;
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 5px;
+    }
+  }
 }
