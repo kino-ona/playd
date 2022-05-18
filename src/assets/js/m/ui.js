@@ -3,6 +3,7 @@
 	const header = document.querySelector('#header');
 	const bodyClass = document.querySelector('body').classList[0];
 	const headerTitle = document.querySelector('.header__title');
+	const footerBanner = document.querySelector('.footer__banner')
 	
 	if(bodyClass === 'main') {
 		window.addEventListener('scroll', () => {
@@ -14,6 +15,8 @@
 		header.classList.add('scrolled');
 		headerTitle.innerHTML = bodyClass.toUpperCase();
 		headerTitle.classList.add('sub-page--active');
+		header.classList.add('scrolled');
+		footerBanner.classList.add('sub-page--active');
 	}
 
 	//gnb
@@ -22,8 +25,13 @@
 	headerGnbItemA.forEach((item) => {
 		item.addEventListener('click', (event) => {
 			event.preventDefault();
-			headerGnbItem.forEach((items) => {
-				if(items.classList.contains('gnb__item--active')) items.classList.remove('gnb__item--active')
+			if(item.closest('div').classList.contains('gnb__item--active')){ 
+				item.closest('div').classList.remove('gnb__item--active')
+				return false; 
+			};
+
+			headerGnbItem.forEach((targets) => {
+				targets.classList.remove('gnb__item--active');
 			})
 			item.closest('div').classList.add('gnb__item--active');
 		});

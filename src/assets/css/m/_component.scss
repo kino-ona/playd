@@ -48,6 +48,39 @@
 .sub-page--active {
   font-size: 15px;
   letter-spacing: -.02px;
+
+  .banner__content .banner__title {
+    padding-top: 40px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .banner__content .banner__title::before {
+    display: none
+  }
+
+  .banner__content .button__wrap {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    margin-left: -10px;
+  }
+
+  .banner__content .button__square {
+    display: inline-block;
+    margin-top: 10px;
+    width: calc(50% - 12px);
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .banner__content .button__square + .button__square {
+    margin-top: 0;
+  }
 }
 
 .scrolled {
@@ -317,6 +350,7 @@
   position: relative;
   background-color: #000000;
   color: #ffffff;
+  margin-bottom: -1px;
 
   &__nav {
     display: block;
@@ -327,17 +361,28 @@
     border-top: 1px solid rgba(112,112,112,.2);
   }
 
-  &__nav li {
-    float: left;
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__nav a{
+    display: inline-block;
     margin-top: 13px;
-    margin-left: 8.2%;
-    margin-right: 5.2%;
     font-size: 12px;
     line-height: 18px;
   }
 
-  &__nav li::after {
+  &__nav p {
+    position:relative
+  }
+
+  &__nav p::before {
     display: inline-block;
+    position: absolute;
+    left: 100%;
+    top: 22px;
     width: 1px;
     height: 5px;
     background-color: rgba(112,112,112,.2);
@@ -345,26 +390,13 @@
     content: '';
   }
 
-  &__nav li:nth-child(1) {
-    margin-left: 0;
-  }
-
-  &__nav li:nth-child(4) {
-    margin-right: 0;
-  }
-
-  &__nav li:last-child {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  &__nav li:nth-child(4)::after,
-  &__nav li:last-child::after {
+  .footer__wrap--line &__line--last::before{
     display: none;
   }
 
   &__nav--right {
     position: absolute;
-    bottom: 40px;
+    bottom: -40px;
   }
 
   &__nav--right img {
@@ -393,11 +425,6 @@
     color: #ffffff;
     font-size: 24px;
     line-height: 29px;
-  }
-
-  &__nav--right {
-    position: absolute;
-    bottom: 52px;
   }
 
   .copyright {
@@ -431,12 +458,26 @@
   }
 
   .banner__title {
-    padding-top: 40px;
+    position: relative;
+    padding-top: 73px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 23px;
     line-height: 32px;
     letter-spacing: -.03px;
     text-align: center;
+
+    &::before {
+      position: absolute;
+      top: 39px;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      display: inline-block;
+      background: url('../../images/m/common/icon_talk.png') 0 0 no-repeat;
+      background-size: contain;
+      content: '';
+    }
   }
 
   .button__wrap {
@@ -446,17 +487,16 @@
   }
 
   .button__square {
-    display: inline-block;
-    margin-top: 10px;
-    width: calc(50% - 10px);
-    height: 40px;
-    line-height: 36px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     box-sizing: border-box;
   }
 
   .button__square + .button__square {
-    margin-left: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -465,7 +505,6 @@
 }
 
 .footer-bottom {
-  margin: 0 25px;
   flex-basis: auto;
 }
 
@@ -495,7 +534,7 @@
 		border: 1px solid #DDDDDD;
 		background-color: #ffffff;
   }
-  
+
 	&__button--active {
 		color: #ffffff;
 		font-weight: 500;

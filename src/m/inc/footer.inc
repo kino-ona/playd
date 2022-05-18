@@ -15,12 +15,14 @@
 				<img src="../assets/images/m/common/logo_color.png" alt="플레이디 로고">
 			</a>
 			</p>
-			<ul class="footer__nav">
-				<li><a href="#">윤리신고</a></li>
-				<li><a href="#">뉴스레터</a></li>
-				<li><a href="#">오시는길</a></li>
-				<li><a href="#">무료광고진단</a></li>
-				<li><a href="#">개인정보처리방침</a></li>
+			<div class="footer__nav">
+				<div class="footer__wrap footer__wrap--line">
+					<p><a href="#">윤리신고</a></p>
+					<p><a href="#">뉴스레터</a></p>
+					<p><a href="#">오시는길</a></p>
+					<p class="footer__line--last"><a href="#">무료광고진단</a></p>
+				</div>
+				<div class="footer__wrap--line"><p class="footer__line--last"><a href="#" class="font--bd ">개인정보처리방침</a></p></div>
 			</ul>
 			<nav class="footer__nav--right">
 				<a href="#" class=""><img src="../assets/images/m/common/logo_naver.png" /><span class="a11y">네이버</span></a>
