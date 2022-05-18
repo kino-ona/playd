@@ -193,7 +193,7 @@
 				&::after {
 					position: absolute;
 					content: '';
-					top: 4px;
+					top: 10px;
 					right: 0;
 					height: 10px;
 					width: 1px;
@@ -298,21 +298,24 @@
 	&--wide {
 		max-width: 1920px;
 	}
+
 	&--full {
 		max-width: none;
 	}
 }
 
 .section__inner {
+	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
-	flex-direction: column; 
-
-	&--wide {
-		max-width: 1200px;
-	}
-	&--full {
-		max-width: 1200px;
+	flex-direction: column;
+}
+	
+.section__content {
+	
+	&--row {
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 

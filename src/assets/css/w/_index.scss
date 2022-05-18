@@ -402,14 +402,16 @@ $elemT: 150px;
 }
 
 [data-section="service"] {
+  margin: $elemT 0 0;
+  padding: 0 0 $elemT;
 	position: relative;
-  margin: $elemT 0;
+  overflow: visible;
 
 	.section {
 
 		&__inner {
       width: 100%;
-      margin: 0;
+      margin: 0; 
 			position: absolute;
       top: 0;
       right: 0;
@@ -423,18 +425,12 @@ $elemT: 150px;
       right: 0;
 			width: 66.7%;
 		}
-	
-		&__content--row {
-			display: flex;
-			flex-wrap: wrap;
-		}
 	}
 
   .section__head {
     position: absolute;
-    top: 0;   //load default
-    left: 0;  //load default
-    // transition: top $duration2 ease;
+    top: 0;
+    left: 0;
   }
   
   &.approached .section__head {
@@ -482,7 +478,7 @@ $elemT: 150px;
     margin-left: 40px; 
     margin-bottom: 40px;
     @include imgContentIn(1);
-    transition: margin $duration2 ease;
+    transition: all $duration2 ease;
 
     a {
       display: block;
@@ -511,7 +507,7 @@ $elemT: 150px;
 		}
 
     &:last-of-type {
-      margin-bottom: 70px;
+      margin-bottom: 0;
     }
 
 		&__title {
@@ -654,8 +650,6 @@ $elemT: 150px;
 
 	.section__content {
 		margin-top: 70px;
-		display: flex;
-		flex-wrap: wrap;
 	}
 }
 

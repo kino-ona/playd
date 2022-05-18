@@ -10,18 +10,6 @@ window.addEventListener('load', () => {
     visualSrcName = '@main_' + i  + '.jpg'
     visualSrc.setAttribute('src', '../assets/images/w/visual/' + visualSrcName);
   }
-  // const main = document.querySelector('body.main');
-  // const visual = main.querySelector('.visual');
-  // const visualSrc = main.querySelector('.visual .visual__image');
-  // let getVisualSrc = window.getComputedStyle(visualSrc).backgroundImage;
-  // let visualSrcName = getVisualSrc.split('@')[0];
-  // let i = 0;
-
-  // const setKv = () => {
-  //   i++;
-  //   visualSrcName = '@main_' + i  + '.jpg'
-  //   visualSrc.style.cssText = `background-image: url(../assets/images/w/visual/${visualSrcName});`;
-  // }
   const stopKv = () => {
     clearInterval(timer);
   }
@@ -75,13 +63,19 @@ anime1 = () => {
   const areaHead = area.querySelector('.section__head');
   const areaContImgs = area.querySelectorAll('.section__content .image-block');
   let innerW = parseFloat(window.getComputedStyle(areaInner).width);
+  let HeadH = parseFloat(window.getComputedStyle(areaHead).height);
   let elemT = 150;
   let wdP = ((wdW - innerW)*0.5);
+
+  let areaReach = area.getBoundingClientRect(true).top;
+  let areaEndReach = area.getBoundingClientRect(true).bottom;
 
   areaInner.style.left = wdP + 'px';
 
   window.addEventListener('scroll', () => {
     scT = window.pageYOffset;
+    areaReach = area.getBoundingClientRect(true).top;
+    areaEndReach = area.getBoundingClientRect(true).bottom;
     
     for (i = 0; i < areaContImgs.length; i++) { 
       if (areaContImgs[i].getBoundingClientRect().top <= wdH + elemT) {
@@ -95,21 +89,20 @@ anime1 = () => {
         innerW = parseFloat(window.getComputedStyle(areaInner).width);
         wdP = ((wdW - innerW)*0.5);
         areaInner.style.left = wdP + 'px';
+        areaReach = area.getBoundingClientRect(true).top;
+        areaEndReach = area.getBoundingClientRect(true).bottom;
       })
-
-      let areaReach = area.getBoundingClientRect(true).top;
-      let areaEndReach = area.getBoundingClientRect(true).bottom;
 
       if (areaReach <= elemT) {
         area.classList.add('approached');
-        areaHead.style.cssText = `top: 150px; left: ${wdP}px; bottom: auto;`
+        areaHead.style.cssText = `top: ${elemT}px; left: ${wdP}px; bottom: auto;`
       } else {
         area.classList.remove('approached');
         areaHead.style.cssText = `top: 0; left: 0; bottom: auto;`
       }
-      if (areaEndReach <= 580) { 
+      if (areaEndReach <= (elemT*2 + HeadH + 50)) { 
         area.classList.remove('approached');
-        areaHead.style.cssText = `top: auto; left: 0; bottom: 0;`
+        areaHead.style.cssText = `top: auto; left: 0; bottom: ${elemT + 50}px;`
       }
       clearTimeout(delay);
     }, 50);
