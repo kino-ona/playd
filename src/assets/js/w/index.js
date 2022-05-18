@@ -1,20 +1,27 @@
 //index kv
 window.addEventListener('load', () => {
-  const main = document.querySelector('body.main');
-  const visual = main.querySelector('.visual');
-  const visualSrc = main.querySelector('.visual .visual__image');
-  let getVisualSrc = window.getComputedStyle(visualSrc).backgroundImage;
-  let visualSrcName = getVisualSrc.split('@')[0];
+  const visualSrc = document.querySelector('.visual__image img');
+  let getVisualSrc = visualSrc.getAttribute('src');
+  let visualSrcName = getVisualSrc.split('.')[0];
   let i = 0;
 
   const setKv = () => {
     i++;
     visualSrcName = '@main_' + i  + '.jpg'
-    visualSrc.style.cssText = `background-image: url(../../../assets/images/w/visual/${visualSrcName});`;
-    let clone = document.createElement('div');
-    clone.classList.add('visual__image'); 
-    visual.appendChild(clone);
+    visualSrc.setAttribute('src', '../assets/images/w/visual/' + visualSrcName);
   }
+  // const main = document.querySelector('body.main');
+  // const visual = main.querySelector('.visual');
+  // const visualSrc = main.querySelector('.visual .visual__image');
+  // let getVisualSrc = window.getComputedStyle(visualSrc).backgroundImage;
+  // let visualSrcName = getVisualSrc.split('@')[0];
+  // let i = 0;
+
+  // const setKv = () => {
+  //   i++;
+  //   visualSrcName = '@main_' + i  + '.jpg'
+  //   visualSrc.style.cssText = `background-image: url(../assets/images/w/visual/${visualSrcName});`;
+  // }
   const stopKv = () => {
     clearInterval(timer);
   }

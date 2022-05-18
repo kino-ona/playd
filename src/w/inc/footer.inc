@@ -19,10 +19,10 @@
 				<li><a href="#">개인정보처리방침</a></li>
 			</ul>
 			<nav class="footer__nav--right">
-				<a href="#" class="sns-link"><img src="../../assets/images/w/common/icons/footer_sns-naver.png" /><span class="a11y">네이버</span></a>
-				<a href="#" class="sns-link"><img src="../../assets/images/w/common/icons/footer_sns-instagram.png" /><span class="a11y">인스타그램</span></a>
-				<a href="#" class="sns-link"><img src="../../assets/images/w/common/icons/footer_sns-youtube.png" /><span class="a11y">유투브</span></a>
-				<a href="#" class="sns-link"><img src="../../assets/images/w/common/icons/footer_sns-facebook.png" /><span class="a11y">페이스북</span></a>
+				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-naver.png" /><span class="a11y">네이버</span></a>
+				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-instagram.png" /><span class="a11y">인스타그램</span></a>
+				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-youtube.png" /><span class="a11y">유투브</span></a>
+				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-facebook.png" /><span class="a11y">페이스북</span></a>
 			</nav>
 		</div>
 	</div>
