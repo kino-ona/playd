@@ -128,32 +128,33 @@
 }
 
 .banner__footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
 	color: #EA2126;
 	background-color: #D12327;
 
+	.banner__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	.banner__title {
-		position: relative;
+		margin: 0;
 		display: inline-block;
-		margin: 0 auto;
-		
-		&::after {
-			content: '';
-			position: absolute;
-			left: 100%;
-			bottom: 75%;
-			width: 39px;
-			height: 33px;
-			background: {
-				image: url(../../../assets/images/w/dummy/@icon-contact_us.png);
-				size: 100%;
-				position: 0 0;
-				repeat: no-repeat;
-			}
-		}
+		font-size: 26px;
+		@include FontBD;
+		color: #ffffff;
 	}
 
 	.button__wrap {
-		margin-top: 35px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.button {
+		font-size: 16px;
+		letter-spacing: -0.03em;
 	}
 }
 
@@ -192,7 +193,7 @@
 				&::after {
 					position: absolute;
 					content: '';
-					top: 4px;
+					top: 10px;
 					right: 0;
 					height: 10px;
 					width: 1px;
@@ -297,21 +298,24 @@
 	&--wide {
 		max-width: 1920px;
 	}
+
 	&--full {
 		max-width: none;
 	}
 }
 
 .section__inner {
+	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
-	flex-direction: column; 
-
-	&--wide {
-		max-width: 1200px;
-	}
-	&--full {
-		max-width: 1200px;
+	flex-direction: column;
+}
+	
+.section__content {
+	
+	&--row {
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
@@ -343,26 +347,16 @@
 
 .banner {
 	width: 100%;
-	padding-top: 125px;
-	padding-bottom: 90px;
 	text-align: center;
-
-	&--belt {
-		padding: 0;
-	}
-
-	&__title {
-		font-size: 40px;
-		line-height: 50px;
-		letter-spacing: -0.04em;
-		color: #ffffff;
-		@include FontBD;
-	}
 	
 	&__content {
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
+	}
+
+	&--belt {
+		padding: 0;
 	}
 	
 	&__content--belt {
@@ -433,11 +427,9 @@
 	}
 
 	&__radius {
-		padding: 20px 60px;
-		font-size: 22px;
-		letter-spacing: -0.03em;
+		padding: 13px 50px;
 		@include FontBD;
-		border-radius: 36px;
+		border-radius: 8px;
 
 		&:not(:first-of-type) {
 			margin-left: 22px;
