@@ -1,0 +1,94 @@
+.contact {
+  .sub-header {
+    padding: 115px 25px 0;
+
+    h2 {
+      font-size: 25px;
+      letter-spacing: -.03px;
+      line-height: 36px;
+    }
+
+    .font--md {
+      padding-top: 20px;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: -.03px;
+    }
+
+    .font--dl {
+      padding-top: 5px;
+      color: #666666;
+      font-size: 13px;
+      line-height: 19px;
+      letter-spacing: -.03px;
+    }
+  }
+
+  .sub-content {
+    padding-top: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    h3 {
+      font-size: 16px;
+      letter-spacing: -.03px;
+      line-height: 21px;
+    }
+
+    .description {
+      padding-top: 3px;
+      color: #888888;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: -.03px;
+    }
+  }
+
+  .sub-checkbox {
+    display: block;
+    
+    &::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
+  .sub-checkbox {
+    margin: -10px;
+
+    &__item {
+      display: inline-block;
+      float: left;
+      width: calc(50% - 2.5px);
+      margin: 5px
+    } 
+
+    &__item--full {
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    &__item--full .input__checkbox {
+      width: 90%;
+    }
+
+    &__item--full .input__checkbox-label {
+      width: 100%;
+    }
+  }
+
+  .input {
+    &__checkbox {
+      width: auto;
+    }
+
+    &__checkbox-label {
+      width: auto;
+    }
+  }
+
+
+
+
+}
