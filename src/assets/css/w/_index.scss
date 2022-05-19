@@ -338,7 +338,7 @@ $elemT: 150px;
     
     .box__title {
       z-index: 3;
-      background-image: url(../../images/w/dummy/@bg_box-1.jpg);
+      background-image: url(../../images/w/visual/@bg_box-1.jpg);
     }
 
     .box__content {
@@ -355,7 +355,7 @@ $elemT: 150px;
     
     .box__title {
       z-index: 1;
-      background-image: url(../../images/w/dummy/@bg_box-2.jpg);
+      background-image: url(../../images/w/visual/@bg_box-2.jpg);
     }
 
     .box__content {
@@ -402,30 +402,17 @@ $elemT: 150px;
 
   .accordian__item {
 
-    &:not(:last-of-type) { 
-      margin-bottom: 50px;
-    }
-
     &--active {
 
       .accordian__title a {
-        font-weight: 600;
         color: #000000;
-      }
-
-      .accordian__content {
-        border-color: transparent;
       }
     }
   }
 
   .accordian__content {
-    font-size: 16px;
-    line-height: 24px;
-    @include FontDL;
 
     p {
-      @include FontInherit;
       color: #666666;
     }
   }
@@ -678,7 +665,7 @@ $elemT: 150px;
 [data-section="partners"] {
 	margin-bottom: 0;
 	background: {
-		image: url(../../images/w/dummy/@bg_partners.jpg);
+		image: url(../../images/w/visual/@bg_partners.jpg);
 		size: contain;
 		position: center center;
 		repeat: no-repeat;

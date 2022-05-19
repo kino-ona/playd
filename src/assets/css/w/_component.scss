@@ -332,6 +332,35 @@ input[type="file"] {
   }
 }
 
+.sub-tabs {
+	display: block;
+	width: 100%;
+
+	p {
+    display: inline-block;
+  }
+
+	&__item {
+    padding: 12px 20px;
+		margin-top: 60px;
+		margin-right: 10px;
+		display: inline-block;
+		font-size: 18px;
+		letter-spacing: -.02px;
+		@include FontMD;
+		color: #666666;
+		text-align: center;
+		border-radius: 30px;
+		background-color: #F7F7F7;
+	}
+
+	&__item--active {
+		@include FontBD;
+		color: #ffffff;
+		background-color: #000000;
+	}
+}
+
 /** COMPONENTS **/
 
 .banner {
@@ -444,16 +473,16 @@ input[type="file"] {
 	}
 
 	&__icon-arrow_left {
-		background-image: url(../../../assets/images/w/dummy/i__arrow_left-white.png);
+		background-image: url(../../../assets/images/w/common/icons/i__arrow_left-white.png);
 		
 		&.button__icon--white {
-			background-image: url(../../../assets/images/w/dummy/i__arrow_left-red.png);
+			background-image: url(../../../assets/images/w/common/icons/i__arrow_left-red.png);
 			background-color: #ffffff;
 		}
 	}
 
 	&__icon-arrow_right {
-		background-image: url(../../../assets/images/w/dummy/i__arrow_right-white.png);
+		background-image: url(../../../assets/images/w/common/icons/i__arrow_right-white.png);
 
 		&.button__icon--white {
 			background-color: #ffffff;
@@ -770,32 +799,6 @@ input[type="file"] {
 	}
 }
 
-.sub-tabs {
-	display: block;
-
-	p {
-    display: inline-block;
-  }
-
-	&__item {
-		display: inline-block;
-		text-align: center;
-		width: 250px;
-		height: 50px;
-		color: #666666;
-		line-height: 50px;
-		font-size: 18px;
-		letter-spacing: -.02px;
-		background-color: #F7F7F7;
-		border-radius: 30px;
-	}
-
-	&__item--active {
-		background-color: #000000;
-		color: #ffffff;
-	}
-}
-
 .form-info {
 	display: block;
 	margin-top: 30px;
@@ -868,12 +871,21 @@ input[type="file"] {
 
 	&__item {
 		margin-top: 30px;
+
+    &:not(:last-of-type) { 
+      margin-bottom: 50px;
+    }
 	}
 
 	&__item--active {
 
 		.accordian__content {
 			height: 100%;
+			border-color: transparent;
+		}
+
+		.accordian__title a {
+			font-weight: 600;
 		}
 
 		.accordian__title::before {
@@ -885,8 +897,14 @@ input[type="file"] {
 		border-top: 1px solid #DDDDDD;
 		overflow: hidden;
 		height: 0;
-		font-size: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    @include FontDL;
 		letter-spacing: -0.02em;
+
+    p {
+      @include FontInherit;
+    }
 	}
 }
 
