@@ -153,17 +153,85 @@
 	}
 
 
-	//form layerpopup
+	//form check layerpopup
 	const formSubmit = document.querySelector('.contact .form-submit');
 	const formSubmitClose = document.querySelector('.contact .close_btn');
+	const formUserCompany  = document.querySelector('#user-company');
+	const formUserName = document.querySelector('#user-name');
+	const formUserNumber = document.querySelector('#user-number');
+	const formUserMail = document.querySelector('#user-mail');
+	const formUserUrl = document.querySelector('#user-url');
+	const formUserFile = document.querySelector('#form-file-text');
+  const formFileIput = document.querySelector('#form-file-text');
+  const formFileButton = document.querySelector('#form-file-button');
+	const needCheck = document.querySelector('#sub-checkbox--personal');
+
+	formFileButton.addEventListener('change', () => {
+		if(!formFileIput.value) {
+			formFileIput.closest('.input-box--file').classList.remove('warning')
+		}
+		formFileIput.value = formFileButton.files[0].name
+	});
 	
 	formSubmit.addEventListener('click' , (event) => {
 		event.preventDefault();
+		document.querySelectorAll('.form-field').forEach((item) => {
+			item.classList.remove('warning');
+		})
+
+		console.log(needCheck)
+
+		if(!needCheck.checked) {
+			needCheck.focus();
+			return false;
+		}
+
+		if(!formFileIput.value) {
+			formFileIput.focus();
+			formFileIput.closest('.input-box--file').classList.add('warning')
+			return false;
+		}
+
+		if(!formUserFile.value) {
+			formUserFile.focus();
+			formUserFile.closest('.input-box--file').classList.add('warning')
+			return false;
+		}
+
+		if(!formUserCompany.value) {
+			formUserCompany.focus();
+			formUserCompany.closest('.form-field').classList.add('warning')
+			return false;
+		}
+
+		if(!formUserName.value) {
+			formUserName.focus();
+			formUserName.closest('.form-field').classList.add('warning')
+			return false;
+		}
+
+		if(!formUserNumber.value) {
+			formUserNumber.focus();
+			formUserNumber.closest('.form-field').classList.add('warning')
+			return false;
+		}
+
+		if(!formUserMail.value) {
+			formUserMail.focus();
+			formUserMail.closest('.form-field').classList.add('warning')
+			return false;
+		}
+
+		if(!formUserUrl.value) {
+			formUserUrl.focus();
+			formUserUrl.closest('.form-field').classList.add('warning')
+			return false;
+		}
+
 		layerOpen('form_popup');
 	})
 
 	formSubmitClose.addEventListener('click' , (event) => {
 		layerClose('form_popup');
 	})
-
 }) ()
