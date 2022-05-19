@@ -460,6 +460,12 @@ input[type="file"] {
 		background-color: #fff;
 	}
 
+	&__filled-black {
+		color: #ffffff;
+		border: 0;
+		background-color: #000000;
+	}
+
 	&__filled-red {
 		color: inherit;
 		border: 0;
@@ -549,23 +555,12 @@ input[type="file"] {
 	}
 
 	&__form-submit {
-		padding: 13.5px 0;
+		padding: 13.5px 50px;
 		margin-left: auto;
 		margin-right: auto;
 		display: inline-block;
+		@include FontBD;
 		border-radius: 5px;
-		
-		span {
-			display: inline-block;
-			color: #ffffff;
-			font-size: 16px;
-			letter-spacing: -.15px;
-		}
-	}
-
-	&__wrap--form-submit {
-    display: block;
-    text-align: center;
 	}
 }
 
@@ -829,20 +824,6 @@ input[type="file"] {
 	}
 }
 
-.form-submit {
-  padding: 13.5px 0;
-  background-color: #000000;
-  border-radius: 8px;
-  border: none;
-
-  span {
-    display: inline-block;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: -.15px;
-  }
-}
-
 .accordian {
 	width: 240px;
 
@@ -893,6 +874,12 @@ input[type="file"] {
 		}
 	}
 
+	&__content--row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
 	&__content {
 		border-top: 1px solid #DDDDDD;
 		overflow: hidden;
@@ -905,6 +892,11 @@ input[type="file"] {
     p {
       @include FontInherit;
     }
+	}
+
+	&__item--row {
+		width: 100%;
+		max-width: calc(50% - 20px);
 	}
 }
 

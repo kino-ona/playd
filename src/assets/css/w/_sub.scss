@@ -7,9 +7,87 @@
     width: 100%;
   }
 
+  li {
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 26px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+  }
+
+  dl {
+    font-size: 16px;
+    line-height: 26px;
+
+    dt {
+      @include FontRG;
+      margin-bottom: 4px;
+
+      &:not(:first-of-type) {
+        margin-top: 15px;
+      }
+    }
+
+    dd {
+      padding-left: 10px;
+      @include FontDL;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        content: '·';
+      }
+    }
+
+    &.dl--row {
+      
+      dt {
+        display: block;
+      }
+
+      dd {
+        width: 100%;
+        max-width: calc(50% - 20px);
+        display: inline-block;
+      }
+    }
+  }
+
   .accordian {
     width: 100%;
+
+    &__description {
+      padding-right: 80px;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      font-size: 20px;
+      @include FontRG;
+      border-bottom: 1px solid #DDDDDD;
+    }
+
+    dt {
+      @include FontBD;
+    }
+
+    dd {
+      margin-top: 6px;
+    }
   }
+
+  .image-block {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
 }
 
 .sub-container--row {
@@ -198,15 +276,10 @@
 
   .button__form-submit {
 		height: 70px;
-		width: 100%;
-		max-width: 330px;
 		font-size: 22px;
-		@include FontBD;
-		color: #ffffff;
-		background-color: #000000;
   }
 
-  .button__wrap--form-submit {
+  .button__wrap {
     margin-top: 80px;
   }
 
@@ -386,6 +459,25 @@
     @include FontDL;
   }
 
+  li {
+
+    &::before {
+      content: '·';
+    }
+  }
+
+  dl {
+    margin: 25px 30px 0;
+
+    dd {
+      color: #666666;
+
+      &::before {
+        content: '-';
+      }
+    }
+  }
+
   .layer__button {
 		margin-top: 40px;
   }
@@ -424,52 +516,6 @@
   }
 }
 
-li {
-  padding-left: 15px;
-  font-size: 16px;
-  line-height: 26px;
-  position: relative;
-
-  &::before {
-    content: '·';
-    position: absolute;
-    left: 0;
-  }
-
-  &:not(:last-of-type) {
-    margin-bottom: 6px;
-  }
-}
-
-dl {
-  margin: 25px 30px 0;
-
-  font-size: 16px;
-  line-height: 26px;
-
-  dt {
-    @include FontRG;
-    margin-bottom: 4px;
-
-    &:not(:first-of-type) {
-      margin-top: 15px;
-    }
-  }
-
-  dd {
-    padding-left: 10px;
-    @include FontDL;
-    color: #666666;
-    position: relative;
-
-    &::before {
-      content: '-';
-      position: absolute;
-      left: 0;
-    }
-  }
-}
-
 /* RECRUIT */
 
 .recruit {
@@ -481,10 +527,21 @@ dl {
     }
   }
 
-  .accordian__item--active {
+  .accordian {
     
-    .accordian__title {
-      @include FontBD;
+    &__item--active {
+    
+      .accordian__title {
+        @include FontBD;
+      }
     }
+
+    dl {
+      margin-bottom: 30px;
+    }
+  }
+
+  .button__form-submit {
+    margin-top: 40px;
   }
 }
