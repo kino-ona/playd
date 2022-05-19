@@ -151,7 +151,6 @@
 
 	.button {
 		font-size: 16px;
-		letter-spacing: -0.03em;
 	}
 }
 
@@ -323,7 +322,6 @@ input[type="file"] {
     margin-bottom: 20px;
     font-size: 46px;
     line-height: 64px;
-    letter-spacing: -0.03em;
     @include FontBD;
   }
 
@@ -574,7 +572,6 @@ input[type="file"] {
 		box-sizing: border-box;
 		font-size: 18px;
 		line-height: 25px;
-    letter-spacing: -0.03em;
 		@include FontDL;
 		color: #666666;
     text-align: center;
@@ -699,7 +696,7 @@ input[type="file"] {
 				left: 8.5px;
 				top: 50%;
 				transform: translateY(-50%);
-				background: url('../../images/m/common/icon_check.png') 0 0 no-repeat;
+				background: url('../../images/w/common/icons/icon_check.png') 0 0 no-repeat;
 				background-size: contain;
 				content: '';
 			}
@@ -750,7 +747,6 @@ input[type="file"] {
 		height: 0;
 		color: #000000;
 		font-size: 16px;
-		letter-spacing: -.03px;
     background: #ffffff;
 	}
 	
@@ -899,57 +895,73 @@ input[type="file"] {
 	&__body {
 		position: fixed;
 		min-height: 100vh;
-		z-index: 99;
+		z-index: 9999;
 		top: 0;
 		left: 0;
 		display: none;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0, .9);
+		background-color: rgba(0,0,0, .5);
 	}
 	
 	&__wrap {
 		position: absolute;
-		z-index: 99;
+		z-index: 9999;
 		top:50%;
 		left:50%;
-		max-width: 950px;
+		max-width: 400px;
 		width: 100%;
-		background-color: #fff;
+		background-color: #ffffff;
+		border-radius: 10px;
 		opacity: 0;
 		@include transform(translate(-50%, -50%));
-		-webkit-transition: visibility 0.2s 0.1s, opacity 0.2;
-		-moz-transition: visibility 0.2s 0.1s, opacity 0.2;
-		-ms-transition: visibility 0.2s 0.1s, opacity 0.2;
-		-o-transition: visibility 0.2s 0.1s, opacity 0.2;
 		transition: visibility 0.2s 0.1s, opacity 0.2;
+
+		&--wide {
+			max-width: 520px;
+		}
 	}
 	
 	&__close {
+		z-index: 10000;
 		position: absolute;
-		z-index: 100;
-		max-width: 950px;
-		width: 100%;
-		top: 20px;
-		right: 0;
-	
-		.close_btn {
-			position: absolute;
-			top: -45px;
-			right: -20px;
-			width: 40px;
-			height: 40px;
-			background: {
-				image: url();
-				size: 40px;
-				repeat: no-repeat;
-				position: center center;
-				color: transparent;
-			}
-			border: 0;
-			border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		top: 15px;
+		right: 15px;
+
+		.close {
 			text-indent:-9999px;
 			cursor: pointer;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			opacity: .6;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&::before, &::after {
+				height: 24px;
+				width: 2px;
+				position: absolute;
+				top: 3px;
+				left: 14px;
+				background-color: #666666;
+				content: '';
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
 		}
 	}
 	
@@ -961,7 +973,7 @@ input[type="file"] {
 	&__content {
 		max-width: 100%;
 		height: 100%;
-		padding: 50px;
+		padding: 40px;
 
 		> *:first-child {
 			margin-top: 0;
@@ -970,6 +982,19 @@ input[type="file"] {
 		> *:last-child {
 			margin-bottom: 0;
 		}
+	}
+
+	&__button {
+		width: 100%;
+		display: block;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		font-size: 18px;
+		letter-spacing: -0.03em;
+		@include FontBD;
+		color: #ffffff;
+		border-radius: 5px;
+		background-color: #EA2126;
 	}
 }
 
@@ -984,21 +1009,6 @@ input[type="file"] {
 		display: block;
 	}
 }
-
-.form-submit {
-  padding: 13.5px 0;
-  background-color: #000000;
-  border-radius: 8px;
-  border: none;
-
-  span {
-    display: inline-block;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: -.15px;
-  }
-}
-
 
 .sub-list-category {
   &::after {
@@ -1037,4 +1047,35 @@ input[type="file"] {
   }
 
 
+}
+
+.icon {
+
+	&__check {
+		position: relative;
+		
+    i {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background-color: #EA2126;
+      border-radius: 50%;
+      content: "";
+
+      &::after {
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        right: -2px;
+				top: 8px;
+        background: url(../../images/w/common/icons/icon_check.png) 0 0 no-repeat;
+        background-size: contain;
+        content: "";
+      }
+    }
+	}
 }

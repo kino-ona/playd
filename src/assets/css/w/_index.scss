@@ -96,7 +96,6 @@ $elemT: 150px;
     &__title {
       font-size: 40px;
       line-height: 60px;
-      letter-spacing: -0.03em;
       @include FontBD;
     }	
   
@@ -199,7 +198,6 @@ $elemT: 150px;
       bottom: 8px;
       transform: translateY(-50%);
       font-size: 26px;
-      letter-spacing: -0.02em;
       @include FontBD;
     }
 
@@ -289,7 +287,6 @@ $elemT: 150px;
   
     &__slogan {
       font-size: 50px;
-      letter-spacing: -0.02em;
       text-transform: uppercase;
       @include FontBD;
       margin-bottom: 30px;
@@ -297,7 +294,6 @@ $elemT: 150px;
   
     &__slogan--small {
       font-size: 32px;
-      letter-spacing: -0.03em;
       @include FontBD;
       margin-bottom: 10px;
     }
@@ -310,7 +306,6 @@ $elemT: 150px;
       &--1 {
         font-size: 18px;
         line-height: 26px;
-        letter-spacing: -0.03em;
         opacity: 0.8;
       }
 
@@ -400,7 +395,6 @@ $elemT: 150px;
       font-size: 40px;
       line-height: inherit;
       font-weight: 600;
-      letter-spacing: -0.02em;
       @include FontBasicSans;
       color: #000000;
     }
@@ -561,7 +555,6 @@ $elemT: 150px;
 		&__slogan {
 			font-size: 16px;
 			line-height: 26px;
-			letter-spacing: -0.03em;
 			@include FontRG;
 			margin-top: 12px;
 		}

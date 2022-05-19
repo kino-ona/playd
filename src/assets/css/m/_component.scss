@@ -970,6 +970,31 @@
   }
 }
 
+.sub-header {
+  padding: 115px 25px 0;
+
+  &__title {
+    font-size: 23px;
+    letter-spacing: -.03px;
+    line-height: 36px;
+  }
+
+  &__description {
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -.03px;
+  }
+
+  &__more-description {
+    padding-top: 5px;
+    color: #666666;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -.03px;
+  }
+}
+
 .sub-list-category {
   &::after {
     display: block;
@@ -1007,4 +1032,8 @@
   }
 
 
+}
+
+.form-field {
+  position: relative;
 }

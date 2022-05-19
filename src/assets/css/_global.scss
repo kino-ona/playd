@@ -48,7 +48,7 @@ article, aside, canvas, details, embed, figure, figcaption, footer, header, hgro
 ruby, section, summary,time, mark, audio, video {
 	margin: 0;padding: 0; vertical-align: top; word-break:keep-all;
 	text-decoration:none; -webkit-tap-highlight-color:transparent;
-	color: inherit; font-weight: normal; line-height: 1.6;
+	color: inherit; font-weight: normal; line-height: 1.6;letter-spacing: -0.03em;
 }
 fieldset, img, textarea {border: 0;outline: 0;}
 /* HTML5 display-role reset for older browsers */
@@ -60,9 +60,8 @@ html, body {
 	font-family: 'NS DL','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	-ms-word-wrap:break-word;word-wrap:break-word;
 	font-size:16px;
-	color:$txtBlack;
-	line-height:1;
-	letter-spacing:-0.05em;
+	letter-spacing: -0.03em;
+	color:$txtBlack; 
 }
 ol, ul {list-style: none;}
 address,em {font-style: normal}

@@ -1,31 +1,6 @@
 .contact {
   background: #ffffff;
 
-  .sub-header {
-    padding: 115px 25px 0;
-
-    &__title {
-      font-size: 25px;
-      letter-spacing: -.03px;
-      line-height: 36px;
-    }
-
-    &__description {
-      padding-top: 20px;
-      font-size: 15px;
-      line-height: 22px;
-      letter-spacing: -.03px;
-    }
-
-    &__more-description {
-      padding-top: 5px;
-      color: #666666;
-      font-size: 13px;
-      line-height: 19px;
-      letter-spacing: -.03px;
-    }
-  }
-
   .sub-content {
     padding-top: 60px;
     padding-left: 25px;
@@ -219,10 +194,11 @@
 
     &__title {
       letter-spacing: -.03px;
+      padding: 0 15px;
+      line-height: 52px;
     }
 
     &__text {
-      padding-left: 15px;
       color: #999999;
       font-size: 15px;
       line-height: 50px;
@@ -363,5 +339,45 @@
     overflow: hidden;
     padding: 25px;
     text-align: center;
+  }
+
+  .form-warning {
+    display: none;
+  }
+  
+  .input-box--file.warning {
+    position: relative;
+    border: 1px solid #EA2126;
+
+    .form-warning {
+      bottom: -29px;
+      left: 3px;
+    }
+  }
+
+  .warning {
+    .input-box-info__input {
+      border-color: #EA2126;
+    }
+    .form-warning {
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      color: #EA2126;
+      font-size: 12px;
+      letter-spacing: -.02px;
+    }
+
+    .form-warning::before {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      padding-right: 8px;
+      background: url('../../images/m/sub/icon_warning.png') 0 0 no-repeat;
+      background-size: contain;
+      transform: translateY(2px);
+      content:'';
+    }
+  
   }
 }
