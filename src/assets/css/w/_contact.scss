@@ -1,0 +1,373 @@
+/** SUB **/
+
+.sub-container {
+
+  form {
+    width: 100%;
+  }
+}
+
+.sub-container--row {
+  display: flex;
+  justify-content: space-between;
+
+  .sub-content {
+    width: 100%;
+    max-width: calc(50% - 10px);
+  }
+}
+
+.sub-content {
+  margin-bottom: 80px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 27px;
+    @include FontBD;
+    letter-spacing: -0.03em;
+  }
+
+  .description {
+    margin-left: 4px;
+    font-size: 16px;
+    @include FontDL;
+    color: #888888;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+}
+
+.sub-checkbox {
+  width: 100%;
+  margin-bottom: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    min-width: 232px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  } 
+}
+  
+.sub-checkboxs {
+  .sub-checkbox__input + span {
+    font-size: 18px;
+    padding-left: 40px;
+    padding-bottom: 4px;
+  }
+}
+
+.input-box {
+  width: 100%;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+}
+
+.input-box--file {
+
+  textarea {
+    max-width: 100%;
+    height: 180px;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+    font-size: 18px;
+    letter-spacing: -.03px;
+    @include FontDL;
+    border: none;
+    background: transparent;
+  }
+
+  .input-file {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #form-file-button {
+    & + label {
+      min-width: 180px;
+      height: 55px;
+      margin-left: 10px;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 18px;
+      line-height: 55px;
+      color: #666666;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #EEEEEE;
+    }
+  }
+
+  #form-file-text {
+    width: 100%;
+    height: 55px;
+    padding: 0 30px;
+    font-size: 15px;
+    line-height: 55px;
+    letter-spacing: -.03px;
+    border: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      @include FontInherit;
+      color: #888888;
+    }
+  }
+} 
+
+.input-box--info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .form-field {
+    width: 100%;
+    max-width: calc(50% - 20px);
+  }
+
+  &__label {
+    padding-left: 2px;
+    padding-bottom: 15px;
+    display: block;
+    font-size: 16px;
+    @include FontRG;
+  }
+
+  &__label--necessary::after{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    padding-left: 4px;
+    color: #EA2126;
+    content: '*';
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 40px;
+    line-height: 1;
+    font-size: 18px;
+    @include FontDL;
+    letter-spacing: -.03px;
+    padding-bottom: 10px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #DDDDDD;
+    background-color: transparent;
+
+    &::placeholder {
+      @include FontInherit;
+      color: #888888;
+    }
+  }
+}
+
+.contact {
+
+  .sub-container {
+    margin-bottom: 150px;
+  }
+
+  .sub-checkboxs {
+    border-top: 1px solid #000000;
+    padding-top: 30px;
+
+    .sub-checkbox__list {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 25px;
+      }
+    }
+
+    .button__sub-checkbox {
+      margin-left: 8px;
+      font-size: 18px;
+      line-height: inherit;
+      @include FontRG;
+      color: #055BFF;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .button__form-submit {
+		height: 70px;
+		width: 100%;
+		max-width: 330px;
+		font-size: 22px;
+		@include FontBD;
+		color: #ffffff;
+		background-color: #000000;
+  }
+
+  .button__wrap--form-submit {
+    margin-top: 80px;
+  }
+
+  .sub-info {
+    margin-top: 150px;
+    padding-top: 130px;
+    position: relative;
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      left: -9999px;
+      right: -9999px;
+      top: 0;
+      height: 570px;
+      background-color: #F5F5F5;
+      content: '';
+    }
+    text-align: center;
+
+    &__title {
+      font-size: 16px;
+      @include FontBD;
+    }
+
+    &__note {
+      margin-top: 18px;
+      font-size: 20px;
+      @include FontDL;
+      letter-spacing: -0.03em;
+    }
+
+    .image {
+      margin-top: 35px;
+      margin-bottom: 60px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    &__contact {
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+      font-size: 80px;
+      font-weight: 300;
+      line-height: 1;
+      @include FontBasicSans;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        display: inline-block;
+        height: 4px;
+        background-color: #000000;
+        content: '';
+      }
+
+      &::before {
+        position: absolute;
+        right: 85px;
+        top: -35px;
+        background-image: url(../../images/w/dummy/@icon-airplane.png);
+        background: {
+          size: 100%;
+          repeat: no-repeat;
+          position: center center;
+        }
+        width: 87px;
+        height: 69px;
+        content: '';
+      }
+    }
+
+    &__description {
+      margin-top: 40px;
+      font-size: 16px;
+      @include FontDL;
+      color: #666666;
+    }
+  }
+
+  .banner {
+    z-index: 1;
+    position: relative;
+    padding: 72px 0;
+    margin-top: 150px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-image: url(../../images/w/dummy/banner__contact.jpg);
+    background: {
+      size: cover;
+      repeat: no-repeat;
+      position: center center;
+    }
+
+    &::before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: inherit;
+      max-width: inherit;
+      height: inherit;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    &__title {
+      font-size: 26px;
+      @include FontBD;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    &__title--small {
+      font-size: 16px;
+      @include FontRG;
+      color: #ffffff;   
+    }
+
+    .button__wrap {
+      margin-top: 30px;
+    }
+  }
+
+  .marker {
+    width: 105px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    color: #ffffff;
+
+    span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 7.5px 15px 7.5px 10px;
+      font-size: 15px;
+      line-height: 1;
+      @include FontMD;
+      border-radius: 0 15px 15px 0;
+      background-color: #4478FA;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 27.5px;
+        top: -1.5px;
+        bottom: -1.5px;
+        left: -27.5px;
+        border-radius: 0 15px 15px 0;
+        box-shadow: 10px 0 0 0 #4478FA;
+      }
+    }
+  }
+}

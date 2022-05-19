@@ -1,15 +1,6 @@
 //Header
 const globalHeader = () => {
 	const header = document.querySelector('#header');
-	const logo = header.querySelector('.logo');
-	header.addEventListener('mouseenter', () => {
-		header.classList.replace('header__default', 'header__interact');
-		logo.classList.replace('logo__default', 'logo__interact');
-	})
-	header.addEventListener('mouseleave', () => {
-		header.classList.replace('header__interact', 'header__default');
-		logo.classList.replace('logo__interact', 'logo__default');
-	})
 	
 	window.addEventListener('scroll', () => {
 		let scT = window.pageYOffset;
@@ -88,7 +79,6 @@ accordionItem.forEach((item) => {
 let isOpen = false;
 const layerOpen = (layerId) =>{
 	let curPos = window.pageYOffset;
-	console.log(curPos);
 	document.documentElement.classList.add("noscroll");
 	document.querySelector('#' + layerId).classList.add("is-visible");
 	let layerID = document.querySelector('#' + layerId);
