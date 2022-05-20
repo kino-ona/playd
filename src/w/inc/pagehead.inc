@@ -19,6 +19,7 @@
   <link rel="icon" href="" sizes="32x32" />
   <link rel="icon" href="" sizes="192x192" />
   <link rel="apple-touch-icon" href="" />
+	<link rel="stylesheet" href="https://use.typekit.net/gjs0snj.css">
 
 	<title>@@pagetitle</title>
 	<link rel="stylesheet" href="@@webroot/assets/css/w/ui.css">

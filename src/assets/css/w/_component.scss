@@ -27,18 +27,20 @@
 }
 
 .header {
-  z-index: 9;
+	z-index: 999;
+  height: 100px;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  height: 100px;
-  padding: 0 50px;
 	border-bottom: 1px solid transparent;
-	transition: all 0.4s;
+	color: #ffffff;
+	transition: height 0.4s;
 
 	&__inner {
+		z-index: 999;
 		max-width: 1920px;
+		padding: 0 50px;
 		margin: 0 auto;
     position: relative;
     display: flex;
@@ -72,53 +74,143 @@
 		.logo {
 			width: 108px;
 			height: 21px;
+			transition: all 0.2s;
 		}
 	}
 }
 
-.gnb {
-	display: flex;
+.nav {
 	height: inherit;
+	display: flex;
 	font-size: 18px;
-	color: #ffffff;
 	@include FontBD;
+	color: #000000;
+	text-align: center;
 
 	&__link {
+		height: inherit;
+		margin-left: 50px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	&__gnb {
+		padding-left: 20px;
+		margin-left: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			width: 24px;
+			height: 18px;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+
+		i {
+			width: 24px;
+			height: 2px;
+			display: inline-block;
+			background-color: #000000;
+
+			&::before, &::after {
+				width: inherit;
+				height: inherit;
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: inline-block;
+				background-color: inherit;
+				content: '';
+			}
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+		}
+	}
+}
+
+.navmenu {
+	z-index: 998;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: inherit;
+	background-color: #ffffff;
+	border-bottom: 1px solid #DDDDDD;
+	transition: top 0.4s;
+	overflow: hidden;
+
+	&__list {
+		width: 100%;
 		height: inherit;
-		margin-left: 50px;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		opacity: 0;
+		color: #888888;
+		transition: opacity 0.2s;
+	}
+
+	&__link {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-left: 0;
+		margin-right: 30px;
+		font-size: 18px;
+		color: inherit;
+	}
+}
+
+.header__transparent {
+	background-color: transparent;
+
+	.nav {
+		color: #ffffff;
+	}
+
+	.navmenu {
+		background-color: transparent;
+		border-bottom: 0;
+	}
+	
+	.nav__gnb i {
+		background-color: #fff;
 	}
 }
 
 .header__sticked {
+	box-sizing: border-box;
 	background-color: #ffffff;
-	border-bottom: 1px solid #DDDDDD;
 
-	.gnb {
-		font-size: 18px;
-		line-height: 1;
-		@include FontBD;
-		color: #000000;
-		text-align: center;
+	.nav__link {
+		position: relative;
 
-		&__link {
-			position: relative;
+		a:hover {
+			color: #EA2126;
 
-			a:hover {
-				color: #EA2126;
-
-				&::after {
-					content: '';
-					position: absolute;
-					bottom: -1.5px;
-					left: 0;
-					right: 0;
-					width: 100%;
-					height: 4px;
-					background-color: #EA2126;
-				}
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -1.5px;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 4px;
+				background-color: #EA2126;
 			}
 		}
 	}

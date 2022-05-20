@@ -1,15 +1,15 @@
 //index header
 const indexHeader = () => {
-  const header = document.querySelector('#header');
+  const header = document.querySelector('header#header');
   const logo = header.querySelector('.logo');
 
   header.addEventListener('mouseenter', () => {
-    header.classList.replace('header__default', 'header__sticked');
+    header.classList.replace('header__transparent', 'header__sticked');
     logo.classList.replace('logo__default', 'logo__filled');
   })
   
   header.addEventListener('mouseleave', () => {
-    header.classList.replace('header__sticked', 'header__default');
+    header.classList.replace('header__sticked', 'header__transparent');
     logo.classList.replace('logo__filled', 'logo__default');
   })
 }
