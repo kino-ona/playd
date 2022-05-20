@@ -693,17 +693,20 @@
 
 	&__title {
 		height: 50px;
-		color: #000000;
-		font-size: 16px;
-		line-height: 60px;
+    padding: 12px 15px;
+		color: #888888;
+		font-size: 15px;
+		line-height: 50px;
 		letter-spacing: -.03px;
-		border: 1px solid #DDDDDD;
+		border: 1px solid #EEEEEE;
+    background: #ffffff;
 		border-radius: 5px;
+    box-sizing: border-box;
 
 		&::before {
 			position: absolute;
 			top: 20px;
-			right: 31px;
+			right: 20px;
 			width: 6.5px;
 			height: 6.5px;
 			transform: rotate(45deg);
@@ -716,7 +719,7 @@
 	&__wrap {
 		overflow: hidden;
     position: absolute;
-    top: 52px;
+    top: 49px;
     left: 0;
     right: 0;
 		height: 0;
@@ -737,7 +740,7 @@
 		padding: 15px;
     border-width: 0 1px 1px 1px;
     border-style: solid;
-    border-color: #DDDDDD;
+    border-color: #EEEEEE;
 	}
 
 	p {
@@ -761,14 +764,16 @@
 
 	&__item {
 		display: inline-block;
-		text-align: center;
-    padding: 12px 26px;
+    height: 38px;
+    padding: 2px 15px;
 		color: #666666;
-		line-height: 15px;
+		line-height: 30px;
 		font-size: 15px;
+    text-align: center;
 		letter-spacing: -.02px;
 		background-color: #F7F7F7;
 		border-radius: 30px;
+    box-sizing: border-box;
 	}
 
 	&__item--active {
@@ -784,7 +789,7 @@
   
   &__box {
     overflow-x: scroll;
-    height: 46px;
+    height: 38px;
   }
 }
 
@@ -993,7 +998,7 @@
   padding: 115px 25px 0;
 
   &__title {
-    font-size: 19px;
+    font-size: 20px;
     letter-spacing: -.03px;
     line-height: 30px;
   }
@@ -1014,6 +1019,15 @@
     color: #666666;
     font-size: 13px;
     line-height: 19px;
+    letter-spacing: -.03px;
+  }
+}
+
+.sub-content {
+  &__description {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 24px;
     letter-spacing: -.03px;
   }
 }

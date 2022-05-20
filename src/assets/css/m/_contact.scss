@@ -2,7 +2,7 @@
   background: #ffffff;
 
   .sub-content {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-left: 25px;
     padding-right: 25px;
 
@@ -87,7 +87,7 @@
     border-color: #DDDDDD;
 
     &::placeholder {
-      color: '#999999';
+      color: #999999;
       letter-spacing: -.03px;
       font-size: 15px;
     }
@@ -178,6 +178,7 @@
     width: 100%;
     height: 50px;
     padding: 15px 14px;
+    background: #ffffff;
     line-height: 50px;
     border: none;
     box-sizing: border-box;
