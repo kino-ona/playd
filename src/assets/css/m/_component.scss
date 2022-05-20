@@ -7,7 +7,6 @@
 
   .header {
     background-color:#ffffff;
-    border-bottom: 1px solid #DDDDDD;
   }
 
   .burger-sticks {
@@ -85,6 +84,7 @@
 
 .scrolled {
   background-color: #ffffff;
+  border-bottom: 1px solid #DDDDDD;
 
   .burger-sticks {
     background: #000000;
@@ -306,10 +306,10 @@
 
 	&__lined-white {
     display: inline-block;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     color: #ffffff;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 26px;
     letter-spacing: -.03px;
 	}
 
@@ -734,7 +734,9 @@
 	&--active &__wrap {
 		height: auto;
 		padding: 15px;
-		box-shadow: 3px 3px 3px 3px #DDDDDD;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #DDDDDD;
 	}
 
 	p {
@@ -745,16 +747,21 @@
 }
 
 .sub-tabs {
-	display:block;
+  display: block;
+  overflow: hidden;
 
   p {
     display: inline-block;
   }
 
+  p + p {
+    margin-left: 5px;
+  }
+
 	&__item {
 		display: inline-block;
 		text-align: center;
-    padding: 12px 24px;
+    padding: 12px 26px;
 		color: #666666;
 		line-height: 15px;
 		font-size: 15px;
@@ -767,6 +774,17 @@
 		background-color: #000000;
 		color: #ffffff;
 	}
+
+  &__wrap {
+    position: absolute;
+    width: 93%;
+    white-space: nowrap;
+  }
+  
+  &__box {
+    overflow-x: scroll;
+    height: 46px;
+  }
 }
 
 .form-info {
@@ -958,7 +976,7 @@
 
 .form-submit {
   padding: 13.5px 0;
-  background-color: #000000;
+  background-color: #DDDDDD;
   border-radius: 8px;
   border: none;
 

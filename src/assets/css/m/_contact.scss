@@ -205,7 +205,7 @@
     }
 
     &__wrap {
-      top: 50px;
+      top: 49px;
     }
   }
 
@@ -234,7 +234,11 @@
     font-size: 16px;
     line-height: 1;
     border-radius: 4px;
-    
+    cursor:default;
+  }
+
+  .sub-container .form-submit.submit--active {
+    background-color: #000000;
   }
 
   .sub-info {

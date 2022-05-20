@@ -13,21 +13,30 @@
 		footerBanner.classList.add('sub-page--active');
 	}
 	
-	if(bodyClass === 'main') {
-		window.addEventListener('scroll', () => {
-			let sct = window.pageYOffset;
-			let threshold = 10;
-			sct > threshold ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
-		})
-	}else if(bodyClass === 'contact') {
-		headerTitle.innerHTML = bodyClass.toUpperCase();
-		subCommonFunction();
-	
-	} else if(bodyClass === 'recruit') {
-		headerTitle.innerHTML = '인재채용';
-		subCommonFunction();
-	} else {
 
+	if(bodyClass) {
+		switch(bodyClass) {
+			case 'main':
+				window.addEventListener('scroll', () => {
+					let sct = window.pageYOffset;
+					let threshold = 10;
+					sct > threshold ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
+				})
+				break;
+
+			case 'contact':
+				headerTitle.innerHTML = bodyClass.toUpperCase();
+				subCommonFunction();
+				break;
+
+			case 'recruit':
+				headerTitle.innerHTML = '채용';
+				subCommonFunction();
+				break;
+
+			default: 
+				alert('c');
+		}
 	}
 
 	//gnb
@@ -95,16 +104,26 @@
 	
 	//tab
 	const subTabs = document.querySelectorAll('.sub-tabs a');
+	const subContainer = document.querySelectorAll('.sub-container');
 	
 	subTabs.forEach((item) => {
-		item.addEventListener('click', (event) => { 
+		item.addEventListener('click', (event,target) => { 
 			event.preventDefault();
-			subTabs.forEach(element => {
-				element.classList.contains('sub-tabs__item--active') ? 
-				element.classList.remove('sub-tabs__item--active') : null;
-			});
-				
-			item.classList.add('sub-tabs__item--active');
+		
+			if(item.dataset.content) {
+				document.querySelectorAll('.sub-container').forEach((thisTarget) => {
+					thisTarget.classList.remove('content--active')
+				})
+				document.querySelector('.sub-container--' + item.dataset.content).classList.add('content--active');
+
+
+				subTabs.forEach(element => {
+					element.classList.contains('sub-tabs__item--active') ? 
+					element.classList.remove('sub-tabs__item--active') : null;
+				});
+					
+				item.classList.add('sub-tabs__item--active');
+			}
 		});
 	
 	})
@@ -154,84 +173,122 @@
 
 
 	//form check layerpopup
-	const formSubmit = document.querySelector('.contact .form-submit');
-	const formSubmitClose = document.querySelector('.contact .close_btn');
-	const formUserCompany  = document.querySelector('#user-company');
-	const formUserName = document.querySelector('#user-name');
-	const formUserNumber = document.querySelector('#user-number');
-	const formUserMail = document.querySelector('#user-mail');
-	const formUserUrl = document.querySelector('#user-url');
-	const formUserFile = document.querySelector('#form-file-text');
-  const formFileIput = document.querySelector('#form-file-text');
-  const formFileButton = document.querySelector('#form-file-button');
-	const needCheck = document.querySelector('#sub-checkbox--personal');
+	if (bodyClass === 'contact') {
+		const formSubmit = document.querySelector('.contact .form-submit');
+		const formSubmitClose = document.querySelector('.contact .close_btn');
+		const formUserCompany  = document.querySelector('.contact #user-company');
+		const formUserName = document.querySelector('.contact #user-name');
+		const formUserNumber = document.querySelector('.contact #user-number');
+		const formUserMail = document.querySelector('.contact #user-mail');
+		const formUserUrl = document.querySelector('.contact #user-url');
+		const formUserFile = document.querySelector('.contact #form-file-text');
+		const formFileIput = document.querySelector('.contact #form-file-text');
+		const formFileButton = document.querySelector('.contact #form-file-button');
+		const needCheck = document.querySelector('.contact #sub-checkbox--personal');
+		const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
-	formFileButton.addEventListener('change', () => {
-		if(!formFileIput.value) {
-			formFileIput.closest('.input-box--file').classList.remove('warning')
-		}
-		formFileIput.value = formFileButton.files[0].name
-	});
-	
-	formSubmit.addEventListener('click' , (event) => {
-		event.preventDefault();
-		document.querySelectorAll('.form-field').forEach((item) => {
-			item.classList.remove('warning');
+		formFileButton.addEventListener('change', () => {
+			if(!formFileIput.value) {
+				formFileIput.closest('.input-box--file').classList.remove('warning')
+			}
+			formFileIput.value = formFileButton.files[0].name
+		});
+		
+		needCheck.addEventListener('change', () => {
+			if(needCheck.checked) {
+				formSubmit.classList.add('submit--active');
+			}else {
+				formSubmit.classList.remove('submit--active');
+			}
+		})
+		
+		
+		formSubmit.addEventListener('click' , (event) => {
+			event.preventDefault();
+			document.querySelectorAll('.form-field').forEach((item) => {
+				item.classList.remove('warning');
+			})
+
+			if(!needCheck.checked) {
+				needCheck.focus();
+				return false;
+			}
+
+			if(!formFileIput.value) {
+				formFileIput.focus();
+				formFileIput.closest('.input-box--file').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserFile.value) {
+				formUserFile.focus();
+				formUserFile.closest('.input-box--file').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserCompany.value) {
+				formUserCompany.focus();
+				formUserCompany.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserName.value) {
+				formUserName.focus();
+				formUserName.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserNumber.value) {
+				formUserNumber.focus();
+				formUserNumber.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserMail.value) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!regEmail.test(formUserMail.value)) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+				return false;
+			}
+
+			if(!formUserUrl.value) {
+				formUserUrl.focus();
+				formUserUrl.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+
+			layerOpen('form-popup');
 		})
 
-		console.log(needCheck)
+		formSubmitClose.addEventListener('click' , (event) => {
+			layerClose('form-popup');
+		})
+	}
 
-		if(!needCheck.checked) {
-			needCheck.focus();
-			return false;
-		}
+	if(bodyClass === 'recruit') {
+		const recruitItem = document.querySelectorAll('.recruit-ordinary__item');
+		const recruitCloseButton = document.querySelectorAll('.close_btn ');
 
-		if(!formFileIput.value) {
-			formFileIput.focus();
-			formFileIput.closest('.input-box--file').classList.add('warning')
-			return false;
-		}
+		recruitItem.forEach((item, index) => {
+			item.addEventListener('click', () => {
+				layerOpen('recruit-popup--' +[index + 1])
+			});		
+		});
 
-		if(!formUserFile.value) {
-			formUserFile.focus();
-			formUserFile.closest('.input-box--file').classList.add('warning')
-			return false;
-		}
+		recruitCloseButton.forEach((item, index) => {
+			item.addEventListener('click', () => {
+				layerClose('recruit-popup--' +[index + 1])
+			});		
+		});
 
-		if(!formUserCompany.value) {
-			formUserCompany.focus();
-			formUserCompany.closest('.form-field').classList.add('warning')
-			return false;
-		}
+	}
 
-		if(!formUserName.value) {
-			formUserName.focus();
-			formUserName.closest('.form-field').classList.add('warning')
-			return false;
-		}
 
-		if(!formUserNumber.value) {
-			formUserNumber.focus();
-			formUserNumber.closest('.form-field').classList.add('warning')
-			return false;
-		}
-
-		if(!formUserMail.value) {
-			formUserMail.focus();
-			formUserMail.closest('.form-field').classList.add('warning')
-			return false;
-		}
-
-		if(!formUserUrl.value) {
-			formUserUrl.focus();
-			formUserUrl.closest('.form-field').classList.add('warning')
-			return false;
-		}
-
-		layerOpen('form_popup');
-	})
-
-	formSubmitClose.addEventListener('click' , (event) => {
-		layerClose('form_popup');
-	})
 }) ()

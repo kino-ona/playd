@@ -95,10 +95,13 @@
 					</div>
 					<div class="drop-box__wrap">
 						<div>
-							<p><a href="/">100</a></p>
-							<p><a href="/">200</a></p>
-							<p><a href="/">300</a></p>
-							<p><a href="/">400</a></p>
+							<p><a href="/">3000만 원 미만</a></p>
+							<p><a href="/">3000만 원 ~ 5000만 원</a></p>
+							<p><a href="/">5000만 원 ~ 1억 원</a></p>
+							<p><a href="/">1억~2억</a></p>
+							<p><a href="/">2억~3억</a></p>
+							<p><a href="/">3억 이상</a></p>
+							<p><a href="/">미정</a></p>
 						</div>  
 					</div>
 				</div>
@@ -111,10 +114,11 @@
 					</div>
 					<div class="drop-box__wrap">
 						<div>
-							<p><a href="/">100</a></p>
-							<p><a href="/">200</a></p>
-							<p><a href="/">300</a></p>
-							<p><a href="/">400</a></p>
+							<p><a href="/">3개월 이내</a></p>
+							<p><a href="/">6개월 이내</a></p>
+							<p><a href="/">1년 이내</a></p>
+							<p><a href="/">1년 이상</a></p>
+							<p><a href="/">미정</a></p>
 						</div>  
 					</div>
 				</div>
@@ -149,7 +153,7 @@
 					</div>
 					<div class="form-field">
 						<label for="user-number" class="input-box-info__label input-box-info__label--necessary">연락처</label>
-						<input type="text" id="user-number"  class="input-box-info__input" name="" placeholder="연락처를 입력해 주세요.">
+						<input type="number" input type="number" pattern="\d*" id="user-number"  class="input-box-info__input" name="" placeholder="연락처를 입력해 주세요.">
 						<p class="form-warning">연락처를 입력해주세요</p>
 					</div>
 					<div class="form-field">
@@ -195,7 +199,7 @@
 					<span>[선택] 플레이디 마케팅 수신에 동의합니다.</span>
 				</label>
 			</div>
-			<input type="submit" class="form-submit font--bd" value="프로젝트 문의 등록"> 
+			<input type="submit" class="form-submit font--bd submit--active" value="프로젝트 문의 등록"> 
 		</form>
 		<div class="sub-info">
 			<h3 class="sub-info__title font--bd">
@@ -227,7 +231,7 @@
 			<a href="/" class="sub-advertise__button" role="button">무료광고진단</a>
 		</div>
 	</div>
-	<div class="layer__body popup" id="form_popup" aria-hidden="true" role="dialog">
+	<div class="layer__body popup" id="form-popup" aria-hidden="true" role="dialog">
     <div class="layer__wrap">
       <div class="layer__inner">
         <div class="layer__content form-popup">
