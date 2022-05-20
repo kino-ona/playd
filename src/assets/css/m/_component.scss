@@ -45,6 +45,7 @@
 }
 
 .sub-page--active {
+  color: #EA2126;
   font-size: 15px;
   letter-spacing: -.02px;
 
@@ -992,13 +993,17 @@
   padding: 115px 25px 0;
 
   &__title {
-    font-size: 23px;
+    font-size: 19px;
     letter-spacing: -.03px;
-    line-height: 36px;
+    line-height: 30px;
+  }
+
+  &__title span {
+    color: #EA2126;
   }
 
   &__description {
-    padding-top: 20px;
+    padding-top: 15px;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -.03px;
