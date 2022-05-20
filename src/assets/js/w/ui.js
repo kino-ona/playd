@@ -1,18 +1,57 @@
 //Header
-const globalHeader = () => {
-	const header = document.querySelector('#header');
-	
-	window.addEventListener('scroll', () => {
-		let scT = window.pageYOffset;
-		const container = document.querySelector('#container');
-		const abTcontainer =  container.getBoundingClientRect().top;
-		setTimeout((delay) => {
-			scT > abTcontainer*0.9 ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
-			clearTimeout(delay);
-		}, 50);
+const header = document.querySelector('header#header');
+window.addEventListener('scroll', () => {
+	let scT = window.pageYOffset;
+	const container = document.querySelector('#container');
+	const abTcontainer =  container.getBoundingClientRect().top;
+	setTimeout((delay) => {
+		scT > abTcontainer*0.9 ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
+		clearTimeout(delay);
+	}, 50);
+})
+
+const nav = document.querySelector('header#header nav.nav');
+const navmenu = document.querySelector('header#header .navmenu');
+const navLinks = document.querySelectorAll('#header nav.nav .nav__link');
+
+navLinks.forEach((item) => {
+	let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
+	const targetLinks = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
+
+	const navListPos = () => {
+		for (let i=1;i<navLinks.length;i++) {
+			if ((itemIdx) === i ) {
+				let elemWdL = navLinks[i].querySelector('a').getBoundingClientRect().left;
+				targetLinks.style.left = elemWdL - parseFloat(navLinks[i].getBoundingClientRect().width) - 50 + 'px';
+			}
+		}
+	}
+	navListPos();
+
+	window.addEventListener('resize', () => {
+		navListPos();
 	})
-}
-globalHeader();
+
+	item.addEventListener('mouseenter', () => {
+		console.log(itemIdx, "ENTER");
+		if (itemIdx > 5){() => {
+			return;
+		}} else {
+			navmenu.style.top = `calc(100% + 1px)`;
+			targetLinks.style.opacity = 1;
+		}
+	})
+
+	item.addEventListener('mouseleave', () => {
+		console.log(itemIdx, "LEAVE");
+		if (itemIdx > 5){() => {
+			return;
+		}} else {
+			navmenu.style.top = 0;
+			targetLinks.style.opacity = 0;
+		}
+	})
+})
 
 //inputButton
 const inputButton = document.querySelectorAll('.input__button');
