@@ -10,6 +10,7 @@
       font-size: 16px;
       letter-spacing: -.03px;
       line-height: 21px;
+      @include FontBD;
     }
 
     .description {
@@ -236,6 +237,7 @@
     line-height: 1;
     border-radius: 4px;
     cursor:default;
+    @include FontBD;
   }
 
   .sub-container .form-submit.submit--active {
@@ -251,6 +253,7 @@
       font-size: 19px;
       line-height: 28px;
       letter-spacing: -.03px;
+      @include FontBD;
     }
 
     &__position {
@@ -258,6 +261,7 @@
       padding-bottom: 10px;
       font-size: 14px;
       line-height: 1;
+      @include FontDL;
     }
 
     a {
@@ -270,6 +274,7 @@
       line-height: 1;
       letter-spacing: 0.5px;
       border-bottom: 2px solid #000000;
+      @include FontBasicSans;
     }
 
     a::after {
@@ -288,6 +293,7 @@
       color: #666666;
       font-size: 13px;
       line-height: 19px;
+      @include FontDL;
     }
   }
 
@@ -314,6 +320,7 @@
       color: #ffffff;
       font-size: 19px;
       line-height: 28px;
+      @include FontBD;
     }
 
     &__description {
@@ -324,6 +331,7 @@
       font-size: 13px;
       line-height: 19px;
       letter-spacing: -.03px;
+      @include FontDL;
     }
 
     &__button {

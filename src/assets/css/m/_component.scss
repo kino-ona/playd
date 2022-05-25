@@ -108,6 +108,7 @@
     letter-spacing: -.03px;
     font-weight: bold;
     line-height: 32px;
+    @include FontMD;
   }
 
   &__desc {
@@ -122,6 +123,7 @@
     font-size: 15px;
     font-weight: bold;
     line-height: 1;
+    @include FontBasicSans; 
   }
 
   &__desc {
@@ -137,7 +139,7 @@
   height: 55px;
   padding: 0 25px;
   transition: all .2s ease-out;
-  z-index: 9;
+  z-index: 99;
   box-sizing: border-box;
 
   &__button {
@@ -774,6 +776,7 @@
 		background-color: #F7F7F7;
 		border-radius: 30px;
     box-sizing: border-box;
+    @include FontMD;
 	}
 
 	&__item--active {
@@ -924,6 +927,7 @@
       background-color: #EA2126;
       border-radius: 4px;
       line-height: 1;
+      @include FontBD;
     }
 	}
 
@@ -932,6 +936,7 @@
     padding-top: 57px;
     font-size: 16px;
     line-height: 23px;
+    @include FontBD;
   }
 
   &__title::before {
@@ -965,6 +970,7 @@
     padding-top: 10px;
     padding-bottom: 30px;
     color: #666666;
+    @include FontDL;
   }
 }
 	
@@ -1001,10 +1007,13 @@
     font-size: 20px;
     letter-spacing: -.03px;
     line-height: 30px;
+    @include FontBD;
   }
 
   &__title span {
+    margin:0 2px; 
     color: #EA2126;
+    line-height: 30px;
   }
 
   &__description {

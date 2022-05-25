@@ -58,6 +58,7 @@ html {
       font-size: 18px;
       line-height: 25px;
       letter-spacing: -.03px;
+      @include FontBD;
     }
 
     &__slogan {
@@ -92,6 +93,7 @@ html {
       font-weight: bold;
       justify-content: center;
       align-items: center;
+      @include FontBasicSans;
     }
   }
 
@@ -182,6 +184,7 @@ html {
       font-size: 14px;
       letter-spacing: -.03px;
       line-height: 1;
+      @include FontMD;
     }
 
     &__content p {
@@ -195,6 +198,7 @@ html {
       font-size: 27px;
       letter-spacing: -.02px;
       line-height: 1;
+      @include FontBD;
     }
   }
 

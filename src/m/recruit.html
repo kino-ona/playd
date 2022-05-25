@@ -1,6 +1,6 @@
 @@include('./inc/pagehead.inc', {
-	"webroot": "..",
-	"pagetitle": "PLAYD",
+	"webroot":"..",
+	"pagetitle":"PLAYD",
 })
 </head>
 <body class="recruit">
@@ -10,20 +10,20 @@
 
 	<!-- header -->
 	@@include('./inc/header.inc', {
-		"webroot": "..",
-		"headertype": "header__default",
+		"webroot":"..",
+		"headertype":"header__default",
 	})
 	<!-- //header -->
 	<div class="sub-tab-content">
 		<div class="sub-header">
-			<h2 class="sub-header__title font--bd">디지털 마케팅 시장에서 함께<br><span>성장할 플레이어</span>를 기다립니다.</h2>
+			<h2 class="sub-header__title">디지털 마케팅 시장에서<br>함께<span>성장할 플레이어</span>를 기다립니다.</h2>
 
 			<div class="sub-tabs">
 				<div class="sub-tabs__wrap">
 					<div class="sub-tabs__box">
-						<p><a href="/" class="sub-tabs__item font--md sub-tabs__item--active" data-content="always-recruit">상시채용</a></p>
-						<p><a href="/" class="sub-tabs__item font--md" data-content="recruit-list">채용 공고</a></p>
-						<p><a href="/" class="sub-tabs__item font--md" data-content="recruit-process">채용 프로세스</a></p>
+						<p><a href="/" class="sub-tabs__item sub-tabs__item--active" data-content="always-recruit">상시채용</a></p>
+						<p><a href="/" class="sub-tabs__item" data-content="recruit-list">채용 공고</a></p>
+						<p><a href="/" class="sub-tabs__item" data-content="recruit-process">채용 프로세스</a></p>
 					</div>
 				</div>
 			</div>
@@ -31,8 +31,8 @@
 		<div class="sub-container sub-container--always-recruit content--active">
 			<div class="sub-content">
 				<div class="recruit-ordinary">
-					<p class="recruit-ordinary__item"><a href="" class="recruit-ordinary__link font--md">퍼포먼스 마케팅AE</a></p>
-					<p class="recruit-ordinary__item"><a href="" class="recruit-ordinary__link font--md">솔루션 개발자</a></p>
+					<p class="recruit-ordinary__item"><a href="" class="recruit-ordinary__link">퍼포먼스 마케팅AE</a></p>
+					<p class="recruit-ordinary__item"><a href="" class="recruit-ordinary__link">솔루션 개발자</a></p>
 				</div>
 			</div>
 		</div>
@@ -75,9 +75,9 @@
 				<div class="relate-content">
 					<a href="/">
 						<p class="relate-content__title">
-							<div class="relate-content__wrap font--md">
+							<div class="relate-content__wrap">
 								퍼포먼스 마케팅AE
-								<div class="relate-content__date font--md">
+								<div class="relate-content__date">
 									<p>D-<span>14</span></p>
 								</div>
 							</div>
@@ -91,9 +91,9 @@
 				<div class="relate-content">
 					<a href="/">
 						<p class="relate-content__title">
-							<div class="relate-content__wrap font--md">
+							<div class="relate-content__wrap">
 								솔루션 개발자
-								<div class="relate-content__date font--md">
+								<div class="relate-content__date">
 									<p>D-<span>9</span></p>
 								</div>
 							</div>
@@ -106,9 +106,9 @@
 				</div>
 				<div class="relate-content relate-content--end">
 					<p class="relate-content__title">
-						<div class="relate-content__wrap font--md">
+						<div class="relate-content__wrap">
 							프로모션 디자이너
-							<div class="relate-content__date font--md">
+							<div class="relate-content__date">
 								<p>END</p>
 							</div>
 						</div>
@@ -121,9 +121,9 @@
 				<div class="relate-content">
 					<a href="/">
 						<p class="relate-content__title">
-							<div class="relate-content__wrap font--md">
+							<div class="relate-content__wrap">
 								솔루션 개발자
-								<div class="relate-content__date font--md">
+								<div class="relate-content__date">
 									<p>D-<span>2</span></p>
 								</div>
 							</div>
@@ -138,7 +138,45 @@
 		
 
 		</div>
-		<div class="sub-container sub-container--recruit-process"></div>
+		<div class="sub-container sub-container--recruit-process">
+
+			<div class="process-list">
+				<div class="process-list__item">
+					<p class="process-list__title">신입</p>
+					<ol class="process-list__wrap">
+						<li><span>01</span>지원서 접수</li>
+						<li><span>02</span>서류 검토</li>
+						<li><span>03</span>1차 면접</li>
+						<li><span>04</span>2차 면접</li>
+						<li><span>05</span>인턴 근무 및 최종평가(2개월)</li>
+						<li class="process-item--last"><span>06</span>최종합격</li>
+					</ol>
+				</div>
+				<div class="process-list__item">
+					<p class="process-list__title">신입(성과제)</p>
+					<ol class="process-list__wrap">
+						<li><span>01</span>지원서 접수</li>
+						<li><span>02</span>서류 검토</li>
+						<li><span>03</span>1차 면접</li>
+						<li><span>04</span>2차 면접</li>
+						<li><span>05</span>인턴 근무 및 최종평가(2개월)</li>
+						<li class="process-item--last"><span>06</span>계약직 근무 후 근무 평가에<br>따라 정규직 전환</li>
+					</ol>
+				</div>
+				<div class="process-list__item">
+					<p class="process-list__title">경력(정규직)</p>
+					<ol class="process-list__wrap">
+						<li><span>01</span>지원서 접수</li>
+						<li><span>02</span>서류 검토</li>
+						<li><span>03</span>1차 면접</li>
+						<li><span>04</span>2차 면접</li>
+						<li><span>05</span>처우협의</li>
+						<li class="process-item--last"><span>06</span>최종합격</li>
+					</ol>
+				</div>
+				<a href="/" role="button">지원하기</a>
+			</div>
+		</div>
 
 		<div class="layer__body popup" id="recruit-popup--1" aria-hidden="true" role="dialog">
 			<div class="layer__wrap">
@@ -146,7 +184,7 @@
 				<div class="layer__inner">
 					<div class="layer__content recruit-popup__content">
 						<div>
-							<p class="layer__title font--bd recruit-popup__title">
+							<p class="layer__title recruit-popup__title">
 								퍼포먼스 마케팅AE(경력)
 								<div class="recruit-popup__title--more">
 									<span>경력</span>
@@ -154,34 +192,34 @@
 								</div>
 							</p>
 							<img src="../assets/images/m/sub/img_recruit_1.png" alt="" class="recruit-popup__main-img">
-							<p class="layer__description font--dl recruit-popup__description font--bd">
+							<p class="layer__description recruit-popup__description">
 								트렌디한 시각으로 방향성을 제시할 수 있는<br>
 								전문가를 찾습니다.
 							</p>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">업무내용</dt>
-								<dd class="recruit-popup__sub-text font--dl">온라인 브랜딩 및 퍼포먼스 광고 운영</dd>
-								<dd class="recruit-popup__sub-text font--dl">미디어플래닝 및 운영 관리</dd>
-								<dd class="recruit-popup__sub-text font--dl">데이터 분석 및 인사이트 도출</dd>
-								<dd class="recruit-popup__sub-text font--dl">광고 제안서 작성 및 경쟁 PT참여</dd>
+								<dt class="recruit-popup__sub-title">업무내용</dt>
+								<dd class="recruit-popup__sub-text">온라인 브랜딩 및 퍼포먼스 광고 운영</dd>
+								<dd class="recruit-popup__sub-text">미디어플래닝 및 운영 관리</dd>
+								<dd class="recruit-popup__sub-text">데이터 분석 및 인사이트 도출</dd>
+								<dd class="recruit-popup__sub-text">광고 제안서 작성 및 경쟁 PT참여</dd>
 							</dl>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">자격요건</dt>
-								<dd class="recruit-popup__sub-text font--dl">퍼포먼스광고 운영 및 유관 경력 1년 이상인 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">대형 광고주 운영 및 제안 참여 경험이 있는분</dd>
-								<dd class="recruit-popup__sub-text font--dl">GA분석 및 데이터 분석 경험이 있는 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">OA활용능력이 우수한 분(엑셀, 파워포인트, 포토샵 등)</dd>
+								<dt class="recruit-popup__sub-title">자격요건</dt>
+								<dd class="recruit-popup__sub-text">퍼포먼스광고 운영 및 유관 경력 1년 이상인 분</dd>
+								<dd class="recruit-popup__sub-text">대형 광고주 운영 및 제안 참여 경험이 있는분</dd>
+								<dd class="recruit-popup__sub-text">GA분석 및 데이터 분석 경험이 있는 분</dd>
+								<dd class="recruit-popup__sub-text">OA활용능력이 우수한 분(엑셀, 파워포인트, 포토샵 등)</dd>
 							</dl>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">우대사항</dt>
-								<dd class="recruit-popup__sub-text font--dl">검색광고마케터, GA자격증을 보유한 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">밝고 적극적인 성격과 열린 마인드를 보유한 분</dd>
+								<dt class="recruit-popup__sub-title">우대사항</dt>
+								<dd class="recruit-popup__sub-text">검색광고마케터, GA자격증을 보유한 분</dd>
+								<dd class="recruit-popup__sub-text">밝고 적극적인 성격과 열린 마인드를 보유한 분</dd>
 							</dl>
 							<div class="recruit-popup__relate">
-								<p class="recruit-popup__relate-title font--bd">관련공고</p>
+								<p class="recruit-popup__relate-title">관련공고</p>
 								<div class="relate-content">
 									<a href="/">
-										<p class="relate-content__title font--md">
+										<p class="relate-content__title">
 											퍼포먼스 마케팅AE
 											<div class="relate-content__type">
 												<span>신입</span>
@@ -192,7 +230,7 @@
 								</div>
 								<div class="relate-content">
 									<a href="/">
-										<p class="relate-content__title font--md">
+										<p class="relate-content__title">
 											퍼포먼스 마케팅AE
 											<div class="relate-content__type">
 												<span>신입</span>
@@ -203,7 +241,7 @@
 								</div>
 								<div class="relate-content">
 									<a href="/">
-										<p class="relate-content__title font--md">
+										<p class="relate-content__title">
 											퍼포먼스 마케팅AE
 											<div class="relate-content__type">
 												<span>신입</span>
@@ -213,7 +251,7 @@
 									</a>
 								</div>
 							</div>
-							<p class="recruit-popup__button"><a href="/" role="button" class="recruit-popup__button-link font--bd">지원하기</a></p>
+							<p class="recruit-popup__button"><a href="/" role="button" class="recruit-popup__button-link">지원하기</a></p>
 						</div>
 					</div>
 				</div>
@@ -225,7 +263,7 @@
 				<div class="layer__inner">
 					<div class="layer__content recruit-popup__content">
 						<div>
-							<p class="layer__title font--bd recruit-popup__title">
+							<p class="layer__title recruit-popup__title">
 								솔루션 개발자(경력)
 								<div class="recruit-popup__title--more">
 									<span>경력</span>
@@ -233,48 +271,48 @@
 								</div>
 							</p>
 							<img src="../assets/images/m/sub/img_recruit_2.png" alt="" class="recruit-popup__main-img">
-							<p class="layer__description font--dl recruit-popup__description font--bd">
+							<p class="layer__description recruit-popup__descriptionz">
 								온라인 마케팅 시장에서<br>
 								AD-Tech를 리딩할 분을 찾습니다.
 							</p>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">업무내용</dt>
-								<dd class="recruit-popup__sub-text font--dl">온라인 광고 관리 솔루션 개발</dd>
-								<dd class="recruit-popup__sub-text font--dl">통합분석 및 광고 자동화 솔루션 개발</dd>
-								<dd class="recruit-popup__sub-text font--dl">광고 서버 시스템 개발</dd>
-								<dd class="recruit-popup__sub-text font--dl">신규 온라인광고 솔루션 개발</dd>
-								<dd class="recruit-popup__sub-text font--dl">외부 솔루션 연동 모듈 개발</dd>
-								<dd class="recruit-popup__sub-text font--dl">내부 사내 시스템 개발</dd>
+								<dt class="recruit-popup__sub-title">업무내용</dt>
+								<dd class="recruit-popup__sub-text">온라인 광고 관리 솔루션 개발</dd>
+								<dd class="recruit-popup__sub-text">통합분석 및 광고 자동화 솔루션 개발</dd>
+								<dd class="recruit-popup__sub-text">광고 서버 시스템 개발</dd>
+								<dd class="recruit-popup__sub-text">신규 온라인광고 솔루션 개발</dd>
+								<dd class="recruit-popup__sub-text">외부 솔루션 연동 모듈 개발</dd>
+								<dd class="recruit-popup__sub-text">내부 사내 시스템 개발</dd>
 							</dl>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">프로젝트 개발 환경</dt>
-								<dd class="recruit-popup__sub-text font--dl">java 1.8+, spring boot, tiles3, thymeleaf, myBatis, javascript, jQuery</dd>
-								<dd class="recruit-popup__sub-text font--dl">vert.x, tomcat, apache</dd>
-								<dd class="recruit-popup__sub-text font--dl">kafka, ActiveMQ</dd>
-								<dd class="recruit-popup__sub-text font--dl">mysql, redis</dd>
-								<dd class="recruit-popup__sub-text font--dl">​github, jenkins, eclipse, IntelliJ</dd>
-								<dd class="recruit-popup__sub-text font--dl">on-premise + naver cloud platform</dd>
+								<dt class="recruit-popup__sub-title">프로젝트 개발 환경</dt>
+								<dd class="recruit-popup__sub-text">java 1.8+, spring boot, tiles3, thymeleaf, myBatis, javascript, jQuery</dd>
+								<dd class="recruit-popup__sub-text">vert.x, tomcat, apache</dd>
+								<dd class="recruit-popup__sub-text">kafka, ActiveMQ</dd>
+								<dd class="recruit-popup__sub-text">mysql, redis</dd>
+								<dd class="recruit-popup__sub-text">​github, jenkins, eclipse, IntelliJ</dd>
+								<dd class="recruit-popup__sub-text">on-premise + naver cloud platform</dd>
 							</dl>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">자격요건</dt>
-								<dd class="recruit-popup__sub-text font--dl">JAVA 기반 웹 서비스 개발/운영 경험이 있는 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">Spring / MyBatis등의 프레임워크 활용 경험이 있는 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">javascript(jQuery), HTML5등 FrontEnd기술 경험이 있는 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">MySQL등의 DB프로그래밍 및 설계 경험이 있는 분</dd>
+								<dt class="recruit-popup__sub-title">자격요건</dt>
+								<dd class="recruit-popup__sub-text">JAVA 기반 웹 서비스 개발/운영 경험이 있는 분</dd>
+								<dd class="recruit-popup__sub-text">Spring / MyBatis등의 프레임워크 활용 경험이 있는 분</dd>
+								<dd class="recruit-popup__sub-text">javascript(jQuery), HTML5등 FrontEnd기술 경험이 있는 분</dd>
+								<dd class="recruit-popup__sub-text">MySQL등의 DB프로그래밍 및 설계 경험이 있는 분</dd>
 							</dl>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">우대사항</dt>
-								<dd class="recruit-popup__sub-text font--dl">대용량 DB데이터 운영 및 관리 경험이 있는 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">빅데이터처리 프레임웍(Hadoop, Spark, kafka등)기반 개발 경험이 있는 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">빅데이터 처리 및 쿼리 튜닝이 가능한 분</dd>
-								<dd class="recruit-popup__sub-text font--dl">온라인광고 및 로그분석 관련 시스템 개발 경험이 있는 분</dd>
+								<dt class="recruit-popup__sub-title">우대사항</dt>
+								<dd class="recruit-popup__sub-text">대용량 DB데이터 운영 및 관리 경험이 있는 분</dd>
+								<dd class="recruit-popup__sub-text">빅데이터처리 프레임웍(Hadoop, Spark, kafka등)기반 개발 경험이 있는 분</dd>
+								<dd class="recruit-popup__sub-text">빅데이터 처리 및 쿼리 튜닝이 가능한 분</dd>
+								<dd class="recruit-popup__sub-text">온라인광고 및 로그분석 관련 시스템 개발 경험이 있는 분</dd>
 							</dl>
 							<dl class="recruit-popup__sub-content">
-								<dt class="recruit-popup__sub-title font--bd">참고</dt>
-								<dd class="recruit-popup__sub-text font--dl">플레이디 마케팅솔루션(techHUB)<a href="https://www.techhub.co.kr">https : //www.techhub.co.kr</a></dd>
+								<dt class="recruit-popup__sub-title">참고</dt>
+								<dd class="recruit-popup__sub-text">플레이디 마케팅솔루션(techHUB)<a href="https://www.techhub.co.kr">https : //www.techhub.co.kr</a></dd>
 							</dl>
 							<div class="recruit-popup__relate">
-								<p class="recruit-popup__relate-title font--bd">관련공고</p>
+								<p class="recruit-popup__relate-title">관련공고</p>
 								<div class="recruit-popup__relate-content">
 									<p class="recruit-popup__relate-sub-title font--md">
 										퍼포먼스 마케팅AE
@@ -294,7 +332,7 @@
 									</p>
 								</div>
 								<div class="recruit-popup__relate-content">
-									<p class="recruit-popup__relate-sub-title font--md">
+									<p class="recruit-popup__relate-sub-title">
 										솔루션 개발자
 										<div class="recruit-popup__title--more">
 											<span>신입</span>
@@ -303,7 +341,7 @@
 									</p>
 								</div>
 							</div>
-							<p class="recruit-popup__button"><a href="/" role="button" class="recruit-popup__button-link font--bd">지원하기</a></p>
+							<p class="recruit-popup__button"><a href="/" role="button" class="recruit-popup__button-link">지원하기</a></p>
 						</div>
 					</div>
 				</div>
@@ -314,7 +352,7 @@
 
 <!-- footer -->
 @@include('./inc/footer.inc', {
-	"webroot": "..",
+	"webroot":"..",
 })
 <!-- <script src="../assets/js/m/index.js"></script> -->
 <!-- //footer -->

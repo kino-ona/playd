@@ -61,6 +61,7 @@
     &__link {
       font-size: 15px;
       line-height: 28px;
+      @include FontMD;
     }
   }
   
@@ -133,6 +134,8 @@
       padding: 65px 25px 0;
       font-size: 19px;
       line-height: 28px;
+
+      @include FontBD;
     }
 
     &__title::before ,
@@ -175,6 +178,8 @@
       font-size: 16px;
       line-height: 24px;
       border-bottom: 1px solid #000000;
+
+      @include FontBD;
     }
 
     &__sub-content {
@@ -185,6 +190,8 @@
       margin-bottom: 2.5px;
       font-size: 14px;
       line-height: 20px;
+
+      @include FontBD;
     }
 
     &__sub-text {
@@ -194,6 +201,8 @@
       font-size: 14px;
       line-height: 20px;
       letter-spacing: -.02px;
+
+      @include FontDL;
     }
 
     &__sub-text a {
@@ -238,6 +247,12 @@
 
     &__relate-title {
       padding: 40px 25px 15px; 
+
+      @include FontBD;
+    }
+
+    &__button-link {
+      @include FontBD;
     }
   }
 
@@ -317,6 +332,10 @@
     border-radius: 6px;
     box-sizing: border-box;
 
+    &__title {
+      @include FontMD;
+    }
+
     &__sub-title {
       padding: 0 25px;
       font-size: 15px;
@@ -368,11 +387,12 @@
       display: inline-block;
       font-size: 15px;
       letter-spacing: -.02px;
+      @include FontMD;
     }
 
     &__date {
       display: inline;
-    
+      @include FontMD;
     }
 
     &__date p { 
@@ -412,5 +432,84 @@
       border-color: #707070;
     }
    
+  }
+
+  .process-list {
+    margin: -15px 25px 75px;
+
+    &__item {
+      margin-top: 45px;
+    }
+
+    &__title {
+      padding-bottom: 8px;
+      font-size: 15px;
+      line-height: 22px;
+      border-bottom: 1px solid #000000;
+
+      @include FontBD;
+    }
+
+    &__wrap li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 52px;
+      margin-top: 15px;
+      padding-left: 72px;
+      font-size: 15px;
+     
+    }
+
+    &__wrap li span {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      margin-right: 20px;
+      color: #F04145;
+      font-size: 16px;
+      line-height: 52px;
+      text-align: center;
+      z-index: 9;
+
+      @include FontBD;
+      @include FontBasicSans;
+    }
+
+    &__wrap li span::before {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid #EA2126;
+      z-index: -1;
+      content: '';
+    }
+
+    .process-item--last span {
+      color: #ffffff;
+    }
+
+    .process-item--last span:before {
+      background-color: #EA2126;
+    }
+
+    > a {
+      display: inline-block;
+      width: 100%;
+      height: 50px;
+      margin-top: 40px;
+      background-color: #000000;
+      color: #ffffff;
+      line-height: 50px;
+      border-radius: 4px;
+      text-align: center;
+
+      @include FontBD;
+    }
   }
 }
