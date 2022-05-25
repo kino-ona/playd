@@ -1132,20 +1132,25 @@ input[type="file"] {
 }
 
 .sub-list-category {
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
+	margin-bottom: 35px;
 
   p {
     float: left;
   }
 
+	&__box::after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+
   &__item {
+		position: relative;
     display: inline-block;
-    font-size: 15px;
-    margin-right: 27px;
+    font-size: 16px;
+		@include FontDL;
+		color: #888888;
+    margin-right: 21px;
   }
 
   &__item::after {
@@ -1153,21 +1158,21 @@ input[type="file"] {
     position: absolute;
     width: 1px;
     height: 14px;
-    margin-top: 5px;
-    margin-left: 13px;
-    margin-right: 13px;
+    margin-top: 8.5px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: #DDDDDD;
     content: '';
   }
 
+	p:last-of-type .sub-list-category__item::after {
+		content: none;
+	}
+
   &__item--active {
-    padding-bottom: 7px;
     color: #000000;
-    border-bottom: 2px solid #000000;
     @include FontBD;
   }
-
-
 }
 
 .icon {
