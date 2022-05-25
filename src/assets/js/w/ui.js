@@ -14,132 +14,142 @@ const nav = document.querySelector('header#header nav.nav');
 const navmenu = document.querySelector('header#header .navmenu');
 const navLinks = document.querySelectorAll('#header nav.nav .nav__link');
 
-navLinks.forEach((item) => {
-	let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
-	const targetLinks = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
+// navLinks.forEach((item) => {
+// 	let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
+// 	let targetLinks = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
 
-	const navListPos = () => {
-		for (let i=1;i<navLinks.length;i++) {
-			if ((itemIdx) === i ) {
-				let elemWdL = navLinks[i].querySelector('a').getBoundingClientRect().left;
-				targetLinks.style.left = elemWdL - parseFloat(navLinks[i].getBoundingClientRect().width) - 50 + 'px';
-			}
-		}
-	}
-	navListPos();
+// 	const navListPos = () => {
+// 		for (let i=1;i<navLinks.length;i++) {
+// 			if ((itemIdx) === i ) {
+// 				let elemWdL = navLinks[i].querySelector('a').getBoundingClientRect().left;
+// 				targetLinks.style.paddingLeft = elemWdL - parseFloat(navLinks[i].getBoundingClientRect().width) - 50 + 'px';
+// 			}
+// 		}
+// 	}
+// 	navListPos();
 
-	window.addEventListener('resize', () => {
-		navListPos();
-	})
+// 	window.addEventListener('resize', () => {
+// 		navListPos();
+// 	})
 
-	item.addEventListener('mouseenter', () => {
-		console.log(itemIdx, "ENTER");
-		if (itemIdx > 5){() => {
-			return;
-		}} else {
-			navmenu.style.top = `calc(100% + 1px)`;
-			targetLinks.style.opacity = 1;
-		}
-	})
+// 	item.addEventListener('mouseenter', () => {
+// 		if (itemIdx > 5){() => {
+// 			return;
+// 		}} else {
+// 			navmenu.style.top = `calc(100% + 1px)`;
+// 			navmenu.style.borderTop = `1px solid #DDDDDD`;
+// 			targetLinks.style.opacity = 1;
+// 			// item.style.zIndex = 998;
+// 		}
+// 	})
 
-	item.addEventListener('mouseleave', () => {
-		console.log(itemIdx, "LEAVE");
-		if (itemIdx > 5){() => {
-			return;
-		}} else {
-			navmenu.style.top = 0;
-			targetLinks.style.opacity = 0;
-		}
-	})
-})
+// 	navmenu.addEventListener('mouseleave', () => {
+// 		navmenu.style.top = 0;
+// 		navmenu.style.borderTop = 0;
+// 		targetLinks.style.opacity = 0;
+// 		// item.style.zIndex = -1;
+// 	})
+// })
 
-//inputButton
-const inputButton = document.querySelectorAll('.input__button');
+(function() {
 
-inputButton.forEach((item) => {
-	item.addEventListener('click', () => {
-		if(item.classList.contains('input__button--active')) item.classList.remove('input__button--active')
-		else item.classList.add('input__button--active');
-	});
-});
+	//subTab
+	const subTabLinks = document.querySelectorAll('.sub-tabs a');
+	const subContainer = document.querySelectorAll('.sub-container');
 
-//dropdown
-const dropBox = document.querySelectorAll('.drop-box');
-const dropBoxItem = document.querySelectorAll('.drop-box__wrap a');
-
-dropBox.forEach((item) => {
-	item.addEventListener('click', () => {
-		if(item.closest('.drop-box').classList.contains('drop-box--active')) {
-			item.closest('.drop-box').classList.remove('drop-box--active')
-		} else {
-			item.closest('.drop-box').classList.add('drop-box--active')
-		}
-	})
-})
-
-dropBoxItem.forEach((item) => {
-	item.addEventListener('click', (event) => {
-		event.preventDefault();
-		item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title').innerHTML = item.innerHTML;
-	})
-})
-
-//tab
-const subTabs = document.querySelectorAll('.sub-tabs a');
-
-subTabs.forEach((item) => {
-	item.addEventListener('click', (event) => { 
-		event.preventDefault();
-		subTabs.forEach(element => {
-			element.classList.contains('sub-tabs__item--active') ? 
-			element.classList.remove('sub-tabs__item--active') : null;
-		});
+	subTabLinks.forEach((item) => {
+		item.addEventListener('click', (event) => { 
+			event.preventDefault();
+			document.querySelectorAll('.sub-container').forEach((target) => {
+				target.classList.remove('located');
+			})
 			
-		item.classList.add('sub-tabs__item--active');
+			for (let i=0;i<subContainer.length;i++) {
+				if (subContainer[i].dataset.content === item.innerText){
+					subContainer[i].classList.add('located');
+				} 
+			}
+
+			subTabLinks.forEach(element => {
+				element.classList.contains('sub-tabs__item--active') ? element.classList.remove('sub-tabs__item--active') : null;
+			});
+			item.classList.add('sub-tabs__item--active');
+		});
+	})
+
+	//inputButton
+	const inputButton = document.querySelectorAll('.input__button');
+
+	inputButton.forEach((item) => {
+		item.addEventListener('click', () => {
+			if(item.classList.contains('input__button--active')) item.classList.remove('input__button--active')
+			else item.classList.add('input__button--active');
+		});
 	});
 
-})
+	//dropdown
+	const dropBox = document.querySelectorAll('.drop-box');
+	const dropBoxItem = document.querySelectorAll('.drop-box__wrap a');
 
-//accordion
-const accordionItem = document.querySelectorAll('.accordian__item');
-
-accordionItem.forEach((item) => {
-	item.addEventListener('click', (event) => {
-		event.preventDefault();
-		if(item.classList.contains('accordian__item--active')) {
-			item.classList.remove('accordian__item--active')
-		} else {
-			item.classList.add('accordian__item--active')
-		}
+	dropBox.forEach((item) => {
+		item.addEventListener('click', () => {
+			if(item.closest('.drop-box').classList.contains('drop-box--active')) {
+				item.closest('.drop-box').classList.remove('drop-box--active')
+			} else {
+				item.closest('.drop-box').classList.add('drop-box--active')
+			}
+		})
 	})
-})
 
-//layerPopup
-let isOpen = false;
-const layerOpen = (layerId) =>{
-	let curPos = window.pageYOffset;
-	document.documentElement.classList.add("noscroll");
-	document.querySelector('#' + layerId).classList.add("is-visible");
-	let layerID = document.querySelector('#' + layerId);
-	layerID.setAttribute('aria-hidden', 'false');
-	if(document.querySelector('[role="dialog"].is-visible') && isOpen == false) {
-		isOpen = true;
-	}
-	const delay = setTimeout( function() {
-		if(!document.documentElement.classList.contains('noscroll')){
-			document.documentElement.classList.add('noscroll');
+	dropBoxItem.forEach((item) => {
+		item.addEventListener('click', (event) => {
+			event.preventDefault();
+			item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title').innerHTML = item.innerHTML;
+		})
+	})
+
+	//accordion
+	const accordionItem = document.querySelectorAll('.accordian__item');
+
+	accordionItem.forEach((item) => {
+		item.addEventListener('click', (event) => {
+			event.preventDefault();
+			if(item.classList.contains('accordian__item--active')) {
+				item.classList.remove('accordian__item--active')
+			} else {
+				item.classList.add('accordian__item--active')
+			}
+		})
+	})
+
+	//layerPopup
+	let isOpen = false;
+	const layerOpen = (layerId) =>{
+		let curPos = window.pageYOffset;
+		document.documentElement.classList.add("noscroll");
+		document.querySelector('#' + layerId).classList.add("is-visible");
+		let layerID = document.querySelector('#' + layerId);
+		layerID.setAttribute('aria-hidden', 'false');
+		if(document.querySelector('[role="dialog"].is-visible') && isOpen == false) {
+			isOpen = true;
 		}
-		clearTimeout(delay);
-	}, 50);
-}
-const layerClose = (layerId) => {
-	let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
-	document.querySelector('#' + layerId).classList.remove("is-visible");
-	document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
-	document.documentElement.classList.remove("noscroll");
-	if (document.querySelector('[role="dialog"].is-visible')) {
-		document.documentElement.classList.remove("noscroll");
-		window.scrollTop = curPos;
-		isOpen = false;
+		const delay = setTimeout( function() {
+			if(!document.documentElement.classList.contains('noscroll')){
+				document.documentElement.classList.add('noscroll');
+			}
+			clearTimeout(delay);
+		}, 50);
 	}
-}
+	const layerClose = (layerId) => {
+		let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
+		document.querySelector('#' + layerId).classList.remove("is-visible");
+		document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
+		document.documentElement.classList.remove("noscroll");
+		if (document.querySelector('[role="dialog"].is-visible')) {
+			document.documentElement.classList.remove("noscroll");
+			window.scrollTop = curPos;
+			isOpen = false;
+		}
+	}
+	
+})()

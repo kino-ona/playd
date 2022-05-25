@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+/* MIXIN */
+
+@mixin FlexRow($w: nowrap, $jc: space-between, $a: center) {
+  display: flex;
+	flex-wrap: $w;
+  justify-content: $jc;
+  align-items: $a;
+}
+
 /** GLOBAL **/
 
 .logo {
@@ -152,7 +161,7 @@
 	overflow: hidden;
 
 	&__list {
-		width: 100%;
+		width: inherit;
 		height: inherit;
 		display: flex;
 		align-items: center;
@@ -162,6 +171,7 @@
 		top: 0;
 		opacity: 0;
 		color: #888888;
+		background-color: #ffffff;
 		transition: opacity 0.2s;
 	}
 
@@ -195,6 +205,11 @@
 .header__sticked {
 	box-sizing: border-box;
 	background-color: #ffffff;
+
+	.header__inner {
+		background-color: #ffffff;
+		// border-bottom: 0;
+	}
 
 	.nav__link {
 		position: relative;
@@ -415,6 +430,12 @@ input[type="file"] {
     font-size: 46px;
     line-height: 64px;
     @include FontBD;
+
+		strong {
+			display: inline-block;
+			line-height: inherit;
+			color: #EA2126;
+		}
   }
 
   &__description {
@@ -434,8 +455,7 @@ input[type="file"] {
 
 	&__item {
     padding: 12px 20px;
-		margin-top: 60px;
-		margin-right: 10px;
+		margin: 80px 10px -30px 0;
 		display: inline-block;
 		font-size: 18px;
 		letter-spacing: -.02px;
@@ -647,7 +667,9 @@ input[type="file"] {
 	}
 
 	&__form-submit {
+		min-width: 320px;
 		padding: 13.5px 50px;
+		box-sizing: border-box;
 		margin-left: auto;
 		margin-right: auto;
 		display: inline-block;
@@ -917,7 +939,6 @@ input[type="file"] {
 }
 
 .accordian {
-	width: 240px;
 
 	&__title {
 		position: relative;
@@ -967,9 +988,7 @@ input[type="file"] {
 	}
 
 	&__content--row {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: nowrap;
+		@include FlexRow;
 	}
 
 	&__content {
