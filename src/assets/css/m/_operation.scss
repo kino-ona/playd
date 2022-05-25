@@ -1,0 +1,80 @@
+.operation {
+  background: #ffffff;
+
+  .sub-header {
+    &__description {
+      padding-top: 9px;
+    }
+  }
+
+  .sub-container {
+    display: none;
+  }
+
+  .content--active {
+    display: block;
+  }
+
+  .sub-content {
+    margin-top: 30px;
+    margin-bottom: 75px;
+  }
+
+  .list-card {
+    padding: 25px;
+    margin: 0 25px;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+
+    &__title {
+      margin-bottom: 3px;
+      font-size: 15px;
+      line-height: 1;
+      @include FontBD; 
+    }
+
+    &__title span {
+      display: block;
+      margin-bottom: 50px;
+      color: #EA2126;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: bold;
+      @include FontBasicSans;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -.02px;
+    }
+
+    &__list {
+      margin-top: 15px;
+    }
+
+    &__list li {
+      position: relative;
+      margin-top: 5px;
+      padding-left: 22px;
+      color: #666666;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -.02px;
+    }
+
+    &__list span {
+      display: block;
+      position: absolute;
+      left: 0;
+      @include FontBasicSans;
+    }
+  }
+
+  .list-card + .list-card {
+    margin-top: 20px;
+  }
+
+
+
+}

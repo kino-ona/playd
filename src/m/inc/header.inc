@@ -46,8 +46,8 @@
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">인재채용</a>
 					<div class="gnb__wrap">
-						<p><a href="/">채용</a></p>
-						<p><a href="/">복리후생</a></p>
+						<p><a href="./recruit.html">채용</a></p>
+						<p><a href="./welfare.html">복리후생</a></p>
 					</div>
 				</div>
 			</div>

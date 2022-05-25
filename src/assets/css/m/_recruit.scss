@@ -7,25 +7,12 @@
     }
   }
 
-  .sub-tabs {
-    height: 40px;
-    margin-top: 40px;
-  }
-
-  .sub-tabs__wrap {
-    left: 25px;
-  }
-
   .sub-container {
     display: none;
 
     &--recruit-list {
       padding-bottom: 75px;
       margin-top: 30px;
-    }
-
-    &--recruit-list .relate-content {
-      background: #FAFAFA;
     }
   }
 
@@ -70,7 +57,7 @@
   }
 
   .layer__content {
-    padding: 0;
+    padding: 0 25px;
   }
 
   .layer__body {
@@ -129,12 +116,13 @@
   }
 
   .recruit-popup {
+    margin: 0 25px; 
+
     &__title {
       display: block;
-      padding: 65px 25px 0;
-      font-size: 19px;
+      padding-top: 64px;
+      font-size: 20px;
       line-height: 28px;
-
       @include FontBD;
     }
 
@@ -146,51 +134,48 @@
     &__title--more {
       display: block;
       margin-top: 7px;
-      padding: 0 25px;
-      margin-bottom: 20px;
+      line-height: 1;
+      margin-bottom: 15px;
     }
 
     &__title--more span {
+      display: inline-block;
       color: #888888;
       font-size: 14px;
-      line-height: 20px;
+      line-height: 1;
       letter-spacing: -.02px;
+      @include FontDL;
     }
 
     &__title--more span + span::before {
       display: inline-block;
       width: 1px;
       height: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      background-color: #DDDDDD;
-      line-height: 28px;
-      content: '';
+      margin-left: -2px;
+      margin-right: 4px;
+      content: ',';
     }
 
     &__main-img {
+      overflow: hidden;
       width: 100%;
+      border-radius: 6px;
     }
 
     &__description {
-      margin: 30px 25px 20px;
+      margin-bottom: 20px;
+      padding: 30px 0 20px;
       color: #000000;
       font-size: 16px;
       line-height: 24px;
-      border-bottom: 1px solid #000000;
-
-      @include FontBD;
-    }
-
-    &__sub-content {
-      padding: 0 25px;
+      border-bottom: 1px solid #DDDDDD;
+      @include FontMD;
     }
 
     &__sub-title {
       margin-bottom: 2.5px;
       font-size: 14px;
       line-height: 20px;
-
       @include FontBD;
     }
 
@@ -225,6 +210,8 @@
 
     &__button {
       position: fixed;
+      left: 0;
+      right: 0;
       bottom: 0;
       width: 100%;
       height: 60px;
@@ -240,15 +227,24 @@
     }
 
     &__relate {
-      margin-top: 50px;
+      margin: 50px -25px;
       padding-bottom: 135px;
-      background: #FAFAFA;
+
+
     }
 
     &__relate-title {
-      padding: 40px 25px 15px; 
-
+      padding: 0 25px 15px; 
       @include FontBD;
+    }
+
+    &__relate-title::before {
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-bottom: 40px;
+      background-color: #000000;
+      content: '';
     }
 
     &__button-link {
@@ -328,7 +324,7 @@
     height: 85px;
     margin: 0 25px;
     padding: 20px;
-    background: #FFFFFF;
+    background: #FAFAFA;
     border-radius: 6px;
     box-sizing: border-box;
 
@@ -367,19 +363,13 @@
       letter-spacing: -.02px;
     }
 
-    &__type span:nth-child(1) {
-      color: #EA2126;
-    }
-
     &__type span + span::before {
       display: inline-block;
       width: 1px;
       height: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      background-color: #DDDDDD;
-      line-height: 28px;
-      content: '';
+      margin-left: -2px;
+      margin-right: 4px;
+      content: ',';
     }
 
     &__wrap {
@@ -473,8 +463,7 @@
       line-height: 52px;
       text-align: center;
       z-index: 9;
-
-      @include FontBD;
+      font-weight: bold;
       @include FontBasicSans;
     }
 

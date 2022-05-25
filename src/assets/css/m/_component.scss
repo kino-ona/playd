@@ -755,13 +755,16 @@
 .sub-tabs {
   display: block;
   overflow: hidden;
+  height: 40px;
+  margin-top: 40px;
 
   p {
     display: inline-block;
+    margin-right: 5px;
   }
 
-  p + p {
-    margin-left: 5px;
+  p:last-of-type {
+    margin-right: 25px;
   }
 
 	&__item {
@@ -786,6 +789,7 @@
 
   &__wrap {
     position: absolute;
+    left: 25px;
     width: 93%;
     white-space: nowrap;
   }
@@ -1042,14 +1046,25 @@
 }
 
 .sub-list-category {
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
+  display: block;
+  height: 40px;
+  overflow: hidden;
+
+  &__wrap {
+    overflow: hidden;
+    position: absolute;
+    left: 25px;
+    width: 93%;
+    white-space: nowrap;
+  }
+
+  &__box {
+    overflow-x: scroll;
+    height: 40px;
   }
 
   p {
-    float: left;
+    display: inline-block;
   }
 
   &__item {

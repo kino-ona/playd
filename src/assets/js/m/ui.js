@@ -34,6 +34,16 @@
 				subCommonFunction();
 				break;
 
+			case 'welfare':
+				headerTitle.innerHTML = '복리후생';
+				subCommonFunction();
+			break;
+
+			case 'operation':
+				headerTitle.innerHTML = '윤리경영';
+				subCommonFunction();
+			break;
+
 			default: 
 				alert('c');
 		}
@@ -103,10 +113,11 @@
 	})
 	
 	//tab
-	const subTabs = document.querySelectorAll('.sub-tabs a');
+	const subTabs = document.querySelector('.sub-tabs__wrap');
+	const subTabsA = document.querySelectorAll('.sub-tabs a');
 	const subContainer = document.querySelectorAll('.sub-container');
 	
-	subTabs.forEach((item) => {
+	subTabsA.forEach((item) => {
 		item.addEventListener('click', (event,target) => { 
 			event.preventDefault();
 		
@@ -114,10 +125,10 @@
 				document.querySelectorAll('.sub-container').forEach((thisTarget) => {
 					thisTarget.classList.remove('content--active')
 				})
+
 				document.querySelector('.sub-container--' + item.dataset.content).classList.add('content--active');
 
-
-				subTabs.forEach(element => {
+				subTabsA.forEach(element => {
 					element.classList.contains('sub-tabs__item--active') ? 
 					element.classList.remove('sub-tabs__item--active') : null;
 				});
@@ -288,6 +299,14 @@
 			});		
 		});
 
+	}
+
+	if(bodyClass === 'welfare') {
+		const swiper = new Swiper('.swiper', {
+			pagination: {
+				el: '.swiper-pagination',
+			}
+		});
 	}
 
 
