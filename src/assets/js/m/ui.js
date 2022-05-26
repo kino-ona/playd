@@ -39,7 +39,7 @@
 				subCommonFunction();
 			break;
 
-			case 'operation':
+			case 'ethical':
 				headerTitle.innerHTML = '윤리경영';
 				subCommonFunction();
 			break;
@@ -309,7 +309,7 @@
 		});
 	}
 
-	if(bodyClass === 'operation') {
+	if(bodyClass === 'ethical') {
 		const sublist =  document.querySelectorAll('.sub-list__item');
 		const categoryItem = document.querySelectorAll('.sub-list-category__item');
 		const declarationList = document.querySelectorAll('.sub-content');
