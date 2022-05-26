@@ -110,6 +110,16 @@
   }
 }
 
+@mixin subTabCateLocation {
+  .sub-list-category-container {
+    display: none;
+    &.located {
+      display: block;
+      transition: none;
+    }
+  }
+}
+
 .sub-header {
   .visual {
     margin-top: 40px;

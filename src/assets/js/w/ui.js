@@ -63,19 +63,42 @@ const navLinks = document.querySelectorAll('#header nav.nav .nav__link');
 			document.querySelectorAll('.sub-container').forEach((target) => {
 				target.classList.remove('located');
 			})
-			
 			for (let i=0;i<subContainer.length;i++) {
 				if (subContainer[i].dataset.content === item.innerText){
 					subContainer[i].classList.add('located');
 				} 
 			}
-
 			subTabLinks.forEach(element => {
 				element.classList.contains('sub-tabs__item--active') ? element.classList.remove('sub-tabs__item--active') : null;
 			});
 			item.classList.add('sub-tabs__item--active');
 		});
 	})
+
+
+	//subTab
+	const subTabCateLinks = document.querySelectorAll('.sub-list-category p a');
+	const subCateContainer = document.querySelectorAll('.sub-list-category-container');
+
+	subTabCateLinks.forEach((item) => {
+		item.addEventListener('click', (event) => { 
+			event.preventDefault();
+			document.querySelectorAll('.sub-list-category-container').forEach((target) => {
+				target.classList.remove('located');
+			})
+			for (let i=0;i<subCateContainer.length;i++) {
+				if (subCateContainer[i].dataset.content === item.innerText){
+					subCateContainer[i].classList.add('located');
+				} 
+			}
+			subTabCateLinks.forEach(element => {
+				element.classList.contains('sub-list-category__item--active') ? element.classList.remove('sub-list-category__item--active') : null;
+			});
+			item.classList.add('sub-list-category__item--active');
+		});
+	})
+
+
 
 	//inputButton
 	const inputButton = document.querySelectorAll('.input__button');
