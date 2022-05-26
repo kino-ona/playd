@@ -199,20 +199,18 @@
     @include FlexRow;
   }
 
-  #form-file-button {
-    & + label {
-      min-width: 180px;
-      height: 55px;
-      margin-left: 10px;
-      box-sizing: border-box;
-      display: inline-block;
-      font-size: 18px;
-      line-height: 55px;
-      color: #666666;
-      text-align: center;
-      border-radius: 5px;
-      background-color: #EEEEEE;
-    }
+  #form-file-button + label {
+    min-width: 180px;
+    height: 55px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 55px;
+    color: #666666;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #EEEEEE;
   }
 
   #form-file-text {
@@ -225,11 +223,11 @@
     border-radius: 5px;
     box-sizing: border-box;
     background-color: #fff;
+  }
 
-    &::placeholder {
-      @include FontInherit;
-      color: #888888;
-    }
+  #form-file-text::placeholder {
+    @include FontInherit;
+    color: #888888;
   }
 } 
 
@@ -239,14 +237,14 @@
   .form-field {
     width: 100%;
     max-width: calc(50% - 20px);
-
-    &__inner {
-      @include FlexRow;
-    }
   }
 
   .form-field--wide {
     max-width: 100%;
+  }
+
+  .form-field__inner {
+    @include FlexRow;
   }
 
   &__label {
@@ -277,11 +275,11 @@
     border-style: solid;
     border-color: #DDDDDD;
     background-color: transparent;
+  }
 
-    &::placeholder {
-      @include FontInherit;
-      color: #888888;
-    }
+  &__input::placeholder {
+    @include FontInherit;
+    color: #888888;
   }
 }
 
@@ -353,23 +351,23 @@
   .sub-checkboxs {
     border-top: 1px solid #000000;
     padding-top: 30px;
+  }
 
-    .sub-checkbox__list {
-      @include FlexRow($jc: flex-start);
+  .button__sub-checkbox {
+    margin-left: 8px;
+    font-size: 18px;
+    line-height: inherit;
+    @include FontRG;
+    color: #055BFF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-      &:not(:last-of-type) {
-        margin-bottom: 25px;
-      }
-    }
+  .sub-checkbox__list {
+    @include FlexRow($jc: flex-start);
 
-    .button__sub-checkbox {
-      margin-left: 8px;
-      font-size: 18px;
-      line-height: inherit;
-      @include FontRG;
-      color: #055BFF;
-      text-decoration: underline;
-      cursor: pointer;
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
     }
   }
 
@@ -514,29 +512,29 @@
     display: inline-block;
     overflow: hidden;
     color: #ffffff;
+  }
 
-    span {
+  .marker span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 7.5px 15px 7.5px 10px;
+    font-size: 15px;
+    line-height: 1;
+    @include FontMD;
+    border-radius: 0 15px 15px 0;
+    background-color: #4478FA;
+
+    &::before {
+      content: "";
       position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      padding: 7.5px 15px 7.5px 10px;
-      font-size: 15px;
-      line-height: 1;
-      @include FontMD;
+      width: 27.5px;
+      top: -1.5px;
+      bottom: -1.5px;
+      left: -27.5px;
       border-radius: 0 15px 15px 0;
-      background-color: #4478FA;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 27.5px;
-        top: -1.5px;
-        bottom: -1.5px;
-        left: -27.5px;
-        border-radius: 0 15px 15px 0;
-        box-shadow: 10px 0 0 0 #4478FA;
-      }
+      box-shadow: 10px 0 0 0 #4478FA;
     }
   }
 }
@@ -558,11 +556,8 @@
     @include FontDL;
   }
 
-  li {
-
-    &::before {
-      content: '·';
-    }
+  li::before {
+    content: '·';
   }
 
   dl {
@@ -570,10 +565,10 @@
 
     dd {
       color: #666666;
+    }
 
-      &::before {
-        content: '-';
-      }
+    dd::before {
+      content: '-';
     }
   }
 
@@ -620,14 +615,8 @@
 .recruit {
   @include subTabLocation;
 
-  .accordian {
-    
-    &__item--active {
-    
-      .accordian__title {
-        @include FontBD;
-      }
-    }
+  .accordian__item--active .accordian__title {
+    @include FontBD;
   }
 
   .content__inner {
@@ -646,19 +635,19 @@
       size: 50%;
       repeat: no-repeat;
     }
+  }
 
-    &__content {
-      height: 60px;
-      position: relative;
-    }
+  .banner__content {
+    height: 60px;
+    position: relative;
+  }
 
-    &__title {
-      position: absolute;
-      right: 0;
-      font-size: 20px;
-      @include FontRG;
-      text-align: left;
-    }
+  .banner__title {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    @include FontRG;
+    text-align: left;
   }
 
   dl {
@@ -678,11 +667,11 @@
 
   .search-form {
     margin-bottom: 10px;
+  }
 
-    &__wrap {
-      height: 60px;
-      padding: 15px 25px;
-    }
+  .search-form__wrap {
+    height: 60px;
+    padding: 15px 25px;
   }
 
   #recruit-search {
@@ -690,12 +679,12 @@
     font-size: 18px;
     @include FontDL;
     color: #000000;
-   
-    &::placeholder {
-      font-size: 18px;
-      @include FontDL;
-      color: #999999;
-    }   
+  }
+
+  #recruit-search::placeholder {
+    font-size: 18px;
+    @include FontDL;
+    color: #999999;
   }
 
   .drop-box {
@@ -789,12 +778,12 @@
     max-width: 100px;
     font-size: 20px;
     @include FontBD;
+  }
 
-    span {
-      display: block;
-      @include FontRG;
-      color: #666666;
-    }
+  &__title span {
+    display: block;
+    @include FontRG;
+    color: #666666;
   }
 
   &__list {
@@ -821,39 +810,6 @@
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
   background-color: #ffffff;
-
-  &:not(:last-of-type) {
-    margin-right: -22px;
-  }
-    
-  .phase {
-    width: 100%;
-    position: relative;
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
-    @include FontBasicSans;
-    color: inherit;
-    text-align: center;
-
-    &::after {
-      content: '';
-      width: 18px;
-      height: 1.5px;
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #EA2126;
-    }
-  }
-
-  .phase__title {
-    margin-top: 4px;
-    @include FontDL;
-    color: #000000;
-    text-align: center;
-  }
 
   &--mid {
     position: relative;
@@ -910,6 +866,39 @@
   }
 }
 
+.diagram__phase:not(:last-of-type) {
+  margin-right: -22px;
+}
+  
+.diagram__phase .phase {
+  width: 100%;
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  @include FontBasicSans;
+  color: inherit;
+  text-align: center;
+
+  &::after {
+    content: '';
+    width: 18px;
+    height: 1.5px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #EA2126;
+  }
+}
+
+.diagram__phase .phase__title {
+  margin-top: 4px;
+  @include FontDL;
+  color: #000000;
+  text-align: center;
+}
+
 /* WELFARE */
 
 .welfare {
@@ -926,28 +915,28 @@
       flex-shrink: 0;
       border-radius: 10px;
       background-color: #FAFAFA;
+    }
   
-      &__image {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 40px;
-      }
-  
-      &__title {
-        font-size: 16px;
-        @include FontBD;
-        margin-bottom: 10px;
-      }
-  
-      &__description {
-        min-height: 80px;
-        color: #666666;
-        @include FontDL;
-  
-        &--longer {
-          min-height: 120px;
-        }
-      }
+    .list-content__image {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 40px;
+    }
+
+    .list-content__title {
+      font-size: 16px;
+      @include FontBD;
+      margin-bottom: 10px;
+    }
+
+    .list-content__description {
+      min-height: 80px;
+      color: #666666;
+      @include FontDL;
+    }
+
+    .list-content__description--longer {
+      min-height: 120px;
     }
   }
 }
@@ -962,237 +951,516 @@
     margin-bottom: 0;
   }
 
-  .sub-container[data-content="新 윤리경영 원칙"] {
+  .form-field__inner .input-box--info__input {
+    width: 320px;
+  }
 
-    .sub-content {
-      @include FlexRow($w: wrap, $a: flex-start);
-    
-      .list-content {
-        padding: 50px;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-        flex-basis: calc(33.333% - 10px);
-        flex-shrink: 0;
-        border-radius: 10px;
-        background-color: #FAFAFA;
-    
-        &__label {
-          font-size: 26px;
-          line-height: 1;
-          font-weight: 600;
-          letter-spacing: 0;
-          @include FontBasicSans;
-          color: #EA2126;
-          margin-bottom: 50px;
-        }
-    
-        &__title {
-          font-size: 20px;
-          @include FontBD;
-          margin-bottom: 10px;
-        }
+  .sub-radio {
+    width: 100%;
+    margin-bottom: 40px;
+    @include FlexRow($jc: flex-end);
+  }
 
-        &__subtitle {
-          margin-bottom: 25px;
-          display: block;
-          @include FontDL;
-        }
-    
-        &__description {
-          min-height: 190px;
-          color: #666666;
-          @include FontDL;
-        }
+  .name-radio {
+    margin-left: 20px;
+  }
 
-        li {
-          padding-left: 30px;
-          margin-bottom: 6px;
-          position: relative;
-          @include FontDL;
-          color: #666666;
-        }
+  .check-content__recomment {
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    @include FlexRow($a: flex-start);
+    border-top: 1px solid #DDDDDD;
 
-        .numbering {
-          position: absolute;
-          left: 0;
-          top: -1.5px;
-          font-size: 18px;
-          font-weight: 300;
-          letter-spacing: 0;
-          @include FontBasicSans;
-        }
+    .check-content__sub-title {
+      width: 70px;
+      padding-left: 20px;
+      position: relative;
 
-        &--wide {
-          width: 100%;
-          max-width: calc(50% - 7.5px);
-          flex-basis: auto;
-
-          .list-content__description {
-            min-height: 90px;
-          }
-        }
+      i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: url('../../../assets/images/w/common/icons/icon_enter.png') 0 0 no-repeat;
+        background-size: contain;
+        content: '';
       }
+    }
+
+    .check-content__description {
+      width: 100%;
     }
   }
 
-  .sub-container[data-content="윤리경영 신고"] {
+  .check-content__comment  {
+    width: 100%;
+    margin-top: 40px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
 
-    .input-box--info + .input-box--file {
-      margin-top: -120px;
+    .button {
+      width: 120px;
+      height: 50px;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      display: inline-block;
+      font-size: 18px;
+      line-height: 50px;
+      @include FontMD;
+      color: #666666;
+      text-align: center;
+      background: #DDDDDD;
+      border-radius: 5px;
     }
+  }
+  
+  .check-content__comment textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+    @include FontDL;
+    background: #FAFAFA;
+    border: none;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+}
 
-    .input-box {
-      &--info__label {
-        line-height: 24px;
-      }
-    }
+.sub-container[data-content="新 윤리경영 원칙"] {
 
-    .form-field__inner {
-    
-      .input-box--info__input {
-        width: 320px;
-      }
-
-      .sub-radio {
-        width: 100%;
-        margin-bottom: 40px;
-        @include FlexRow($jc: flex-end);
-      }
-
-      .name-radio {
-        margin-left: 20px;
-      }
-    }
-      
-    textarea {
-      padding: 30px;
+  .sub-content {
+    @include FlexRow($w: wrap, $a: flex-start);
+  
+    .list-content {
+      padding: 50px;
+      margin-bottom: 15px;
       box-sizing: border-box;
-      background-color: #ffffff;
+      flex-basis: calc(33.333% - 10px);
+      flex-shrink: 0;
+      border-radius: 10px;
+      background-color: #FAFAFA;
+    }
+  
+    .list-content__label {
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: 0;
+      @include FontBasicSans;
+      color: #EA2126;
+      margin-bottom: 50px;
     }
 
-    .numbering {
-      margin-right: 2px;
-      font-size: 19px;
-      font-weight: 400;
-      line-height: inherit;
+    .list-content__title {
+      font-size: 20px;
+      @include FontBD;
+      margin-bottom: 10px;
+    }
+
+    .list-content__subtitle {
+      margin-bottom: 25px;
+      display: block;
+      @include FontDL;
+    }
+
+    .list-content__description {
+      min-height: 190px;
+      color: #666666;
+      @include FontDL;
+    }
+
+    .list-content li {
+      padding-left: 30px;
+      margin-bottom: 6px;
+      position: relative;
+      @include FontDL;
+      color: #666666;
+    }
+
+    .list-content .numbering {
+      position: absolute;
+      left: 0;
+      top: -1.5px;
+      font-size: 18px;
+      font-weight: 300;
       letter-spacing: 0;
       @include FontBasicSans;
     }
 
-    dl {
-      margin-bottom: 40px;
-
-      dt {
-        margin-top: 30px;
-        font-size: 18px;
-        @include FontMD;
-      }
-
-      .numbering {
-        margin-right: 4px;
-      }
-
-      dd {
-        margin-left: 32px;
-        color: #666666;
-
-        &:last-of-type {
-          padding-left: 0;
-          
-          &::before {
-            content: none;
-          }
-        }
-      }
+    .list-content--wide {
+      width: 100%;
+      max-width: calc(50% - 7.5px);
+      flex-basis: auto;
     }
-
-    .sub-checkboxs {
-      padding-top: 20px;
-      border-top: 1px solid #000;
-    }
-
-    .verification {
-      @include FlexRow($jc: flex-start);
-
-      &__inner {
-        max-width: 320px;
-      }
-
-      .button {
-
-        &__wrap {
-          width: 100%;
-          @include FlexRow($jc: flex-start);
-        }
-
-        width: calc(50% - 5px);
-        padding-left: 0;
-        padding-right: 0;
-        display: inline-block;
-        line-height: 25px;
-        @include FontRG;
-        color: #777777;
-
-        i {
-          margin-right: 10px;
-          width: 25px;
-          height: 25px;
-          display: inline-block;
-          background: {
-            size: 100%;
-            position: center center;
-            repeat: no-repeat;
-          }
-        }
-      }
-
-      input {
-        height: 50px;
-        width: 100%;
-        padding: 10px 30px;
-        margin-top: 10px;
-        box-sizing: border-box;
-        display: block;
-        font-size: 18px;
-        line-height: 20px;
-        @include FontDL;
-        border-radius: 5px;
-        border: 1px solid #DDDDDD;
-        background-color: #fff;
-      }
-
-      .image-block {
-        width: 500px;
-        height: 130px;
-        margin-right: 40px;
-        background: {
-          size: 100%;
-          position: 0 0;
-          repeat: no-repeat;
-        }
-      }
-
-      &__notification {
-        padding-left: 10px;
-        margin-bottom: 5px;
-        position: relative;
-        display: block;
-        color: #666666;
-        font-size: 14px;
-
-        &::before {
-          position: absolute;
-          content: '·';
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-      }
-    }
-
-    .button__form-submit {
-      height: 70px;
-      font-size: 22px;
+    
+    .list-content--wide .list-content__description {
+      min-height: 90px;
     }
   }
+}
+
+.sub-container[data-content="윤리경영 신고"] {
+
+  .input-box--info + .input-box--file {
+    margin-top: -120px;
+  }
+
+  .input-box--info__label {
+    line-height: 24px;
+  }
+    
+  textarea {
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+
+  .numbering {
+    margin-right: 2px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: inherit;
+    letter-spacing: 0;
+    @include FontBasicSans;
+  }
+
+  dl {
+    margin-bottom: 40px;
+
+    dt {
+      margin-top: 30px;
+      font-size: 18px;
+      @include FontMD;
+    }
+
+    .numbering {
+      margin-right: 4px;
+    }
+
+    dd {
+      margin-left: 32px;
+      color: #666666;
+    }
+
+    dd:last-of-type {
+      padding-left: 0;
+    }
+      
+    dd:last-of-type::before {
+      content: none;
+    }
+  }
+
+  .sub-checkboxs {
+    padding-top: 20px;
+    border-top: 1px solid #000;
+  }
+
+  .button__form-submit {
+    height: 70px;
+    font-size: 22px;
+  }
+}
+
+.verification {
+  @include FlexRow($jc: flex-start);
+
+  &__inner {
+    max-width: 320px;
+  }
+
+  .button__wrap {
+    width: 100%;
+    @include FlexRow($jc: flex-start);
+  }
+
+  .button {
+    width: calc(50% - 5px);
+    padding-left: 0;
+    padding-right: 0;
+    display: inline-block;
+    line-height: 25px;
+    @include FontRG;
+    color: #777777;
+
+    i {
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      background: {
+        size: 100%;
+        position: center center;
+        repeat: no-repeat;
+      }
+    }
+  }
+
+  input {
+    height: 50px;
+    width: 100%;
+    padding: 10px 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    @include FontDL;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    background-color: #fff;
+  }
+
+  .image-block {
+    width: 500px;
+    height: 130px;
+    margin-right: 40px;
+    background: {
+      size: 100%;
+      position: 0 0;
+      repeat: no-repeat;
+    }
+  }
+
+  &__notification {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    display: block;
+    color: #666666;
+    font-size: 14px;
+  }
+
+  &__notification::before {
+    position: absolute;
+    content: '·';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.check-input {
+  margin: 0 auto;
+  max-width: 570px;
+
+  &__wrap {
+    padding: 60px; 
+    box-sizing: border-box;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background: #FAFAFA;
+  }
+  
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    @include FontMD;
+  }
+
+  &__input {
+    display: block;
+    padding: 18px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    @include FontDL;
+    background: #ffffff;
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
+  }
+
+  .check-input__input + .check-input__input {
+    margin-top: 10px;
+  }
+
+  &__button {
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    display: block;
+    font-size: 22px;
+    line-height: 50px;
+    @include FontBD;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &__description {
+    margin: 30px 0 0;
+    @include FontDL;
+    color: #666666;
+  }
+
+  &__description a {
+    display: inline-block;
+    @include FontInherit;
+    color: #055BFF;
+  }
+}
+
+.check-content {
+  margin-top: -20px;
+
+  &__content {
+    padding: 60px 80px;
+    @include FlexRow($w: wrap, $jc: flex-start, $a: flex-start);
+    background: #FAFAFA;
+    border-radius: 10px;
+  }
+
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    @include FontBD;
+  }
+
+  &__sub-title {
+    width: 110px;
+    margin-bottom: 15px;
+    color: #666666;
+    @include FontDL;
+  } 
+
+  &__description {
+    width: calc(100% - 110px);
+    margin-bottom: 15px;
+  }
+
+  &__description-image {
+    display: inline;
+    color: #055BFF;
+    text-decoration: underline;
+  }
+
+  &__process {
+    padding: 110px 25px;
+    text-align: center;
+    border-radius: 10px;
+    background: #DDDDDD;
+  }
+
+  &__process p {
+    font-size: 18px;
+    color: #888888;
+  }
+}
+
+.declaration-list {
+
+  &__description {
+    padding: 25px 40px;
+    margin-bottom: 40px;
+    position: relative;
+    @include FontDL;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+  }
+  
+  &__description--link {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include FontBD;
+    text-decoration: underline;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #DDDDDD;
+  }
+}
+
+.declaration-list__list {
+
+  li::before {
+    content: "·";
+  }
+
+  &--row {
+    width: 100%;
+    @include FlexRow($w: wrap, $jc: flex-start, $a: flex-start);
+  }
+
+  &--row li {
+    display: inline-flex;
+    width: 50%;
+    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.declaration__sub {
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.declaration-list__sub-title {
+  margin-bottom: 4px;
+  @include FontMD;
+}
+
+.declaration-list__sub-list {
+  margin-bottom: 15px;
+
+  li {
+    @include FontDL;
+    color: #666666;
+  }
+  
+  li::before {
+    content: "-";
+  }
+}
+
+.declaration-list__sub-box {
+  padding: 50px 80px;
+  box-sizing: border-box;
+  background-color:#FAFAFA;
+  border-radius: 10px;
+  
+  .declaration-list__list {
+    width: 100%;
+    @include FlexRow($w: wrap, $jc: flex-start, $a: flex-start);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #DDDDDD;
+  }
+
+  .declaration-list__list li {
+    display: inline-flex;
+    width: 50%;
+    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+
+  .declaration-list__sub-title {
+    margin-bottom: 15px;
+  }
+}
+
+.declaration-list__button {
+  height: 70px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  font-size: 22px;
+  line-height: 70px;
+  @include FontBD;
+  text-align: center;
+  border-radius: 5px;
 }

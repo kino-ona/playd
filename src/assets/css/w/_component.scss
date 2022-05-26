@@ -76,15 +76,15 @@
 		display: inline-block;
 		@include FontInherit;
 	}
+}
 
-	&.scrolled {
-		height: 60px;
+.header--scrolled {
+	height: 60px;
 
-		.logo {
-			width: 108px;
-			height: 21px;
-			transition: all 0.2s;
-		}
+	.logo {
+		width: 108px;
+		height: 21px;
+		transition: all 0.2s;
 	}
 }
 

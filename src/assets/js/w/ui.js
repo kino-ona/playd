@@ -5,7 +5,7 @@ window.addEventListener('scroll', () => {
 	const container = document.querySelector('#container');
 	const abTcontainer =  container.getBoundingClientRect().top;
 	setTimeout((delay) => {
-		scT > abTcontainer*0.9 ? header.classList.add('scrolled') : header.classList.remove('scrolled') ;
+		scT > abTcontainer*0.9 ? header.classList.add('header--scrolled') : header.classList.remove('header--scrolled') ;
 		clearTimeout(delay);
 	}, 50);
 })
@@ -14,42 +14,42 @@ const nav = document.querySelector('header#header nav.nav');
 const navmenu = document.querySelector('header#header .navmenu');
 const navLinks = document.querySelectorAll('#header nav.nav .nav__link');
 
-// navLinks.forEach((item) => {
-// 	let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
-// 	let targetLinks = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
+navLinks.forEach((item) => {
+	let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
+	let targetLinks = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
 
-// 	const navListPos = () => {
-// 		for (let i=1;i<navLinks.length;i++) {
-// 			if ((itemIdx) === i ) {
-// 				let elemWdL = navLinks[i].querySelector('a').getBoundingClientRect().left;
-// 				targetLinks.style.paddingLeft = elemWdL - parseFloat(navLinks[i].getBoundingClientRect().width) - 50 + 'px';
-// 			}
-// 		}
-// 	}
-// 	navListPos();
+	const navListPos = () => {
+		for (let i=1;i<navLinks.length;i++) {
+			if ((itemIdx) === i ) {
+				let elemWdL = navLinks[i].querySelector('a').getBoundingClientRect().left;
+				targetLinks.style.paddingLeft = elemWdL - parseFloat(navLinks[i].getBoundingClientRect().width) - 50 + 'px';
+			}
+		}
+	}
+	navListPos();
 
-// 	window.addEventListener('resize', () => {
-// 		navListPos();
-// 	})
+	window.addEventListener('resize', () => {
+		navListPos();
+	})
 
-// 	item.addEventListener('mouseenter', () => {
-// 		if (itemIdx > 5){() => {
-// 			return;
-// 		}} else {
-// 			navmenu.style.top = `calc(100% + 1px)`;
-// 			navmenu.style.borderTop = `1px solid #DDDDDD`;
-// 			targetLinks.style.opacity = 1;
-// 			// item.style.zIndex = 998;
-// 		}
-// 	})
+	item.addEventListener('mouseenter', () => {
+		if (itemIdx > 5){() => {
+			return;
+		}} else {
+			navmenu.style.top = `calc(100% + 1px)`;
+			navmenu.style.borderTop = `1px solid #DDDDDD`;
+			targetLinks.style.opacity = 1;
+			// item.style.zIndex = 998;
+		}
+	})
 
-// 	navmenu.addEventListener('mouseleave', () => {
-// 		navmenu.style.top = 0;
-// 		navmenu.style.borderTop = 0;
-// 		targetLinks.style.opacity = 0;
-// 		// item.style.zIndex = -1;
-// 	})
-// })
+	navmenu.addEventListener('mouseleave', () => {
+		navmenu.style.top = 0;
+		navmenu.style.borderTop = 0;
+		targetLinks.style.opacity = 0;
+		// item.style.zIndex = -1;
+	})
+})
 
 (function() {
 
