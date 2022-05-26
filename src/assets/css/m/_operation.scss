@@ -75,6 +75,187 @@
     margin-top: 20px;
   }
 
+  .sub-list {
+    margin: 0 25px;
 
+    &__title {
+      border-bottom: 1px solid #707070;
+    }
 
+    &__link {
+      display: block;
+      position: relative;
+      height: 75px;
+      color: #000000;
+      line-height: 75px;
+    }
+
+    &__link::after {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 6.5px;
+      height: 6.5px;
+      margin-top: -3px;
+      border-width: 1px 1px 0 0;
+      border-style: solid;
+      border-color: #000000;
+      transform: rotate(135deg);
+      transition: all .2s ease;
+      content: '';
+    }
+
+    &__wrap {
+      padding-top: 10px;
+    }
+
+    &__item .sub-list__wrap {
+      display: none;
+    }
+
+    &__item--active .sub-list__wrap {
+      display: block;
+    }
+
+    &__item--active .sub-list__link::after {
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  .declaration-list {
+    margin: 20px 25px 0;
+
+    &__description {
+      padding: 25px;
+      margin-bottom: -10px;
+      color: #666666;
+      font-size: 14px;
+      line-height: 20px;
+      border: 1px solid #DDDDDD;
+      border-radius: 6px;
+
+      a {
+        display: block;
+        position: relative;
+        padding-top: 15px;
+        color: #000000;
+        @include FontMD;
+      }
+      a::after {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 1px;
+        background: #000000;
+        content: '';
+      }
+    }
+
+    &__title {
+      position: relative;
+      margin-top: 40px;
+      padding-bottom: 8px;
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: -0.02px;
+      border-bottom: 1px solid #DDDDDD;
+      @include FontBD; 
+
+      a {
+        display: inline-block;
+        position: absolute; 
+        right: 0;
+        bottom: 10px;
+        border-bottom: 1px solid #000000;
+        @include FontRG;
+      }
+    }
+
+    &__list {
+      padding-top: 10px;
+    }
+
+    &__list li {
+      position: relative;
+      margin-top: 5px;
+      padding-left: 7.5px;
+      font-size: 14px;
+    }
+
+    &__list li::before {
+      display: inline-block;
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      background: #000000;
+      border-radius: 50%;
+      content: '';
+    }
+
+    &__sub-title {
+      margin-bottom: -15px;
+      padding-top: 15px;
+      padding-left: 11px;
+      font-size: 14px;
+      @include FontMD
+    }
+
+    &__sub-list {
+      padding-top: 15px;
+      padding-left: 11px;
+      color: #666666;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__sub-list li {
+      position:relative;
+      padding-left: 10px;
+    }
+
+    &__sub-list li::before {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      color: #666666;
+      font-size: 14px;
+      content: '-';
+    }
+
+    &__sub-box {
+      margin-top: 30px;
+      padding: 25px;
+      background-color : #FAFAFA;
+      border-radius: 6px;
+    }
+
+    &__sub-box .declaration-list__list {
+      padding-top: 0;
+    }
+
+    &__sub-box .declaration-list__list a {
+      color: #055BFF;
+      border-bottom: 1px solid #055BFF;
+    }
+
+    &__button {
+      display: block;
+      margin-top: 30px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 40px;
+      background: #000000;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 6px;
+      @include FontBD;
+      
+    }
+  }
 }
