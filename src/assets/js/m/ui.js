@@ -312,7 +312,7 @@
 	if(bodyClass === 'operation') {
 		const sublist =  document.querySelectorAll('.sub-list__item');
 		const categoryItem = document.querySelectorAll('.sub-list-category__item');
-
+		const declarationList = document.querySelectorAll('.sub-content');
 
 
 		sublist.forEach(item => {
@@ -344,8 +344,19 @@
 				})
 
 				document.querySelector('.sub-list__item--' + item.dataset.content).classList.add('sub-list__item--active');
-				document.querySelector('.sub-list-category__item--' + item.dataset.content).classList.add('sub-list-category__item--active');
+			
+				if(document.querySelector('.sub-container--guideline').classList.contains('content--active')) {
+					document.querySelector('.sub-container--guideline .sub-list-category__item--' + item.dataset.content).classList.add('sub-list-category__item--active');
+				}
+				if(document.querySelector('.sub-container--declaration').classList.contains('content--active')) {
+					document.querySelector('.sub-container--declaration .sub-list-category__item--' + item.dataset.content).classList.add('sub-list-category__item--active');
 
+					declarationList.forEach( targets => {
+						targets.classList.remove('sub-content--active');
+					})
+
+					document.querySelector('.sub-container--declaration .sub-content--' + item.dataset.content).classList.add('sub-content--active');		
+				}
 			})
 		})
 
