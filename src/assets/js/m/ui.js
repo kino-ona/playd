@@ -313,7 +313,10 @@
 		const sublist =  document.querySelectorAll('.sub-list__item');
 		const categoryItem = document.querySelectorAll('.sub-list-category__item');
 		const declarationList = document.querySelectorAll('.sub-content');
-
+		const formSubmitOpen = document.querySelector('.ethical .sub-content__title--link')
+		const formSubmitClose = document.querySelector('.ethical .close');
+		const formSubmitClose2 = document.querySelector('.ethical .layer__button');
+		
 
 		sublist.forEach(item => {
 			item.addEventListener('click' , () => {
@@ -360,9 +363,17 @@
 			})
 		})
 
+		formSubmitOpen.addEventListener('click' , () => {
+			layerOpen('termAgreePrivacy');
+		})
 
+		formSubmitClose.addEventListener('click' , () => {
+			layerClose('termAgreePrivacy');
+		})
 
-
+		formSubmitClose2.addEventListener('click' , () => {
+			layerClose('termAgreePrivacy');
+		})
 	}
 
 }) ()

@@ -221,7 +221,141 @@
 				</div>
 			</div>
 			<div class="sub-content sub-content--chapter-2">
+				<div class="sub-contents">
+          <h3 class="sub-content__title">제보자 보호정책 <a href="#" class="sub-content__title--link">자세히 보기</a></h3>
+          <div class="word-box">
+            <p>플레이디 임직원의 직무와 관련한 비리행위를 제보하여 주시면 적극 조치하겠습니다. 플레이디에서는 정책에 따라 제보자 및 제보내용에 대한 비밀을 철저히 보장해 드립니다.</p>
+          </div>
+        </div>
+				<form action='' class="info-form">
+          <div class="sub-contents">
+            <h3 class="sub-content__title">제보자 정보</h3>
+            <div class="input-box input-box--info">
+              <div class="form-field form-field--mixed">
+                <label for="user-name" class="input-box--info__label input-box--info__label--necessary">제보자 성명</label>
+                <div class="form-field__inner">
+                  <input type="text" id="user-name" class="input-box--info__input" name="" placeholder="이름을 입력해 주세요.">
+                  <div class="sub-radio">
+                    <div class="name-radio">
+                      <input type="radio" id="name" name="name" class="name-radio__input" checked="">
+                      <label for="name" class="name-radio__label"><span>실명</span></label>
+                    </div>
+                    <div class="name-radio">
+                      <input type="radio" id="name" name="name" class="name-radio__input">
+                      <label for="name" class="name-radio__label"><span>익명</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="user-contact" class="input-box--info__label input-box--info__label--necessary">연락처</label>
+                <input type="text" id="user-contact" class="input-box--info__input" name="" placeholder="연락처를 입력해 주세요.">
+              </div>
+              <div class="form-field">
+                <label for="user-mail" class="input-box--info__label input-box--info__label--necessary">이메일</label>
+                <input type="text" id="user-mail" class="input-box--info__input" name="" placeholder="이메일을 입력해 주세요.">
+              </div>
+              <div class="form-field">
+                <label for="user-password" class="input-box--info__label input-box--info__label--necessary">비밀번호</label>
+                <input type="text" id="user-password" class="input-box--info__input" name="" placeholder="비밀번호를 설정해 주세요.">
+              </div>
+            </div>
+          </div>
 
+          <div class="sub-contents">
+            <h3 class="sub-content__title">제보내용 입력</h3>
+            <div class="input-box input-box--info">
+              <div class="form-field">
+                <label for="user-title" class="input-box--info__label input-box--info__label--necessary">제목</label>
+                <input type="text" id="user-title" class="input-box--info__input" name="" placeholder="제목을 입력해 주세요.">
+              </div>
+              <div class="form-field">
+                <label for="user-where" class="input-box--info__label input-box--info__label--necessary">발생장소</label>
+                <input type="text" id="user-where" class="input-box--info__input" name="" placeholder="발생장소를 입력해 주세요.">
+              </div>
+              <div class="form-field">
+                <label for="user-when" class="input-box--info__label input-box--info__label--necessary">발생시기</label>
+                <input type="text" id="user-when" class="input-box--info__input" name="" placeholder="YYYY.MM.DD ~ YYYY.MM.DD">
+              </div>
+              <div class="form-field">
+                <label for="user-who" class="input-box--info__label">제보대상 및 제보대상자와의 관계 (선택)</label>
+                <input type="text" id="user-who" class="input-box--info__input" name="" placeholder=" 예시) 대상 : 플레이디 OO팀 김XX">
+              </div>
+							<div class="form-field">
+                <label for="form-detail" class="input-box--info__label input-box--info__label--necessary">제보 내용</label>
+								<textarea id="form-detail" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다."></textarea>
+								<div class="input-file">
+									<input type="text" id="form-file-text" placeholder="파일 업로드(RFP 등)" readonly>
+									<div><input type="file" id="form-file-button" name=""><label for="form-file-button">찾아보기</label></div>
+								</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub-contents">
+            <h3 class="sub-content__title">추가정보 입력 (선택)</h3>
+            <p class="sub-content__description">아래 사항에 대해 추가 작성을 해주신다면, 보다 정확하고 신속한 조사 진행에 상당한 도움이 됩니다.</p>
+            <div class="input-box input-box--info">
+              <div class="form-field">
+                <label for="user-witness" class="input-box--info__label"><span class="numbering">01.</span> 제보내용을 알거나, 알 것으로 예상되는 직원이 있다면 기재해 주시기 바랍니다.</label>
+                <input type="text" id="user-witness" class="input-box--info__input" name="" placeholder="직원 성함을 입력해 주세요.">
+              </div>
+              <div class="form-field">
+                <label for="user-how" class="input-box--info__label"><span class="numbering">02.</span> 제보하신 내용을 어떻게 알게 되셨는지요?</label>
+                <input type="text" id="user-how" class="input-box--info__input" name="" placeholder="예시 ) 나에게 일어난 일, 직접 목격함 등">
+              </div>
+							<div class="form-field">
+								<label for="form-etc" class="input-box--info__label"><span class="numbering">03.</span> 문제를 확인하기 위한 가장 좋은 방법을 아신다면 기재해 주시기 바랍니다.</label>
+								<textarea id="form-etc" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다."></textarea>
+							</div>
+            </div>
+            
+          </div>
+
+          <div class="sub-contents">
+            <h3 class="sub-content__title">개인정보 이용 동의</h3>
+            <div class="input-box--info">
+              <p>제보의 충실한 처리를 위해 필요 최소한의 범위 내에서 귀하의 개인정보를 수집, 이용합니다. 개인정보 수입,이용을 원하지 않으실 경우에는 ‘익명’으로 제보하실 수 있습니다.</p>
+              <dl>
+                <dt><span class="numbering">01.</span>수집하는 개인정보의 항목</dt>
+                <dd>필수정보 : 이름, 이메일, 제보대상, 제보자와의 관계, 발생일 등 게시물 작성시 입력된 정보</dd>
+                <dd>선택정보 : 연락처</dd>
+                <dt><span class="numbering">02.</span>개인정보수집 및 이용목적</dt>
+                <dd>회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후, 해당 개인정보를 지체없이 파기합니다. 단, 관계법령의 규정에 의하여
+                  보존할 필요가 있는 경우 회사는 관계법령이 정한 일정한 기간 동안 개인정보를 보관합니다. 그 밖의 사항은 개인정보 처리방침을 준수합니다.</dd>
+              </dl>
+              <ol class="sub-checkboxs">
+                <li class="sub-checkbox__list">
+                  <label for="sub-checkbox--privacy" class="sub-checkbox__label">
+                    <input type="checkbox" id="sub-checkbox--privacy" name="" class="sub-checkbox__input">
+                    <span>개인정보 수집 및 이용에 동의합니다.</span>
+                  </label>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="sub-contents">
+            <h3 class="sub-content__title">자동입력방지문자</h3>
+            <div class="input-box--info verification">
+              <div class="image-block">
+								<img src="../assets/images/m/sub/img_verification.png" alt="">
+							</div>
+              <div class="verification__inner">
+                <div class="button__wrap">
+                  <button type="button" class="button button__radius button__filled-grey"><i style="background-image: url(../assets/images/m/sub/icon_speaker.png)"></i>음성듣기</button>
+                  <button type="button" class="button button__radius button__filled-grey"><i style="background-image: url(../assets/images/m/sub/icon_refresh.png)"></i>새로고침</button>
+                </div>
+                <input type="text" placeholder="보안문자 입력" class="security"/>
+                <span class="verification__notification">보안문자 이미지의 숫자를 보이는 대로<br>입력해주세요.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="button__wrap">
+            <input type="submit" class="button button__filled-black button__form-submit" value="신고하기" />
+          </div>
+        </form>
 			</div>
 			<div class="sub-content sub-content--chapter-3">
 				<form id="" class="check-input" name="" method="POST">
@@ -295,6 +429,42 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="layer__body popup termAgreePrivacy" id="termAgreePrivacy" aria-hidden="true" role="dialog">
+  <div class="layer__wrap layer__wrap--wide">
+    <div class="layer__close">
+      <button class="close"><span>close</span></button>
+    </div>
+    <div class="layer__inner">
+      <div class="layer__head">
+        <p class="content__title">제보자 보호정책</p>
+      </div>
+      <div class="layer__content">
+        <div class="content__text">
+          <ul>
+            <li>본인의 동의 없이 제보자 신분을 노출하거나 이를 암시하는 어떠한 정보도 공개하지 않습니다.</li>
+            <li>제보자는 신분보장 요구를 할 수 있으며, 윤리경영실에서는 불이익이 최소화 되도록 모든 조치를 취할 것입니다.
+              <dl>
+                <dt>보호범위</dt>
+                <dd>제보자 및 조사 협조자의 신분</dd>
+                <dd>제보자가 제시한 증거 또는 제보 관련 수집정보</dd>
+                <dd>대상자를 암시할 수 있는 사항</dd>
+                <dd>제보 이후 결과에 대한 사후조치 등</dd>
+                <dt>제보자 신분 누설 및 노출 금지</dt>
+                <dd>관련내용은 윤리경영 부서의 대외비로 엄격히 보호되며, 제보시스템은 안전한 보안체계로 운영됩니다.</dd>
+                <dd>제보자 신분 누설, 제보자 색출 관련 일체의 행위는 엄격히 금지됩니다.</dd>
+                <dd>제보사건은 내부감사 매뉴얼에 따라 비밀준수를 엄수할 것을 서약한 제한된 인원에 의해 운영되고 있습니다.</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <button class="button layer__button">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- footer -->
 @@include('./inc/footer.inc', {
