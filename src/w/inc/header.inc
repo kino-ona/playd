@@ -39,6 +39,7 @@
 			<div class="navmenu__link"><a href="#">채용</a></div>
 			<div class="navmenu__link"><a href="#">복리후생</a></div>
 		</div>
+		<div class="navmenu__list" style="display:none;"></div>
 	</div>
 </header>
 <style>
