@@ -55,14 +55,14 @@ $duration2: 1s;
   .accordian {
     width: 100%;
 
-    &__description {
-      padding-right: 80px;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-      font-size: 20px;
-      @include FontRG;
-      border-bottom: 1px solid #DDDDDD;
-    }
+    // &__description {
+    //   padding-right: 80px;
+    //   padding-bottom: 20px;
+    //   margin-bottom: 30px;
+    //   font-size: 20px;
+    //   @include FontRG;
+    //   border-bottom: 1px solid #DDDDDD;
+    // }
 
     dt {
       @include FontBD;
@@ -190,30 +190,66 @@ $duration2: 1s;
     line-height: 27px;
     @include FontDL;
 
-    .list-count {
-      span {
-        @include FontBD;
-      }
+    .list-count span {
+      @include FontBD;
     }
 
     .list-select {
+      @include FlexRow;
+    }
 
-      &__title {
-        height: auto;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0;
+    .list-select a[type="button"] {
+      width: 22px;
+      height: 18px;
+      margin: 1.5px 4px 1.5px 12px;
+      position: relative;
+      @include FlexRow;
+    }
 
-        &::before {
-          width: 8px;
-          height: 8px;
-          right: 0;
-        }
+    .list-select a[type="button"] i {
+      width: 22px;
+      height: 2px;
+      display: inline-block;
+      background-color: #000000;
+
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
       }
 
-      &__text {
-        color: #000000;
+      &::before, &::after {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: inline-block;
+        background-color: inherit;
+        content: "";
       }
+    }
+
+    .list-select__title {
+      height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        right: 0;
+      }
+    }
+
+    .list-select__text {
+      color: #000000;
+    }
+
+    > .sub-content__title {
+      font-size: 26px;
     }
   }
 
@@ -532,13 +568,13 @@ $duration2: 1s;
     text-align: center;
 
     &__title {
-      font-size: 16px;
+      font-size: 26px;
       @include FontBD;
     }
 
     &__note {
       margin-top: 18px;
-      font-size: 20px;
+      font-size: 18px;
       @include FontDL;
     }
 
@@ -676,7 +712,7 @@ $duration2: 1s;
 .popup.termAgreePrivacy {
 
   .content__title {
-    font-size: 20px;
+    font-size: 18px;
     @include FontBD;
     padding-bottom: 25px;
     margin-bottom: 20px;
@@ -730,7 +766,7 @@ $duration2: 1s;
   }
 
   .message__title {
-    font-size: 20px;
+    font-size: 18px;
     @include FontBD;
 
     .icon {
@@ -803,7 +839,7 @@ $duration2: 1s;
   .banner__title {
     position: absolute;
     right: 0;
-    font-size: 20px;
+    font-size: 18px;
     @include FontRG;
     text-align: left;
   }
@@ -952,7 +988,7 @@ $duration2: 1s;
   &__title {
     width: 100%;
     max-width: 100px;
-    font-size: 20px;
+    font-size: 18px;
     @include FontBD;
   }
 
@@ -1085,6 +1121,10 @@ $duration2: 1s;
   @include subTabLocation;
   @include subTabCateLocation;
 
+  .accordian__title {
+    font-size: 18px;
+  }
+
   .accordian__item:not(:last-of-type) {
     margin-bottom: 0;
   }
@@ -1191,7 +1231,7 @@ $duration2: 1s;
     }
 
     .list-content__title {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .list-content__subtitle {
@@ -1389,7 +1429,7 @@ $duration2: 1s;
   
   &__title {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     @include FontMD;
   }
 
@@ -1736,81 +1776,7 @@ $duration2: 1s;
   }
 }
 
-.article {
-  margin-top: 40px;
-  margin-bottom: 60px;
-	position: relative;
-	border-radius: 12px;
-	overflow: hidden;
-
-  &__inner {
-    position: absolute;
-    left: 100px;
-    right: 100px;
-    top: 110px;
-    bottom: 110px;
-  }
-
-  &__sort {
-    margin-bottom: 4px;
-    display: block;
-    font-size: 18px;
-    @include FontBasicSans;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-
-  &__slogan {
-    margin-bottom: 15px;
-    font-size: 26px;
-    @include FontMD;
-    line-height: 38px;
-  }
-
-  &__content {
-    @include FontDL;
-  }
-
-  &__meta {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    @include FontRG;
-    color: #888888;
-
-    > span {
-      width: 1px;
-      height: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 8px;
-      display: inline-block;
-      background-color: rgba(255, 255, 255, .5)
-    } 
-  }
-
-  .button__wrap {
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    transition: all 0.2s;
-
-		&:hover {
-			width: 60px;
-      height: 60px;
-
-      .button {
-        background: {
-          color: rgba(255, 255, 255, 1);
-        }
-      }
-		}
-  }
-}
-
-.banner__insight {
+.banner__letter {
   background-color: #EEC4CD;
 
   .banner__content {
@@ -1833,22 +1799,39 @@ $duration2: 1s;
   }
 }
 
-.article {
+.banner__main {
+  height: 450px;
   margin-top: 40px;
   margin-bottom: 60px;
-	position: relative;
-	border-radius: 12px;
-	overflow: hidden;
+  @include FlexRow;
+  text-align: left;
 
-  &__inner {
-    position: absolute;
-    left: 100px;
-    right: 100px;
-    top: 110px;
-    bottom: 110px;
+  .banner__inner {
+    width: 50%;
+    height: 100%;
+    padding: 110px 100px;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
   }
 
-  &__sort {
+  .banner__image {
+    width: 50%;
+    height: 100%;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: {
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .banner__sort {
     margin-bottom: 4px;
     display: block;
     font-size: 18px;
@@ -1857,21 +1840,20 @@ $duration2: 1s;
     letter-spacing: -0.02em;
   }
 
-  &__slogan {
+  .banner__slogan {
     margin-bottom: 15px;
     font-size: 26px;
     @include FontMD;
     line-height: 38px;
   }
 
-  &__content {
+  .banner__content {
     @include FontDL;
   }
 
-  &__meta {
+  .banner__meta {
     position: absolute;
-    bottom: 0;
-    display: block;
+    bottom: 110px;
     @include FontRG;
     color: #888888;
 
@@ -1890,8 +1872,8 @@ $duration2: 1s;
     width: 45px;
     height: 45px;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 100px;
+    bottom: 100px;
     transition: all 0.2s;
 
 		&:hover {
@@ -1907,26 +1889,3 @@ $duration2: 1s;
   }
 }
 
-
-.banner__insight {
-  background-color: #EEC4CD;
-
-  .banner__content {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    position: relative;
-  }
-
-  .banner__title {
-    font-size: 20px;
-    @include FontMD;
-  }
-
-  .banner__image {
-    width: 119px;
-    height: 97px;
-    position: absolute;
-    right: 135px;
-    bottom: 6px;
-  }
-}

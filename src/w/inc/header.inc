@@ -10,7 +10,7 @@
       <div class="nav__link"><a href="#">플레이디</a></div>
       <div class="nav__link"><a href="./recruit.html">인재채용</a></div>
       <div class="nav__link"><a href="./contact.html">CONTACT</a></div>
-      <div class="nav__gnb"><a href="#"><i></i></a></div>
+      <div class="nav__gnb"><a href="#" type="button"><i></i></a></div>
 		</nav>
 	</div>
 	<div class="navmenu">
@@ -43,6 +43,6 @@
 	</div>
 </header>
 <style>
-.header__sticked .nav__link:nth-child(@@located) a { color: #EA2126; }	
-.header__sticked .nav__link:nth-child(@@located) a::after { content: ''; position: absolute; bottom: -1.5px; left: 0; right: 0; width: 100%; height: 4px; background-color: #EA2126; }
+.header__sticked .nav__link:nth-child(@@located) a[type="button"] { color: #EA2126; }	
+.header__sticked .nav__link:nth-child(@@located) a[type="button"]::after { content: ''; position: absolute; bottom: -1.5px; left: 0; right: 0; width: 100%; height: 4px; background-color: #EA2126; }
 </style>

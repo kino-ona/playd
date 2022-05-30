@@ -99,11 +99,9 @@
 	&__gnb {
 		padding-left: 20px;
 		margin-left: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		a {
+		@include FlexRow;
+		
+		a[type="button"] {
 			width: 24px;
 			height: 18px;
 			position: relative;
@@ -202,7 +200,7 @@
 .header__transparent {
 	background-color: transparent !important;
 
-	.nav .nav__link a {
+	.nav .nav__link a[type="button"] {
 		color: #ffffff;
 	}
 
@@ -221,7 +219,7 @@
 	background-color: #ffffff;
 	border-bottom: 1px solid #DDDDDD;
 
-	.nav .nav__link a {
+	.nav .nav__link a[type="button"] {
 		color: #000000;
 	}
 
@@ -420,7 +418,7 @@ input[type="file"] {
   &__label {
     margin-bottom: 10px;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     font-weight: 600;
     @include FontBasicSans;
@@ -430,16 +428,21 @@ input[type="file"] {
 
   &__title {
     margin-bottom: 20px;
-    font-size: 46px;
-    line-height: 64px;
+    font-size: 40px;
+    line-height: 60px;
     @include FontBD;
 
 		strong {
 			display: inline-block;
-			line-height: inherit;
+			@include FontInherit;
 			color: #EA2126;
 		}
   }
+
+	&__title--big {
+		font-size: 46px;
+    line-height: 64px;
+	}
 
   &__description {
     font-size: 18px;
@@ -985,7 +988,7 @@ input[type="file"] {
 
 	&__title {
 		position: relative;
-		font-size: 20px;
+		font-size: 26px;
 		letter-spacing: -.02px;
 
 		a {
