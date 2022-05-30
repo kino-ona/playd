@@ -1,8 +1,3 @@
-<section class="banner banner__insight">
-	<div class="banner__content">
-		<p class="banner__title">최신 업데이트 되는 미디어 이슈부터 인사이트 리포트까지 메일로 편하게 받아보세요.</p>
-	</div>
-</section>
 <section class="banner banner__footer">
 	<div class="banner__content">
 		<p class="banner__title">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>

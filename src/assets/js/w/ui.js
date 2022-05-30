@@ -10,7 +10,6 @@ window.addEventListener('scroll', () => {
 	}, 50);
 })
 
-
 window.addEventListener('load', () => {
 	
 	//HeaderNav

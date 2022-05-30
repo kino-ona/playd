@@ -1,0 +1,128 @@
+@@include('./inc/pagehead.inc', {
+	"webroot": "..",
+	"pagetitle": "PLAYD | 인사이트 | 리포트",
+})
+</head>
+<body>
+<div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
+
+<div class="wrap">
+
+	<!-- header -->
+	@@include('./inc/header.inc', {
+		"webroot": "..",
+		"headertype": "header__sticked",
+		"logotype": "logo__filled",
+		"located": "3",
+	})
+	<!-- //header -->
+
+	<div id="container" class="container insight">
+
+    <div class="sub-header">
+      <h2 class="sub-header__title"><span class="sub-header__label">리포트</span>플레이디 트렌드 리포트를 <br>통해 <strong>마케팅 인사이트</strong>를 얻어가세요.</h2>
+    </div>
+
+		<div class="search-form">
+			<div class="search-form__wrap">
+				<input type="search" id="insightReport-search" name="" placeholder="검색어를 입력하세요.">
+				<button type="button" class="button button__icon-search"><div class="a11y">검색</div></button>
+			</div>
+			<div class="search-list">
+				<div class="search-item">
+					<button type="button" class="sub-tabs__item sub-tabs__item--active">전체</button>
+					<button type="button" class="sub-tabs__item">Trend Delivery</button>
+					<button type="button" class="sub-tabs__item">VOICE Trend</button>
+					<button type="button" class="sub-tabs__item">Trend Report</button>
+				</div>
+			</div>
+		</div>
+			
+		<section class="article">
+			<div class="article__inner">
+				<span class="article__sort">VOICE Trend</span>
+				<h3 class="article__slogan">카카오 광고 플랫폼, <br>카카오 Keyword 광고 파헤치기</h3>
+				<p class="article__content">취향존중 츠엔드 확산에 따라 ‘나’ 자신을 위한 <br>남성들의 투자가 들고 있습니다.</p>
+				<span class="article__meta">2022.04<span><span class="a11y">|</span></span>23,431</span>
+			</div>
+			<div class="button__wrap">
+				<a href="#" class="button button__icon-download"><span class="a11y">다운로드 받기</span></a>
+			</div>
+			<div class="article__image"><img class="image" src="../assets/images/w/visual/insight_2.png" /></div>
+		</section>
+
+		<div class="sub-content">
+			<div class="list-content">
+				<p class="list-content__image">
+					<img src="../assets/images/w/dummy/@insight1.png" />
+				</p>
+				<p class="list-content__title"><span class="list-content__sort">Trend Report</span> [2022.05] 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+				<span class="list-content__meta">2022.04<span><span class="a11y">|</span></span>23,431</span>
+			</div>
+			<div class="list-content">
+				<p class="list-content__image">
+					<img src="../assets/images/w/dummy/@insight2.png" />
+				</p>
+				<p class="list-content__title"><span class="list-content__sort">Trend Delivery</span> [2022.05] 디지털애드 어워즈 4관왕 내 기업의 해외 온라인 마케팅 지원 본격화 내 기업의 해외 온라인 마케팅 지원 본격화</p>
+				<p class="list-content__description">
+					2022.03
+				</p>	
+			</div>
+			<div class="list-content">
+				<p class="list-content__image">
+					<img src="../assets/images/w/dummy/@insight3.png" />
+				</p>
+				<p class="list-content__title"><span class="list-content__sort">Trend Report</span> [2022.04] 플랫폼비즈니스팀 인터뷰</p>
+				<p class="list-content__description">
+					2022.03
+				</p>	
+			</div>
+			<div class="list-content">
+				<p class="list-content__image">
+					<img src="../assets/images/w/dummy/@insight3.png" />
+				</p>
+				<p class="list-content__title"><span class="list-content__sort">Trend Delivery</span> [2022.04] 플랫폼비즈니스팀 인터뷰</p>
+				<p class="list-content__description">
+					2022.03
+				</p>	
+			</div>
+			<div class="list-content">
+				<p class="list-content__image">
+					<img src="../assets/images/w/dummy/@insight3.png" />
+				</p>
+				<p class="list-content__title"><span class="list-content__sort">VOICE Trend</span> [2022.03] 플랫폼비즈니스팀 인터뷰</p>
+				<p class="list-content__description">
+					2022.03
+				</p>	
+			</div>
+			<div class="list-content">
+				<p class="list-content__image">
+					<img src="../assets/images/w/dummy/@insight3.png" />
+				</p>
+				<p class="list-content__title"><span class="list-content__sort">Trend Report</span> [2022.03] 플랫폼비즈니스팀 인터뷰</p>
+				<p class="list-content__description">
+					2022.03
+				</p>	
+			</div>
+		</div>
+
+		<div class="button__wrap button__wrap--seemore">
+			<a href="#" class="button button__seemore">더 보기</a>
+		</div>
+	</div>
+</div>
+
+<section class="banner banner__insight">
+	<div class="banner__content">
+		<p class="banner__title">최신 업데이트 되는 미디어 이슈부터 인사이트 리포트까지 메일로 편하게 받아보세요.</p>
+		<div class="banner__image"><img src="../assets/images/w/dummy/@insight_banner.png" /></div>
+	</div>
+</section>
+
+<!-- footer -->
+@@include('./inc/footer.inc', {
+	"webroot": "..",
+})
+<!-- //footer -->
+</body>
+</html>
