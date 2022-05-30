@@ -106,10 +106,27 @@
 }
 
 .sub-header {
+
   .visual {
     margin-top: 40px;
+    position: relative;
     border-radius: 12px;
     overflow: hidden;
+  }
+
+  .visual__inner {
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+  }
+
+  .visual__slogan {
+    font-size: 26px;
+    @include FontMD;
+    color: inherit;
   }
 }
 
@@ -299,15 +316,6 @@
   border-radius: 5px;
   background-color: #FAFAFA;
 
-  &__wrap {
-    width: 100%;
-    @include FlexRow;
-    box-sizing: border-box;
-    position: relative;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
   input {
     width: 100%;
     position: relative;
@@ -326,6 +334,17 @@
   }
 }
 
+.search-form__wrap {
+  width: 100%;
+  height: 60px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  position: relative;
+  @include FlexRow;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
 .search-list {
   width: 100%;
   @include FlexRow($jc: flex-start);
@@ -337,6 +356,28 @@
 
   & + .search-item {
     margin-left: 10px;
+  }
+}
+
+.sub-content {
+  @include FlexRow($w: wrap, $a: flex-start);
+
+  .list-content {
+    box-sizing: border-box;
+    flex-basis: calc(33.333% - 10px);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: #FAFAFA;
+  }
+
+  .list-content__title {
+    @include FontBD;
+    margin-bottom: 10px;
+  }
+
+  .list-content__description {
+    color: #666666;
+    @include FontDL;
   }
 }
 
@@ -918,14 +959,9 @@
     .list-content {
       padding: 40px;
       margin-bottom: 15px;
-      box-sizing: border-box;
-      flex-basis: calc(33.333% - 10px);
-      flex-shrink: 0;
-      border-radius: 10px;
-      background-color: #FAFAFA;
     }
   
-    .list-content__image {
+    .list-content__icon {
       width: 50px;
       height: 50px;
       margin-bottom: 40px;
@@ -933,14 +969,10 @@
 
     .list-content__title {
       font-size: 16px;
-      @include FontBD;
-      margin-bottom: 10px;
     }
 
     .list-content__description {
       min-height: 80px;
-      color: #666666;
-      @include FontDL;
     }
 
     .list-content__description--longer {
@@ -1048,11 +1080,6 @@
     .list-content {
       padding: 50px;
       margin-bottom: 15px;
-      box-sizing: border-box;
-      flex-basis: calc(33.333% - 10px);
-      flex-shrink: 0;
-      border-radius: 10px;
-      background-color: #FAFAFA;
     }
   
     .list-content__label {
@@ -1067,8 +1094,6 @@
 
     .list-content__title {
       font-size: 20px;
-      @include FontBD;
-      margin-bottom: 10px;
     }
 
     .list-content__subtitle {
@@ -1079,8 +1104,6 @@
 
     .list-content__description {
       min-height: 190px;
-      color: #666666;
-      @include FontDL;
     }
 
     .list-content li {
@@ -1471,4 +1494,100 @@
   @include FontBD;
   text-align: center;
   border-radius: 5px;
+}
+
+/* INSIGHT */
+
+.insight {
+
+  .sub-header .visual {
+    z-index: 1;
+  }
+    
+  .sub-header .visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: inherit;
+    max-width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, rgba(0, 0, 0, .32), 20%,rgba(0, 0, 0, 0));
+  }
+
+  .sub-header .button__wrap {
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .search-form {
+    margin-bottom: 40px;
+  }
+
+  #insightLetter-search {
+    max-width: 660px;
+    font-size: 18px;
+    @include FontDL;
+    color: #000000;
+  }
+
+  #insightLetter-search::placeholder {
+    font-size: 18px;
+    @include FontDL;
+    color: #999999;
+  }
+
+  .search-list {
+    width: auto;
+    margin-left: 30px;
+
+    .search-item {
+      @include FlexRow($jc: flex-end);
+    }
+
+    .sub-tabs__item {
+      margin: 0px 10px 0px 0;
+    }
+  }
+
+
+
+  .sub-content {
+    margin-bottom: 80px;
+    @include FlexRow($w: wrap, $a: flex-start);
+  
+    .list-content {
+      margin-bottom: 15px;
+      background-color: transparent;
+      flex-basis: calc(33.333% - 20px);
+    }
+  
+    .list-content__image {
+      width: 100%;
+      height: 230px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .list-content__title {
+      font-size: 18px;
+      @include FontMD;
+    }
+
+    .numbering {
+      margin-bottom: 4px;
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0;
+      @include FontBasicSans;
+    }
+
+    .list-content__description {
+      margin-top: 20px;
+    }
+  }
 }

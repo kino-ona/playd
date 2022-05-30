@@ -685,6 +685,20 @@ input[type="file"] {
 		@include FontBD;
 		border-radius: 5px;
 	}
+
+	&__seemore {
+		padding: 16px 120px;
+		color: #666666;
+		font-size: 22px;
+		@include FontBD;
+		background-color: #fff;
+		border: 1px solid #DDDDDD;
+		border-radius: 5px;
+	}
+
+	&__wrap--seemore {
+		margin-bottom: 150px;
+	}
 }
 
 .input {
