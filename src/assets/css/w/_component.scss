@@ -1203,13 +1203,12 @@ input[type="file"] {
   }
 
   &__item::after {
-    display: inline-block;
-    position: absolute;
-    width: 1px;
+		width: 1px;
     height: 14px;
     margin-top: 8.5px;
     margin-left: 10px;
     margin-right: 10px;
+    position: absolute;
     background-color: #DDDDDD;
     content: '';
   }
@@ -1221,6 +1220,19 @@ input[type="file"] {
   &__item--active {
     color: #000000;
     @include FontBD;
+
+		&::before {
+			width: 100%;
+			height: 3px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			right: 0;
+			background-color: #000000;
+			content: '';
+		}
   }
 }
 
