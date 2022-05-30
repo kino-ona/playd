@@ -686,6 +686,13 @@ input[type="file"] {
 		border-radius: 5px;
 	}
 
+	&__icon-search {
+		width: 32px;
+		height: 33px;
+		background: url('../../images/w/common/icons/icon_search.png') 0 0 no-repeat;
+		background-size: contain;
+	}
+
 	&__seemore {
 		padding: 16px 120px;
 		color: #666666;
@@ -698,6 +705,19 @@ input[type="file"] {
 
 	&__wrap--seemore {
 		margin-bottom: 150px;
+	}
+
+	&__icon-download {
+		width: 100%;
+		height: 100%;
+		background: {
+			color: rgba(255, 255, 255, .6);
+			size: 66.667%;
+			position: center center;
+			repeat: no-repeat;
+		}
+		background-image: url(../../../assets/images/w/common/icons/icon_download.png);
+		border-radius: 50%;
 	}
 }
 

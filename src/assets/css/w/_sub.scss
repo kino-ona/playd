@@ -1,5 +1,8 @@
 /** SUB COMMON **/
 
+$duration1: 1.5s;
+$duration2: 1s;
+
 .sub-container {
   margin-bottom: 150px;
 
@@ -322,15 +325,11 @@
     background-color: #fff;
   }
 
-  button {
+  .button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     right: 15px;
-    width: 32px;
-    height: 33px;
-    background: url('../../images/w/common/icons/icon_search.png') 0 0 no-repeat;
-    background-size: contain;
+    transform: translateY(-50%);
   }
 }
 
@@ -368,6 +367,8 @@
     flex-shrink: 0;
     border-radius: 10px;
     background-color: #FAFAFA;
+
+    > a {display: block;}
   }
 
   .list-content__title {
@@ -378,6 +379,22 @@
   .list-content__description {
     color: #666666;
     @include FontDL;
+  }
+
+  .list-content__meta {
+    display: block;
+    @include FontRG;
+    color: #888888;
+
+    > span {
+      width: 1px;
+      height: 12px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 8px;
+      display: inline-block;
+      background-color: #DDDDDD;
+    } 
   }
 }
 
@@ -461,9 +478,9 @@
       margin: 0 auto;
       position: relative;
       font-size: 80px;
+      @include FontBasicSans;
       font-weight: 300;
       line-height: 1;
-      @include FontBasicSans;
 
       &::after {
         position: absolute;
@@ -755,8 +772,8 @@
     position: relative;
     display: block;
     font-size: 18px;
-    font-weight: 600;
     @include FontBasicSans;
+    font-weight: 600;
     color: inherit;
     text-align: center;
   
@@ -1084,10 +1101,10 @@
   
     .list-content__label {
       font-size: 26px;
+      @include FontBasicSans;
       line-height: 1;
       font-weight: 600;
       letter-spacing: 0;
-      @include FontBasicSans;
       color: #EA2126;
       margin-bottom: 50px;
     }
@@ -1119,9 +1136,9 @@
       left: 0;
       top: -1.5px;
       font-size: 18px;
+      @include FontBasicSans;
       font-weight: 300;
       letter-spacing: 0;
-      @include FontBasicSans;
     }
 
     .list-content--wide {
@@ -1155,10 +1172,10 @@
   .numbering {
     margin-right: 2px;
     font-size: 19px;
+    @include FontBasicSans;
     font-weight: 400;
     line-height: inherit;
     letter-spacing: 0;
-    @include FontBasicSans;
   }
 
   dl {
@@ -1525,18 +1542,25 @@
   .search-form {
     margin-bottom: 40px;
   }
-
-  #insightLetter-search {
-    max-width: 660px;
+  
+  .search-form input {
     font-size: 18px;
     @include FontDL;
     color: #000000;
+
+    &::placeholder {
+      font-size: 18px;
+      @include FontDL;
+      color: #999999;
+    }
   }
 
-  #insightLetter-search::placeholder {
-    font-size: 18px;
-    @include FontDL;
-    color: #999999;
+  #insightLetter-search {
+    max-width: 660px;
+  }
+
+  #insightReport-search {
+    max-width: 455px;
   }
 
   .search-list {
@@ -1548,20 +1572,47 @@
     }
 
     .sub-tabs__item {
+      white-space: nowrap;
       margin: 0px 10px 0px 0;
     }
   }
 
-
-
   .sub-content {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     @include FlexRow($w: wrap, $a: flex-start);
   
     .list-content {
-      margin-bottom: 15px;
+      margin-bottom: 60px;
       background-color: transparent;
       flex-basis: calc(33.333% - 20px);
+    }
+
+    .list-content__cover {
+      position: relative;
+    }
+
+    .list-content__cover {
+
+      .button__wrap {
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        transition: all 0.2s;
+    
+        &:hover {
+          width: 60px;
+          height: 60px;
+    
+          .button {
+            background: {
+              color: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+      }
     }
   
     .list-content__image {
@@ -1575,19 +1626,127 @@
     .list-content__title {
       font-size: 18px;
       @include FontMD;
+      @include ellipse(2);
+    }
+
+    .list-content__sort {
+      margin-bottom: 4px;
+      display: block;
+      font-size: 16px;
+      @include FontBasicSans;
+      font-weight: 600;
+      letter-spacing: 0;
     }
 
     .numbering {
       margin-bottom: 4px;
       display: block;
       font-size: 16px;
+      @include FontBasicSans;
       font-weight: 600;
       letter-spacing: 0;
-      @include FontBasicSans;
     }
 
-    .list-content__description {
+    .list-content__meta {
       margin-top: 20px;
     }
+  }
+}
+
+.article {
+  margin-top: 40px;
+  margin-bottom: 60px;
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+
+  &__inner {
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    top: 110px;
+    bottom: 110px;
+  }
+
+  &__sort {
+    margin-bottom: 4px;
+    display: block;
+    font-size: 18px;
+    @include FontBasicSans;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  &__slogan {
+    margin-bottom: 15px;
+    font-size: 26px;
+    @include FontMD;
+    line-height: 38px;
+  }
+
+  &__content {
+    @include FontDL;
+  }
+
+  &__meta {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    @include FontRG;
+    color: #888888;
+
+    > span {
+      width: 1px;
+      height: 12px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 8px;
+      display: inline-block;
+      background-color: rgba(255, 255, 255, .5)
+    } 
+  }
+
+  .button__wrap {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    transition: all 0.2s;
+
+		&:hover {
+			width: 60px;
+      height: 60px;
+
+      .button {
+        background: {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+		}
+  }
+}
+
+
+.banner__insight {
+  background-color: #EEC4CD;
+
+  .banner__content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+
+  .banner__title {
+    font-size: 20px;
+    @include FontMD;
+  }
+
+  .banner__image {
+    width: 119px;
+    height: 97px;
+    position: absolute;
+    right: 135px;
+    bottom: 6px;
   }
 }
