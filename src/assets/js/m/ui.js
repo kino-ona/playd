@@ -44,6 +44,11 @@
 				subCommonFunction();
 			break;
 
+			case 'letter':
+				headerTitle.innerHTML = '뉴스레터';
+				subCommonFunction();
+			break;
+
 			default: 
 				alert('c');
 		}
@@ -375,5 +380,91 @@
 			layerClose('termAgreePrivacy');
 		})
 	}
+
+	if(bodyClass === 'letter'){
+		const subTabItem = document.querySelectorAll('.sub-tabs__item');
+		const formSubmit = document.querySelector('.letter .form-submit--wide');
+		const formSubmitOpen = document.querySelector('.letter .button__filled-black')
+		const formSubmitClose = document.querySelector('.letter .close');
+		const formCheckClose = document.querySelector('.letter .close_btn');
+		const formUserName = document.querySelector('.letter #user-name');
+		const formUserPosition = document.querySelector('.letter #user-position');
+		const formUserMail = document.querySelector('.letter #user-mail');
+		const needCheck = document.querySelector('.letter #sub-checkbox--personal');
+		const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+
+		subTabItem.forEach(item => {
+			item.addEventListener('click', () => {
+				subTabItem.forEach(thisTarget => {
+					if(thisTarget.classList.contains('sub-tabs__item--active')) thisTarget.classList.remove('sub-tabs__item--active')
+				})
+				item.classList.add('sub-tabs__item--active');
+			})
+		})
+
+		formSubmitOpen.addEventListener('click' , () => {
+			layerOpen('newsLetter');
+		})
+		
+		needCheck.addEventListener('change', () => {
+			if(needCheck.checked) {
+				formSubmit.classList.add('submit--active');
+			}else {
+				formSubmit.classList.remove('submit--active');
+			}
+		})
+		
+		
+		formSubmit.addEventListener('click' , (event) => {
+			event.preventDefault();
+			document.querySelectorAll('.form-field').forEach((item) => {
+				item.classList.remove('warning');
+			})
+
+			if(!needCheck.checked) {
+				needCheck.focus();
+				return false;
+			}
+
+			if(!formUserName.value) {
+				formUserName.focus();
+				formUserName.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserPosition.value) {
+				formUserPosition.focus();
+				formUserPosition.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+
+			if(!formUserMail.value) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!regEmail.test(formUserMail.value)) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+				return false;
+			}
+
+			layerOpen('form-popup');
+		})
+
+		formCheckClose.addEventListener('click' , () => {
+			layerClose('form-popup');
+			layerClose('newsLetter');
+		});
+
+		formSubmitClose.addEventListener('click' , () => {
+			layerClose('newsLetter');
+		})
+	}
+
 
 }) ()

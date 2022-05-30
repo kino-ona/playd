@@ -75,122 +75,6 @@
     } 
   }
 
-  #form-title {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 30px;
-    line-height: 1;
-    padding-top: 15px;
-    padding-bottom: 12px;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #DDDDDD;
-
-    &::placeholder {
-      color: #999999;
-      letter-spacing: -.03px;
-      font-size: 15px;
-    }
-  }
-
-  #form-detail {
-    width: 100%;
-    height: 155px;
-    padding: 5px 5px 25px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border: none;
-    background: transparent;
-
-    &::placeholder {
-      color: '#888888';
-      letter-spacing: -.03px;
-      font-size: 15px;
-    }
-  }
-
-  #form-file-button {
-    & + label {
-      display: block;
-      width: 100%;
-      height: 50px;
-      margin-top: 10px;
-      color: #666666;
-      font-size: 14px;
-      line-height: 50px;
-      text-align: center;
-      border-radius: 5px;
-      background-color: #EEEEEE;
-    }
-  }
-
-  .input-box-info {
-    margin-top: 15px;
-    background-color: #FAFAFA;
-    border-radius: 5px;
-    padding: 35px 25px 0;
-
-    &__label {
-      display: block;
-      font-size: 14px;
-      padding-bottom: 10px;
-    }
-  
-    &__label--necessary::after{
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      padding-left: 4px;
-      color: #EA2126;
-      content: '*';
-    }
-
-    &__input {
-      width: 100%;
-      height: 15px;
-      margin-bottom: 30px;
-      line-height: 1;
-      font-size: 15px;
-      padding-bottom: 8px;
-      border-width: 0 0 1px 0;
-      border-style: solid;
-      border-color: #DDDDDD;
-      background-color: transparent;
-
-      &::placeholder {
-        color: '#888888';
-        letter-spacing: -.03px;
-        font-size: 15px;
-      }
-    }
-  }
-
-  input[type="file"] {
-    position: absolute;
-    width: 0;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-  }
-
-  #form-file-text {
-    width: 100%;
-    height: 50px;
-    padding: 15px 14px;
-    background: #ffffff;
-    line-height: 50px;
-    border: none;
-    box-sizing: border-box;
-
-    &::placeholder {
-      color: '#999999';
-      letter-spacing: -.03px;
-      font-size: 15px;
-    }
-  }
-
   .drop-box {
     margin-top: 15px;
 
@@ -353,10 +237,6 @@
     padding: 25px;
     text-align: center;
   }
-
-  .form-warning {
-    display: none;
-  }
   
   .input-box--file.warning {
     position: relative;
@@ -366,31 +246,5 @@
       bottom: -29px;
       left: 3px;
     }
-  }
-
-  .warning {
-    .input-box-info__input {
-      border-color: #EA2126;
-    }
-    .form-warning {
-      display: block;
-      position: absolute;
-      bottom: 5px;
-      color: #EA2126;
-      font-size: 12px;
-      letter-spacing: -.02px;
-    }
-
-    .form-warning::before {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      padding-right: 8px;
-      background: url('../../images/m/sub/icon_warning.png') 0 0 no-repeat;
-      background-size: contain;
-      transform: translateY(2px);
-      content:'';
-    }
-  
   }
 }

@@ -1,0 +1,202 @@
+@@include('./inc/pagehead.inc', {
+	"webroot": "..",
+	"pagetitle": "PLAYD | 인사이트 | 뉴스레터",
+})
+</head>
+<body class="letter"> 
+<div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
+
+<div class="wrap">
+
+	<!-- header -->
+	@@include('./inc/header.inc', {
+		"webroot":"..",
+		"headertype":"header__default",
+	})
+	<!-- //header -->
+
+    <div class="sub-header">
+      <h2 class="sub-header__title">하루 5분, 플레이디 뉴스레터로<br><span>트렌드</span>를 빠르게 받아보세요.</h2>
+      <section class="visual">
+				<div class="visual__inner">
+					<h3 class="visual__slogan">광고·미디어에 특화된 업계 동향 및 <br>마케팅·트렌드 소식을 주 1회 빠르게 전달해드립니다.</h3>
+					<div class="button__wrap">
+            <a href="#" class="button button__radius button__filled-black">뉴스레터 신청하기</a>
+          </div>
+				</div>
+        <div class="visual__image" style="background-image: url('../assets/images/m/sub/img_letter_1.png')"></div>
+      </section>
+    </div>
+
+		<div class="search-form">
+			<div class="search-form__wrap">
+				<input type="search" id="insightLetter-search" name="" placeholder="검색어를 입력하세요.">
+				<button><div class="a11y">검색</div></button>
+			</div>
+			<div class="search-list">
+				<div class="search-item">
+					<button type="button" class="sub-tabs__item sub-tabs__item--active">전체</button>
+					<button type="button" class="sub-tabs__item">2020</button>
+					<button type="button" class="sub-tabs__item">2021</button>
+					<button type="button" class="sub-tabs__item">2020</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="sub-content">
+			<div class="list-content">
+				<a href="#">
+					<p class="list-content__image" style="background-image: url('../assets/images/m/sub/img_letter_2.png')"></p>
+					<p class="list-content__title"><span class="numbering">Vol. 112</span> 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+					<p class="list-content__description">
+						2022.03
+					</p>	
+				</a>
+			</div>
+			<div class="list-content">
+				<a href="#">
+					<p class="list-content__image" style="background-image: url('../assets/images/m/sub/img_letter_3.png')"></p>
+					<p class="list-content__title"><span class="numbering">Vol. 112</span> 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+					<p class="list-content__description">
+						2022.03
+					</p>	
+				</a>
+			</div>
+			<div class="list-content">
+				<a href="#">
+					<p class="list-content__image" style="background-image: url('../assets/images/m/sub/img_letter_4.png')"></p>
+					<p class="list-content__title"><span class="numbering">Vol. 112</span> 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+					<p class="list-content__description">
+						2022.03
+					</p>	
+				</a>
+			</div>
+			<div class="list-content">
+				<a href="#">
+					<p class="list-content__image" style="background-image: url('../assets/images/m/sub/img_letter_5.png')"></p>
+					<p class="list-content__title"><span class="numbering">Vol. 112</span> 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+					<p class="list-content__description">
+						2022.03
+					</p>	
+				</a>
+			</div>
+			<div class="list-content">
+				<a href="#">
+					<p class="list-content__image" style="background-image: url('../assets/images/m/sub/img_letter_2.png')"></p>
+					<p class="list-content__title"><span class="numbering">Vol. 112</span> 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+					<p class="list-content__description">
+						2022.03
+					</p>	
+				</a>
+			</div>
+			<div class="list-content">
+				<a href="#">
+					<p class="list-content__image" style="background-image: url('../assets/images/m/sub/img_letter_3.png')"></p>
+					<p class="list-content__title"><span class="numbering">Vol. 112</span> 국내 기업의 해외 온라인 마케팅 지원 본격화</p>
+					<p class="list-content__description">
+						2022.03
+					</p>	
+				</a>
+			</div>
+		</div>
+
+		<div class="button__wrap button__wrap--seemore">
+			<a href="#" class="button button__seemore">더 보기</a>
+		</div>
+	</div>
+
+		<div class="sub-content sub-content__warning" style="display: none">
+			<img src="../../assets/images/m/common/icon_warning.png" alt="경고 아이콘" class="sub-content__warning-icon">
+			<p class="sub-content__warning-text">검색결과가 없습니다.
+				<span>다른키워드로 검색해주세요.</span>
+			</p>
+		</div>
+
+
+	</div>
+
+	<div class="layer__body popup newsLetter" id="newsLetter" aria-hidden="true" role="dialog">
+		<div class="layer__wrap layer__wrap--wide">
+			<div class="layer__close">
+				<button class="close"><span>close</span></button>
+			</div>
+			<div class="layer__inner">
+				<div class="layer__head">
+					<p class="content__title">PlayD 뉴스레터 신청</p>
+					<p class="content__description">광고·마케팅과 관련한 최근 미디어 이슈부터, 트렌드,<br>
+						인사이트 리포트까지 뉴스레터로 손쉽게 받아보세요.</p>
+				</div>
+				<div class="layer__content">
+					<div class="content__text">
+						<form>
+							<legend>플레이디 뉴스레터 신청폼</legend>
+							<div class="form-field">
+								<label for="user-name" class="input-box-info__label input-box-info__label--necessary">이름</label>
+								<input type="text" id="user-name"  class="input-box-info__input" name="" placeholder="이름을 입력해 주세요.">
+								<p class="form-warning">이름을 입력해주세요.</p>
+							</div>
+							<div class="form-field">
+								<label for="user-position" class="input-box-info__label input-box-info__label--necessary">직업</label>
+								<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직업을 입력해 주세요.">
+								<p class="form-warning">직업을 입력해 주세요.</p>
+							</div>
+							<div class="form-field">
+								<label for="user-mail" class="input-box-info__label input-box-info__label--necessary">이메일 주소</label>
+								<input type="text" id="user-mail"  class="input-box-info__input" name="" placeholder="이메일 주소를 입력해 주세요.">
+								<p class="form-warning">이메일 주소를 입력해 주세요.</p>
+							</div>
+							<div class="form-field">
+								<label for="user-position" class="input-box-info__label">직급</label>
+								<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직급을 입력해 주세요.">
+							</div>
+							<div class="form-field">
+								<label for="user-company" class="input-box-info__label">회사명(소속)</label>
+								<input type="text" id="user-company" class="input-box-info__input" name="" placeholder="회사명을 입력해 주세요.">
+							</div>
+							<div class="form-field">
+								<label for="user-team" class="input-box-info__label">부서(팀명)</label>
+								<input type="text" id="user-team" class="input-box-info__input" name="" placeholder="부서를 입력해 주세요.">
+							</div>
+							<div class="sub-checkboxs">
+								<label for="sub-checkbox--personal" class="sub-checkbox__label">
+									<input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input" checked>
+									<span>개인정보 수집 및 이용동의</span>
+								</label>
+							</div>
+							<p class="form-description">
+								입력하신 이름, 직업, 이메일 주소, 직급, 회사명
+								(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 
+								보유,이용기간 동안 보관 및 이용됩니다.
+							</p>
+						</form>
+					</div>
+					<button type="submit" class="button layer__button form-submit--wide">뉴스레터 신청하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="layer__body popup" id="form-popup" aria-hidden="true" role="dialog">
+    <div class="layer__wrap">
+      <div class="layer__inner">
+        <div class="layer__content form-popup">
+          <dl>
+            <dt class="layer__title">뉴스레터 신청이 완료되었습니다.</dt>
+            <dd class="layer__description">
+							플레이디 뉴스레터를 구독해주셔서<br>
+							감사합니다.
+						</dd>
+          </dl>
+					<button class="close_btn">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- footer -->
+@@include('./inc/footer.inc', {
+	"webroot":"..",
+})
+<!-- //footer -->
+</body>
+</html>
