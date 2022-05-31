@@ -43,6 +43,6 @@
 	</div>
 </header>
 <style>
-.header__sticked .nav__link:nth-child(@@located) a[type="button"] { color: #EA2126; }	
-.header__sticked .nav__link:nth-child(@@located) a[type="button"]::after { content: ''; position: absolute; bottom: -1.5px; left: 0; right: 0; width: 100%; height: 4px; background-color: #EA2126; }
+.header__sticked .nav .nav__link:nth-child(@@located) a { color: #EA2126; }	
+.header__sticked .nav .nav__link:nth-child(@@located) a::after { content: ''; position: absolute; bottom: -1.5px; left: 0; right: 0; width: 100%; height: 4px; background-color: #EA2126; }
 </style>

@@ -140,12 +140,10 @@
 .nav__link {
 	height: inherit;
 	margin-left: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include FlexRow($jc: center);
 }
 
-.nav__link:hover {
+.nav__link:hover, .nav__link.located {
 
 	a {
 		color: #EA2126;
@@ -175,26 +173,26 @@
 	border-bottom: 1px solid #DDDDDD;
 	transition: top 0.4s;
 	overflow: hidden;
+}
 
-	&__list {
-		height: inherit;
-		display: none; // flex;
-		align-items: center;
-		position: absolute;
-		top: 0;
-		color: #888888;
-		background-color: #ffffff;
-		transition: opacity 0.2s;
-	}
+.navmenu__list {
+	height: inherit;
+	display: none; // flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	color: #888888;
+	background-color: #ffffff;
+	transition: opacity 0.2s;
+}
 
-	&__link {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		padding-left: 0;
-		margin-right: 30px;
-		font-size: 18px;
-		color: inherit;
-	}
+.navmenu__link {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 0;
+	margin-right: 30px;
+	font-size: 18px;
+	color: inherit;
 }
 
 .header__transparent {
