@@ -49,15 +49,16 @@
     border-radius: 10px;
 
     &__title {
-      margin-bottom: 3px;
-      font-size: 15px;
-      line-height: 1;
+      margin-bottom: 74px;
+      color: #EA2126;
+      font-size: 14px;
+      line-height: 17px;
       @include FontBD; 
     }
 
     &__title span {
-      display: block;
-      margin-bottom: 50px;
+      display: inline-block;
+      margin-right: 6px;
       color: #EA2126;
       font-size: 20px;
       line-height: 1;
@@ -66,13 +67,14 @@
     }
 
     &__description {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 21px;
-      letter-spacing: -.02px;
+      letter-spacing: -.2px;
+      @include FontBD;
     }
 
     &__list {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     &__list li {
@@ -82,7 +84,7 @@
       color: #666666;
       font-size: 14px;
       line-height: 21px;
-      letter-spacing: -.02px;
+      letter-spacing: -.2px;
     }
 
     &__list span {
@@ -98,7 +100,7 @@
   }
 
   .sub-list {
-    margin: 0 25px;
+    margin: 30px 25px 0;
 
     &__title {
       border-bottom: 1px solid #707070;
@@ -126,10 +128,6 @@
       transform: rotate(135deg);
       transition: all .2s ease;
       content: '';
-    }
-
-    &__wrap {
-      padding-top: 10px;
     }
 
     &__item .sub-list__wrap {
@@ -183,7 +181,7 @@
       padding-bottom: 8px;
       color: #000000;
       font-size: 14px;
-      letter-spacing: -0.02px;
+      letter-spacing: -.2px;
       border-bottom: 1px solid #DDDDDD;
       @include FontBD; 
 
@@ -358,7 +356,7 @@
       color: #000000;
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: -.02px;
+      letter-spacing: -2px;
       @include FontBD;
     }
 
@@ -472,7 +470,7 @@
     &__label {
       color: #000000;
       line-height: 22px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
     }
 
     &__label--necessary::after{
@@ -568,7 +566,7 @@
   .form-field {
     input::placeholder {
       color: #888888;
-      font-size: 15px;
+      font-size: 14px;
       @include FontDL;
     }
   }
@@ -636,7 +634,7 @@
 
     &::placeholder {
       color: #888888;
-      font-size: 15px;
+      font-size: 14px;
     }
 
   }
@@ -665,7 +663,7 @@
       padding-left: 10px;
       color: #666666;
       font-size: 14px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
     }
 
     &__notification::before {
@@ -813,6 +811,135 @@
     }
   }
 
+  .ethics-accordion {
+    font-size: 14px; 
 
+    h4 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      @include FontBD;
+    }
+    p {
+      margin-bottom: 20px;
+    }
 
+    .bullet-type {
+      margin-top: 10px
+    }
+
+    .bullet-type > li:last-child {
+      margin-bottom: 30px;
+    }
+
+    .bullet-type > li {
+      position: relative;
+      padding-left: 10px; 
+      font-size: 14px;
+    }
+
+    .bullet-type li:before {
+      display: block;
+      position: absolute;
+      left: 1px;
+      top: 10px;
+      width: 3px;
+      height: 3px;
+      background: #666666;
+      border-radius: 50%;
+      content: '';
+    }
+
+    .footnote li:first-child {
+      margin-bottom: 5px;
+      color: #f52f23;
+    }
+
+    .none-bullet {
+      display: flex;
+      padding-left: 0;
+      margin-left: -5px;
+    }
+
+    .none-bullet span {
+      margin-right: 5px;
+    }
+
+    .bullet-type li ul {
+      margin-top: 5px;
+    }
+
+    table th {
+      position: relative;
+      padding: 12px 16px;
+      border-bottom: 2px solid #ddd;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    table td {
+      padding: 17px 10px;
+      vertical-align: middle;
+      border-left: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    td:first-child {
+      border-left: none;
+    }
+
+    td.add-border {
+      border-left: 1px solid #eaeaea;
+    }
+
+    .table, .tab-table {
+      margin-top: 15px;
+      border-top: 2px solid #ddd;
+      table-layout: auto;
+    }
+    
+    
+
+    th:nth-last-of-type(4) {
+      width: 20%;
+    }
+
+    th:nth-last-of-type(3) {
+      width: 50%;
+    }
+
+    th:nth-last-of-type(2) {
+      width: 10%;
+    }
+
+    .tab-table th:nth-last-of-type(2) {
+      width: 50%;
+    }
+
+    tr:first-child th + th:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1px;
+      height: 17px;
+      transform: translateY(-50%);
+      background: #dddddd;
+    }
+
+    .ethics-accordion-chescaler {
+      overflow-x: scroll;
+    }
+
+    h5 {
+      font-size: 14px;
+      @include FontBD;
+    }
+
+    .table-top__txt {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+  }
 }

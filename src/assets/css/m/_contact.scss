@@ -1,14 +1,18 @@
 .contact {
   background: #ffffff;
 
+  .sub-header__title {
+    margin-bottom: -10px;
+  }
+
   .sub-content {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-left: 25px;
     padding-right: 25px;
 
     &__title {
       font-size: 16px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       line-height: 21px;
       @include FontBD;
     }
@@ -18,7 +22,7 @@
       color: #888888;
       font-size: 12px;
       line-height: 20px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
     }
   }
 
@@ -41,10 +45,6 @@
     &__item--full {
       width: calc(100% - 10px);
       margin: 5px 0 5px 5px;
-    }
-
-    &__item--full .input__checkbox-label {
-      width: 100%;
     }
 
     &--route {
@@ -79,14 +79,14 @@
     margin-top: 15px;
 
     &__title {
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       padding: 0 15px;
       line-height: 52px;
     }
 
     &__text {
-      color: #999999;
-      font-size: 15px;
+      color: #888888;
+      font-size: 14px;
       line-height: 50px;
     }
 
@@ -105,9 +105,9 @@
       margin-left: 32px;
       color: #222BFF;
       border-bottom: 1px solid #222BFF;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
    }
   }
 
@@ -136,7 +136,7 @@
     &__title {
       font-size: 19px;
       line-height: 28px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       @include FontBD;
     }
 
@@ -192,7 +192,7 @@
       font-size: 19px;
       line-height: 28px;
       color: #ffffff;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
     }
   }
 
@@ -214,7 +214,7 @@
       color: #ffffff;
       font-size: 13px;
       line-height: 19px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       @include FontDL;
     }
 

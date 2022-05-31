@@ -46,8 +46,8 @@
 
 .sub-page--active {
   color: #EA2126;
-  font-size: 15px;
-  letter-spacing: -.02px;
+  font-size: 16px;
+  letter-spacing: -.2px;
 
   .banner__content .banner__title {
     padding-top: 40px;
@@ -105,7 +105,7 @@
 
   &__title {
     font-size: 23px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
     font-weight: bold;
     line-height: 32px;
     @include FontMD;
@@ -227,7 +227,7 @@
     margin-top: 20px;
     font-size: 16px;
     line-height: 25px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
   }
 
   &__item--active .gnb__wrap {
@@ -299,9 +299,9 @@
     display: inline-block;
     padding: 9px 25px;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22.5px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
     font-weight: bold;
     background-color: #EA2126;
     border-radius: 45px;
@@ -313,7 +313,7 @@
     color: #ffffff;
     font-size: 16px;
     line-height: 26px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
 	}
 
 	&__filled-white {
@@ -323,7 +323,7 @@
     color: #EA2126;
     font-size: 16px;
     line-height: 25px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
 	}
 
   &__link {
@@ -364,7 +364,7 @@
     margin: 0 25px 75px;
     padding: 18px 0;
     color: #666666;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     line-height: 1;
     border-radius: 5px;
@@ -445,7 +445,7 @@
   &__util {
     margin-bottom: 35px;
     font-size: 12px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
     line-height: 18px;
   }
 
@@ -471,7 +471,7 @@
     color: #999999;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
   }
 
   .information__title {
@@ -561,7 +561,7 @@
 .input {
   &__button {
 		width: 232px;
-		letter-spacing: -.02px;
+		letter-spacing: -.2px;
 		color: #666666;
 		border: 1px solid #DDDDDD;
 		background-color: #ffffff;
@@ -592,11 +592,13 @@
     height: 45px;
     border: 1px solid #DDDDDD;
 		background-color: #ffffff;
-    letter-spacing: -.02px;
+    letter-spacing: -.2px;
 		color: #666666;
+    font-size: 15px;
     text-align: center;
     line-height: 45px;
     border-radius: 4px;
+    box-sizing: border-box;
   }
 
 	&__square-button {
@@ -726,9 +728,9 @@
 		height: 50px;
     padding: 12px 15px;
 		color: #888888;
-		font-size: 15px;
+		font-size: 14px;
 		line-height: 50px;
-		letter-spacing: -.03px;
+		letter-spacing: -.3px;
 		border: 1px solid #EEEEEE;
     background: #ffffff;
 		border-radius: 5px;
@@ -776,8 +778,8 @@
 
 	p {
 		color: #000000;
-		font-size: 16px;
-		letter-spacing: -.03px;
+		font-size: 14px;
+		letter-spacing: -.3px;
 	}
 }
 
@@ -802,9 +804,9 @@
     padding: 2px 15px;
 		color: #666666;
 		line-height: 30px;
-		font-size: 15px;
+		font-size: 14px;
     text-align: center;
-		letter-spacing: -.02px;
+		letter-spacing: -.2px;
 		background-color: #F7F7F7;
 		border-radius: 30px;
     box-sizing: border-box;
@@ -837,13 +839,13 @@
 		display: block;
 		padding-bottom: 5px;
 		font-size: 16;
-		letter-spacing: -.02px;
+		letter-spacing: -.2px;
 	}
 
 	&__input {
 		padding-bottom: 15px;
 		font-size: 20px;
-		letter-spacing: -.02px;
+		letter-spacing: -.2px;
 		border-width: 0 0 1px 0;
 		border-style: solid;
 		border-color: #DDDDDD;
@@ -863,7 +865,7 @@
 	&__title {
 		position: relative;
 		font-size: 20px;
-		letter-spacing: -.02px;
+		letter-spacing: -.2px;
 
 		a {
 			display: block;
@@ -903,7 +905,7 @@
 		overflow: hidden;
 		height: 0;
 		font-size: 20px;
-		letter-spacing: -0.02em;
+		letter-spacing: -.2px;
 	}
 }
 
@@ -959,6 +961,7 @@
       border: none;
       background-color: #EA2126;
       border-radius: 4px;
+      font-size: 14px;
       line-height: 1;
       @include FontBD;
     }
@@ -1003,6 +1006,7 @@
     padding-top: 10px;
     padding-bottom: 30px;
     color: #666666;
+    font-size: 14px;
     @include FontDL;
   }
 
@@ -1090,7 +1094,7 @@
 
   &__title {
     font-size: 20px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
     line-height: 30px;
     @include FontBD;
   }
@@ -1105,7 +1109,7 @@
     padding-top: 15px;
     font-size: 16px;
     line-height: 22px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
   }
 
   &__more-description {
@@ -1113,7 +1117,7 @@
     color: #666666;
     font-size: 13px;
     line-height: 19px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
   }
 }
 
@@ -1122,7 +1126,7 @@
     margin-bottom: 25px;
     font-size: 15px;
     line-height: 24px;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
   }
 
   &__warning {
@@ -1178,7 +1182,7 @@
 
   &__item {
     display: inline-block;
-    font-size: 15px;
+    font-size: 14px;
     margin-right: 27px;
   }
 
@@ -1213,7 +1217,7 @@
     margin-top: 8px;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: -.02px;
+    letter-spacing: -.2px;
   }
 }
 
@@ -1253,7 +1257,7 @@
     height: 15px;
     margin-bottom: 30px;
     line-height: 1;
-    font-size: 15px;
+    font-size: 14px;
     padding-bottom: 8px;
     border-width: 0 0 1px 0;
     border-style: solid;
@@ -1262,8 +1266,8 @@
 
     &::placeholder {
       color: #888888;
-      letter-spacing: -.03px;
-      font-size: 15px;
+      letter-spacing: -.3px;
+      font-size: 14px;
     }
   }
 }
@@ -1282,8 +1286,8 @@
 
   &::placeholder {
     color: #888888;
-    letter-spacing: -.03px;
-    font-size: 15px;
+    letter-spacing: -.3px;
+    font-size: 14px;
   }
 }
 
@@ -1298,7 +1302,7 @@
 
   &::placeholder {
     color: #888888;
-    letter-spacing: -.03px;
+    letter-spacing: -.3px;
     font-size: 15px;
   }
 }
@@ -1307,14 +1311,14 @@
   & + label {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 40px;
     margin-top: 10px;
-    color: #666666;
+    color: #000000;
     font-size: 14px;
-    line-height: 50px;
+    line-height: 40px;
     text-align: center;
     border-radius: 5px;
-    background-color: #EEEEEE;
+    border: 1px solid #000000;
     @include FontMD;
   }
 }
@@ -1339,8 +1343,8 @@ input[type="file"] {
 
   &::placeholder {
     color: #888888;
-    letter-spacing: -.03px;
-    font-size: 15px;
+    letter-spacing: -.3px;
+    font-size: 14px;
   }
 }
 
@@ -1358,7 +1362,7 @@ input[type="file"] {
     bottom: 5px;
     color: #EA2126;
     font-size: 12px;
-    letter-spacing: -.02px;
+    letter-spacing: -.2px;
   }
 
   .form-warning::before {

@@ -57,14 +57,14 @@ html {
       color: #ffffff;
       font-size: 18px;
       line-height: 25px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       @include FontBD;
     }
 
     &__slogan {
       color: #ffffff;
       font-size: 15px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       line-height: 23px;
     }
   }
@@ -89,7 +89,7 @@ html {
       height: 100%;
       color: #ffffff;
       font-size: 40px;
-      letter-spacing: -.02px;
+      letter-spacing: -.2px;
       font-weight: bold;
       justify-content: center;
       align-items: center;
@@ -182,7 +182,7 @@ html {
     &__title {
       padding-left: 37px;
       font-size: 14px;
-      letter-spacing: -.03px;
+      letter-spacing: -.3px;
       line-height: 1;
       @include FontMD;
     }
@@ -196,7 +196,7 @@ html {
       display: inline-block;
       padding-right: 5px;
       font-size: 27px;
-      letter-spacing: -.02px;
+      letter-spacing: -.2px;
       line-height: 1;
       @include FontBD;
     }

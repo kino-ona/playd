@@ -49,6 +49,11 @@
 				subCommonFunction();
 			break;
 
+			case 'letter-detail':
+				headerTitle.innerHTML = '뉴스레터';
+				subCommonFunction();
+			break;
+
 			default: 
 				alert('c');
 		}
@@ -458,7 +463,7 @@
 
 		formCheckClose.addEventListener('click' , () => {
 			layerClose('form-popup');
-			layerClose('newsLetter');
+			
 		});
 
 		formSubmitClose.addEventListener('click' , () => {
