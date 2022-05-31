@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
 	navLinks.forEach((item) => {
 		let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
 		let targetNavmenuList = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
+		let targetNavLink = nav.querySelector('.nav__link:nth-of-type(' + itemIdx + ')');
 
 		const navmenuListPos = () => {
 			for (let i=0;i<(navmenuList.length);i++) {
@@ -40,7 +41,7 @@ window.addEventListener('load', () => {
 			if (itemIdx > 5){
 				navmenu.style.top = 0;
 			} else {
-				// header.style.borderColor = `#DDDDDD`;
+				targetNavLink.classList.add('located');
 				navmenu.style.top = `calc(100% + 1px)`;
 				targetNavmenuList.style.display = `flex`;
 			}
@@ -48,20 +49,25 @@ window.addEventListener('load', () => {
 
 		item.addEventListener('mouseleave', () => {
 			targetNavmenuList.style.display = `none`;
+			targetNavLink.classList.remove('located');
 			nav.addEventListener('mouseleave', () => {
 				navmenu.style.top = 0;
+				targetNavLink.classList.remove('located');
 			})
 			targetNavmenuList.addEventListener('mouseleave', () => {
 				navmenu.style.top = 0;
+				targetNavLink.classList.remove('located');
 			});
 		});
 
 		targetNavmenuList.addEventListener('mouseenter', () => {
+			targetNavLink.classList.add('located');
 			navmenu.style.top = `calc(100% + 1px)`;
 			targetNavmenuList.style.display = `flex`;
 		});
 
 		targetNavmenuList.addEventListener('mouseleave', () => {
+			targetNavLink.classList.remove('located');
 			navmenu.style.top = 0;
 			targetNavmenuList.style.display = `none`;
 		});

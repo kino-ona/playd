@@ -99,11 +99,9 @@
 	&__gnb {
 		padding-left: 20px;
 		margin-left: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		a {
+		@include FlexRow;
+		
+		a[type="button"] {
 			width: 24px;
 			height: 18px;
 			position: relative;
@@ -142,12 +140,10 @@
 .nav__link {
 	height: inherit;
 	margin-left: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include FlexRow($jc: center);
 }
 
-.nav__link:hover {
+.nav__link:hover, .nav__link.located {
 
 	a {
 		color: #EA2126;
@@ -177,32 +173,32 @@
 	border-bottom: 1px solid #DDDDDD;
 	transition: top 0.4s;
 	overflow: hidden;
+}
 
-	&__list {
-		height: inherit;
-		display: none; // flex;
-		align-items: center;
-		position: absolute;
-		top: 0;
-		color: #888888;
-		background-color: #ffffff;
-		transition: opacity 0.2s;
-	}
+.navmenu__list {
+	height: inherit;
+	display: none; // flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	color: #888888;
+	background-color: #ffffff;
+	transition: opacity 0.2s;
+}
 
-	&__link {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		padding-left: 0;
-		margin-right: 30px;
-		font-size: 18px;
-		color: inherit;
-	}
+.navmenu__link {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 0;
+	margin-right: 30px;
+	font-size: 18px;
+	color: inherit;
 }
 
 .header__transparent {
 	background-color: transparent !important;
 
-	.nav .nav__link a {
+	.nav .nav__link a[type="button"] {
 		color: #ffffff;
 	}
 
@@ -221,7 +217,7 @@
 	background-color: #ffffff;
 	border-bottom: 1px solid #DDDDDD;
 
-	.nav .nav__link a {
+	.nav .nav__link a[type="button"] {
 		color: #000000;
 	}
 
@@ -420,7 +416,7 @@ input[type="file"] {
   &__label {
     margin-bottom: 10px;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     font-weight: 600;
     @include FontBasicSans;
@@ -430,16 +426,21 @@ input[type="file"] {
 
   &__title {
     margin-bottom: 20px;
-    font-size: 46px;
-    line-height: 64px;
+    font-size: 40px;
+    line-height: 60px;
     @include FontBD;
 
 		strong {
 			display: inline-block;
-			line-height: inherit;
+			@include FontInherit;
 			color: #EA2126;
 		}
   }
+
+	&__title--big {
+		font-size: 46px;
+    line-height: 64px;
+	}
 
   &__description {
     font-size: 18px;
@@ -985,7 +986,7 @@ input[type="file"] {
 
 	&__title {
 		position: relative;
-		font-size: 20px;
+		font-size: 26px;
 		letter-spacing: -.02px;
 
 		a {
@@ -1052,6 +1053,50 @@ input[type="file"] {
 		width: 100%;
 		max-width: calc(50% - 20px);
 	}
+}
+
+
+
+.accordian.toggle-accordian {
+  position: relative;
+
+	.accordian__item {
+		margin: 0;
+	}
+
+	.accordian__title {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.accordian__title::before {
+		top: calc(50% - 4.5px);
+		right: calc(50% - 4.5px);
+	}
+
+	.accordian__title::after {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		content: '';
+		border: 1px solid #DDDDDD;
+		border-radius: 50%;
+	}
+
+	.accordian__content {
+		height: 55px;
+		border: 0;
+	}
+
+	.accordian__item--active .accordian__content {
+		height: 100%;
+	}
+
 }
 
 .layer {
@@ -1200,13 +1245,12 @@ input[type="file"] {
   }
 
   &__item::after {
-    display: inline-block;
-    position: absolute;
-    width: 1px;
+		width: 1px;
     height: 14px;
     margin-top: 8.5px;
     margin-left: 10px;
     margin-right: 10px;
+    position: absolute;
     background-color: #DDDDDD;
     content: '';
   }
@@ -1218,6 +1262,19 @@ input[type="file"] {
   &__item--active {
     color: #000000;
     @include FontBD;
+
+		&::before {
+			width: 100%;
+			height: 3px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			right: 0;
+			background-color: #000000;
+			content: '';
+		}
   }
 }
 

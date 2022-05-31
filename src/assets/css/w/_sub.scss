@@ -55,14 +55,14 @@ $duration2: 1s;
   .accordian {
     width: 100%;
 
-    &__description {
-      padding-right: 80px;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-      font-size: 20px;
-      @include FontRG;
-      border-bottom: 1px solid #DDDDDD;
-    }
+    // &__description {
+    //   padding-right: 80px;
+    //   padding-bottom: 20px;
+    //   margin-bottom: 30px;
+    //   font-size: 20px;
+    //   @include FontRG;
+    //   border-bottom: 1px solid #DDDDDD;
+    // }
 
     dt {
       @include FontBD;
@@ -148,6 +148,79 @@ $duration2: 1s;
     text-decoration: underline;
   }
 
+  &__head {
+    width: 100%;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    @include FlexRow;
+    font-size: 18px;
+    line-height: 27px;
+    @include FontDL;
+
+    .list-count span {
+      @include FontBD;
+    }
+
+    .list-select {
+      @include FlexRow;
+    }
+
+    .list-select a[type="button"] {
+      width: 22px;
+      height: 18px;
+      margin: 1.5px 4px 1.5px 12px;
+      position: relative;
+      @include FlexRow;
+    }
+
+    .list-select a[type="button"] i {
+      width: 22px;
+      height: 2px;
+      display: inline-block;
+      background-color: #000000;
+
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+
+      &::before, &::after {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: inline-block;
+        background-color: inherit;
+        content: "";
+      }
+    }
+
+    .list-select__title {
+      height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        right: 0;
+      }
+    }
+
+    .list-select__text {
+      color: #000000;
+    }
+
+    > .sub-content__title {
+      font-size: 26px;
+    }
+  }
+
   &__description {
     margin-top: -5px;
     margin-bottom: 5px;
@@ -168,7 +241,6 @@ $duration2: 1s;
 
 .list-content {
   box-sizing: border-box;
-  flex-basis: calc(33.333% - 10px);
   flex-shrink: 0;
   border-radius: 10px;
   background-color: #FAFAFA;
@@ -178,43 +250,6 @@ $duration2: 1s;
   &__title {
     margin-bottom: 10px;
     @include FontBD;
-  }
-
-  &__head {
-    width: 100%;
-    flex-basis: 100%;
-    flex-shrink: 0;
-    margin-bottom: 10px;
-    @include FlexRow;
-    font-size: 18px;
-    line-height: 27px;
-    @include FontDL;
-
-    .list-count {
-      span {
-        @include FontBD;
-      }
-    }
-
-    .list-select {
-
-      &__title {
-        height: auto;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0;
-
-        &::before {
-          width: 8px;
-          height: 8px;
-          right: 0;
-        }
-      }
-
-      &__text {
-        color: #000000;
-      }
-    }
   }
 
   &__description {
@@ -231,6 +266,10 @@ $duration2: 1s;
     }
     border-radius: 12px;
     overflow: hidden;
+  }
+
+  &__head {
+    @include FlexRow;
   }
 
   &__meta {
@@ -434,51 +473,12 @@ $duration2: 1s;
   }
 }
 
-.sub-content {
-  @include FlexRow($w: wrap, $a: flex-start);
-
-  .list-content {
-    box-sizing: border-box;
-    flex-basis: calc(33.333% - 10px);
-    flex-shrink: 0;
-    border-radius: 10px;
-    background-color: #FAFAFA;
-
-    > a {display: block;}
-  }
-
-  .list-content__title {
-    @include FontBD;
-    margin-bottom: 10px;
-  }
-
-  .list-content__description {
-    color: #666666;
-    @include FontDL;
-  }
-
-  .list-content__meta {
-    display: block;
-    @include FontRG;
-    color: #888888;
-
-    > span {
-      width: 1px;
-      height: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 8px;
-      display: inline-block;
-      background-color: #DDDDDD;
-    } 
-  }
-}
-
 /* CONTACT */
 
 .contact {
 
   .sub-content {
+    display: block;
     margin-bottom: 80px;
   }
 
@@ -532,13 +532,13 @@ $duration2: 1s;
     text-align: center;
 
     &__title {
-      font-size: 16px;
+      font-size: 26px;
       @include FontBD;
     }
 
     &__note {
       margin-top: 18px;
-      font-size: 20px;
+      font-size: 18px;
       @include FontDL;
     }
 
@@ -676,7 +676,7 @@ $duration2: 1s;
 .popup.termAgreePrivacy {
 
   .content__title {
-    font-size: 20px;
+    font-size: 18px;
     @include FontBD;
     padding-bottom: 25px;
     margin-bottom: 20px;
@@ -730,7 +730,7 @@ $duration2: 1s;
   }
 
   .message__title {
-    font-size: 20px;
+    font-size: 18px;
     @include FontBD;
 
     .icon {
@@ -803,7 +803,7 @@ $duration2: 1s;
   .banner__title {
     position: absolute;
     right: 0;
-    font-size: 20px;
+    font-size: 18px;
     @include FontRG;
     text-align: left;
   }
@@ -875,6 +875,15 @@ $duration2: 1s;
     @include FontDL;
     color: #000000;
     text-align: center;
+  }
+
+  .button__wrap .button {
+    min-width: 260px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    @include FontBD;
+	  border-radius: 5px;
   }
 }
 
@@ -952,7 +961,7 @@ $duration2: 1s;
   &__title {
     width: 100%;
     max-width: 100px;
-    font-size: 20px;
+    font-size: 18px;
     @include FontBD;
   }
 
@@ -965,11 +974,6 @@ $duration2: 1s;
   &__list {
     width: 100%;
     @include FlexRow;
-  }
-
-  & + .button__wrap .button {
-    padding: 22.5px 50px;
-    font-size: 22px;
   }
 }
 
@@ -1046,6 +1050,21 @@ $duration2: 1s;
   margin-right: -22px;
 }
 
+.sub-container[data-content="채용프로세스"] {
+
+  .diagram:nth-child(2) {
+    margin-bottom: 65px;
+  }
+
+  .diagram__phase:nth-child(5) {
+    padding-top: 45px;
+  }
+
+  .button__wrap {
+    margin-top: 80px;
+  }
+}
+
 /* WELFARE */
 
 .welfare {
@@ -1055,6 +1074,7 @@ $duration2: 1s;
     @include FlexRow($w: wrap, $a: flex-start);
   
     .list-content {
+      flex-basis: calc(33.333% - 10px);
       padding: 40px;
       margin-bottom: 15px;
     }
@@ -1084,6 +1104,10 @@ $duration2: 1s;
 .ethical {
   @include subTabLocation;
   @include subTabCateLocation;
+
+  .accordian__title {
+    font-size: 18px;
+  }
 
   .accordian__item:not(:last-of-type) {
     margin-bottom: 0;
@@ -1176,34 +1200,45 @@ $duration2: 1s;
     @include FlexRow($w: wrap, $a: flex-start);
   
     .list-content {
+      flex-basis: calc(33.333% - 10px);
       padding: 50px;
       margin-bottom: 15px;
     }
   
     .list-content__label {
+      padding-left: 38px;
+      margin-bottom: 50px;
+      position: relative;
+      font-size: 18px;
+      @include FontBD;
+      color: #EA2126;
+    }
+
+    .list-content__label .numbering {
       font-size: 26px;
-      @include FontBasicSans;
       line-height: 1;
       font-weight: 600;
-      letter-spacing: 0;
-      color: #EA2126;
-      margin-bottom: 50px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .list-content__title {
-      font-size: 20px;
-    }
-
-    .list-content__subtitle {
-      margin-bottom: 25px;
-      display: block;
-      @include FontDL;
+      margin-bottom: 20px;
+      font-size: 18px;
+      @include FontMD;
+      line-height: 26px;
     }
 
     .list-content__description {
       min-height: 190px;
     }
 
+    .list-content__description .numbering {
+      top: 0;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    
     .list-content li {
       padding-left: 30px;
       margin-bottom: 6px;
@@ -1212,13 +1247,10 @@ $duration2: 1s;
       color: #666666;
     }
 
-    .list-content .numbering {
+    .numbering {
       position: absolute;
       left: 0;
-      top: -1.5px;
-      font-size: 18px;
       @include FontBasicSans;
-      font-weight: 300;
       letter-spacing: 0;
     }
 
@@ -1389,7 +1421,7 @@ $duration2: 1s;
   
   &__title {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     @include FontMD;
   }
 
@@ -1663,9 +1695,9 @@ $duration2: 1s;
     @include FlexRow($w: wrap, $a: flex-start);
   
     .list-content {
+      flex-basis: calc(33.333% - 20px);
       margin-bottom: 60px;
       background-color: transparent;
-      flex-basis: calc(33.333% - 20px);
     }
 
     .list-content__cover {
@@ -1698,17 +1730,22 @@ $duration2: 1s;
       margin-bottom: 20px;
     }
 
+    .list-content__head {
+      margin-bottom: 10px;
+    }
+
     .list-content__title {
+      display: block;
       font-size: 18px;
       @include FontMD;
-      @include ellipse(2);
+      @include ellipse(1);
     }
     
     .list-content__sort {
-      margin-bottom: 4px;
       display: block;
       font-size: 16px;
       @include FontBasicSans;
+      color: #EA2126;
       font-weight: 600;
       letter-spacing: 0;
     }
@@ -1718,99 +1755,47 @@ $duration2: 1s;
       display: block;
       font-size: 16px;
       @include FontBasicSans;
+      color: #EA2126;
       font-weight: 600;
       letter-spacing: 0;
     }
 
     .list-content__description {
+      margin-top: 15px;
+      margin-bottom: 15px;
       color: #000000;
     }
 
     .list-content__meta {
-      margin-top: 20px;
+      font-size: 16px;
+      @include FontBasicSans;
+    }
+
+    .list-content__meta--view {
+      @include FontDL;
+    }
+    
+    .list-content__meta--view i {
+      width: 25px;
+      height: 25px;
+      margin-top: 1px;
+      margin-right: 5px;
+      display: inline-block;
+      background: {
+        image: url(../../../assets/images/w/common/icons/icon_view.png);
+        size: 100%;
+        repeat: no-repeat;
+        position: center center;
+      }
     }
 
     .list-content__title--long {
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
     }
   }
 }
 
-.article {
-  margin-top: 40px;
-  margin-bottom: 60px;
-	position: relative;
-	border-radius: 12px;
-	overflow: hidden;
-
-  &__inner {
-    position: absolute;
-    left: 100px;
-    right: 100px;
-    top: 110px;
-    bottom: 110px;
-  }
-
-  &__sort {
-    margin-bottom: 4px;
-    display: block;
-    font-size: 18px;
-    @include FontBasicSans;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-
-  &__slogan {
-    margin-bottom: 15px;
-    font-size: 26px;
-    @include FontMD;
-    line-height: 38px;
-  }
-
-  &__content {
-    @include FontDL;
-  }
-
-  &__meta {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    @include FontRG;
-    color: #888888;
-
-    > span {
-      width: 1px;
-      height: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 8px;
-      display: inline-block;
-      background-color: rgba(255, 255, 255, .5)
-    } 
-  }
-
-  .button__wrap {
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    transition: all 0.2s;
-
-		&:hover {
-			width: 60px;
-      height: 60px;
-
-      .button {
-        background: {
-          color: rgba(255, 255, 255, 1);
-        }
-      }
-		}
-  }
-}
-
-.banner__insight {
+.banner__letter {
   background-color: #EEC4CD;
 
   .banner__content {
@@ -1833,22 +1818,39 @@ $duration2: 1s;
   }
 }
 
-.article {
+.banner__main {
+  height: 450px;
   margin-top: 40px;
   margin-bottom: 60px;
-	position: relative;
-	border-radius: 12px;
-	overflow: hidden;
+  @include FlexRow;
+  text-align: left;
 
-  &__inner {
-    position: absolute;
-    left: 100px;
-    right: 100px;
-    top: 110px;
-    bottom: 110px;
+  .banner__inner {
+    width: 50%;
+    height: 100%;
+    padding: 110px 100px;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
   }
 
-  &__sort {
+  .banner__image {
+    width: 50%;
+    height: 100%;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: {
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .banner__sort {
     margin-bottom: 4px;
     display: block;
     font-size: 18px;
@@ -1857,21 +1859,20 @@ $duration2: 1s;
     letter-spacing: -0.02em;
   }
 
-  &__slogan {
+  .banner__slogan {
     margin-bottom: 15px;
     font-size: 26px;
     @include FontMD;
     line-height: 38px;
   }
 
-  &__content {
+  .banner__content {
     @include FontDL;
   }
 
-  &__meta {
+  .banner__meta {
     position: absolute;
-    bottom: 0;
-    display: block;
+    bottom: 110px;
     @include FontRG;
     color: #888888;
 
@@ -1890,8 +1891,8 @@ $duration2: 1s;
     width: 45px;
     height: 45px;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 100px;
+    bottom: 100px;
     transition: all 0.2s;
 
 		&:hover {
@@ -1907,26 +1908,163 @@ $duration2: 1s;
   }
 }
 
+/* ARTICLE */
 
-.banner__insight {
-  background-color: #EEC4CD;
 
-  .banner__content {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    position: relative;
+/* PORTFOLIO */
+
+
+/* INSIGHT */
+
+.portfolio {
+
+  .search-form {
+    margin-bottom: 40px;
   }
 
-  .banner__title {
-    font-size: 20px;
-    @include FontMD;
+  .search-list {
+    width: auto;
+    margin-bottom: 50px;
+
+    .search-item {
+      width: auto;
+      padding-left: 65px;
+      @include FlexRow($w: wrap, $jc: center);
+    }
+
+    .sub-tabs__item {
+      white-space: nowrap;
+      margin: 0px 10px 16px 0;
+    }
   }
 
-  .banner__image {
-    width: 119px;
-    height: 97px;
+  .sub-content {
+    margin-bottom: 20px;
+    @include FlexRow($w: wrap, $a: flex-start);
+  
+    .list-content {
+      flex-basis: calc(33.333% - 20px);
+      margin-bottom: 60px;
+      background-color: transparent;
+    }
+
+    .list-content__cover {
+      margin-bottom: 20px;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+  
+      &:hover .list-content__info {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  
+    .list-content__image {
+      height: 230px;
+    }
+
+    .list-content__head {
+      margin-bottom: 10px;
+    }
+
+    .list-content__title {
+      display: block;
+      font-size: 18px;
+      @include FontMD;
+      @include ellipse(1);
+    }
+    
+    .list-content__sort {
+      display: block;
+      font-size: 16px;
+      @include FontBasicSans;
+      color: #EA2126;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .list-content__meta {
+      font-size: 16px;
+      @include FontBasicSans;
+    }
+  }
+
+  .list-content__info {
+    height: 100%;
+    box-sizing: border-box;
     position: absolute;
-    right: 135px;
-    bottom: 6px;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include FlexRow($w: wrap, $jc: center);
+    align-content: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+
+  .list-content__info--1 {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 20px;
+    @include FontBD;
+    font-weight: 600;
+  }
+
+  .list-content__info--2 {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+    @include FontBasicSans;
+    line-height: 1;
+  }
+
+  .list-content__info--3 {
+    display: block;
+    font-size: 16px;
+    @include FontRG;
+  }
+
+  .button__seemore {
+    padding: 13px 80px;
+    font-size: 16px;
+  }
+}
+
+/* TECHHUB */
+
+.techhub {
+  @include subTabLocation;
+
+  .sub-content {
+    @include FlexRow($w: wrap, $a: flex-start);
+  
+    .list-content {
+      flex-basis: calc(25% - 15px);
+      padding: 40px;
+      margin-bottom: 15px;
+    }
+  
+    .list-content__icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 40px;
+    }
+
+    .list-content__title {
+      font-size: 16px;
+    }
+
+    .list-content__description {
+      min-height: 80px;
+    }
+
+    .list-content__description--long {
+      min-height: 120px;
+    }
   }
 }
