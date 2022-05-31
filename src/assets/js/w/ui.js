@@ -49,6 +49,7 @@ window.addEventListener('load', () => {
 
 		item.addEventListener('mouseleave', () => {
 			targetNavmenuList.style.display = `none`;
+			targetNavLink.classList.remove('located');
 			nav.addEventListener('mouseleave', () => {
 				navmenu.style.top = 0;
 				targetNavLink.classList.remove('located');

@@ -1055,6 +1055,50 @@ input[type="file"] {
 	}
 }
 
+
+
+.accordian.toggle-accordian {
+  position: relative;
+
+	.accordian__item {
+		margin: 0;
+	}
+
+	.accordian__title {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.accordian__title::before {
+		top: calc(50% - 4.5px);
+		right: calc(50% - 4.5px);
+	}
+
+	.accordian__title::after {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		content: '';
+		border: 1px solid #DDDDDD;
+		border-radius: 50%;
+	}
+
+	.accordian__content {
+		height: 55px;
+		border: 0;
+	}
+
+	.accordian__item--active .accordian__content {
+		height: 100%;
+	}
+
+}
+
 .layer {
 
 	&__body {
