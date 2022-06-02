@@ -3,21 +3,30 @@ const indexHeader = () => {
   const header = document.querySelector('header#header');
   const logo = header.querySelector('.logo');
 
-  header.addEventListener('mouseenter', () => {
-    header.classList.replace('header__transparent', 'header__sticked');
-    logo.classList.replace('logo__default', 'logo__filled');
+  window.addEventListener('scroll', () => {
+    let scT = window.pageYOffset;
+    const container = document.querySelector('#container');
+    const abTcontainer =  container.getBoundingClientRect().top;
+    setTimeout((delay) => {
+      if (scT < abTcontainer*0.9) {
+        header.classList.replace('header__sticked', 'header__transparent');
+        logo.classList.replace('logo__filled', 'logo__default');
+      } else {
+        header.classList.replace('header__transparent', 'header__sticked');
+        logo.classList.replace('logo__default', 'logo__filled');
+      }
+      clearTimeout(delay);
+    }, 50);
   })
-  
-  header.addEventListener('mouseleave', () => {
-    header.classList.replace('header__sticked', 'header__transparent');
-    logo.classList.replace('logo__filled', 'logo__default');
-  })
+
+  header.addEventListener('mouseenter', () => {header.classList.remove('header--scrolled');})
+  header.addEventListener('mouseleave', () => {header.classList.add('header--scrolled');})
 }
 indexHeader();
 
 //index kv
 window.addEventListener('load', () => {
-  const visualSrc = document.querySelector('.visual__image img');
+  const visualSrc = document.querySelector('section.visual .visual__image img');
   let getVisualSrc = visualSrc.getAttribute('src');
   let visualSrcName = getVisualSrc.split('.')[0];
   let i = 0;
@@ -152,25 +161,15 @@ anime2 = () => {
 anime2();
 
 //accordion UI in `performance` section
-const dataAnalysis = () => {
-  const accordianItem = document.querySelectorAll('.accordian__item');
-  accordianItem.forEach(targets => {
-    targets.classList.remove('accordian__item--active')
-  })
-  accordianItem.forEach(item => {
-    item.addEventListener('click', () => {      
-      accordianItem.forEach(targets => {
-        targets.classList.remove('accordian__item--active')
-      })
-      if (item.classList.contains('accordian__item--active')) {
-        item.classList.remove('accordian__item--active')
-      } else {
-        item.classList.add('accordian__item--active');
-      }
-    });
+const listItems = document.querySelectorAll('section[data-section="performance"] .accordian__item');
+
+listItems.forEach(item => {
+  item.addEventListener('click', () => {
+    listItems.forEach(targets => { targets.classList.remove('accordian__item--active');})
+    let result = item.classList.contains('accordian__item--active');
+    result ? item.classList.add('accordian__item--active') : item.classList.remove('accordian__item--active');
   });
-}
-dataAnalysis();
+})
 
 //belt-type banner
 const swiperOptions = {

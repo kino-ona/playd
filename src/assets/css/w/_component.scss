@@ -105,7 +105,7 @@ $duration3: 0.2s;
 		margin-left: 30px;
 		@include FlexRow;
 		
-		a[type="button"] {
+		a {
 			width: 24px;
 			height: 18px;
 			position: relative;
@@ -202,7 +202,7 @@ $duration3: 0.2s;
 .header__transparent {
 	background-color: transparent !important;
 
-	.nav .nav__link a[type="button"] {
+	.nav .nav__link a {
 		color: #ffffff;
 	}
 
@@ -216,12 +216,30 @@ $duration3: 0.2s;
 	}
 }
 
+// .header__transparent.header--scrolled {
+// 	box-sizing: border-box;
+// 	background-color: #ffffff;
+// 	border-bottom: 1px solid #DDDDDD;
+
+// 	.nav .nav__link a {
+// 		color: #000000;
+// 	}
+
+// 	.header__inner {
+// 		background-color: #ffffff;
+// 	}
+
+// 	.nav__link {
+// 		position: relative;
+// 	}
+// }
+
 .header__sticked {
 	box-sizing: border-box;
 	background-color: #ffffff;
 	border-bottom: 1px solid #DDDDDD;
 
-	.nav .nav__link a[type="button"] {
+	.nav .nav__link a {
 		color: #000000;
 	}
 
@@ -305,6 +323,10 @@ $duration3: 0.2s;
 					width: 1px;
 					background-color: rgba(255, 255, 255, 0.2);
 				}
+			}
+
+			&:last-of-type {
+				@include FontBD;
 			}
 		}
 	}
