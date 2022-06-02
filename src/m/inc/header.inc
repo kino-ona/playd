@@ -29,7 +29,7 @@
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">인사이트</a>
 					<div class="gnb__wrap">
-						<p><a href="/">뉴스레터</a></p>
+						<p><a href="./letter.html">뉴스레터</a></p>
 						<p><a href="/">리포트</a></p>
 						<p><a href="/">광고컬럼</a></p>
 					</div>
@@ -39,7 +39,7 @@
 					<div class="gnb__wrap">
 						<p><a href="/">ABOUT</a></p>
 						<p><a href="/">IR</a></p>
-						<p><a href="/">윤리경영</a></p>
+						<p><a href="./ethical.html">윤리경영</a></p>
 						<p><a href="/">ESG</a></p>
 					</div>
 				</div>

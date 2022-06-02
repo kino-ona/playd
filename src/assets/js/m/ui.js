@@ -54,6 +54,16 @@
 				subCommonFunction();
 			break;
 
+			case 'report':
+				headerTitle.innerHTML = '리포트';
+				subCommonFunction();
+			break;
+
+			case 'column':
+				headerTitle.innerHTML = '광고칼럼';
+				subCommonFunction();
+			break;
+
 			default: 
 				alert('c');
 		}
@@ -468,6 +478,68 @@
 
 		formSubmitClose.addEventListener('click' , () => {
 			layerClose('newsLetter');
+		})
+	}
+
+	if(bodyClass === 'report') {
+		const subTabItem = document.querySelectorAll('.sub-tabs__item');
+		const formSubmit = document.querySelector('.report .form-submit--wide');
+		const formSubmitOpen = document.querySelectorAll('.report .download')
+		const formSubmitClose = document.querySelector('.report .close');
+		const formUserName = document.querySelector('.report #user-name');
+		const formUserPosition = document.querySelector('.report #user-position');
+		const formUserMail = document.querySelector('.report #user-mail');
+		const needCheck = document.querySelector('.report #sub-checkbox--personal');
+		const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+		formSubmitOpen.forEach(item => {
+			item.addEventListener('click' , () => {
+				layerOpen('report');
+			})
+		})
+
+		formSubmit.addEventListener('click' , (event) => {
+			event.preventDefault();
+			document.querySelectorAll('.form-field').forEach((item) => {
+				item.classList.remove('warning');
+			})
+
+			if(!needCheck.checked) {
+				needCheck.focus();
+				return false;
+			}
+
+			if(!formUserName.value) {
+				formUserName.focus();
+				formUserName.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserPosition.value) {
+				formUserPosition.focus();
+				formUserPosition.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+
+			if(!formUserMail.value) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!regEmail.test(formUserMail.value)) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+				return false;
+			}
+
+			console.log('성공')
+		})
+
+		formSubmitClose.addEventListener('click' , () => {
+			layerClose('report');
 		})
 	}
 

@@ -63,7 +63,7 @@ html {
 
     &__slogan {
       color: #ffffff;
-      font-size: 15px;
+      font-size: 14px;
       letter-spacing: -.3px;
       line-height: 23px;
     }
@@ -78,7 +78,10 @@ html {
 
   .swiper {
     margin-top: 40px;
-    margin-right: 25px;
+
+    .swiper-slide:last-child {
+      margin-right: 25px;
+    }
   }
 
   .box {

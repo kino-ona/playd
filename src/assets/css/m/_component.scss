@@ -120,7 +120,7 @@
     margin-top: 75px;
     margin-bottom: 20px;
     color: #EA2126;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     line-height: 1;
     @include FontBasicSans; 
@@ -154,7 +154,7 @@
   }
 
   &__inner {
-    padding-top: 18px;
+    padding-top: 15px;
   }
 }
 
@@ -361,7 +361,8 @@
 
   &__wrap--seemore {
     display: block;
-    margin: 0 25px 75px;
+    width: 150px;
+    margin: 40px auto 75px;
     padding: 18px 0;
     color: #666666;
     font-size: 14px;
@@ -375,6 +376,7 @@
   &__seemore {
     display: block;
     line-height: 1;
+    @include FontMD; 
   }
 }
 
@@ -594,7 +596,7 @@
 		background-color: #ffffff;
     letter-spacing: -.2px;
 		color: #666666;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     line-height: 45px;
     border-radius: 4px;
@@ -689,6 +691,7 @@
 
   &__input + span {
     padding-left: 34px;
+    line-height: 31px;
   }
 
   &__input + span::before {
@@ -801,7 +804,7 @@
 	&__item {
 		display: inline-block;
     height: 38px;
-    padding: 2px 15px;
+    padding: 4px 15px;
 		color: #666666;
 		line-height: 30px;
 		font-size: 14px;
@@ -935,6 +938,10 @@
 		transition: visibility 0.2s 0.1s, opacity 0.2;
     border-radius: 6px;
 	}
+
+  &__wrap--wide {
+    max-width: 100%;
+  }
 	
 	&__inner {
 		max-height: 85vh;
@@ -1124,7 +1131,7 @@
 .sub-content {
   &__description {
     margin-bottom: 25px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
     letter-spacing: -.3px;
   }
@@ -1144,7 +1151,7 @@
     color: #888888;
     font-size: 16px;
     line-height: 20px;
-    @include FontBD;
+    @include FontMD;
   }
 
   &__warning-text span {
@@ -1160,7 +1167,7 @@
 
 .sub-list-category {
   display: block;
-  height: 40px;
+  height: 31px;
   overflow: hidden;
 
   &__wrap {
@@ -1173,15 +1180,21 @@
 
   &__box {
     overflow-x: scroll;
-    height: 40px;
+    height: 31px;
   }
 
   p {
     display: inline-block;
   }
 
+  p:last-child a::after {
+    background: none;
+  }
+
+
   &__item {
     display: inline-block;
+    position: relative;
     font-size: 14px;
     margin-right: 27px;
   }
@@ -1197,6 +1210,7 @@
     background-color: #DDDDDD;
     content: '';
   }
+
 
   &__item--active {
     padding-bottom: 7px;
@@ -1224,6 +1238,25 @@
 .list-content {
   &__image {
     border-radius: 6px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__viewer {
+    padding-left: 5px;
+    font-size: 13px;
+    @include FontDL;
+  }
+
+  &__viewer::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../../../assets/images/m/sub/icon_eyes.png') center center no-repeat;
+    background-size: 20px;
+    vertical-align: inherit;
+    content: '';
   }
 }
 
@@ -1303,7 +1336,7 @@
   &::placeholder {
     color: #888888;
     letter-spacing: -.3px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -1383,4 +1416,31 @@ form legend {
  width: 0;
  height: 0;
  opacity: 0;
+}
+
+.content {
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    @include FontMD;
+  }
+
+  &__description {
+    padding-bottom: 15px;
+    margin-top: 7.5px;
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+    letter-spacing: -1.5px;
+    line-height: 20px;
+    @include FontDL;
+  }
+  
+}
+
+.form-description {
+  margin-top: 25px;
+  padding-bottom: 110px;
+  color: #888888;
+  font-size: 14px;
+  line-height: 22px;
 }
