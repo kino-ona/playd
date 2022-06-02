@@ -1,8 +1,5 @@
 /** SUB COMMON **/
 
-$duration1: 1.5s;
-$duration2: 1s;
-
 .sub-container {
   margin-bottom: 150px;
 
@@ -1266,6 +1263,43 @@ $duration2: 1s;
   }
 }
 
+.sub-container[data-content="윤리경영 실전지침"] {
+
+  .sub-list__link {
+    font-size: 18px;
+  }
+
+  .sub-list__wrap {
+    padding: 0 40px;
+  }
+
+  .sub-list {
+    font-size: 16px;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      @include FontBD;
+    }
+
+    h5 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      @include FontMD;
+    }
+
+    .table, .tab-table {
+      margin-top: 15px;
+    }
+  }
+}
+
 .sub-container[data-content="윤리경영 신고"] {
 
   .input-box--info + .input-box--file {
@@ -1722,7 +1756,7 @@ $duration2: 1s;
       position: absolute;
       right: 20px;
       bottom: 20px;
-      transition: all 0.2s;
+      transition: all $duration3;
     }
   
     .list-content__image {
@@ -1893,7 +1927,7 @@ $duration2: 1s;
     position: absolute;
     right: 100px;
     bottom: 100px;
-    transition: all 0.2s;
+    transition: all $duration3;
 
 		&:hover {
 			width: 60px;
@@ -1912,9 +1946,6 @@ $duration2: 1s;
 
 
 /* PORTFOLIO */
-
-
-/* INSIGHT */
 
 .portfolio {
 
@@ -2004,7 +2035,7 @@ $duration2: 1s;
     background-color: rgba(0, 0, 0, .5);
     text-align: center;
     color: #ffffff;
-    transition: all 0.2s;
+    transition: all $duration3;
   }
 
   .list-content__info--1 {

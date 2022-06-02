@@ -96,6 +96,7 @@ window.addEventListener('load', () => {
 	})
 
 	//accordion
+
 	const accordionItems = document.querySelectorAll('.accordian__item');
 
 	accordionItems.forEach((item) => {
@@ -149,6 +150,66 @@ window.addEventListener('load', () => {
 			}
 		});
 	})
+
+	//sublistItemsAccordion
+	const sublistItems =  document.querySelectorAll('.sub-list .sub-list__item');
+	const sublistItemTitles =  document.querySelectorAll('.sub-list .sub-list__item .sub-list__title');
+	const subCateItems = document.querySelectorAll('.sub-list-category__inpage .sub-list-category__item');
+
+	const CleanTargetClassName = () => {
+		sublistItems.forEach(targets => { targets.classList.remove('sub-list__item--active');})
+		subCateItems.forEach(targets => { targets.classList.remove('sub-list-category__item--active');})
+	}
+
+	sublistItemTitles.forEach(item => {
+		item.addEventListener('click' , () => {
+			let result1 = item.parentElement.classList.contains('sub-list__item--active');
+			let targetChapter = item.parentElement.classList[1].split('--')[1];
+			let targetCate = document.querySelector('.sub-list-category__item--' + targetChapter);
+			let result2 = targetCate.classList.contains('sub-list-category__item--active');
+
+			if (result1 && result2) {
+				CleanTargetClassName();
+			} else {
+				CleanTargetClassName();
+				item.parentElement.classList.add('sub-list__item--active');
+				targetCate.classList.add('sub-list-category__item--active');
+			}
+		})
+	})
+
+	subCateItems.forEach(item => {
+		item.addEventListener('click' , () => {
+			let result1 = item.classList.contains('sub-list-category__item--active');
+			let targetChapter = item.classList[1].split('--')[1];
+			let targetListItem = document.querySelector('.sub-list__item--' + targetChapter);
+			let result2 = targetListItem.classList.contains('sub-list__item--active');
+
+			if (result1 && result2) {
+				CleanTargetClassName();
+			} else {
+				CleanTargetClassName();
+				item.classList.add('sub-list-category__item--active');
+				targetListItem.classList.add('sub-list__item--active');
+			}
+		})
+	})
+
+	//sublistItemsAccordion ClickToScroll
+	for (let i=0;i<sublistItems.length;i++) {
+		let abTtargetItem = [];
+		
+		const ClickToScroll = () => {
+			abTtargetItem[i] = parseFloat(sublistItemTitles[i].offsetTop - 90);
+			window.scrollTo({ top: abTtargetItem[i], behavior: "smooth" });
+
+			// console.log(abTtargetItem);
+			// console.log(abTtargetItem[i]); ---> [1089, 978, 867, 756, 645, 534]
+		}
+
+		subCateItems[i].addEventListener('click' , () => {ClickToScroll();})
+		sublistItemTitles[i].addEventListener('click' , () => {ClickToScroll();})
+	}
 
 	//inputButton
 	const inputButton = document.querySelectorAll('.input__button');
