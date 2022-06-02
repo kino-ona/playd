@@ -41,12 +41,14 @@
       width: 100%;
     }
   }
+
   .search-form {
     margin: 0 25px;
 
     &__wrap {
       position: relative;
-      margin-top: 100px;
+      margin-top: 40px;
+      margin-bottom: 10px;
       height: 50px;
       padding: 15px;
       border: 1px solid #EEEEEE;
@@ -75,11 +77,6 @@
     }
   }
 
-  .search-item {
-   position: absolute;
-   margin-top: -100px;
-  }
-
   .list-content {
     margin: 40px 25px;
 
@@ -93,12 +90,16 @@
     .numbering {
       display: block;
       margin-top: 15px;
+      margin-bottom: 5px;
+      color: #EA2126;
       font-weight: bold;
     }
 
     &__description {
       display: block;
-      margin-top: 15px;
+      position: absolute;
+      right: 25px;
+      margin-top: -75px;
       color: #888888;
       font-size: 14px;
       line-height: 22px;
@@ -118,36 +119,22 @@
       margin: 64px 25px 0;
     }
   }
-
-  .content {
-    &__title {
-      font-size: 20px;
-      line-height: 28px;
-      @include FontMD;
-    }
-
-    &__description {
-      padding-bottom: 15px;
-      margin-top: 7.5px;
-      border-bottom: 1px solid #000000;
-      font-size: 14px;
-      letter-spacing: -1.5px;
-      line-height: 20px;
-      @include FontDL;
-    }
-    
-  }
-
-  .form-description {
-    margin-top: 25px;
-    padding-bottom: 110px;
-    color: #888888;
-    font-size: 14px;
-    line-height: 22px;
+  .newsLetter .layer__wrap {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;;
+    transform: translate(0 ,0);
+    border-radius: 0;
   }
 
   .form-popup {
     text-align: center;
+  }
+
+  .sub-content {
+    padding-top: 15px;
   }
 }
 
