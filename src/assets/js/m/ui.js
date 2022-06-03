@@ -59,8 +59,23 @@
 				subCommonFunction();
 			break;
 
+			case 'report-detail':
+				headerTitle.innerHTML = '리포트';
+				subCommonFunction();
+			break;
+
 			case 'column':
 				headerTitle.innerHTML = '광고칼럼';
+				subCommonFunction();
+			break;
+
+			case 'column-detail':
+				headerTitle.innerHTML = '광고칼럼';
+				subCommonFunction();
+			break;
+
+			case 'ir':
+				headerTitle.innerHTML = 'IR';
 				subCommonFunction();
 			break;
 
@@ -541,6 +556,62 @@
 		formSubmitClose.addEventListener('click' , () => {
 			layerClose('report');
 		})
+	}
+
+	if(bodyClass === 'report-detail') {
+		const shareButton = document.querySelector('.sub-content__share');
+		const shareClsoeButton = document.querySelector('.share-popup .close')
+
+		const swiper = new Swiper('.list-content__slide ', {
+			slidesPerView: 1.05,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			}
+		});
+
+		const swiper2 = new Swiper('.slide-swiper', {
+			slidesPerView: 1.05,
+		});
+
+		shareButton.addEventListener('click', (event) => {
+			event.preventDefault();
+			layerOpen('share-popup')
+		});
+
+		shareClsoeButton.addEventListener('click', (event) => {
+			layerClose('share-popup')
+		});
+
+
+	}
+
+	if(bodyClass === 'column-detail') {
+		const shareButton = document.querySelector('.sub-content__share');
+		const shareClsoeButton = document.querySelector('.share-popup .close')
+
+		const swiper = new Swiper('.list-content__slide ', {
+			slidesPerView: 1.05,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			}
+		});
+
+		const swiper2 = new Swiper('.slide-swiper', {
+			slidesPerView: 1.05,
+		});
+
+		shareButton.addEventListener('click', (event) => {
+			event.preventDefault();
+			layerOpen('share-popup')
+		});
+
+		shareClsoeButton.addEventListener('click', (event) => {
+			layerClose('share-popup')
+		});
+
+
 	}
 
 

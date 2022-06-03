@@ -30,8 +30,8 @@
 					<a href="/" role="button" class="gnb__list--link font--bd">인사이트</a>
 					<div class="gnb__wrap">
 						<p><a href="./letter.html">뉴스레터</a></p>
-						<p><a href="/">리포트</a></p>
-						<p><a href="/">광고컬럼</a></p>
+						<p><a href="./report.html">리포트</a></p>
+						<p><a href="./column.html">광고컬럼</a></p>
 					</div>
 				</div>
 				<div class="gnb__item">
