@@ -3,7 +3,7 @@
 	"pagetitle": "PLAYD | Contact Us",
 })
 </head>
-<body>
+<body class="contact">
 <div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
 
 <div class="wrap">
@@ -17,7 +17,7 @@
 	})
 	<!-- //header -->
 
-	<div id="container" class="container contact">
+	<div id="container" class="container">
 
     <div class="sub-header">
       <h2 class="sub-header__title sub-header__title--big"><span class="sub-header__label">Contact</span>플레이디와 함께<br><strong>가능성</strong>을 <strong>성장</strong>으로 실현하세요!</h2>
@@ -130,6 +130,7 @@
             <div class="input-file">
               <input type="text" id="form-file-text" placeholder="파일 업로드(RFP 등)" readonly>
               <div><input type="file" id="form-file-button" name=""><label for="form-file-button">찾아보기</label></div>
+              <p class="form-warning">입력범위를 초과했습니다.</p>
             </div>
           </div>
         </div>
@@ -139,10 +140,12 @@
             <div class="form-field">
               <label for="user-company" class="input-box--info__label input-box--info__label--necessary">회사명</label>
               <input type="text" id="user-company" class="input-box--info__input" name="" placeholder="오앤에이크리에이션">
+              <p class="form-warning">회사명을 입력해주세요</p>
             </div>
             <div class="form-field">
               <label for="user-name" class="input-box--info__label input-box--info__label--necessary">담당자 이름</label>
               <input type="text" id="user-name" class="input-box--info__input" name="" placeholder="홍길동">
+              <p class="form-warning">담당자 이름을 입력해주세요</p>
             </div>
             <div class="form-field">
               <label for="user-position" class="input-box--info__label">직책</label>
@@ -151,14 +154,17 @@
             <div class="form-field">
               <label for="user-number" class="input-box--info__label input-box--info__label--necessary">연락처</label>
               <input type="text" id="user-number" class="input-box--info__input" name="" placeholder="연락처를 입력해 주세요.">
+              <p class="form-warning">연락처를 입력해주세요</p>
             </div>
             <div class="form-field">
               <label for="user-mail" class="input-box--info__label input-box--info__label--necessary">이메일</label>
               <input type="text" id="user-mail" class="input-box--info__input" name="" placeholder="이메일을 입력해 주세요.">
+              <p class="form-warning">이메일을 입력해주세요</p>
             </div>
             <div class="form-field">
               <label for="user-url" class="input-box--info__label input-box--info__label--necessary">프로젝트 진행할 홈페이지 URL</label>
               <input type="text" id="user-url" class="input-box--info__input" name="" placeholder="프로젝트 홈페이지 URL 입력해 주세요.">
+              <p class="form-warning">URL을 입력해주세요</p>
             </div>
           </div>
         </div>
@@ -185,7 +191,7 @@
         <ul class="sub-checkboxs">
           <li class="sub-checkbox__list">
             <label for="sub-checkbox--personal" class="sub-checkbox__label">
-              <input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input" checked>
+              <input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input">
               <span><i></i>[필수] 개인정보보호정책에 동의합니다.</span>
             </label>
             <button class="button button__sub-checkbox" type="button">전문보기</button>
@@ -198,7 +204,7 @@
           </li>
         </ul>
         <div class="button__wrap">
-          <input type="submit" class="button button__filled-black button__form-submit" value="프로젝트 문의 등록하기" onclick="layerOpen('formSubmitted')"/>
+          <input type="submit" class="button button__large button__filled-black form-submit" value="프로젝트 문의 등록하기" />
         </div>
       </form>
       
@@ -224,13 +230,13 @@
 	</div>
 </div>
 
-<div class="layer__body popup formSubmitted" id="formSubmitted" aria-hidden="true" role="dialog">
+<div class="layer__body popup form-popup formSubmitted" id="formSubmitted" aria-hidden="true" role="dialog">
   <div class="layer__wrap">
     <div class="layer__inner">
       <div class="layer__content">
         <p class="message__title"><span class="icon icon__check"><i></i></span>프로젝트 문의 등록이 완료되었습니다.</p>
         <p class="message__text">내부에서 면밀히 검토 후 빠르고 정확하게 연락드릴 예정입니다.</p>
-        <button class="button layer__button" onclick="layerClose('formSubmitted')">확인</button>
+        <button class="button layer__button close">확인</button>
       </div>
     </div>
   </div>

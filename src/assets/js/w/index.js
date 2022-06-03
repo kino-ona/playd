@@ -191,21 +191,3 @@ listItems.forEach(item => {
     result ? item.classList.add('accordian__item--active') : item.classList.remove('accordian__item--active');
   });
 })
-
-//belt-type banner
-const swiperOptions = {
-  loop: true,
-  spaceBetween: 20,
-  autoplay: {
-    delay: 1,
-    disableOnInteraction: false
-  },
-  slidesPerView: 'auto',
-  speed: 12000,
-  grabCursor: true,
-  mousewheelControl: true,
-  keyboardControl: true,
-  observer: true,
-  observeParents: true,
-};
-const swiper = new Swiper("#swiper", swiperOptions);
