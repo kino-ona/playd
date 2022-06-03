@@ -49,6 +49,7 @@ window.addEventListener('load', () => {
 
 		item.addEventListener('mouseleave', () => {
 			targetNavmenuList.style.display = `none`;
+			navmenu.style.top = 0;
 			targetNavLink.classList.remove('located');
 			nav.addEventListener('mouseleave', () => {
 				navmenu.style.top = 0;
@@ -96,7 +97,6 @@ window.addEventListener('load', () => {
 	})
 
 	//accordion
-
 	const accordionItems = document.querySelectorAll('.accordian__item');
 
 	accordionItems.forEach((item) => {
@@ -201,10 +201,8 @@ window.addEventListener('load', () => {
 		
 		const ClickToScroll = () => {
 			abTtargetItem[i] = parseFloat(sublistItemTitles[i].offsetTop - 90);
-			window.scrollTo({ top: abTtargetItem[i], behavior: "smooth" });
-
-			// console.log(abTtargetItem);
 			// console.log(abTtargetItem[i]); ---> [1089, 978, 867, 756, 645, 534]
+			window.scrollTo({ top: abTtargetItem[i], behavior: "smooth" });
 		}
 
 		subCateItems[i].addEventListener('click' , () => {ClickToScroll();})

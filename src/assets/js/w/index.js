@@ -3,21 +3,51 @@ const indexHeader = () => {
   const header = document.querySelector('header#header');
   const logo = header.querySelector('.logo');
 
-  header.addEventListener('mouseenter', () => {
-    header.classList.replace('header__transparent', 'header__sticked');
-    logo.classList.replace('logo__default', 'logo__filled');
-  })
-  
-  header.addEventListener('mouseleave', () => {
+  const headerTransparentize = () => {
     header.classList.replace('header__sticked', 'header__transparent');
     logo.classList.replace('logo__filled', 'logo__default');
+  }
+  const headerUntransparentize = () => {
+    header.classList.replace('header__transparent', 'header__sticked');
+    logo.classList.replace('logo__default', 'logo__filled');
+  }
+
+  const headerLoaded = () => {
+    header.addEventListener('mouseenter', () => {headerUntransparentize();})
+    header.addEventListener('mouseleave', () => {headerTransparentize();})
+  }
+
+  window.addEventListener('load', () => {headerLoaded();})
+
+  window.addEventListener('scroll', () => {
+    let scT = window.pageYOffset;
+    const container = document.querySelector('#container');
+    const abTcontainer =  container.getBoundingClientRect().top;
+    const navLinks = document.querySelectorAll('#header nav.nav .nav__link');
+    const navmenu = document.querySelector('header#header .navmenu');
+    const navmenuList = document.querySelectorAll('header#header .navmenu .navmenu__list');
+    setTimeout((delay) => {
+      if (scT > abTcontainer*0.9) {
+        headerUntransparentize();
+        header.addEventListener('mouseenter', () => {header.classList.remove('header--scrolled');})
+        header.addEventListener('mouseleave', () => {header.classList.add('header--scrolled');headerUntransparentize();})
+      } else if (scT === abTcontainer*0.9) {
+        header.classList.remove('header--scrolled');
+        headerTransparentize();
+      } else {
+        header.addEventListener('mouseenter', () => {headerUntransparentize();})
+        header.addEventListener('mouseleave', () => {header.classList.remove('header--scrolled');headerTransparentize();})
+      }
+      clearTimeout(delay);
+	  }, 50);
   })
 }
 indexHeader();
-
+ 
 //index kv
 window.addEventListener('load', () => {
-  const visualSrc = document.querySelector('.visual__image img');
+
+  const visualSrc = document.querySelector('section.visual .visual__image img');
   let getVisualSrc = visualSrc.getAttribute('src');
   let visualSrcName = getVisualSrc.split('.')[0];
   let i = 0;
@@ -152,25 +182,15 @@ anime2 = () => {
 anime2();
 
 //accordion UI in `performance` section
-const dataAnalysis = () => {
-  const accordianItem = document.querySelectorAll('.accordian__item');
-  accordianItem.forEach(targets => {
-    targets.classList.remove('accordian__item--active')
-  })
-  accordianItem.forEach(item => {
-    item.addEventListener('click', () => {      
-      accordianItem.forEach(targets => {
-        targets.classList.remove('accordian__item--active')
-      })
-      if (item.classList.contains('accordian__item--active')) {
-        item.classList.remove('accordian__item--active')
-      } else {
-        item.classList.add('accordian__item--active');
-      }
-    });
+const listItems = document.querySelectorAll('section[data-section="performance"] .accordian__item');
+
+listItems.forEach(item => {
+  item.addEventListener('click', () => {
+    listItems.forEach(targets => { targets.classList.remove('accordian__item--active');})
+    let result = item.classList.contains('accordian__item--active');
+    result ? item.classList.add('accordian__item--active') : item.classList.remove('accordian__item--active');
   });
-}
-dataAnalysis();
+})
 
 //belt-type banner
 const swiperOptions = {
