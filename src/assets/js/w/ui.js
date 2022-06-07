@@ -1,16 +1,16 @@
-//Header
-const header = document.querySelector('header#header');
-window.addEventListener('scroll', () => {
-	let scT = window.pageYOffset;
-	const container = document.querySelector('#container');
-	const abTcontainer =  container.getBoundingClientRect().top;
-	setTimeout((delay) => {
-		scT > abTcontainer*0.9 ? header.classList.add('header--scrolled') : header.classList.remove('header--scrolled') ;
-		clearTimeout(delay);
-	}, 50);
-})
-
 window.addEventListener('load', () => {
+	
+	//Header
+	const header = document.querySelector('header#header');
+	window.addEventListener('scroll', () => {
+		let scT = window.pageYOffset;
+		const container = document.querySelector('#container');
+		const abTcontainer =  container.getBoundingClientRect().top;
+		setTimeout((delay) => {
+			scT > abTcontainer*0.9 ? header.classList.add('header--scrolled') : header.classList.remove('header--scrolled') ;
+			clearTimeout(delay);
+		}, 50);
+	})
 	
 	//HeaderNav
 	const nav = document.querySelector('header#header nav.nav');
@@ -97,16 +97,26 @@ window.addEventListener('load', () => {
 	})
 
 	//accordion
-	const accordionItems = document.querySelectorAll('.accordian__item');
+	const accordionItems = document.querySelectorAll('.accordian:not(.toggle-accordian) .accordian__item');
 
 	accordionItems.forEach((item) => {
 		item.addEventListener('click', (event) => {
 			event.preventDefault();
-			if(item.classList.contains('accordian__item--active')) {
-				item.classList.remove('accordian__item--active');
-			} else {
-				item.classList.add('accordian__item--active');
-			}
+			item.classList.contains('accordian__item--active') ? item.classList.remove('accordian__item--active') : item.classList.add('accordian__item--active');
+		})
+	})
+
+	const toggleAccordionItems = document.querySelectorAll('.accordian.toggle-accordian .accordian__item');
+	const toggleAccordionToggle = document.querySelector('.accordian.toggle-accordian .accordian__item .accordian__title');
+
+	toggleAccordionItems.forEach((item) => {
+		item.addEventListener('click', (event) => {
+			event.preventDefault();
+			return;
+		})
+		toggleAccordionToggle.addEventListener('click', (event) => {
+			event.preventDefault();
+			item.classList.contains('accordian__item--active') ? item.classList.remove('accordian__item--active') : item.classList.add('accordian__item--active');
 		})
 	})
 
@@ -240,6 +250,378 @@ window.addEventListener('load', () => {
 		})
 	})
 });
+
+
+// Input * Form * Swiper
+const bodyClass = document.querySelector('body').classList[0];
+
+if(bodyClass) {
+
+	const formFileButton = document.querySelector('#form-file-button');
+	const formFileIput = document.querySelector('#form-file-text');
+
+	const formSubmit = document.querySelector('.form-submit');
+	const needCheck = document.querySelector('#sub-checkbox--personal');
+			
+	const ButtonCloses = document.querySelectorAll('.close');
+
+	// File-Attaching Button
+	const InputFileAttaching = () => {
+		if (formFileButton === null) return;
+		else formFileButton.addEventListener('change', () => {
+			if(!formFileIput.value) {
+				formFileIput.closest('.input-box--file').classList.remove('warning')
+			}
+			formFileIput.value = formFileButton.files[0].name
+		});
+	}
+
+	// Necessary Check
+	const CheckboxNeededCheck = () => {
+		if (needCheck === null) return;
+		else needCheck.addEventListener('change', () => {
+			needCheck.checked ? formSubmit.classList.add('submit--active') : formSubmit.classList.remove('submit--active');
+		})	
+	}
+
+	// All .close UI
+	const LayerCloseClicker = () => {
+		if (ButtonCloses === null) return;
+		else ButtonCloses.forEach((item) => {
+			item.addEventListener('click' , (event) => { 
+				let CurrentPopup = document.querySelector('.popup.is-visible').getAttribute('id');
+				layerClose(CurrentPopup); 
+			})
+		})
+	}
+
+	switch(bodyClass) {
+
+		case 'main':{
+			const swiperOptions = {
+				loop: true,
+				spaceBetween: 20,
+				autoplay: {
+					delay: 1,
+					disableOnInteraction: false
+				},
+				slidesPerView: 'auto',
+				speed: 12000,
+				grabCursor: true,
+				mousewheelControl: true,
+				keyboardControl: true,
+				observer: true,
+				observeParents: true,
+			};
+			const swiper = new Swiper("#swiper", swiperOptions);
+		}
+		break;
+
+		case 'contact':{
+
+			window.addEventListener('load', () => {
+				InputFileAttaching();
+				CheckboxNeededCheck();
+				LayerCloseClicker();
+			})
+
+			const formUserCompany  = document.querySelector('#user-company');
+			const formUserName = document.querySelector('#user-name');
+			const formUserNumber = document.querySelector('#user-number');
+			const formUserMail = document.querySelector('#user-mail');
+			const formUserUrl = document.querySelector('#user-url');
+			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+			
+			formSubmit.addEventListener('click' , (event) => {
+				event.preventDefault();
+				layerOpen('formSubmitted');
+
+				document.querySelectorAll('.form-field').forEach((item) => {
+					item.classList.remove('warning');
+				})
+
+				if(!needCheck.checked) {
+					needCheck.focus();
+					return false;
+				}
+
+				if(!formFileIput.value) {
+					formFileIput.focus();
+					formFileIput.closest('.input-box--file').classList.add('warning')
+					return false;
+				}
+
+				if(!formUserCompany.value) {
+					formUserCompany.focus();
+					formUserCompany.closest('.form-field').classList.add('warning')
+					return false;
+				}
+
+				if(!formUserName.value) {
+					formUserName.focus();
+					formUserName.closest('.form-field').classList.add('warning')
+					return false;
+				}
+
+				if(!formUserNumber.value) {
+					formUserNumber.focus();
+					formUserNumber.closest('.form-field').classList.add('warning')
+					return false;
+				}
+
+				if(!formUserMail.value) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					return false;
+				}
+
+				if(!regEmail.test(formUserMail.value)) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+					return false;
+				}
+
+				if(!formUserUrl.value) {
+					formUserUrl.focus();
+					formUserUrl.closest('.form-field').classList.add('warning')
+					return false;
+				}
+			})
+		}
+		break;
+
+		case 'ethical':{
+
+			// File-Attaching Button
+			const InputFileAttaching = () => {
+				if (formFileButton === null) return;
+				else formFileButton.addEventListener('change', () => {
+					if(!formFileIput.value) {
+						formFileIput.closest('.input-box--file').classList.remove('warning')
+					}
+					formFileIput.value = formFileButton.files[0].name
+				});
+			}
+
+			// Necessary Check
+			const CheckboxNeededCheck = () => {
+				if (needCheck === null) return;
+				else needCheck.addEventListener('change', () => {
+					needCheck.checked ? formSubmit.classList.add('submit--active') : formSubmit.classList.remove('submit--active');
+				})
+			}
+
+			// All .close UI
+			const LayerCloseClicker = () => {
+				if (ButtonCloses === null) return;
+				else ButtonCloses.forEach((item) => {
+					item.addEventListener('click' , (event) => { 
+						let CurrentPopup = document.querySelector('.popup.is-visible').getAttribute('id');
+						layerClose(CurrentPopup); 
+					})
+				})
+			}
+
+			InputFileAttaching();
+			CheckboxNeededCheck();
+			LayerCloseClicker();
+
+			const popLayers = document.querySelectorAll('.open.sub-content__title--link')
+			
+			popLayers.forEach((item) => {
+				item.addEventListener('click' , (event) => { 
+					layerOpen('termAgreePrivacy');
+				})
+			})
+		}
+		break;
+
+		case 'letter':{
+
+			window.addEventListener('load', () => {
+				CheckboxNeededCheck();
+				LayerCloseClicker();
+			})
+
+			const formOpener = document.querySelector('.open');
+			const formUserName = document.querySelector('#user-name');
+			const formUserProfession = document.querySelector('#user-profession');
+			const formUserPosition = document.querySelector('#user-position');
+			const formUserMail = document.querySelector('#user-mail');
+			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+			formSubmit.addEventListener('click' , () => {
+				layerOpen('letterFormSubmitted');
+			});
+
+			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
+				layerClose('newsLetter');
+			});
+
+			formOpener.addEventListener('click' , (event) => {
+				event.preventDefault();
+				layerOpen('newsLetter');
+
+				document.querySelectorAll('.form-field').forEach((item) => {
+					item.classList.remove('warning');
+				})
+	
+				if(!needCheck.checked) {
+					needCheck.focus();
+					return false;
+				}
+	
+				if(!formUserName.value) {
+					formUserName.focus();
+					formUserName.closest('.form-field').classList.add('warning')
+					return false;
+				}
+	
+				if(!formUserProfession.value) {
+					formUserProfession.focus();
+					formUserProfession.closest('.form-field').classList.add('warning')
+					return false;
+				}	
+
+				if(!formUserPosition.value) {
+					formUserPosition.focus();
+					formUserPosition.closest('.form-field').classList.add('warning')
+					return false;
+				}	
+	
+				if(!formUserMail.value) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					return false;
+				}
+	
+				if(!regEmail.test(formUserMail.value)) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+					return false;
+				}
+			})
+		}
+		break;
+
+		case 'article':{
+			(function () {
+				let options = {};
+				let slides = document.querySelectorAll("#swiper .swiper-slide");
+				let navis = document.querySelectorAll('#swiper .swiper-button-prev, #swiper .swiper-button-next');
+        if ( slides.length == 1 ) {
+					swiperOptions = {
+						loop: false,
+						spaceBetween: 0,
+						slidesPerView: '1',
+						speed: 0,
+						grabCursor: false,
+						mousewheelControl: false,
+						keyboardControl: false,
+					},
+					navis.forEach((item) => {
+						item.style.display = `none`;
+					})
+        } else {
+					swiperOptions = {
+						loop: false,
+						spaceBetween: 0,
+						slidesPerView: '1',
+						speed: 400,
+						grabCursor: true,
+						mousewheelControl: true,
+						keyboardControl: true,
+						observer: true,
+						observeParents: true,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'fraction',
+						},
+					}
+        }
+				const swiper = new Swiper("#swiper", swiperOptions);
+			}) ()
+		}
+		break;
+
+		case 'report':{
+
+			window.addEventListener('load', () => {
+				CheckboxNeededCheck();
+				LayerCloseClicker();
+			})
+
+			const formOpener = document.querySelector('.open')
+			const formUserName = document.querySelector('#user-name');
+			const formUserProfession = document.querySelector('#user-profession');
+			const formUserPosition = document.querySelector('#user-position');
+			const formUserMail = document.querySelector('#user-mail');
+			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+			formSubmit.addEventListener('click' , () => {
+				layerOpen('letterFormSubmitted');
+			});
+
+			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
+				layerClose('newsLetter');
+			});
+
+			formOpener.addEventListener('click' , (event) => {
+				event.preventDefault();
+				layerOpen('newsLetter');
+
+				document.querySelectorAll('.form-field').forEach((item) => {
+					item.classList.remove('warning');
+				})
+	
+				if(!needCheck.checked) {
+					needCheck.focus();
+					return false;
+				}
+	
+				if(!formUserName.value) {
+					formUserName.focus();
+					formUserName.closest('.form-field').classList.add('warning')
+					return false;
+				}
+	
+				if(!formUserProfession.value) {
+					formUserProfession.focus();
+					formUserProfession.closest('.form-field').classList.add('warning')
+					return false;
+				}	
+
+				if(!formUserPosition.value) {
+					formUserPosition.focus();
+					formUserPosition.closest('.form-field').classList.add('warning')
+					return false;
+				}	
+	
+				if(!formUserMail.value) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					return false;
+				}
+	
+				if(!regEmail.test(formUserMail.value)) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+					return false;
+				}
+			})
+		}
+		break;
+
+		case 'column':
+		break;
+
+		default: 
+			// alert('c');
+	}
+}
 
 //layerPopup
 let isOpen = false;

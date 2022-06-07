@@ -1,7 +1,7 @@
 <header id="header" class="header @@headertype">
 	<div class="header__inner">
 		<h1 class="header__title">
-			<a href="#" class="logo @@logotype"><span class="a11y">플레이디</span></a>
+			<a href="./index.html" class="logo @@logotype"><span class="a11y">플레이디</span></a>
 		</h1>
 		<nav class="nav">
 			<div class="nav__link"><a href="#">사업영역</a></div>
