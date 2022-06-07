@@ -18,6 +18,20 @@ window.addEventListener('load', () => {
 	const navmenu = document.querySelector('header#header .navmenu');
 	const navmenuList = document.querySelectorAll('header#header .navmenu .navmenu__list');
 
+	const sitemap = document.querySelector('#sitemap');
+	const sitemapBtns = [nav.querySelector('.nav__gnb'), sitemap.querySelector('.sitemap__close')];
+
+	sitemapBtns.forEach((items) => {
+		items.addEventListener('click', (event) => {
+			event.preventDefault;
+			const docBody = document.querySelector('body');
+			let currBodyStatus = docBody.classList.contains('noscroll');
+			let currStatus = sitemap.classList.contains('sitemap__is-visible');
+			currBodyStatus ? docBody.classList.remove('noscroll') : docBody.classList.add('noscroll');
+			currStatus ? sitemap.classList.remove('sitemap__is-visible') : sitemap.classList.add('sitemap__is-visible');
+		})
+	})
+
 	navLinks.forEach((item) => {
 		let itemIdx = parseInt(1 + Array.from(item.parentElement.querySelectorAll('.nav__link')).indexOf(item));
 		let targetNavmenuList = navmenu.querySelector('.navmenu__list:nth-of-type(' + itemIdx + ')');
@@ -33,9 +47,7 @@ window.addEventListener('load', () => {
 		}
 		navmenuListPos();
 
-		window.addEventListener('resize', () => {
-			navmenuListPos();
-		})
+		window.addEventListener('resize', () => {navmenuListPos();})
 
 		item.addEventListener('mouseenter', () => {
 			if (itemIdx > 5){

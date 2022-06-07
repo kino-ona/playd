@@ -53,13 +53,11 @@ $duration3: 0.2s;
 	&__inner {
 		z-index: 999;
 		max-width: 1920px;
+    height: 100%;
 		padding: 0 50px;
 		margin: 0 auto;
     position: relative;
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
+		@include FlexRow;
 	}
 
 	&__title {
@@ -99,44 +97,45 @@ $duration3: 0.2s;
 	@include FontBD;
 	color: #000000;
 	text-align: center;
+}
 
-	&__gnb {
-		padding-left: 20px;
-		margin-left: 30px;
-		@include FlexRow;
-		
-		a {
-			width: 24px;
-			height: 18px;
-			position: relative;
-			display: flex;
-			align-items: center;
+.nav__gnb {
+	padding-left: 20px;
+	margin-left: 30px;
+	@include FlexRow;
+	cursor: pointer;
+	
+	a {
+		width: 24px;
+		height: 18px;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	i {
+		width: 24px;
+		height: 2px;
+		display: inline-block;
+		background-color: #000000;
+
+		&::before, &::after {
+			width: inherit;
+			height: inherit;
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: inline-block;
+			background-color: inherit;
+			content: '';
 		}
 
-		i {
-			width: 24px;
-			height: 2px;
-			display: inline-block;
-			background-color: #000000;
+		&::before {
+			top: 0;
+		}
 
-			&::before, &::after {
-				width: inherit;
-				height: inherit;
-				position: absolute;
-				left: 0;
-				right: 0;
-				display: inline-block;
-				background-color: inherit;
-				content: '';
-			}
-
-			&::before {
-				top: 0;
-			}
-
-			&::after {
-				bottom: 0;
-			}
+		&::after {
+			bottom: 0;
 		}
 	}
 }
@@ -232,6 +231,127 @@ $duration3: 0.2s;
 	.nav__link {
 		position: relative;
 	}
+}
+
+#sitemap {
+	z-index: 9999;
+	padding: 0 230px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	@include FlexRow($jc: center, $a: center);
+	flex-direction: column;
+	background: {
+		image: url(../../images/w/common/sitemap.jpg);
+		size: cover;
+		position: 0 0;
+		repeat: no-repeat;
+	}
+	&::after {
+		z-index: 9998;
+		content: '';
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, .85);
+	}
+	display: none;
+	&.sitemap__is-visible {display: flex;}
+}
+
+.sitemap {
+
+	&__inner {
+		z-index: inherit;
+		position: fixed;
+		left: 50px;
+		right: 50px;
+		top: 0;
+		height: 100px;
+		@include FlexRow;
+	}
+
+	.logo {
+		width: 139px;
+		height: 27px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 0.4s;
+	}
+
+	a {
+		display: inline-block;
+		@include FontInherit;
+	}
+
+	&__close {
+		padding-left: 20px;
+		margin-left: 30px;
+		@include FlexRow;
+		cursor: pointer;
+		
+		button {
+			width: 30px;
+			height: 18px;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+	
+		i {
+			width: 30px;
+			height: 3px;
+			display: inline-block;
+			transition: all $duration3;
+	
+			&::before, &::after {
+				width: inherit;
+				height: inherit;
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: inline-block;
+				content: '';
+				background-color: #ffffff;
+			}
+			&::before {
+				transform: rotate(45deg);
+			}
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.gnb {
+	z-index: inherit;
+	width: 100%;
+	max-width: 1455px;
+	@include FlexRow($a: flex-start);
+}
+
+.menu {
+	z-index: inherit;
+	color: #ffffff;
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 40px;
+		@include FontMD;
+	} 
+
+	&__link {
+		margin-bottom: 15px;
+		font-size: 18px;
+		@include FontRG;
+	} 
 }
 
 .banner__footer {
@@ -670,6 +790,11 @@ input[type="file"] {
 	&__lined-white {
 		color: #ffffff;
 		border: 2px solid #ffffff;
+		background-color: transparent;
+	}
+
+	&__lined-black {
+		border: 1px solid #000000;
 		background-color: transparent;
 	}
 
