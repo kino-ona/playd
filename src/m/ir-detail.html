@@ -1,0 +1,94 @@
+@@include('./inc/pagehead.inc', {
+	"webroot": "..",
+	"pagetitle": "PLAYD",
+})
+</head>
+<body class="ir-detail"> 
+<div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
+
+<div class="wrap">
+
+	<!-- header -->
+	@@include('./inc/header.inc', {
+		"webroot":"..",
+		"headertype":"header__default",
+	})
+	<!-- //header -->
+		<div class="sub-content">
+			<div class="sub-content__head">
+				<p class="sub-content__type">10</p>
+				<h3 class="sub-content__title">제12기 결산공고</h3>
+				<p>
+					<span class="sub-content__date">2022.04</span>
+					<a href="/" class="sub-content__share"><span class="a11y">공유하기</span></a>
+				</p>
+			</div>
+			<div class="list-content">
+				<div class="list-content__slide swiper">
+					<div class="swiper-wrapper">
+						<div class="list-content__item swiper-slide">
+							<p><span class="list-content__image" style="background-image:url('../assets/images/m/sub/img_column_1.png')"></span></p>
+							<p class="list-content__description">새로운 로그인 방식부터 광고 구조까지 변화한 카카오	키워드 광고 플랫폼을 A~Z 모두 살펴보았습니다.</p>
+						</div>
+						<div class="list-content__item swiper-slide">
+							<p><span class="list-content__image" style="background-image:url('../assets/images/m/sub/img_column_2.png')"></span></p>
+							<p class="list-content__description">새로운 로그인 방식부터 광고 구조까지 변화한 카카오	키워드 광고 플랫폼을 A~Z 모두 살펴보았습니다.</p>
+						</div>
+						<div class="list-content__item swiper-slide">
+							<p><span class="list-content__image" style="background-image:url('../assets/images/m/sub/img_column_1.png')"></span></p>
+							<p class="list-content__description">새로운 로그인 방식부터 광고 구조까지 변화한 카카오	키워드 광고 플랫폼을 A~Z 모두 살펴보았습니다.</p>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<a href="/" class="download">리포트 다운로드</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="layer__body popup share-popup" id="share-popup" aria-hidden="true" role="dialog">
+		<div class="layer__wrap">
+			<div class="layer__close">
+				<button class="close"><span>close</span></button>
+			</div>
+			<div class="layer__inner">
+				<div class="layer__head">
+					<p class="content__title">공유하기</p>
+				</div>
+				<div class="layer__content">
+					<div class="share-list">
+						<ul>
+							<li class="kakao">
+								<img src="../assets/images/m/sub/icon_share_kakao.png" alt="카카오톡 아이콘">
+								카카오톡
+							</li>
+							<li class="facebook">
+								<img src="../assets/images/m/sub/icon_share_facebook.png" alt="페이스북 아이콘">
+								페이스북
+							</li>
+							<li class="twitter">
+								<img src="../assets/images/m/sub/icon_share_twitter.png" alt="트위터 아이콘">
+								트위터
+							</li>
+							<li class="sms">
+								<img src="../assets/images/m/sub/icon_share_sms.png" alt="sms 아이콘">
+								sms
+							</li>
+							<li class="url">
+								<img src="../assets/images/m/sub/icon_share_url.png" alt="URL 아이콘">
+								URL 복사
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- footer -->
+@@include('./inc/footer.inc', {
+	"webroot":"..",
+})
+<!-- //footer -->
+</body>
+</html>

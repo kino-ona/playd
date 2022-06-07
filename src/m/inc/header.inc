@@ -16,7 +16,7 @@
 						<p><a href="/">캠페인전략</a></p>
 						<p><a href="/">미디어전략</a></p>
 						<p><a href="/">크리에이티브</a></p>
-						<p><a href="/">포트폴리오</a></p>
+						<p><a href="./portfolio.html">포트폴리오</a></p>
 						<p><a href="/">수상내역</a></p>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 					<a href="/" role="button" class="gnb__list--link font--bd">플레이디</a>
 					<div class="gnb__wrap">
 						<p><a href="/">ABOUT</a></p>
-						<p><a href="/">IR</a></p>
+						<p><a href="./ir.html">IR</a></p>
 						<p><a href="./ethical.html">윤리경영</a></p>
 						<p><a href="/">ESG</a></p>
 					</div>
