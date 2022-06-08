@@ -748,11 +748,7 @@ input[type="file"] {
 		display: block;
 		text-align: center;
 	}
-
-	&__wrap--seemore {
-		margin-bottom: 150px;
-	}
-
+	
 	&__radius {
 		padding: 13px 50px;
 		@include FontBD;
@@ -812,6 +808,7 @@ input[type="file"] {
 		display: inline-block;
 		font-size: 18px;
 		@include FontBD;
+		line-height: 33px;
 		border-radius: 5px;
 	}
 
