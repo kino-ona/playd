@@ -47,21 +47,37 @@ indexHeader();
 //index kv
 window.addEventListener('load', () => {
 
-  const visualSrc = document.querySelector('section.visual .visual__image img');
-  let getVisualSrc = visualSrc.getAttribute('src');
-  let visualSrcName = getVisualSrc.split('.')[0];
-  let i = 0;
+  // const visualSrc = document.querySelector('section.visual .visual__image img');
+  // let getVisualSrc = visualSrc.getAttribute('src');
+  // let visualSrcName = getVisualSrc.split('.')[0];
+  // let i = 0;
+
+  // const setKv = () => {
+  //   i++;
+  //   visualSrcName = '@main_' + i  + '.jpg'
+  //   visualSrc.setAttribute('src', '../assets/images/w/visual/' + visualSrcName);
+  // }
+  // const stopKv = () => {
+  //   clearInterval(timer);
+  // }
+  // const timer = setInterval(setKv, 300);
+  // setTimeout(stopKv, 3400);
+
+
+  console.log()
 
   const setKv = () => {
-    i++;
-    visualSrcName = '@main_' + i  + '.jpg'
-    visualSrc.setAttribute('src', '../assets/images/w/visual/' + visualSrcName);
-  }
-  const stopKv = () => {
-    clearInterval(timer);
+    document.querySelectorAll('section.visual .visual__image img').forEach((item) => {
+      console.log()
+      item.classList.add('active');
+    })
   }
   const timer = setInterval(setKv, 300);
-  setTimeout(stopKv, 3400);
+  const stopKv = () => {
+      clearInterval(timer);
+    }
+  setTimeout(stopKv, 900);
+
 })
 
 //setting min-height to each section needed
