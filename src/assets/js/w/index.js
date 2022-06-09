@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
     i++;
     visual.forEach(() => {
       visual[i].classList.add('active');
-      if ((visual.length) > i > 2) {visual[i-2].style.display = `none`;}
+      if ((visual.length + 1) > i > 2) {visual[i-2].style.display = `none`;}
     });
   };
   

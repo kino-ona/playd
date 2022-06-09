@@ -559,6 +559,13 @@ input, textarea {
 	}
 }
 
+textarea {
+	padding: 30px;
+	background-color: #ffffff !important;
+	border-radius: 5px;
+	border: 0;
+}
+
 input[type="file"] {
 	position: absolute;
 	width: 0;
@@ -1178,6 +1185,7 @@ input[type="file"] {
 		border: 1px solid #DDDDDD;
 		border-radius: 5px;
 		font-size: 18px;
+		color: #666666;
 		@include FontDL;
 
 		&::before {
