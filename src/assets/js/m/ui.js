@@ -213,6 +213,7 @@
 		let curPos = window.pageYOffset;
 		console.log(curPos);
 		document.documentElement.classList.add("noscroll");
+		document.querySelector('body').classList.add('open-modal')
 		document.querySelector('#' + layerId).classList.add("is-visible");
 		let layerID = document.querySelector('#' + layerId);
 		layerID.setAttribute('aria-hidden', 'false');
@@ -230,6 +231,8 @@
 		let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
 		document.querySelector('#' + layerId).classList.remove("is-visible");
 		document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
+		document.querySelector('body').classList.remove('open-modal')
+
 		document.documentElement.classList.remove("noscroll");
 		if (document.querySelector('[role="dialog"].is-visible')) {
 			document.documentElement.classList.remove("noscroll");
