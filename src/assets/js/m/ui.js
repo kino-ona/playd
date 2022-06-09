@@ -94,6 +94,11 @@
 				subCommonFunction();
 			break;
 
+			case 'awards':
+				headerTitle.innerHTML = '수상내역';
+				subCommonFunction();
+			break;
+
 
 			default: 
 				alert('c');
@@ -727,6 +732,17 @@
 				event.preventDefault();
 			})
 		})
+
+		document.querySelectorAll('.sub-tabs__item').forEach(item => {
+			item.addEventListener('click', (event) => {
+				document.querySelectorAll('.sub-tabs__item').forEach((thisTarget) => {
+					if(thisTarget.classList.contains('sub-tabs__item--active')) thisTarget.classList.remove('sub-tabs__item--active')
+				})
+				item.classList.add('sub-tabs__item--active')
+			})
+		})
+
+
 	}
 
 	if(bodyClass === 'letter-detail') {

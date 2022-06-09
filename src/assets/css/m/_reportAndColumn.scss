@@ -97,17 +97,26 @@
   }
 
   .drop-box__title {
-    width: 70px;
-    height: 20px;
-    padding: 0;
+    margin-top: 30px;
     margin-right: 25px;
+    padding: 0;
+    width: 75px;
+    height: 30px;
+    line-height: 24px;
     border: none;
   }
 
   .drop-box__title::before {
-    top: 5px;
-    right: 25px;
+    right: 32px;
+    top: 7px;
+  }
 
+  .drop-box--active .drop-box__wrap {
+    top: 45px;
+    width: 43px;
+    border-radius: 6px;
+    border-width: 1px 1px 1px 1px;
+    z-index: 9;
   }
 
   .list-select__wrap {

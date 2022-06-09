@@ -258,7 +258,6 @@
 
   #recruit-search {
     width: 88%;
-    padding: 15px;
     background: #ffffff;
    
     &::placeholder {
@@ -271,6 +270,7 @@
   .search-list {
     height: 50px;
     margin-top: 10px;
+    margin-bottom: 10px;
 
     &::after {
       display: inline-block;
@@ -291,6 +291,7 @@
   .drop-box {
     &__title {
       border: 1px solid #EEEEEE;
+      line-height: 26px;
     }
 
     &__title p {
@@ -473,7 +474,6 @@
       margin-top: 40px;
       background-color: #000000;
       color: #ffffff;
-      line-height: 50px;
       border-radius: 4px;
       text-align: center;
 

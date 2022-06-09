@@ -19,7 +19,7 @@
 		}
 	
 		const timer = setInterval(setVisual, 300);
-		setTimeout(stopVisual, 1600);
+		setTimeout(stopVisual, 3400);
 	
 		
 		//aos

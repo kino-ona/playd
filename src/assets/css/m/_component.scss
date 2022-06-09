@@ -26,7 +26,7 @@
   }
 
   .gnb {
-    top: 55px;
+    top: 0;
     right: 0;
     z-index: 99;
     overflow: scroll;
@@ -40,7 +40,7 @@
     position: absolute;
     background: url('../../images/m/common/logo_gray.png') 0 0 no-repeat;
     background-size: contain;
-    z-index: 999;
+    z-index: 9;
   }
 }
 
@@ -156,6 +156,17 @@
   &__inner {
     padding-top: 15px;
   }
+
+  &__logo {
+    height: 55px;
+    padding: 0 25px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #DDDDDD;
+  }
+
+  &__logo a {
+    margin-top: 20px;
+  }
 }
 
 .burger-sticks {
@@ -187,6 +198,7 @@
 
 .gnb {
   position: absolute;
+  top: 0;
   right: -101%;
   width: 100%;
   height: 100vh;
@@ -315,6 +327,10 @@
     line-height: 26px;
     letter-spacing: -.3px;
 	}
+
+  &__lined-black {
+    border: 1px solid #000000;
+  }
 
 	&__filled-white {
     display: inline-block;
@@ -944,14 +960,14 @@
   }
 	
 	&__inner {
-		max-height: 85vh;
+		max-height: 100vh;
 		overflow-x: hidden;
 	}
 	
 	&__content {
 		max-width: 100%;
 		height: 100%;
-		padding: 25px;
+		padding: 25px 25px 0;
 
 		> *:first-child {
 			margin-top: 0;
@@ -1085,12 +1101,9 @@
 }
 
 .form-submit--wide {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  width: calc(100% + 50px);
   height: 60px;
+  margin: 0 -25px;
   font-size: 17px;
   background-color: #EA2126;
   color:#ffffff;
