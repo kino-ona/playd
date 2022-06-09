@@ -629,7 +629,7 @@ if(bodyClass) {
 		break;
 
 		case 'report':{
-
+			
 			window.addEventListener('load', () => {
 				CheckboxNeededCheck();
 				LayerCloseClicker();
@@ -698,7 +698,42 @@ if(bodyClass) {
 		}
 		break;
 
-		case 'column':
+		case 'welfare':{
+			(function () {
+				let options = {};
+				let slides = document.querySelectorAll("#swiper .swiper-slide");
+        if ( slides.length == 1 ) {
+					swiperOptions = {
+						loop: false,
+						spaceBetween: 0,
+						slidesPerView: '1',
+						speed: 0,
+						grabCursor: false,
+						mousewheelControl: false,
+						keyboardControl: false,
+					}
+        } else {
+					swiperOptions = {
+						loop: true,
+						spaceBetween: 0,
+						slidesPerView: '1',
+						speed: 400,
+						grabCursor: true,
+						mousewheelControl: true,
+						keyboardControl: true,
+						observer: true,
+						observeParents: true,
+						autoplay: true,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+							clickable: true
+						},
+					}
+        }
+				const swiper = new Swiper("#swiper", swiperOptions);
+			}) ()
+		}
 		break;
 
 		default: 

@@ -459,13 +459,14 @@ $elemT: 150px;
         right: 0;
         bottom: 0;
         overflow: hidden;
+        justify-content: space-between;
       }
     
       &__content {
         position: absolute;
         top: 0;
         right: 0;
-        width: 66.7%;
+        width: 65%;
       }
     }
 
@@ -494,7 +495,7 @@ $elemT: 150px;
     
         i {
           width: 8px;
-          height: 8px;
+          height: 14px;
           margin-left: 6px;
     
           &:after {

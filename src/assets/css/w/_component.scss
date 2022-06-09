@@ -172,10 +172,11 @@ $duration3: 0.2s;
 	@include FlexRow($jc: center);
 }
 
-.nav__link:hover, .nav__link.located {
+.nav .nav__link:hover, .nav .nav__link.located {
 
 	a {
 		color: #EA2126;
+		@include FontBD;
 	}
 
 	&::after {
@@ -246,22 +247,22 @@ $duration3: 0.2s;
 	background-color: #ffffff;
 	border-bottom: 1px solid #DDDDDD;
 
-	.nav .nav__link a {
+	.nav .nav__link {
+		position: relative;
+	}
+
+	.nav__link a {
 		color: #000000;
+		@include FontMD;
 	}
 
 	.header__inner {
 		background-color: #ffffff;
 	}
-
-	.nav__link {
-		position: relative;
-	}
 }
 
 #sitemap {
 	z-index: 9999;
-	padding: 0 230px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -359,13 +360,22 @@ $duration3: 0.2s;
 .gnb {
 	z-index: inherit;
 	width: 100%;
-	max-width: 1455px;
+	max-width: 1200px;
 	@include FlexRow($a: flex-start);
 }
 
 .menu {
 	z-index: inherit;
 	color: #ffffff;
+	@media screen and (max-width: 1440px) {
+		margin-left: 35px;
+		margin-right: 35px;
+	}
+
+	@media screen and (max-width: 1240px) {
+		margin-left: 18px;
+		margin-right: 18px;
+	}
 
 	&__title {
 		margin-bottom: 30px;
@@ -1008,6 +1018,7 @@ input[type="file"] {
 
   &__checkbox:checked +  &__checkbox-label{
     color: #ffffff;
+		@include FontMD;
     background-color: #EA2126;
 		border: 1px solid #EA2126;
   }
@@ -1162,7 +1173,7 @@ input[type="file"] {
 
 	&__title {
 		height: 60px;
-		padding: 17px 30px;
+		padding: 17px 25px;
 		box-sizing: border-box;
 		border: 1px solid #DDDDDD;
 		border-radius: 5px;
@@ -1190,7 +1201,7 @@ input[type="file"] {
     z-index: 999;
 		overflow: hidden;
     position: absolute;
-    top: 62px;
+    top: 57px;
     left: 0;
     right: 0;
 		height: 0;
@@ -1207,6 +1218,11 @@ input[type="file"] {
 		display: block;
 	}
 
+	&--active {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
 	&--active &__title::before {
 		top: 26.5px;
 		transform: rotate(225deg);
@@ -1214,8 +1230,12 @@ input[type="file"] {
 
 	&--active &__wrap {
 		height: auto;
-		padding: 15px;
-		box-shadow: 3px 3px 3px 3px #DDDDDD;
+		padding: 0 30px 30px;
+		border: 1px solid #DDDDDD;
+		border-radius: 5px;
+		border-width: 0 1px 1px 1px;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
 	}
 }
 
@@ -1247,6 +1267,10 @@ input[type="file"] {
 		font-size: 16px;
 		content: '*';
 	}
+}
+
+.search-list .sub-tabs__item:not(.sub-tabs__item--active) {
+	background-color: #ffffff;
 }
 
 .accordian {
@@ -1616,6 +1640,7 @@ input[type="file"] {
 	}
 }
 
+/* POPUP */
 
 .layer {
 
@@ -1673,8 +1698,8 @@ input[type="file"] {
 		width: 30px;
 		height: 30px;
 		padding: 0;
-		top: 15px;
-		right: 15px;
+		top: 0;
+		right: -40px;
 
 		.close {
 			text-indent:-9999px;
@@ -1696,7 +1721,7 @@ input[type="file"] {
 				position: absolute;
 				top: 3px;
 				left: 14px;
-				background-color: #666666;
+				background-color: #000000;
 				content: '';
 			}
 
