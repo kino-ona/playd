@@ -261,7 +261,6 @@ $duration3: 0.2s;
 
 #sitemap {
 	z-index: 9999;
-	padding: 0 230px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -359,13 +358,22 @@ $duration3: 0.2s;
 .gnb {
 	z-index: inherit;
 	width: 100%;
-	max-width: 1455px;
+	max-width: 1200px;
 	@include FlexRow($a: flex-start);
 }
 
 .menu {
 	z-index: inherit;
 	color: #ffffff;
+	@media screen and (max-width: 1440px) {
+		margin-left: 35px;
+		margin-right: 35px;
+	}
+
+	@media screen and (max-width: 1240px) {
+		margin-left: 18px;
+		margin-right: 18px;
+	}
 
 	&__title {
 		margin-bottom: 30px;
