@@ -123,6 +123,7 @@
 
   &__title {
     margin-bottom: 20px;
+    @include FlexRow;
     font-size: 18px;
     line-height: 27px;
     @include FontBD;
@@ -154,6 +155,42 @@
       @include FlexRow;
     }
 
+    .drop-box {
+
+      .list-select__wrap {
+        width: 120px;
+        box-sizing: border-box;
+        right: -10px;
+        left: auto;
+        padding: 0;
+        border-radius: 5px;
+        border-width: 1px;
+      }
+  
+      .list-select__wrap a {
+        color: #666666;
+      }
+  
+      .list-select__title {
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+  
+        &::before {
+          width: 8px;
+          height: 8px;
+          right: 0;
+        }
+      }
+
+      &--active {
+        .list-select__wrap {
+          padding: 15px;
+        }
+      }
+    }
+
     .list-select a[type="button"] {
       width: 22px;
       height: 18px;
@@ -171,6 +208,7 @@
       &::before {
         top: 0;
       }
+
       &::after {
         bottom: 0;
       }
@@ -184,19 +222,6 @@
         display: inline-block;
         background-color: inherit;
         content: "";
-      }
-    }
-
-    .list-select__title {
-      height: auto;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-
-      &::before {
-        width: 8px;
-        height: 8px;
-        right: 0;
       }
     }
 
@@ -262,7 +287,7 @@
 
   &__meta {
     display: block;
-    @include FontRG;
+    @include FontDL;
     color: #888888;
 
     > span {
@@ -350,10 +375,12 @@
     display: inline-block;
     font-size: 18px;
     line-height: 55px;
-    color: #666666;
+    @include FontMD;
+    color: #000000;
     text-align: center;
     border-radius: 5px;
-    background-color: #EEEEEE;
+    background-color: transparent;
+    border: 1px solid #000000;
   }
 
   #form-file-text {
@@ -424,6 +451,11 @@
     @include FontInherit;
     color: #888888;
   }
+}
+
+.input-box--info + .input-box--info {
+  padding-top: 0;
+  margin-top: -55px;
 }
 
 .word-box {
@@ -604,7 +636,7 @@
 
     .image {
       margin-top: 35px;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
       border-radius: 24px;
       overflow: hidden;
     }
@@ -646,7 +678,7 @@
     }
 
     &__description {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 16px;
       @include FontDL;
       color: #666666;
@@ -962,6 +994,10 @@
     @include FlexRow;
   }
 
+  &__title--end {
+    color: #888888;
+  }
+
   &__wrap {
     font-size: 26px;
     @include FontMD;
@@ -1031,6 +1067,36 @@
 .welfare {
   @include subTabLocation;
 
+  .swiper-container {
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    height: inherit;
+    border-radius: 10px;
+  }
+
+  .swiper-pagination {
+    height: 12px;
+    bottom: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    &:not(:last-of-type) {
+      margin-right: 15px;
+    }
+    background-color: #ffffff;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #000000;
+  }
+
   .sub-content {
     @include FlexRow($w: wrap, $a: flex-start);
   }
@@ -1078,6 +1144,7 @@
 
   .form-field__inner .input-box--info__input {
     width: 320px;
+    flex-shrink: 0;
   }
 
   .sub-radio {
@@ -1125,35 +1192,34 @@
     margin-top: 40px;
     box-sizing: border-box;
     position: relative;
-    border: 1px solid #DDDDDD;
     border-radius: 8px;
+    
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-size: 18px;
+      @include FontDL;
+      background: #FAFAFA;
+      border: none;
+      border-radius: inherit;
+      overflow: hidden;
+      border: 1px solid #DDDDDD;
+    }
 
-    .button {
-      width: 120px;
+    .check-content__button {
+      margin: 20px auto 0;
+      width: 200px;
       height: 50px;
-      position: absolute;
-      bottom: 30px;
-      right: 30px;
       display: inline-block;
       font-size: 18px;
       line-height: 50px;
       @include FontMD;
-      color: #666666;
+      color: #000000;
       text-align: center;
-      background: #DDDDDD;
+      background: transparent;
       border-radius: 5px;
+      border: 1px solid #000000;
     }
-  }
-  
-  .check-content__comment textarea {
-    width: 100%;
-    height: 200px;
-    font-size: 18px;
-    @include FontDL;
-    background: #FAFAFA;
-    border: none;
-    border-radius: inherit;
-    overflow: hidden;
   }
 
   .form-submit.submit--active {
@@ -1283,7 +1349,6 @@
   textarea {
     padding: 30px;
     box-sizing: border-box;
-    background-color: #ffffff;
   }
 
   .numbering {
@@ -1767,6 +1832,7 @@
   }
 
   .banner__image {
+    margin-top: -17.5px;
     display: inline-block;
     width: 119px;
     height: 97px;
@@ -1823,30 +1889,32 @@
   }
 
   .banner__content {
-    font-size: 15px;
+    margin-bottom: 40px;
+    font-size: 16px;
     @include FontDL;
   }
 
   .banner__meta {
-    position: absolute;
-    bottom: 110px;
-    @include FontRG;
+    @include FontDL;
     color: #888888;
-
-    > span {
-      width: 1px;
-      height: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 8px;
-      display: inline-block;
-      background-color: rgba(255, 255, 255, .5)
-    } 
   }
 
   .button__wrap {
-    text-align: left;
-    margin-top: 50px;
+    position: absolute;
+    right: 80px;
+    bottom: 115px;
+  }
+
+  .button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: all $duration3;
+
+    &:hover {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -2195,7 +2263,7 @@
     .search-item {
       width: auto;
       padding-left: 65px;
-      @include FlexRow($w: wrap, $jc: center);
+      @include FlexRow($w: wrap, $jc: flex-start);
     }
 
     .sub-tabs__item {
@@ -2249,11 +2317,6 @@
     color: #EA2126;
     font-weight: 600;
     letter-spacing: 0;
-  }
-
-  .list-content__meta {
-    font-size: 16px;
-    @include FontBasicSans;
   }
 
   .list-content__info {
@@ -2716,7 +2779,7 @@
     height: 30px;
     background-color: #000000;
     color: #ffffff;
-    line-height: 30px;
+    line-height: 28px;
     border-radius: 50%;
   }
 
@@ -2760,7 +2823,6 @@
 }
 
 /* AWARDS */
-
 
 .awards {
 

@@ -23,20 +23,17 @@ const indexHeader = () => {
     let scT = window.pageYOffset;
     const container = document.querySelector('#container');
     const abTcontainer =  container.getBoundingClientRect().top;
-    const navLinks = document.querySelectorAll('#header nav.nav .nav__link');
-    const navmenu = document.querySelector('header#header .navmenu');
-    const navmenuList = document.querySelectorAll('header#header .navmenu .navmenu__list');
     setTimeout((delay) => {
-      if (scT > abTcontainer*0.9) {
+      headerLoaded();
+      if (scT === 0) {
+        headerTransparentize();
+      } else if (scT > abTcontainer*0.9) {
         headerUntransparentize();
-        header.addEventListener('mouseenter', () => {header.classList.remove('header--scrolled');})
-        header.addEventListener('mouseleave', () => {header.classList.add('header--scrolled');headerUntransparentize();})
+        header.addEventListener('mouseleave', () => {headerUntransparentize();})
       } else if (scT === abTcontainer*0.9) {
-        header.classList.remove('header--scrolled');
         headerTransparentize();
       } else {
-        header.addEventListener('mouseenter', () => {headerUntransparentize();})
-        header.addEventListener('mouseleave', () => {header.classList.remove('header--scrolled');headerTransparentize();})
+        headerTransparentize();
       }
       clearTimeout(delay);
 	  }, 50);
