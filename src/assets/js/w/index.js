@@ -49,7 +49,8 @@ window.addEventListener('load', () => {
   const setKv = () => {
     i++;
     visual.forEach(() => {
-      visual[i].classList.add('active')
+      visual[i].classList.add('active');
+      visual[i-2].style.display = `none`;
     });
   };
   
