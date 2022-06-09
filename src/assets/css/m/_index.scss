@@ -216,7 +216,7 @@ html {
       font-size: 27px;
       letter-spacing: -.2px;
       line-height: 1;
-      @include FontBD;
+      font-weight: bold;
     }
   }
 
@@ -240,6 +240,10 @@ html {
     &__list img {
       max-width: 95px;
     }
+  }
+
+  .button__radius--filled-red {
+    border-radius: 4px;
   }
 }
 

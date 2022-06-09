@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
 		window.addEventListener('resize', () => {navmenuListPos();})
 
 		item.addEventListener('mouseenter', () => {
-			if (itemIdx > 5){
+			if (itemIdx > 4){
 				navmenu.style.top = 0;
 			} else {
 				targetNavLink.classList.add('located');

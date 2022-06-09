@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
     i++;
     visual.forEach(() => {
       visual[i].classList.add('active');
-      visual[i-2].style.display = `none`;
+      if ((visual.length + 1) > i > 2) {visual[i-2].style.display = `none`;}
     });
   };
   
@@ -184,10 +184,13 @@ const listItems = serviceArea.querySelectorAll('.accordian__item');
 const boxItems = serviceArea.querySelectorAll('.box-item--left, .box-item--right');
 
 listItems.forEach(item => {
-  item.addEventListener('click', () => {
+  item.addEventListener('mouseenter', () => {
     listItems.forEach(targets => { targets.classList.remove('accordian__item--active');})
     let result = item.classList.contains('accordian__item--active');
-    result ? item.classList.add('accordian__item--active') : item.classList.remove('accordian__item--active');
+    !result ? item.classList.add('accordian__item--active') : item.classList.remove('accordian__item--active');
+  });
+  item.addEventListener('mouseleave', () => {
+    listItems.forEach(targets => { targets.classList.remove('accordian__item--active');})
   });
 })
 

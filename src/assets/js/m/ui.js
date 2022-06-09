@@ -257,13 +257,7 @@
 		const needCheck = document.querySelector('.contact #sub-checkbox--personal');
 		const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
-		formFileButton.addEventListener('change', () => {
-			if(!formFileIput.value) {
-				formFileIput.closest('.input-box--file').classList.remove('warning')
-			}
-			formFileIput.value = formFileButton.files[0].name
-		});
-		
+
 		needCheck.addEventListener('change', () => {
 			if(needCheck.checked) {
 				formSubmit.classList.add('submit--active');
@@ -271,8 +265,14 @@
 				formSubmit.classList.remove('submit--active');
 			}
 		})
-		
-		
+
+		formFileButton.addEventListener('change', () => {
+			if(!formFileIput.value) {
+				formFileIput.closest('.input-box--file').classList.remove('warning')
+			}
+			formFileIput.value = formFileButton.files[0].name
+		});
+			
 		formSubmit.addEventListener('click' , (event) => {
 			event.preventDefault();
 			document.querySelectorAll('.form-field').forEach((item) => {
@@ -332,7 +332,6 @@
 				formUserUrl.closest('.form-field').classList.add('warning')
 				return false;
 			}
-
 
 			layerOpen('form-popup');
 		})

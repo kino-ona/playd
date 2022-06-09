@@ -3,7 +3,7 @@
 		<div class="banner__content">
 			<p class="banner__title font--md">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
 			<div class="button__wrap">
-				<a href="#" class="button__square button__lined-white font--bd">프로젝트 문의하기</a>
+				<a href="#" class="button__square button__lined-white font--bd">프로젝트 문의</a>
 				<a href="#" class="button__square button__filled-white font--bd">회사소개서 다운로드</a>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
 		<nav class="footer__util--right">
-			<p class="information"><span class="information__title">대표전화</span><span class="footer__number font--bd">1566-3265</span></p>
+			<p class="information"><span class="information__title">대표전화</span><span class="footer__number numbering">1566-3265</span></p>
 			<ul class="information__desc">
 				<li>MON - FRI 09 : 00 - 18:00</li>
 				<li>주말, 공휴일 휴무</li>

@@ -76,7 +76,7 @@
   }
 
   .drop-box {
-    margin-top: 15px;
+    margin-top: 10px;
 
     &__title {
       letter-spacing: -.3px;
@@ -152,7 +152,7 @@
       display: inline-block;
       position: relative;
       margin-top: 40px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       padding-bottom: 4px;
       font-size: 27px;
       line-height: 1;
@@ -229,6 +229,7 @@
       line-height: 40px;
       text-align: center;
       border-radius: 5px;
+      @include FontBD;
     }
   }
 
