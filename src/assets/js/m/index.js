@@ -4,22 +4,21 @@
 	const visualSrc = document.querySelector('.visual__image img');
 
 	if(visualSrc) {
-		let getVisualSrc = visualSrc.getAttribute('src');
-		let visualSrcName = getVisualSrc.split('.')[0];
-		let i = 0;
-	
-		const setVisual = () => {
+	  const visual = document.querySelectorAll('.visual__image .image');
+  	let i = 0;
+
+		const setKv = () => {
 			i++;
-			visualSrcName = 'img_visual_' + i  + '.png'
-			visualSrc.setAttribute('src', '../assets/images/m/visual/' + visualSrcName);
-		}
-	
-		const stopVisual = () => {
+			visual.forEach(() => {
+				visual[i].classList.add('active')
+			});
+		};
+  
+		const stopKv = () => {
 			clearInterval(timer);
 		}
-	
-		const timer = setInterval(setVisual, 300);
-		setTimeout(stopVisual, 3400);
+		const timer = setInterval(setKv, 900);
+		setTimeout(stopKv, 10000);
 	
 		
 		//aos
