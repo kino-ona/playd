@@ -53,6 +53,7 @@
     padding-top: 40px;
     font-size: 16px;
     line-height: 1;
+    @include FontBD;
   }
   
   .banner__content .banner__title::before {
@@ -72,10 +73,12 @@
     width: calc(50% - 12px);
     height: 40px;
     line-height: 36px;
+    font-size: 14px;
     text-align: center;
     box-sizing: border-box;
     margin-top: 0;
     margin-left: 10px;
+    @include FontBD;
   }
 
   .banner__content .button__square + .button__square {
@@ -113,6 +116,7 @@
 
   &__desc {
     line-height: 35px;
+    @include FontRG;
   }
 
   &__label {
@@ -475,6 +479,7 @@
     color: #ffffff;
     font-size: 24px;
     line-height: 29px;
+    font-weight: bold;
   }
 
   .copyright {
@@ -799,6 +804,7 @@
 		color: #000000;
 		font-size: 14px;
 		letter-spacing: -.3px;
+    @include FontMD;
 	}
 }
 
@@ -829,7 +835,7 @@
 		background-color: #F7F7F7;
 		border-radius: 30px;
     box-sizing: border-box;
-    @include FontMD;
+    @include FontRG;
 	}
 
 	&__item--active {
@@ -1123,10 +1129,11 @@
   font-size: 17px;
   background-color: #EA2126;
   color:#ffffff;
+  @include FontBD;
 }
 
 .sub-header {
-  padding: 115px 25px 0;
+  padding: 100px 25px 0;
 
   &__title {
     font-size: 20px;
@@ -1166,7 +1173,7 @@
   }
 
   &__warning {
-    margin-top: 40px;
+    margin-top: 75px;
     margin-bottom: 75px;
     text-align: center;
   }
@@ -1325,12 +1332,6 @@
     border-style: solid;
     border-color: #DDDDDD;
     background-color: transparent;
-
-    &::placeholder {
-      color: #888888;
-      letter-spacing: -.3px;
-      font-size: 14px;
-    }
   }
 }
 
@@ -1345,12 +1346,6 @@
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #DDDDDD;
-
-  &::placeholder {
-    color: #888888;
-    letter-spacing: -.3px;
-    font-size: 14px;
-  }
 }
 
 #form-detail {
@@ -1361,12 +1356,6 @@
   font-size: 14px;
   border: none;
   background: transparent;
-
-  &::placeholder {
-    color: #888888;
-    letter-spacing: -.3px;
-    font-size: 14px;
-  }
 }
 
 #form-file-button {
@@ -1402,12 +1391,6 @@ input[type="file"] {
   line-height: 50px;
   border: none;
   box-sizing: border-box;
-
-  &::placeholder {
-    color: #888888;
-    letter-spacing: -.3px;
-    font-size: 14px;
-  }
 }
 
 .form-warning {
@@ -1494,18 +1477,15 @@ form legend {
 	&__wrap input {
 		width: 90%;
 		font-size: 14px;
-		&::placeholder {
-			color: #888888;
-		}
 	}
 	&__wrap button {
 		position: absolute;
-		top: 8px;
+		top: 15px;
 		right: 10px;
-    width: 25px;
-		height: 30px;
+    width: 20px;
+		height: 20px;
 		background: url('../../images/m/sub/icon_search.png') center center no-repeat;
-		background-size: contain;
+		background-size: 20px;
 		vertical-align: top;
 	}
 }
@@ -1519,16 +1499,6 @@ form legend {
 .arrow-number {
   margin-bottom: 75px;
   text-align: center;
-
-  &--active {
-    width: 32px;
-    height: 32px;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 32px;
-    border-radius: 50%;
-  }
 
   &__list {
     float: left;
@@ -1553,6 +1523,17 @@ form legend {
   button {
     float: left;
     line-height: 32px;
+    color: #888888;
+  }
+
+  &--active {
+    width: 32px;
+    height: 32px;
+    background-color: #000000;
+    color: #ffffff !important;
+    font-size: 14px;
+    line-height: 32px;
+    border-radius: 50%;
   }
 
   .more-prev {
@@ -1623,4 +1604,12 @@ form legend {
   li:nth-child(5) {
     width: 49%;
   }
+}
+
+input::placeholder {
+  color: #888888;
+  font-size: 14px;
+  @include FontRG;
+  font-size: 14px;
+  letter-spacing: -.3px;
 }

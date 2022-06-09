@@ -259,12 +259,6 @@
   #recruit-search {
     width: 88%;
     background: #ffffff;
-   
-    &::placeholder {
-      color: #999999;
-      letter-spacing: -.03px;
-      font-size: 14px;
-    }   
   }
 
   .search-list {
@@ -476,7 +470,7 @@
       color: #ffffff;
       border-radius: 4px;
       text-align: center;
-
+      line-height: 50px;
       @include FontBD;
     }
   }

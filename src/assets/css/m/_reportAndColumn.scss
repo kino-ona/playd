@@ -85,8 +85,9 @@
     margin-left: 25px;
     display: inline-block;
     span {
-      font-size: 15px;
-      @include FontBD;
+      font-size: 17px;
+      font-weight: 600;
+      @include FontBasicSans;
     }
   }
 
@@ -113,10 +114,17 @@
 
   .drop-box--active .drop-box__wrap {
     top: 45px;
-    width: 43px;
+    left: -15px;
+    width: 90px;
     border-radius: 6px;
     border-width: 1px 1px 1px 1px;
     z-index: 9;
+    box-sizing: border-box;
+
+    p {
+      color: #666666;
+      @include FontDL;
+    }
   }
 
   .list-select__wrap {
@@ -181,10 +189,12 @@
     &__type {
       color:#EA2126;
       font-size: 16px;
+      font-weight: 600;
       @include FontBasicSans;
     }
 
     &__title {
+      padding: 0px 0 15px;
       font-size: 20px;
       @include FontBD;
     }
@@ -270,7 +280,7 @@
   .download {
     display: block;
     margin-right: 25px;
-    padding: 12.5px 0; 
+    padding: 12.5px 0 12.5px 17px; 
     background-color: #000000;
     color: #ffffff;
     font-size: 16px;
@@ -296,7 +306,8 @@
       margin-top: 15px;
       color: #EA2126;
       font-size: 14px;
-      @include FontBD; 
+      font-weight: 600;
+      @include FontBasicSans;
     }
 
     &__title {
