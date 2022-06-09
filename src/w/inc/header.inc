@@ -8,7 +8,6 @@
       <div class="nav__link"><a href="./techhub.html">솔루션</a></div>
       <div class="nav__link"><a href="./letter.html">인사이트</a></div>
       <div class="nav__link"><a href="./about.html">플레이디</a></div>
-      <div class="nav__link"><a href="./recruit.html">인재채용</a></div>
       <div class="nav__link"><a href="./contact.html">CONTACT</a></div>
       <div class="nav__gnb"><a href="#" type="button"><i></i></a></div>
 		</nav>
@@ -34,10 +33,6 @@
 			<div class="navmenu__link"><a href="./ir.html">IR</a></div>
 			<div class="navmenu__link"><a href="./ethical.html">윤리경영</a></div>
 			<div class="navmenu__link"><a href="#">ESG</a></div>
-		</div>
-		<div class="navmenu__list">
-			<div class="navmenu__link"><a href="./recruit.html">채용</a></div>
-			<div class="navmenu__link"><a href="./welfare.html">복리후생</a></div>
 		</div>
 		<div class="navmenu__list" style="display:none;" tabindex="-1"></div>
 	</div>
