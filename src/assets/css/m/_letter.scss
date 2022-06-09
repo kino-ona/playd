@@ -57,7 +57,7 @@
       margin-top: 15px;
       margin-bottom: 5px;
       color: #EA2126;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     &__description {
@@ -115,6 +115,7 @@
     &__type {
       color:#EA2126;
       font-size: 16px;
+      font-weight: 600;
       @include FontBasicSans;
     }
 
@@ -283,6 +284,7 @@
       margin-bottom: 7.5px;
       font-size: 16px;
       letter-spacing: -.2px;
+      @include FontMD;
     }
 
     &__text {
@@ -319,7 +321,7 @@
 
     &__image {
       display: block;
-      height: 175px;
+      height: 190px;
       margin-right: 10px;
       background-size: cover;
       background-position: center center;
