@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../assets/css/w/index.css">
 </head>
 <body class="main">
-<div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
+<div class="skipnavigation"><a href="#container" tabindex="1">본문 바로가기</a></div>
 
 <div class="wrap">
 
@@ -21,10 +21,8 @@
   <!-- keyvisual -->
   <section class="visual">
     <div class="visual__inner">
-      <span class="a11y">
-        <h3 class="visual__slogan">고객의 성장을 위한 파트너</h3>
-        <h2 class="visual__title">PLAY.<span class="a11y">플레이디</span></h2>
-      </span>
+      <h3 class="visual__slogan">고객의 성장을 위한 파트너</h3>
+      <h2 class="visual__title">PLAY.</h2>
     </div>
     <div class="visual__image"><img class="image" src="../assets/images/w/visual/@main_1.jpg" /></div>
   </section>
@@ -33,6 +31,7 @@
 	<div id="container" class="container">
     
 		<section class="section section--wide" data-section="service">
+      <span class="a11y" tabindex="0">service</span>
 			<div class="section__inner">
 				<div class="section__head">
           <h3 class="section__title"><span class="section__label">SERVICE</span>플레이디에서 한번에 <br>통합 마케팅 캠페인을 <br>집행하세요.</h3>
@@ -113,8 +112,9 @@
 		</section>
     
     <section class="box" data-section="performance">
+      <span class="a11y" tabindex="0">performance</span>
       <div class="box-item box-item--left">
-        <div class="box__title">
+        <div class="box__title" tabindex="0">
           <p>Data<span class="button button__icon-arrow_right"><span class="a11y">펼쳐보기</span></span></p>
         </div>
         <div class="box__content box__content--left">
@@ -153,9 +153,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="button__wrap">
-            <a href="#" class="button button__radius button__filled-red">자세히 보기</a>
+            <div class="button__wrap">
+              <a href="#" class="button button__radius button__filled-red">자세히 보기</a>
+            </div>
           </div>
         </div>
       </div>
@@ -165,7 +165,7 @@
         </p>
       </div>
       <div class="box-item box-item--right">
-        <div class="box__title">
+        <div class="box__title" tabindex="0">
           <p><span class="button button__icon-arrow_left"><span class="a11y">펼쳐보기</span></span>Creative</p>
         </div>
         <div class="box__content box__content--right">
@@ -179,7 +179,7 @@
               </span>
               <span class="box__text box__text--2">사례 | 에어 뉴질랜드, ed:m</span>
               <div class="button__wrap">
-                <span class="button button__icon-arrow_left button__icon--white"><i></i><span class="a11y">뒤로가기</span></span>
+                <a href="#" class="button button__icon-arrow_left button__icon--white"><i></i><span class="a11y">뒤로가기</span></a>
               </div>
             </div>
             <div class="box__content--row">
@@ -191,6 +191,7 @@
     </section>
 
 		<section class="section section--full" data-section="partners" style="min-height: 960px;">
+      <span class="a11y" tabindex="0">PARTNERS</span>
 			<div class="section__inner">
         <div class="section__head">
           <h3 class="section__title"><span class="section__label">PARTNERS</span>이미 성장한 많은 기업들이 <br>플레이디와 함께하였습니다.</h3>

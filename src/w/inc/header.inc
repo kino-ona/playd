@@ -4,10 +4,10 @@
 			<a href="./index.html" class="logo @@logotype"><span class="a11y">플레이디</span></a>
 		</h1>
 		<nav class="nav">
-			<div class="nav__link"><a href="#">사업영역</a></div>
+			<div class="nav__link"><a href="./campaign.html">사업영역</a></div>
       <div class="nav__link"><a href="./techhub.html">솔루션</a></div>
       <div class="nav__link"><a href="./letter.html">인사이트</a></div>
-      <div class="nav__link"><a href="#">플레이디</a></div>
+      <div class="nav__link"><a href="./about.html">플레이디</a></div>
       <div class="nav__link"><a href="./recruit.html">인재채용</a></div>
       <div class="nav__link"><a href="./contact.html">CONTACT</a></div>
       <div class="nav__gnb"><a href="#" type="button"><i></i></a></div>
@@ -15,11 +15,11 @@
 	</div>
 	<div class="navmenu">
 		<div class="navmenu__list">
-			<div class="navmenu__link"><a href="#">캠페인 전략</a></div>
+			<div class="navmenu__link"><a href="./campaign.html">캠페인 전략</a></div>
 			<div class="navmenu__link"><a href="#">미디어 전략</a></div>
 			<div class="navmenu__link"><a href="#">크리에이티브</a></div>
 			<div class="navmenu__link"><a href="./portfolio.html">포트폴리오</a></div>
-			<div class="navmenu__link"><a href="#">수상내역</a></div>
+			<div class="navmenu__link"><a href="./awards.html">수상내역</a></div>
 		</div>
 		<div class="navmenu__list">
 			<div class="navmenu__link"><a href="./techhub.html">Tech HUB</a></div>
@@ -39,7 +39,7 @@
 			<div class="navmenu__link"><a href="./recruit.html">채용</a></div>
 			<div class="navmenu__link"><a href="./welfare.html">복리후생</a></div>
 		</div>
-		<div class="navmenu__list" style="display:none;"></div>
+		<div class="navmenu__list" style="display:none;" tabindex="-1"></div>
 	</div>
 </header>
 <div id="sitemap" class="sitemap">
@@ -47,16 +47,16 @@
 		<h1 class="sitemap__title">
 			<a href="./index.html" class="logo logo__default"><span class="a11y">플레이디</span></a>
 		</h1>
-		<div class="sitemap__close"><button type="button"><i></i></button></div>
+		<div class="sitemap__close"><button type="button" tabindex="0"><i></i></button></div>
 	</div>
 	<div class="gnb">
 		<ul class="menu">
 			<li class="menu__title"><span>사업영역</span></li>
-			<li class="menu__link"><a href="#"><span>캠페인전략</span></a></li>
+			<li class="menu__link"><a href="./campaign.html"><span>캠페인전략</span></a></li>
 			<li class="menu__link"><a href="#"><span>미디어전략</span></a></li>
 			<li class="menu__link"><a href="#"><span>크리에이티브</span></a></li>
 			<li class="menu__link"><a href="./portfolio.html"><span>포트폴리오</span></a></li>
-			<li class="menu__link"><a href="#"><span>수상내역</span></a></li>
+			<li class="menu__link"><a href="./awards.html"><span>수상내역</span></a></li>
 		</ul>
 		<ul class="menu">
 			<li class="menu__title"><span>솔루션</span></li>

@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
     clearInterval(timer);
   }
   const timer = setInterval(setKv, 300);
-  setTimeout(stopKv, 1600);
+  setTimeout(stopKv, 3400);
 })
 
 //setting min-height to each section needed
@@ -182,7 +182,9 @@ anime2 = () => {
 anime2();
 
 //accordion UI in `performance` section
-const listItems = document.querySelectorAll('section[data-section="performance"] .accordian__item');
+const serviceArea = document.querySelector('section[data-section="performance"]');
+const listItems = serviceArea.querySelectorAll('.accordian__item');
+const boxItems = serviceArea.querySelectorAll('.box-item--left, .box-item--right');
 
 listItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -190,4 +192,13 @@ listItems.forEach(item => {
     let result = item.classList.contains('accordian__item--active');
     result ? item.classList.add('accordian__item--active') : item.classList.remove('accordian__item--active');
   });
+})
+
+const targetArrowBtn = serviceArea.querySelector('.main .box-item--left ');
+
+boxItems.forEach(item => {
+  item.addEventListener('mouseover', () => {item.classList.add('item--is-visible');})
+  item.addEventListener('mouseleave', () => {item.classList.remove('item--is-visible');})
+  item.querySelector('.box__title').addEventListener('focus', () => {item.classList.add('item--is-visible');})
+  item.querySelector('.box__title').addEventListener('!focus', () => {item.classList.remove('item--is-visible');})
 })

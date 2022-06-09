@@ -1,6 +1,13 @@
 @charset "utf-8";
 @import "../mixins";
 
+@mixin FlexRow($w: nowrap, $jc: space-between, $a: center) {
+  display: flex;
+	flex-wrap: $w;
+  justify-content: $jc;
+  align-items: $a;
+}
+
 $duration1: 1.5s;
 $duration2: 1s;
 $duration3: 0.2s;
@@ -17,6 +24,9 @@ $elemT: 150px;
     min-width: 1200px;
   
     &__inner {
+      z-index: 1;
+      width: 100%;
+      max-width: 1200px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -45,14 +55,20 @@ $elemT: 150px;
     }
   
     &__title {
-      font-size: 300px;
+      font-size: 320px;
+      line-height: 1;
+      font-weight: 700;
       color: #ffffff;
-      @include FontRG;
+      letter-spacing: -0.002em;
+      @include FontBasicSans;
     }
   
     &__slogan {
+      padding-left: 25px;
+      margin-bottom: 38px;
       font-size: 26px;
       color: #ffffff;
+      @include FontRG;
     }
   }
 
@@ -273,28 +289,6 @@ $elemT: 150px;
       font-size: 28px;
       @include FontDL;
     }
-
-    &__content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
-
-    &__inner {
-      flex-basis: 100%;
-      width: 100%;
-      flex-shrink: 0;
-    }
-
-    &__content--row {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
   
     &__slogan {
       font-size: 50px;
@@ -331,18 +325,24 @@ $elemT: 150px;
 		}
   }
 
-	.box__content {
-		color: #ffffff;
-		transition: all $duration1 ease;
-	}
+  .box__content {
+    @include FlexRow($w: wrap, $jc: center);
+    align-content: center;
+    color: #ffffff;
+    transition: all $duration1 ease;
+  }
+
+  .box__content--row {
+    width: 100%;
+    height: inherit;
+    @include FlexRow($w: wrap, $jc: flex-start, $a: flex-start);
+    flex-direction: column;
+  }
   
-  .box-item {
-  
-    &--center {
-      z-index: 1;
-      flex: 1.7;
-      background-color: #F7F7F7;
-    }
+  .box-item--center {
+    z-index: 1;
+    flex: 1.7;
+    background-color: #F7F7F7;
   }
 
   .box-item--left {
@@ -355,6 +355,10 @@ $elemT: 150px;
     .box__content {
       z-index: 2;
       background-color: #F7F7F7;
+    }
+
+    .box__inner {
+      display: block;
     }
 
     .button__icon-arrow_right {
@@ -374,19 +378,24 @@ $elemT: 150px;
       background-color: #CF2327;
     }
 
+    .box__inner {
+      @include FlexRow($jc: flex-start);
+      text-align: left;
+    }
+
     .button__icon-arrow_left {
       margin-right: 15px;
     }
   }
 
-  .accordian {
+  .box .accordian {
     width: 100%;
     max-width: 840px;
     margin: 0 auto 60px;
     overflow: hidden;
   }
 
-  .accordian__title {
+  .box .accordian__title {
 
     &::before {
       top: 15px;
@@ -411,21 +420,12 @@ $elemT: 150px;
     }
   }
 
-  .accordian__item {
-
-    &--active {
-
-      .accordian__title a {
-        color: #000000;
-      }
-    }
+  .box .accordian__item--active .accordian__title a {
+    color: #000000;
   }
 
-  .accordian__content {
-
-    p {
-      color: #666666;
-    }
+  .box .accordian__content p {
+    color: #666666;
   }
 
   /**** SECTIONS IN MAIN ****/
@@ -566,8 +566,9 @@ $elemT: 150px;
   @mixin boxContentIn($distance) {
     opacity: 0;
     transform: translateX($distance*500 + px);
+    animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
   }
-
+  
   [data-section="performance"] {
 
     .box__title--center i {
@@ -588,11 +589,6 @@ $elemT: 150px;
       max-width: 460px;
       margin-left: auto;
       background-image: url(../../../assets/images/w/dummy/@main__performance.png)
-    }
-
-    .box-item:hover * {
-      opacity: 1!important;
-      transform: translateX(0)!important;
     }
 
     .box-item--left {

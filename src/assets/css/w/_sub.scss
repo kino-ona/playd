@@ -459,7 +459,7 @@
 .search-form__wrap {
   width: 100%;
   height: 60px;
-  padding: 15px 25px;
+  padding: 15px 60px 15px 25px;
   box-sizing: border-box;
   position: relative;
   @include FlexRow;
@@ -1745,6 +1745,7 @@
     margin-top: 15px;
     margin-bottom: 15px;
     color: #000000;
+    @include ellipse(5);
   }
 
   .list-content__title--long {
@@ -1903,6 +1904,10 @@
 
 .article {
 
+  .wrap {
+    overflow: hidden;
+  }
+
   &__head {
     @include FlexRow;
   }
@@ -1947,7 +1952,7 @@
       display: inline-block;
       margin-left: 10px;
       background: {
-        image: url(../../../../assets/images/w/common/icons/icon_download.png);
+        image: url(../../../assets/images/w/common/icons/icon_download.png);
         size: 100%;
         position: center center;
         repeat: no-repeat;

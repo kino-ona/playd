@@ -15,6 +15,32 @@ $duration3: 0.2s;
 
 /** GLOBAL **/
 
+.skipnavigation {
+	z-index: 99999999999;
+	position: relative;
+
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		z-index: 1;
+		display: block;
+		font-size: 0;
+		background-color: #000000;
+		color: #ffffff;
+		text-align: center;
+
+		&:focus {
+			height: 30px;
+			padding: 4px 0;
+			visibility: visible;
+			font-size: 1em;
+		}
+	}
+}
+
 .logo {
 	display: inherit;
 	cursor: pointer;
@@ -717,26 +743,43 @@ input[type="file"] {
 	&__inner {
 		width: 100%;
 		max-width: 1200px;
+    flex-basis: 100%;
+    flex-shrink: 0;
 		margin: 0 auto;
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
 	}
 }
 
 .box-item {
-	display: flex;
 	flex: 1.55;
 	flex-direction: column;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	&--left:hover .box__content {
-		right: 0;
+}
+    
+.box-item--left.item--is-visible {
+	
+	.button__icon-arrow_right {
+		transform: rotate(180deg);
 	}
 
-	&--right:hover .box__content {
-		left: 0;
+	.box__content {
+		right: 0;
+
+		* {
+			opacity: 1!important;
+			transform: translateX(0)!important;
+		}
+	}
+}
+
+.box-item--right.item--is-visible .box__content {
+	left: 0;
+	opacity: 1;
+
+	* {
+		opacity: 1!important;
+		transform: translateX(0)!important;
 	}
 }
 
@@ -862,7 +905,7 @@ input[type="file"] {
 		background-color: #ffffff;
 	}
 
-	&-arrow_left, &__icon-arrow_right {
+	&-arrow_left, &-arrow_right {
 		width: 50px;
 		height: 50px;
 		margin-top: 25px;

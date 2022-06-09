@@ -19,9 +19,9 @@ window.addEventListener('load', () => {
 	const navmenuList = document.querySelectorAll('header#header .navmenu .navmenu__list');
 
 	const sitemap = document.querySelector('#sitemap');
-	const sitemapBtns = [nav.querySelector('.nav__gnb'), sitemap.querySelector('.sitemap__close')];
+	const sitemapOpeners = [nav.querySelector('.nav__gnb'), sitemap.querySelector('.sitemap__close')];
 
-	sitemapBtns.forEach((items) => {
+	sitemapOpeners.forEach((items) => {
 		items.addEventListener('click', (event) => {
 			event.preventDefault;
 			const docBody = document.querySelector('body');
@@ -547,6 +547,10 @@ if(bodyClass) {
 						keyboardControl: true,
 						observer: true,
 						observeParents: true,
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
 						pagination: {
 							el: '.swiper-pagination',
 							type: 'fraction',
@@ -555,6 +559,72 @@ if(bodyClass) {
         }
 				const swiper = new Swiper("#swiper", swiperOptions);
 			}) ()
+
+			window.addEventListener('load', () => {
+				CheckboxNeededCheck();
+				LayerCloseClicker();
+			})
+
+			const formOpener = document.querySelector('.open')
+			const formUserName = document.querySelector('#user-name');
+			const formUserProfession = document.querySelector('#user-profession');
+			const formUserPosition = document.querySelector('#user-position');
+			const formUserMail = document.querySelector('#user-mail');
+			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
+				layerClose('newsLetter');
+			});
+
+			formSubmit.addEventListener('click' , () => {
+				layerClose('newsLetter');
+				layerOpen('letterFormSubmitted');
+			});
+
+			formOpener.addEventListener('click' , (event) => {
+				event.preventDefault();
+				layerOpen('newsLetter');
+
+				document.querySelectorAll('.form-field').forEach((item) => {
+					item.classList.remove('warning');
+				})
+	
+				if(!needCheck.checked) {
+					needCheck.focus();
+					return false;
+				}
+	
+				if(!formUserName.value) {
+					formUserName.focus();
+					formUserName.closest('.form-field').classList.add('warning')
+					return false;
+				}
+	
+				if(!formUserProfession.value) {
+					formUserProfession.focus();
+					formUserProfession.closest('.form-field').classList.add('warning')
+					return false;
+				}	
+
+				if(!formUserPosition.value) {
+					formUserPosition.focus();
+					formUserPosition.closest('.form-field').classList.add('warning')
+					return false;
+				}	
+	
+				if(!formUserMail.value) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					return false;
+				}
+	
+				if(!regEmail.test(formUserMail.value)) {
+					formUserMail.focus();
+					formUserMail.closest('.form-field').classList.add('warning')
+					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+					return false;
+				}
+			})
 		}
 		break;
 
@@ -572,12 +642,13 @@ if(bodyClass) {
 			const formUserMail = document.querySelector('#user-mail');
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
-			formSubmit.addEventListener('click' , () => {
-				layerOpen('letterFormSubmitted');
-			});
-
 			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
 				layerClose('newsLetter');
+			});
+
+			formSubmit.addEventListener('click' , () => {
+				layerClose('newsLetter');
+				layerOpen('letterFormSubmitted');
 			});
 
 			formOpener.addEventListener('click' , (event) => {
