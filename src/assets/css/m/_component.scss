@@ -960,7 +960,8 @@
   }
 	
 	&__inner {
-		max-height: 100vh;
+		// max-height: 100vh;
+    height: 100%;
 		overflow-x: hidden;
 	}
 	
@@ -1072,6 +1073,12 @@
     transform: rotate(-45deg);
     content: '';
   }
+
+  &__button {
+    &.form-submit--wide {
+      width: 100%;
+    }
+  }
 }
 	
 .layer__body.is-visible {
@@ -1110,8 +1117,6 @@
 .form-submit--wide {
   position: fixed;
   bottom: 0;
-  bottom: calc(constant(safe-area-inset-bottom));
-  bottom: calc(env(safe-area-inset-bottom));
   width: calc(100% + 50px);
   height: 60px;
   margin: 0 -25px;
