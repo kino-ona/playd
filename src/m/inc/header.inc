@@ -54,7 +54,7 @@
 					</div>
 				</div>
 			</div>
-			<p class="gnb__button"><a href="/" class="gnb__button--link font--bd">CONTACT</a></p>
+			<p class="gnb__button"><a href="./contact.html" class="gnb__button--link font--bd">CONTACT</a></p>
 		</nav>
 	</div>
 </header>

@@ -167,25 +167,27 @@ $duration3: 0.2s;
 }
 
 .nav__link {
+	position: relative;
 	height: inherit;
 	margin-left: 50px;
 	@include FlexRow($jc: center);
 }
 
-.nav .nav__link:hover, .nav .nav__link.located {
+.nav .nav__link:hover, 
+.nav .nav__link.located {
 
 	a {
 		color: #EA2126;
 		@include FontBD;
 	}
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
 		bottom: -1.5px;
-		left: 0;
+		left: -10px;
 		right: 0;
-		width: 100%;
+		width: calc(100% + 20px);
 		height: 4px;
 		background-color: #EA2126;
 	}
@@ -230,6 +232,7 @@ $duration3: 0.2s;
 
 	.nav .nav__link a {
 		color: #ffffff;
+		@include FontBD;
 	}
 
 	.navmenu {
@@ -253,7 +256,6 @@ $duration3: 0.2s;
 
 	.nav__link a {
 		color: #000000;
-		@include FontMD;
 	}
 
 	.header__inner {

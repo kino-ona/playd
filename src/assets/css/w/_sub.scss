@@ -405,6 +405,7 @@
   @include FlexRow($w: wrap);
 
   .form-field {
+    position: relative;
     width: 100%;
     max-width: calc(50% - 20px);
   }
@@ -819,6 +820,10 @@
     @include FontBD;
   }
 
+  .drop-box--active .drop-box__title {
+    border: 1px solid #DDDDDD
+  }
+
   .accordian__content {
     @include FlexRow($w: wrap, $a: flex-start);
 
@@ -898,7 +903,7 @@
   }
 
   .drop-box__title {
-    border: 0;
+    border: 1px solid #ffffff;
   }
 
   .search-list {
@@ -2509,6 +2514,9 @@
 .container.ir {
   @include subTabLocation;
 
+  .drop-box--active .drop-box__title {
+    border: 1px solid #DDDDDD
+  }
   .search-list {
     max-width: 20%;
   }
@@ -2537,7 +2545,7 @@
   }
 
   .drop-box__title {
-    border: 0;
+    border: 1px solid #ffffff;
   }
 
   .notice-list {

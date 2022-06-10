@@ -346,7 +346,6 @@ if(bodyClass) {
 			
 			formSubmit.addEventListener('click' , (event) => {
 				event.preventDefault();
-				layerOpen('formSubmitted');
 
 				document.querySelectorAll('.form-field').forEach((item) => {
 					item.classList.remove('warning');
@@ -399,6 +398,8 @@ if(bodyClass) {
 					formUserUrl.closest('.form-field').classList.add('warning')
 					return false;
 				}
+
+				layerOpen('formSubmitted');
 			})
 		}
 		break;
@@ -457,6 +458,7 @@ if(bodyClass) {
 			})
 
 			const formOpener = document.querySelector('.open');
+			const formSubmitButton = document.querySelector('.form-submit');
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
 			const formUserPosition = document.querySelector('#user-position');
@@ -464,7 +466,7 @@ if(bodyClass) {
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
 			formSubmit.addEventListener('click' , () => {
-				layerOpen('letterFormSubmitted');
+				layerOpen('newsLetter');
 			});
 
 			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
@@ -474,7 +476,10 @@ if(bodyClass) {
 			formOpener.addEventListener('click' , (event) => {
 				event.preventDefault();
 				layerOpen('newsLetter');
+			});
 
+			formSubmitButton.addEventListener('click' , (event) => {
+				event.preventDefault();
 				document.querySelectorAll('.form-field').forEach((item) => {
 					item.classList.remove('warning');
 				})
@@ -514,6 +519,8 @@ if(bodyClass) {
 					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
 					return false;
 				}
+
+				layerOpen('letterFormSubmitted');
 			})
 		}
 		break;
@@ -635,7 +642,8 @@ if(bodyClass) {
 				LayerCloseClicker();
 			})
 
-			const formOpener = document.querySelector('.open')
+			const formOpener = document.querySelector('.button__icon-download');
+			const formSubmitButton = document.querySelector('.form-submit');
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
 			const formUserPosition = document.querySelector('#user-position');
@@ -646,14 +654,15 @@ if(bodyClass) {
 				layerClose('newsLetter');
 			});
 
-			formSubmit.addEventListener('click' , () => {
-				layerClose('newsLetter');
-				layerOpen('letterFormSubmitted');
-			});
-
 			formOpener.addEventListener('click' , (event) => {
 				event.preventDefault();
 				layerOpen('newsLetter');
+
+			});
+
+			formSubmitButton.addEventListener('click' , (event) => {
+				event.preventDefault();
+				console.log('b');
 
 				document.querySelectorAll('.form-field').forEach((item) => {
 					item.classList.remove('warning');
@@ -694,6 +703,8 @@ if(bodyClass) {
 					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
 					return false;
 				}
+
+				layerOpen('letterFormSubmitted');
 			})
 		}
 		break;

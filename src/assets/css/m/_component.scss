@@ -1601,25 +1601,15 @@ form legend {
     transform: translate(-50%, 0);
   }
 
-  li:nth-child(4),
-  li:nth-child(5) {
-    width: 49%;
-    text-align: left;
+  li.sms,
+  li.url {
+    width: 33%;
+    text-align: center;
     box-sizing: border-box;
   }
 
-  li:nth-child(4) {
-    padding-right: 52px;
-    text-align: right;
-  }
-
-  li:nth-child(5) {
-    padding-left: 3px;
-  }
-
-  li:nth-child(5) img {
-    position: absolute;
-    left: 30px;
+  li.sms {
+    margin-left: 15%;
   }
 }
 

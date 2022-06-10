@@ -573,7 +573,7 @@
 				return false;
 			}
 
-			console.log('성공')
+			layerClose('report');
 		})
 
 		formSubmitClose.addEventListener('click' , () => {

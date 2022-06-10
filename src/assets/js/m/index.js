@@ -1,7 +1,7 @@
 (function () {
 
 	//visual
-	const visualSrc = document.querySelector('.visual__image img');
+	const visualSrc = document.querySelector('.visual__image .image');
 
 	if(visualSrc) {
 	  const visual = document.querySelectorAll('.visual__image .image');
@@ -10,7 +10,7 @@
 		const setKv = () => {
 			i++;
 			visual.forEach(() => {
-				visual[i].classList.add('active')
+				visual[i].classList.add('active');
 			});
 		};
   
@@ -18,7 +18,7 @@
 			clearInterval(timer);
 		}
 		const timer = setInterval(setKv, 900);
-		setTimeout(stopKv, 10000);
+		setTimeout(stopKv, 9800);
 	
 		
 		//aos
