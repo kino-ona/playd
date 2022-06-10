@@ -1346,9 +1346,12 @@
     line-height: 24px;
   }
     
-  textarea {
+  .input-box--info__label + textarea {
     padding: 30px;
     box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    background-color: #FFFFFF;
   }
 
   .numbering {
@@ -2269,6 +2272,11 @@
     .sub-tabs__item {
       white-space: nowrap;
       margin: 0px 10px 16px 0;
+      background-color: #F7F7F7;
+    }
+    
+    .sub-tabs__item--active {
+      background-color: #000000;
     }
   }
 
