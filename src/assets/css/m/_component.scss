@@ -116,7 +116,7 @@
 
   &__desc {
     line-height: 35px;
-    @include FontRG;
+    @include FontDL;
   }
 
   &__label {
@@ -127,6 +127,7 @@
     font-size: 14px;
     font-weight: bold;
     line-height: 1;
+    letter-spacing: 0;
     @include FontBasicSans; 
   }
 
@@ -1603,6 +1604,22 @@ form legend {
   li:nth-child(4),
   li:nth-child(5) {
     width: 49%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  li:nth-child(4) {
+    padding-right: 52px;
+    text-align: right;
+  }
+
+  li:nth-child(5) {
+    padding-left: 3px;
+  }
+
+  li:nth-child(5) img {
+    position: absolute;
+    left: 30px;
   }
 }
 

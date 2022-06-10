@@ -88,6 +88,7 @@
       color: #888888;
       font-size: 14px;
       line-height: 50px;
+      @include FontRG; 
     }
 
     &__wrap {

@@ -96,6 +96,7 @@
 
   .form-popup {
     text-align: center;
+    padding: 25px;
   }
 
   .sub-content {
@@ -313,7 +314,7 @@
 
     &__date {
       position: absolute;
-      top: 190px;
+      top: 204px;
       right: 20px;
       color: #888888;
       font-size: 14px;
@@ -397,5 +398,8 @@
     border-radius: 0;
   }
 
-  
+  .layer__content {
+    padding: 25px 25px 40px;
+   
+  }
 }

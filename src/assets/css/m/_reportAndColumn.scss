@@ -51,7 +51,7 @@
       display: block;
       color: #EA2126;
       font-size: 14px;
-      @include FontMD;
+      font-weight: 600;
     }
 
     &__viewer {
@@ -109,7 +109,7 @@
 
   .drop-box__title::before {
     right: 32px;
-    top: 7px;
+    top: 5px;
   }
 
   .drop-box--active .drop-box__wrap {
