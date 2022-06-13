@@ -102,6 +102,22 @@
   .sub-content {
     padding-top: 15px;
   }
+
+  .tab-fixed {
+    .search-list {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      right: 0;
+      padding: 15px 0 15px 15px;
+      margin: 0;
+      z-index: 9;
+      background-color: #ffffff;
+    }
+    .sub-content {
+      padding-top: 70px;
+    }
+  }
 }
 
 .letter-detail {

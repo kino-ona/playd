@@ -106,7 +106,7 @@
     display: block;
     position: relative;
     height: 82px;
-    padding: 20px 25px;
+    padding: 10px 25px;
     background: linear-gradient(#EEC7CF, #F5DCE0);
     box-sizing: border-box;
 
@@ -122,10 +122,29 @@
       content: '';
     }
 
-    span {
+    &__title {
       color: #000000;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    &__text {
+      display: inline-block;
+      position:relative;
+      margin-top: 5px;
+      font-size: 12px;
+      @include FontMD;
+    }
+
+    &__text::after {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #000000;
+      content: '';
     }
   }
 
@@ -141,6 +160,22 @@
     max-width: 100%;;
     transform: translate(0 ,0);
     border-radius: 0;
+  }
+
+  .tab-fixed {
+    .sub-tabs {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      right: 0;
+      padding: 15px 0;
+      margin: 0;
+      z-index: 9;
+      background-color: #ffffff;
+    }
+    .sub-content {
+      padding-top: 70px;
+    }
   }
 }
 

@@ -121,6 +121,9 @@
     font-size: 16px;
     line-height: 1;
     border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor:default;
     @include FontBD;
   }
@@ -234,12 +237,21 @@
   }
   
   .input-box--file.warning {
-    position: relative;
-    border: 1px solid #EA2126;
+
+    .form-detail-box {
+      position: relative;
+    }
+
+    #form-detail {
+      border: 1px solid #EA2126
+    }
 
     .form-warning {
-      bottom: -29px;
-      left: 3px;
+      width: calc(100% - 30px);
+      padding: 10px;
+      background-color: #ffffff;
+      bottom: 1px;
+      left: 1px;
     }
   }
 }

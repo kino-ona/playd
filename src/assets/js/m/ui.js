@@ -99,6 +99,10 @@
 				subCommonFunction();
 			break;
 
+			case 'campaign':
+				headerTitle.innerHTML = '캠페인전략';
+				subCommonFunction();
+			break;
 
 			default: 
 				alert('c');
@@ -251,7 +255,7 @@
 		const formUserNumber = document.querySelector('.contact #user-number');
 		const formUserMail = document.querySelector('.contact #user-mail');
 		const formUserUrl = document.querySelector('.contact #user-url');
-		const formUserFile = document.querySelector('.contact #form-file-text');
+		const formUserDetail = document.querySelector('.contact #form-detail');
 		const formFileIput = document.querySelector('.contact #form-file-text');
 		const formFileButton = document.querySelector('.contact #form-file-button');
 		const needCheck = document.querySelector('.contact #sub-checkbox--personal');
@@ -267,9 +271,6 @@
 		})
 
 		formFileButton.addEventListener('change', () => {
-			if(!formFileIput.value) {
-				formFileIput.closest('.input-box--file').classList.remove('warning')
-			}
 			formFileIput.value = formFileButton.files[0].name
 		});
 			
@@ -279,20 +280,16 @@
 				item.classList.remove('warning');
 			})
 
+			document.querySelector('.input-box--file').classList.remove('warning');
+
 			if(!needCheck.checked) {
 				needCheck.focus();
 				return false;
 			}
 
-			if(!formFileIput.value) {
-				formFileIput.focus();
-				formFileIput.closest('.input-box--file').classList.add('warning')
-				return false;
-			}
-
-			if(!formUserFile.value) {
-				formUserFile.focus();
-				formUserFile.closest('.input-box--file').classList.add('warning')
+			if(formUserDetail.value === '') {
+				formUserDetail.focus();
+				formUserDetail.closest('.input-box--file').classList.add('warning')
 				return false;
 			}
 
@@ -517,6 +514,17 @@
 		formSubmitClose.addEventListener('click' , () => {
 			layerClose('newsLetter');
 		})
+
+		const tabOffsetTop = document.querySelector('.search-list').offsetTop - (document.querySelector('.search-list').clientHeight + 13);
+		window.addEventListener('scroll', () => {
+			let sct = window.pageYOffset;
+		
+			if(sct > tabOffsetTop) {
+				document.querySelector('.wrap').classList.add('tab-fixed');
+			}else {
+				document.querySelector('.wrap').classList.remove('tab-fixed');
+			}
+		})
 	}
 
 	if(bodyClass === 'report') {
@@ -579,6 +587,17 @@
 		formSubmitClose.addEventListener('click' , () => {
 			layerClose('report');
 		})
+
+		const tabOffsetTop = document.querySelector('.sub-tabs').offsetTop - (document.querySelector('.sub-tabs').clientHeight + 13);
+		window.addEventListener('scroll', () => {
+			let sct = window.pageYOffset;
+		
+			if(sct > tabOffsetTop) {
+				document.querySelector('.wrap').classList.add('tab-fixed');
+			}else {
+				document.querySelector('.wrap').classList.remove('tab-fixed');
+			}
+		})
 	}
 
 	if(bodyClass === 'report-detail') {
@@ -619,6 +638,19 @@
 		});
 
 
+	}
+
+	if(bodyClass === 'column') {
+		const tabOffsetTop = document.querySelector('.sub-tabs').offsetTop - (document.querySelector('.sub-tabs').clientHeight + 13);
+		window.addEventListener('scroll', () => {
+			let sct = window.pageYOffset;
+		
+			if(sct > tabOffsetTop) {
+				document.querySelector('.wrap').classList.add('tab-fixed');
+			}else {
+				document.querySelector('.wrap').classList.remove('tab-fixed');
+			}
+		})
 	}
 
 	if(bodyClass === 'column-detail') {
@@ -754,13 +786,7 @@
 			}else {
 				document.querySelector('.wrap').classList.remove('tab-fixed');
 			}
-
-			console.log(tabOffsetTop);
-			
-			// console.log(sct)
 		})
-
-
 	}
 
 	if(bodyClass === 'letter-detail') {
