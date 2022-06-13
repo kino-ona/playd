@@ -219,29 +219,35 @@
     line-height: 68px;
   }
   &__list--link::after {
-    position: absolute;
-    top: 26px;
-    right: 26px;
-    width: 10px;
-    height: 10px;
-    border-width: 0 2px 2px 0;
-    border-style: solid;
-    border-color: #000000;
-    box-sizing: border-box;
-    transform: rotate(45deg);
-    content: '';
+    // position: absolute;
+    // top: 26px;
+    // right: 26px;
+    // width: 10px;
+    // height: 10px;
+    // border-width: 0 2px 2px 0;
+    // border-style: solid;
+    // border-color: #000000;
+    // box-sizing: border-box;
+    // transform: rotate(45deg);
+    // content: '';
   }
 
   &__wrap {
-    overflow: hidden;
-    height: 0;
-    padding: 0;
+    // overflow: hidden;
+    // height: 0;
+    // padding: 0;
+    padding: 20px;
     background-color: #FAFAFA;
+  }
+
+  &__wrap p {
+    display: inline-block;
   }
 
   &__wrap a {
     display: block;
-    margin-top: 20px;
+    // margin-top: 20px;
+    margin-right: 10px;
     font-size: 16px;
     line-height: 25px;
     letter-spacing: -.3px;
@@ -1065,7 +1071,7 @@
     right: 0;
     width: 20px;
     height: 1.5px;
-    background-color: #888888;
+    background-color: #000000;
     transform: rotate(45deg);
     content: '';
   }
@@ -1076,7 +1082,7 @@
     right: 0;
     width: 20px;
     height: 1.5px;
-    background-color: #888888;
+    background-color: #000000;
     transform: rotate(-45deg);
     content: '';
   }
@@ -1619,4 +1625,39 @@ input::placeholder {
   @include FontRG;
   font-size: 14px;
   letter-spacing: -.3px;
+}
+
+
+.drop-box--type2 {
+  margin-bottom: 10px;
+
+  .drop-box__title {
+    margin-top: 30px;
+    margin-right: 25px;
+    padding: 0;
+    width: 75px;
+    height: 30px;
+    line-height: 24px;
+    border: none;
+  }
+
+  .drop-box__title::before {
+    right: 32px;
+    top: 5px;
+  }
+}
+
+.drop-box--type2.drop-box--active .drop-box__wrap {
+  top: 40px;
+  left: -15px;
+  width: 90px;
+  border-radius: 6px;
+  border-width: 1px 1px 1px 1px;
+  z-index: 9;
+  box-sizing: border-box;
+
+  p {
+    color: #666666;
+    @include FontDL;
+  }
 }

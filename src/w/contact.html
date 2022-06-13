@@ -126,11 +126,13 @@
         <div class="sub-content">
           <h3 class="sub-content__title">무엇을 도와드리면 될까요?</h3>
           <div class="input-box input-box--file">
-            <textarea id="form-detail" placeholder="프로젝트의 대한 상세 설명, 캠페인 타깃, 캠페인 진행상태, 고려중인 매체 등 상세하게 기재해주시면 내부에서 면밀히 검토 후 정확한 답변을 드릴 수 있습니다."></textarea>
+            <div class="form-detail-box">
+              <textarea id="form-detail" placeholder="프로젝트의 대한 상세 설명, 캠페인 타깃, 캠페인 진행상태, 고려중인 매체 등 상세하게 기재해주시면 내부에서 면밀히 검토 후 정확한 답변을 드릴 수 있습니다."></textarea>
+              <p class="form-warning">입력범위를 초과했습니다.</p>
+            </div>
             <div class="input-file">
               <input type="text" id="form-file-text" placeholder="파일 업로드(RFP 등)" readonly>
               <div><input type="file" id="form-file-button" name=""><label for="form-file-button">파일 업로드</label></div>
-              <p class="form-warning">입력범위를 초과했습니다.</p>
             </div>
           </div>
         </div>
@@ -207,15 +209,23 @@
           <input type="submit" class="button button__large button__filled-black form-submit" value="프로젝트 문의 등록하기" />
         </div>
       </form>
-      
+    
       <div class="sub-info">
-        <h3 class="sub-info__title">플레이디는 성장하고자 하는 모든 비즈니스에 언제나 열려있습니다.</h3>
-        <p class="sub-info__note">경기도 성남시 분당구 황새울로 359번길 11, 5층</p>
-        <div class="marker" style="display: none;"><span>플레이디</span></div>
-        <div class="image"><img src="../assets/images/w/dummy/img_location.png" alt="playD 위치 이미지" /></div>
-        <a href="mailto:master@playd.com" class="sub-info__contact">master@playd.com</a>
-        <p class="sub-info__description">매체 제휴 등 제휴 문의는 이메일로 전달주시면 빠르게 답변드리겠습니다.</p>
+        <h3 class="sub-info__title">
+          플레이디는 성장하고자 하는<br>
+          모든 비즈니스에 언제나<br>
+          열려있습니다.
+        </p>
+        <img src="../assets/images/w/sub/icon_growth_1.png" class="icon" alt="아이콘">
+        <p class="sub-info__position">경기도 성남시 분당구 황새울로 359번길 11, 5층</p>
+        <a href="mailto:master@playd.com">master@playd.com</a>
+        <p class="sub-info__description">
+          매체 제휴 등 제휴 문의는 이메일로 전달주시면<br>
+          빠르게 답변드리겠습니다. 
+        </p>
+        <img src="../assets/images/w/dummy/img_location.png" class="map" alt="playD 위치 이미지">
       </div>
+
 
       <div class="banner">
         <div class="banner__content">

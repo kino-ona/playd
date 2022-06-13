@@ -131,8 +131,9 @@
 
   .sub-info {
     margin-top: 75px;
+    margin-bottom: 60px;
     padding: 60px 25px;
-    background: linear-gradient(#F8F8F8 0px, #F8F8F8 250px, #ffffff 251px, #ffffff 100%);
+    background: #F8F8F8 250px;
 
     &__title {
       font-size: 19px;
@@ -142,43 +143,35 @@
     }
 
     &__position {
-      padding-top: 23px;
-      padding-bottom: 10px;
-      font-size: 14px;
-      line-height: 1;
+      padding-top: 3px;
+      padding-bottom: 2px;
+      font-size: 15px;
+      line-height: 20px;
       @include FontDL;
     }
 
     a {
       display: inline-block;
-      position: relative;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      padding-bottom: 4px;
-      font-size: 27px;
-      line-height: 1;
-      letter-spacing: 0.5px;
-      border-bottom: 2px solid #000000;
-      @include FontBasicSans;
-    }
-
-    a::after {
-      display: inline-block;
-      position: absolute;
-      top: -25px;
-      left: 226px;
-      width: 43px;
-      height: 35px;
-      background: url('../../images/m/sub/icon_mail.png') 0 0 no-repeat;
-      background-size: contain;
-      content: '';
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -.3px;
+      border-bottom: 1px solid #000000;
+      @include FontDL;
     }
 
     &__description {
+      margin-bottom: 10px;
       color: #666666;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 19px;
       @include FontDL;
+    }
+
+    .icon {
+      margin-top: 30px;
+      width: 20px;
+      height: 20px;
     }
   }
 

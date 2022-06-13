@@ -337,6 +337,7 @@ if(bodyClass) {
 				LayerCloseClicker();
 			})
 
+			const formUserDetail = document.querySelector('#form-detail');
 			const formUserCompany  = document.querySelector('#user-company');
 			const formUserName = document.querySelector('#user-name');
 			const formUserNumber = document.querySelector('#user-number');
@@ -350,15 +351,18 @@ if(bodyClass) {
 				document.querySelectorAll('.form-field').forEach((item) => {
 					item.classList.remove('warning');
 				})
+				document.querySelector('.input-box--file').classList.remove('warning')
+
+				
 
 				if(!needCheck.checked) {
 					needCheck.focus();
 					return false;
 				}
 
-				if(!formFileIput.value) {
-					formFileIput.focus();
-					formFileIput.closest('.input-box--file').classList.add('warning')
+				if(formUserDetail.value === '') {
+					formUserDetail.focus();
+					formUserDetail.closest('.input-box--file').classList.add('warning')
 					return false;
 				}
 

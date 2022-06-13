@@ -282,7 +282,7 @@
   }
 
   &__head {
-    @include FlexRow;
+    line-height: 1;
   }
 
   &__meta {
@@ -609,6 +609,7 @@
 
   .sub-info {
     margin-top: 150px;
+    padding-bottom: 150px;
     padding-top: 130px;
     position: relative;
 
@@ -618,14 +619,16 @@
       left: -9999px;
       right: -9999px;
       top: 0;
-      height: 570px;
+      height: 700px;
       background-color: #F5F5F5;
       content: '';
     }
     text-align: center;
 
     &__title {
-      font-size: 26px;
+      font-size: 40px;
+      line-height: 60px;
+      text-align: left;
       @include FontBD;
     }
 
@@ -640,6 +643,46 @@
       margin-bottom: 70px;
       border-radius: 24px;
       overflow: hidden;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin-top: 55px;
+      margin-bottom: 5px;
+    }
+
+    &__position {
+      font-size: 18px;
+      letter-spacing: -.3px;
+      @include FontDL;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      font-size: 18px;
+      letter-spacing: -.2px;
+      @include FontDL;
+    }
+
+    a::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 160px;
+      height: 1px;
+      background: #000000;
+      content: '';
+    }
+
+    .map {
+      position: absolute;
+      top: 150px;
+      right: 0;
+      width: 600px;
+      height: 400px;
     }
 
     &__contact {
@@ -661,25 +704,9 @@
         background-color: #000000;
         content: '';
       }
-
-      &::before {
-        position: absolute;
-        right: 85px;
-        top: -35px;
-        background-image: url(../../images/w/dummy/@icon-airplane.png);
-        background: {
-          size: 100%;
-          repeat: no-repeat;
-          position: center center;
-        }
-        width: 87px;
-        height: 69px;
-        content: '';
-      }
     }
 
     &__description {
-      margin-top: 30px;
       font-size: 16px;
       @include FontDL;
       color: #666666;
@@ -770,12 +797,17 @@
 	}
 
   .input-box--file.warning {
-    position: relative;
-    border: 1px solid #EA2126;
-
+    .form-detail-box {
+      position: relative;
+    }
+    #form-detail {
+      border: 1px solid #EA2126;
+    }
     .form-warning {
-      bottom: -29px;
-      left: 3px;
+      bottom: 2px;
+      left: 2px;
+      padding: 15px;
+      background-color: #ffffff;
     }
   }
 }
@@ -1162,6 +1194,56 @@
     margin-left: 20px;
   }
 
+  .check-content {
+    position: relative;
+
+    &__modify {
+      position: absolute;
+      right: 0;
+      margin-top: -31px;
+
+      a {
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        letter-spacing: -2px;
+        @include FontDL;
+      }
+
+      a + a {
+        margin-left: 20px;
+      }
+
+      a + a::before {
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: -10px;
+        width: 1px;
+        height: 10px;
+        background-color: #DDDDDD;
+        content: '';
+      }
+    }
+
+    &__recomment .check-content__description {
+      margin-bottom: 94px;
+    }
+
+    &__wrap {
+      position: relative;
+      margin-left: 40px;
+    }
+  }
+
+  .check-content__description + .check-content__modify  {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    bottom: 30px;
+    text-align: right;
+  }
+
   .check-content__recomment {
     margin-top: 25px;
     padding-top: 25px;
@@ -1194,13 +1276,12 @@
 
   .check-content__comment  {
     width: 100%;
-    margin-top: 40px;
     box-sizing: border-box;
     position: relative;
     border-radius: 8px;
     
     textarea {
-      width: 100%;
+      width: calc(100% - 60px);
       height: 200px;
       font-size: 18px;
       @include FontDL;
@@ -1790,6 +1871,7 @@
 
   .list-content__title {
     display: block;
+    margin-bottom: 20px;
     font-size: 18px;
     @include FontMD;
     @include ellipse(1);
@@ -1805,9 +1887,9 @@
   }
 
   .numbering {
-    margin-bottom: 4px;
     display: block;
     font-size: 16px;
+    line-height: 1;
     @include FontBasicSans;
     color: #EA2126;
     font-weight: 600;
@@ -1823,6 +1905,34 @@
 
   .list-content__title--long {
     -webkit-line-clamp: 2;
+  }
+}
+
+/* report, column*/
+.report,
+.column {
+  .drop-box .drop-box__title {
+    width: 120px;
+    padding: 17px;
+    border-width: 1px 1px 0 1px;
+    border-color: #ffffff;
+    border-style: solid;
+    box-sizing: border-box;
+  }
+
+  .drop-box .drop-box__title::before {
+    right: 11px;
+  }
+
+  .drop-box--active .drop-box__title {
+    border-color: #DDDDDD;
+  }
+
+  .drop-box--active .list-select__wrap {
+    right: 0;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #DDDDDD;
   }
 }
 
@@ -1903,8 +2013,9 @@
   }
 
   .banner__meta {
-    @include FontDL;
+    line-height: 1;
     color: #888888;
+    @include FontDL;
   }
 
   .button__wrap {
@@ -1994,20 +2105,20 @@
     color: #666666;
   }
   
-  &__meta--view i {
-    width: 25px;
-    height: 25px;
-    margin-top: 1px;
-    margin-right: 5px;
-    margin-left: 10px;
-    display: inline-block;
-    background: {
-      image: url(../../../assets/images/w/common/icons/icon_view.png);
-      size: 100%;
-      repeat: no-repeat;
-      position: center center;
-    }
-  }
+  // &__meta--view i {
+  //   width: 25px;
+  //   height: 25px;
+  //   margin-top: 1px;
+  //   margin-right: 5px;
+  //   margin-left: 10px;
+  //   display: inline-block;
+  //   background: {
+  //     image: url(../../../assets/images/w/common/icons/icon_view.png);
+  //     size: 100%;
+  //     repeat: no-repeat;
+  //     position: center center;
+  //   }
+  // }
 
   &__content {
     padding-bottom: 150px;
@@ -2634,6 +2745,14 @@
 
     dl {
       text-align: left;
+    }
+
+    .warning {
+      position: relative;
+  
+      .form-warning {
+        bottom: 17px;
+      }
     }
   }
 

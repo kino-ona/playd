@@ -684,21 +684,7 @@ input[type="file"] {
 }
 
 .warning {
-	
-	.input-box-info__input {
-		border-color: #EA2126;
-	}
-
-	.form-warning {
-		display: block;
-		position: absolute;
-		bottom: 5px;
-		color: #EA2126;
-		font-size: 12px;
-		letter-spacing: -.2px;
-	}
-
-	.form-warning::before {
+	textarea + .form-warning::before {
 		display: inline-block;
 		width: 16px;
 		height: 16px;
@@ -708,6 +694,34 @@ input[type="file"] {
 		transform: translateY(2px);
 		content:'';
 	}
+
+	&::before {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		bottom: 60px;
+		width: 16px;
+		height: 16px;
+		padding-right: 8px;
+		background: url('../../images/w/common/icons/icon_warning.png') 0 0 no-repeat;
+		background-size: contain;
+		transform: translateY(2px);
+		content:'';
+	}
+
+	.input-box--info__input {
+		border-color: #EA2126;
+	}
+
+	.form-warning {
+		display: block;
+		position: absolute;
+		bottom: 15px;
+		color: #EA2126;
+		font-size: 12px;
+		letter-spacing: -.2px;
+	}
+	
 }
 
 

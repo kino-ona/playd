@@ -46,7 +46,6 @@
     margin: 40px 25px;
 
     &__title {
-      margin-top: 2px;
       font-size: 16px;
       line-height: 22px;
       @include FontMD;
@@ -58,16 +57,16 @@
       margin-bottom: 5px;
       color: #EA2126;
       font-weight: 600;
+      line-height: 1;
     }
 
     &__description {
       display: block;
-      position: absolute;
       right: 25px;
-      margin-top: -55px;
+      margin-top: 8px;
       color: #888888;
       font-size: 14px;
-      line-height: 22px;
+      line-height: 1;
     }
 
     &__image {
@@ -84,6 +83,7 @@
       margin: 64px 25px 0;
     }
   }
+
   .newsLetter .layer__wrap {
     top: 0;
     left: 0;
@@ -313,9 +313,6 @@
     }
 
     &__date {
-      position: absolute;
-      top: 204px;
-      right: 20px;
       color: #888888;
       font-size: 14px;
     }

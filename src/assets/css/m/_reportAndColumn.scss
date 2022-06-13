@@ -19,7 +19,7 @@
 
   .list-content {
     position: relative;
-    margin: 40px 25px 0;
+    margin: 25px 25px 0;
 
     &__image {
       width: 100%;
@@ -27,10 +27,7 @@
     }
 
     &__description {
-      position: absolute;
-      top: 260px;
-      right: 0;
-      margin-top: -55px;
+      margin-top: 8px;
       color: #888888;
       font-size: 13px;
     }
@@ -38,6 +35,7 @@
     &__title {
       margin-top: 15px;
       font-size: 16px;
+      line-height: 24px;
       @include FontMD;
     }
 
@@ -95,36 +93,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: -25px;
-  }
-
-  .drop-box__title {
-    margin-top: 30px;
-    margin-right: 25px;
-    padding: 0;
-    width: 75px;
-    height: 30px;
-    line-height: 24px;
-    border: none;
-  }
-
-  .drop-box__title::before {
-    right: 32px;
-    top: 5px;
-  }
-
-  .drop-box--active .drop-box__wrap {
-    top: 45px;
-    left: -15px;
-    width: 90px;
-    border-radius: 6px;
-    border-width: 1px 1px 1px 1px;
-    z-index: 9;
-    box-sizing: border-box;
-
-    p {
-      color: #666666;
-      @include FontDL;
-    }
   }
 
   .list-select__wrap {
@@ -307,6 +275,7 @@
       color: #EA2126;
       font-size: 14px;
       font-weight: 600;
+      line-height: 1;
       @include FontBasicSans;
     }
 
@@ -320,30 +289,9 @@
       margin-bottom: 10px;
       color: #666666;
       font-size: 14px;
-
-    }
-
-    &__viewer {
-      padding-left: 5px;
-      color: #888888;
-      font-size: 14px;
-      @include FontDL;
-    }
-  
-    &__viewer::before {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background: url('../../../assets/images/m/sub/icon_eyes.png') center center no-repeat;
-      background-size: 20px;
-      vertical-align: inherit;
-      content: '';
     }
 
     &__date {
-      position: absolute;
-      top: 190px;
-      right: 20px;
       color: #888888;
       font-size: 14px;
     }
@@ -366,7 +314,7 @@
     &__wrap {
       display: flex;
       justify-content: space-between;
-      margin: 0 25px 20px;
+      margin: 0 25px 10px;
     }
 
     .slide-swiper {
@@ -426,5 +374,11 @@
     top: 25px;
   }
 
+}
+
+.column-detail {
+  .list-content {
+    padding-bottom: 0;
+  }
 }
 

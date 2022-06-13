@@ -76,16 +76,10 @@
     &__box {
       padding-right: 30px
     }
-
-    &__wrap {
-      position:relative;
-      left: 75px;
-      padding-right: 20px;
-    }
   }
 
   .sub-content {
-    margin: 0 24px;
+    margin: 30px 24px 0;
     @include FlexRow($w: wrap, $a: flex-start);
   
     .list-content {
@@ -179,5 +173,21 @@
     display: block;
     font-size: 14px;
     @include FontRG;
+  }
+
+  .tab-fixed {
+    .sub-tabs {
+      position: fixed;
+      top: 55px;
+      left: 0;
+      right: 0;
+      padding: 15px 0;
+      margin: 0;
+      z-index: 9;
+      background-color: #ffffff;
+    }
+    .sub-content {
+      padding-top: 70px;
+    }
   }
 }

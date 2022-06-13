@@ -350,7 +350,37 @@
   }
 
   .check-content {
+    position: relative;
     margin: 0 25px;
+
+    &__modify {
+      position: absolute;
+      right: 0;
+      margin-top: -31px;
+
+      a {
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        letter-spacing: -2px;
+        @include FontDL;
+      }
+
+      a + a {
+        margin-left: 20px;
+      }
+
+      a + a::before {
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: -10px;
+        width: 1px;
+        height: 10px;
+        background-color: #DDDDDD;
+        content: '';
+      }
+    }
 
     &__title {
       margin-bottom: 10px;
@@ -402,6 +432,17 @@
       padding-left: 25px;
     }
 
+    &__recomment::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #DDDDDD;
+      content: '';
+    }
+
     &__recomment::before {
       position: absolute;
       left: 0;
@@ -412,8 +453,18 @@
       content: '';
     }
 
+    &__recomment .check-content__description {
+      margin-bottom: 15px;
+    }
+
+    .check-content__description + .check-content__modify  {
+      position: relative;
+      margin-top: -14px;
+      text-align: right;
+    }
+
     &__comment  {
-      margin-top: 20px;
+      margin-top: 30px;
       border-radius: 6px;
     }
    
@@ -657,7 +708,7 @@
       display: inline-block;
       width: calc(100% - 50px);
       height: 50px;
-      margin: 0 25px;
+      margin: 40px 25px 0;
       color: #ffffff;
       font-size: 14px;
       line-height: 50px;
@@ -688,7 +739,7 @@
 
   .layer {
     &__head {
-      padding: 31px 25px 0;
+      padding: 31px 25px 18px;
     }
     &__content {
       padding: 10px 25px 25px;
@@ -696,9 +747,9 @@
     }
 
     &__button {
-      width: 100%;
+      width: calc(100% - 50px);
       height: 40px;
-      margin-top: 20px;
+      margin: 20px 25px;
       line-height: 40px;
       border-radius: 4px;
       background-color: #EA2126;
@@ -710,8 +761,7 @@
   .content {
     &__title {
       padding-bottom: 7.5px; 
-      font-size: 14px;
-      border-bottom: 1px solid #DDDDDD;
+      font-size: 16px;
       @include FontBD;
     }
 
@@ -896,5 +946,23 @@
       margin-bottom: 15px;
     }
 
+  }
+
+  .termAgreePrivacy {
+    height: 430px;
+
+    .content__title {
+      line-height: 1;
+    }
+
+    .layer__close .close {
+      top: 26px;
+      right: 32px;
+    }
+
+    .layer__content {
+      overflow: scroll;
+      height: 280px;
+    }
   }
 }
