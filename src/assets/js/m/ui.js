@@ -814,4 +814,12 @@
 			layerClose('share-popup')
 		});
 	}
+
+	if(bodyClass === 'campaign') {
+			if(document.querySelectorAll('.head-slide__slide .swiper-slide').length > 1) {
+			const swiper = new Swiper('.head-slide__slide ', {
+				slidesPerView: 1.05,
+			});
+		}
+	}
 }) ()
