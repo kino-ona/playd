@@ -12,29 +12,40 @@ const indexHeader = () => {
     logo.classList.replace('logo__default', 'logo__filled');
   }
 
-  const headerLoaded = () => {
-    header.addEventListener('mouseenter', () => {headerUntransparentize();})
-    header.addEventListener('mouseleave', () => {headerTransparentize();})
-  }
+  // 20220615 s
 
-  window.addEventListener('load', () => {headerLoaded();})
+  window.addEventListener('load', () => {
+    headerTransparentize();
+    header.addEventListener('mouseleave', () => {headerTransparentize();})
+  })
+
+  let mouseBoolean = false;
+
+  header.addEventListener('mouseenter', () => {mouseBoolean = true;})
+  header.addEventListener('mouseleave', () => {mouseBoolean = false;})
+
+  header.addEventListener('mouseenter', () => {headerUntransparentize();})
+
+  // 20220615 e
 
   window.addEventListener('scroll', () => {
     let scT = window.pageYOffset;
     const container = document.querySelector('#container');
     const abTcontainer =  container.getBoundingClientRect().top;
+
+    // 20220615 s
     setTimeout((delay) => {
-      headerLoaded();
-      if (scT === 0) {
+      if (scT < abTcontainer*0.9 && mouseBoolean) {
+        headerUntransparentize();
+        header.addEventListener('mouseleave', () => {headerTransparentize();})
+      } else if (scT < abTcontainer*0.9 && !mouseBoolean) {
         headerTransparentize();
-      } else if (scT > abTcontainer*0.9) {
+        header.addEventListener('mouseleave', () => {headerTransparentize();})
+      } else {
         headerUntransparentize();
         header.addEventListener('mouseleave', () => {headerUntransparentize();})
-      } else if (scT === abTcontainer*0.9) {
-        headerTransparentize();
-      } else {
-        headerTransparentize();
       }
+    // 20220615 e
       clearTimeout(delay);
 	  }, 50);
   })
@@ -48,10 +59,12 @@ window.addEventListener('load', () => {
 
   const setKv = () => {
     i++;
+    // 20220615 s
+    if (i === visual.length) {return;}
     visual.forEach(() => {
       visual[i].classList.add('active');
-      if ((visual.length + 1) > i > 2) {visual[i-2].style.display = `none`;}
     });
+    // 20220615 e
   };
   
   const stopKv = () => {
