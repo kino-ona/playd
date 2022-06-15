@@ -12,8 +12,6 @@ const indexHeader = () => {
     logo.classList.replace('logo__default', 'logo__filled');
   }
 
-  // 20220615 s
-
   window.addEventListener('load', () => {
     headerTransparentize();
     header.addEventListener('mouseleave', () => {headerTransparentize();})
@@ -26,14 +24,11 @@ const indexHeader = () => {
 
   header.addEventListener('mouseenter', () => {headerUntransparentize();})
 
-  // 20220615 e
-
   window.addEventListener('scroll', () => {
     let scT = window.pageYOffset;
     const container = document.querySelector('#container');
     const abTcontainer =  container.getBoundingClientRect().top;
 
-    // 20220615 s
     setTimeout((delay) => {
       if (scT < abTcontainer*0.9 && mouseBoolean) {
         headerUntransparentize();
@@ -45,7 +40,6 @@ const indexHeader = () => {
         headerUntransparentize();
         header.addEventListener('mouseleave', () => {headerUntransparentize();})
       }
-    // 20220615 e
       clearTimeout(delay);
 	  }, 50);
   })
@@ -54,17 +48,24 @@ indexHeader();
  
 //index kv
 window.addEventListener('load', () => {
-  const visual = document.querySelectorAll('.visual__image .image');
+  const visual = document.querySelector('.visual');
+  const visualImage = document.querySelector('.visual__image .image');
+  const visualImages = document.querySelectorAll('.visual__image .image');
+
   let i = 0;
+  let colorBg = ['#33dac6','#ffc809','#fb697e','#1682c2', '#42e17b', '#000000', '#9fe0a8', '#000000', '#631ba3', '#84bbec', '#ffa608'];
+  
+  visualImage.style.opacity = 1;
+  visual.style.backgroundColor = '#33dac6';
 
   const setKv = () => {
     i++;
-    // 20220615 s
-    if (i === visual.length) {return;}
-    visual.forEach(() => {
-      visual[i].classList.add('active');
+    if (i === visualImages.length) {return;}
+    visualImages.forEach(() => {
+      visual.style.backgroundColor = colorBg[i];
+      visualImages[i-1].style.opacity = 0;
+      visualImages[i].style.opacity = 1;
     });
-    // 20220615 e
   };
   
   const stopKv = () => {
@@ -86,7 +87,7 @@ minHeights = () => {
   const area2Inner = area2.querySelectorAll('.box-item .box__title');
 
   setTimeout((delay) => {
-    kv.style.minHeight = wdH + 'px';
+    kv.style.height = wdH + 'px';
     area1.style.height = innerH*0.5 + 'px';
 
     for (i = 0; i < area2Inner.length; i++) { 
@@ -96,7 +97,7 @@ minHeights = () => {
     window.addEventListener('resize', () => {
       wdH = window.innerHeight;
 
-      kv.style.minHeight = wdH + 'px';
+      kv.style.height = wdH + 'px';
       area1.style.height = innerH*0.5 + 'px';
 
       for (i = 0; i < area2Inner.length; i++) { 
@@ -129,6 +130,17 @@ anime1 = () => {
 
   areaInner.style.left = wdP + 'px';
 
+  window.addEventListener('resize', () => {
+    wdH = window.innerHeight;
+    wdW = document.body.clientWidth;
+    innerW = parseFloat(window.getComputedStyle(areaInner).width);
+    wdP = ((wdW - innerW)*0.5);
+    areaInner.style.left = wdP + 'px';
+    areaHead.style.left = wdP + 'px';
+    areaReach = area.getBoundingClientRect(true).top;
+    areaEndReach = area.getBoundingClientRect(true).bottom;
+  })
+
   window.addEventListener('scroll', () => {
     scT = window.pageYOffset;
     areaReach = area.getBoundingClientRect(true).top;
@@ -141,14 +153,7 @@ anime1 = () => {
     }
 
     setTimeout((delay) => {
-      window.addEventListener('resize', () => {
-        wdW = document.body.clientWidth;
-        innerW = parseFloat(window.getComputedStyle(areaInner).width);
-        wdP = ((wdW - innerW)*0.5);
-        areaInner.style.left = wdP + 'px';
-        areaReach = area.getBoundingClientRect(true).top;
-        areaEndReach = area.getBoundingClientRect(true).bottom;
-      })
+    
 
       if (areaReach <= elemT) {
         area.classList.add('approached');
