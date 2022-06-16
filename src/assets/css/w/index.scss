@@ -411,11 +411,6 @@ $elemT: 150px;
 
   /**** SECTIONS IN MAIN ****/
 
-  @mixin imgContentIn($distance) {
-    opacity: 0;
-    margin-top: ($distance*500 + px);
-  }
-
   [data-section="service"] {
     margin: $elemT 0 0;
     padding: 0 0 $elemT;
@@ -484,6 +479,11 @@ $elemT: 150px;
       .image-block:nth-of-type(#{$i}) {
         background-image: url(../../images/w/dummy/block#{$i}.png);
       }
+    }
+
+    @mixin imgContentIn($distance) {
+      opacity: 0;
+      margin-top: ($distance*500 + px);
     }
 
     .image-block {

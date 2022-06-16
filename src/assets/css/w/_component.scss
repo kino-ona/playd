@@ -173,7 +173,6 @@ $duration3: 0.2s;
 	@include FlexRow($jc: center);
 }
 
-.nav .nav__link:hover, 
 .nav .nav__link.located {
 
 	a {
@@ -653,19 +652,18 @@ input[type="file"] {
 }
 
 .sub-content__warning {
-	margin-top: 40px;
+	margin-top: 90px;
 	margin-bottom: 75px;
 	text-align: center;
 
 	&-icon {
-		width: 32px;
-		margin-bottom: 20px;
+		width: 105px;
+		margin-bottom: 40px;
 	}
 
 	&-text {
 		color: #888888;
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 26px;
 		@include FontMD;
 	}
 
