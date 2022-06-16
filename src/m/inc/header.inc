@@ -18,7 +18,7 @@
 					<div class="gnb__wrap">
 						<p><a href="/">캠페인전략</a></p>
 						<p><a href="/">미디어전략</a></p>
-						<p><a href="/">크리에이티브</a></p>
+						<p><a href="./creative.html">크리에이티브</a></p>
 						<p><a href="./portfolio.html">포트폴리오</a></p>
 						<p><a href="./awards.html">수상내역</a></p>
 					</div>

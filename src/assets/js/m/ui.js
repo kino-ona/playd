@@ -109,6 +109,11 @@
 				subCommonFunction();
 			break;
 
+			case 'esg':
+				headerTitle.innerHTML = 'ESG';
+				subCommonFunction();
+			break;
+
 
 			default: 
 				alert('페이지 오류');

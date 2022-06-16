@@ -1,0 +1,260 @@
+.esg {
+  background: #ffffff;
+
+  .sub-header-description {
+    margin: 40px 25px 0; 
+
+    h3 {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 1;
+      @include FontBD;
+    }
+
+    &__item {
+      display: flex;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 1;
+      @include FontBD;
+    }
+
+    &__title  span {
+      display: inline-block;
+      color: #EA2126;
+      margin-top: -4px;
+    }
+
+    &__text {
+      font-size: 14px;
+      @include FontRG;
+    }
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+
+    .sub-header-description__item + .sub-header-description__item {
+      margin-top: 25px;
+    }
+  }
+
+  .accordian {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+
+    &__title {
+      font-size: 16px;
+      @include FontRG;
+    }
+
+    &__title:before {
+      width: 6px;
+      height: 6px;
+      margin-top: 6px;
+      border-right: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+    }
+
+    &__sub-title {
+      font-size: 14px;
+      @include FontRG;
+    }
+
+    &__text {
+      margin-top: 15px;
+      margin-bottom: 30px;
+      color: #666666;
+      font-size: 14px;
+      @include FontDL; 
+    }
+
+    img {
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+  }
+
+  .accordian__item--active {
+    .accordian__content {
+      border-bottom: 1px solid #DDDDDD;
+      border-top: none;
+    }
+    .accordian__title {
+      @include FontBD;
+    }
+  }
+
+  .sub-content {
+    &__label {
+      margin: 0 25px;
+      padding: 15px;
+      background-color: #EA2126;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 50px;
+    }
+
+    &__label p {
+      display: inline-block;
+      @include FontBD;
+    }
+
+    &__label p > span {
+      display: inline-block;
+      @include FontMD; 
+    }
+
+    &__label p .sub-content__mail {
+      display: inline-block;
+      @include FontDL;
+    }
+
+    h3 {
+      margin: 0 25px;
+      font-size: 16px;
+      @include FontBD;
+    }
+
+  }
+
+  .sub-content--group {
+    margin-top: 50px;
+    background-color: #FAFAFA;
+
+    h3 {
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+
+    .sub-content__box {
+      margin: 0 25px;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      border-top: 5px solid #EA2126;
+    }
+
+    .sub-content__box p {
+      font-sizt: 16px;
+      @include FontBD;
+    }
+
+    .sub-content__box p span {
+      @include FontRG;
+    }
+  }
+
+  .list-head {
+    padding: 50px 25px 0;
+    padding-bottom: 20px;
+
+    &__title {
+      margin-bottom: 4px;
+      font-size: 16px;
+      @include FontBD;
+    }
+
+    &__description {
+      font-size: 14px;
+      @include FontDL;
+    }
+  }
+
+  .list-head--more {
+    background-color: #FAFAFA;
+  }
+
+  .list-container {
+    margin: 0 25px;
+    border-top: 1px solid #000000;
+    padding-bottom: 50px;
+  }
+
+  .list-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDDDDD;
+
+    &__item {
+      margin-top: 3px;
+      font-size: 14px;
+      @include FontRG;
+    }
+
+
+    &__item--type {
+      margin-bottom: 13px;
+    }
+
+    &__title {
+      display: inline-block;
+      position: absolute;
+      left: 25px;
+      width: 90px;
+      font-size: 14px;
+      @include FontMD; 
+    }
+
+    &__sub-title {
+      position: absolute;
+      left: 25px;
+      width: 90px;
+      color: #666666;
+      font-size: 14px;
+       @include FontDL;
+    }
+
+    &__text {
+      padding-left: 90px;
+    }
+  }
+
+  .list-container--more {
+    margin: 0;
+    padding: 0 25px 75px;
+    border-top: none;
+    background-color: #FAFAFA;
+
+    .list-content__title {
+      position: inherit;
+      width: auto;
+      color: #000000;
+      margin-bottom: 15px;
+      @include FontBD;
+    } 
+
+    .list-content {
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 6px;
+      border-bottom: none;
+    }
+
+    .list-content + .list-content {
+      margin-top: 10px; 
+    }
+
+    .list-content__sub-title {
+      left: 45px;
+      font-size: 12px;
+    }
+
+    .list-content__text {
+      font-size: 12px;
+      @include FontDL;
+    }
+  }
+
+
+}
