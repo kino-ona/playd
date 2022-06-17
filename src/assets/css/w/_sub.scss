@@ -155,84 +155,6 @@
       @include FontBD;
     }
 
-    .list-select {
-      @include FlexRow;
-    }
-
-    .drop-box {
-
-      .list-select__wrap {
-        width: 120px;
-        box-sizing: border-box;
-        right: -10px;
-        left: auto;
-        padding: 0;
-        border-radius: 5px;
-        border-width: 1px;
-      }
-  
-      .list-select__wrap a {
-        color: #666666;
-      }
-  
-      .list-select__title {
-        height: auto;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0;
-  
-        &::before {
-          width: 8px;
-          height: 8px;
-          right: 0;
-        }
-      }
-
-      &--active {
-        .list-select__wrap {
-          padding: 15px;
-        }
-      }
-    }
-
-    .list-select a[type="button"] {
-      width: 22px;
-      height: 18px;
-      margin: 1.5px 4px 1.5px 12px;
-      position: relative;
-      @include FlexRow;
-    }
-
-    .list-select a[type="button"] i {
-      width: 22px;
-      height: 2px;
-      display: inline-block;
-      background-color: #000000;
-
-      &::before {
-        top: 0;
-      }
-
-      &::after {
-        bottom: 0;
-      }
-
-      &::before, &::after {
-        width: inherit;
-        height: inherit;
-        position: absolute;
-        left: 0;
-        right: 0;
-        display: inline-block;
-        background-color: inherit;
-        content: "";
-      }
-    }
-
-    .list-select__text {
-      color: #000000;
-    }
-
     > .sub-content__title {
       font-size: 26px;
     }
@@ -1900,34 +1822,6 @@
 
   .list-content__title--long {
     -webkit-line-clamp: 2;
-  }
-}
-
-/* report, column*/
-.report,
-.column {
-  .drop-box .drop-box__title {
-    width: 120px;
-    padding: 17px;
-    border-width: 1px 1px 0 1px;
-    border-color: #ffffff;
-    border-style: solid;
-    box-sizing: border-box;
-  }
-
-  .drop-box .drop-box__title::before {
-    right: 11px;
-  }
-
-  .drop-box--active .drop-box__title {
-    border-color: #DDDDDD;
-  }
-
-  .drop-box--active .list-select__wrap {
-    right: 0;
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: #DDDDDD;
   }
 }
 

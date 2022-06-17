@@ -1262,6 +1262,102 @@ input[type="file"] {
 	}
 }
 
+.list-select.drop-box {
+	margin-right: -25px;
+	padding: 15px 60px 15px 25px;
+	border: 1px solid transparent;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+
+	.list-select__title {
+		height: auto;
+    width: 65px;
+		padding: 0;
+    box-sizing: content-box;
+		border: 0;
+    border-width: 1px 1px 0 1px;
+    border-color: #ffffff;
+    border-style: solid;
+	}
+
+	.list-select__title::before {
+		width: 8px;
+		height: 8px;
+		top: 24px;
+    right: 25px;
+	}
+
+	.list-select__wrap {
+		width: 102px;
+		padding: 0 25px 15px;
+		box-sizing: content-box;
+		right: -10px;
+		left: auto;
+		border-width: 1px;
+		color: #666666;
+	}
+
+	.list-select__text {
+		color: #000000;
+	}
+
+  &.drop-box--active {
+		border: 1px solid #DDDDDD;
+		overflow: visible;
+  }
+	
+	&.drop-box--active .list-select__title::before {
+		top: 27px;
+	}
+
+  &.drop-box--active .list-select__wrap {
+    right: -1px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #DDDDDD;
+  }
+}
+
+.list-select {
+	@include FlexRow;
+	cursor: pointer;
+
+	a[type="button"] {
+		width: 22px;
+		height: 18px;
+		margin: 1.5px 4px 1.5px 12px;
+		position: relative;
+		@include FlexRow;
+	}
+
+	a[type="button"] i {
+		width: 22px;
+		height: 2px;
+		display: inline-block;
+		background-color: #000000;
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		&::before, &::after {
+			width: inherit;
+			height: inherit;
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: inline-block;
+			background-color: inherit;
+			content: "";
+		}
+	}
+}
+
 .form-info {
 	display: block;
 	margin-top: 30px;
