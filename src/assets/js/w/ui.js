@@ -249,30 +249,26 @@ window.addEventListener('load', () => {
 		let closestTarget = item.closest('.drop-box');
 
 		document.body.addEventListener('click', () => {
-			if (item.classList.contains('drop-box--active')) {
-				item.classList.remove('drop-box--active');
-			}
+			if (item.classList.contains('drop-box--active')) { item.classList.remove('drop-box--active'); }
 		}, true);
 
-		item.addEventListener('click', () => {
-			if (!closestTarget.classList.contains('drop-box--active')) {
-				closestTarget.classList.add('drop-box--active');
-			} else {
-				closestTarget.classList.remove('drop-box--active');
-			}
-		})
+		item.addEventListener('click', (event) => {
+			event.preventDefault();
+			let activeBoolean = item.classList.contains('drop-box--active');
+
+			if (!activeBoolean) { item.classList.add('drop-box--active'); } else { item.classList.remove('drop-box--active'); }
+		});
 	})
 
 	dropBoxItem.forEach((item) => {
+		let closestTarget = item.closest('.drop-box');
+		
 		item.addEventListener('click', (event) => {
 			event.preventDefault();
-			let closestTarget = item.closest('.drop-box');
-			item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title').innerHTML = item.innerHTML;
-			if (!closestTarget.classList.contains('drop-box--active')) {
-				closestTarget.classList.add('drop-box--active');
-			} else {
-				closestTarget.classList.remove('drop-box--active');
-			}
+			let activeBoolean = closestTarget.classList.contains('drop-box--active');
+
+			item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title .drop-box__text').innerHTML = item.innerHTML;
+			if (!activeBoolean) { closestTarget.classList.add('drop-box--active'); } else { closestTarget.classList.remove('drop-box--active'); }
 		})
 	})
 });
