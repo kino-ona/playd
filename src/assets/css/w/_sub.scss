@@ -2850,8 +2850,15 @@
     letter-spacing: -0.01em;
   }
 
+  .accordian__title::before {
+    top: 13.5px;
+  }
+
   .accordian__item--active .accordian__title a {
     font-weight: 600;
+  }
+  .accordian__item--active .accordian__title::before {
+    top: 15px;
   }
   
   .list-content {
