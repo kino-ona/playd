@@ -590,7 +590,7 @@ if(bodyClass) {
 				LayerCloseClicker();
 			})
 
-			const formOpener = document.querySelector('.open')
+			const formOpeners = document.querySelectorAll('.open')
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
 			const formUserPosition = document.querySelector('#user-position');
@@ -606,49 +606,51 @@ if(bodyClass) {
 				layerOpen('letterFormSubmitted');
 			});
 
-			formOpener.addEventListener('click' , (event) => {
-				event.preventDefault();
-				layerOpen('newsLetter');
+			formOpeners.forEach((item) => {
+				item.addEventListener('click' , (event) => {
+					event.preventDefault();
+					layerOpen('newsLetter');
 
-				document.querySelectorAll('.form-field').forEach((item) => {
-					item.classList.remove('warning');
+					document.querySelectorAll('.form-field').forEach((item) => {
+						item.classList.remove('warning');
+					})
+		
+					if(!needCheck.checked) {
+						needCheck.focus();
+						return false;
+					}
+		
+					if(!formUserName.value) {
+						formUserName.focus();
+						formUserName.closest('.form-field').classList.add('warning')
+						return false;
+					}
+		
+					if(!formUserProfession.value) {
+						formUserProfession.focus();
+						formUserProfession.closest('.form-field').classList.add('warning')
+						return false;
+					}	
+
+					if(!formUserPosition.value) {
+						formUserPosition.focus();
+						formUserPosition.closest('.form-field').classList.add('warning')
+						return false;
+					}	
+		
+					if(!formUserMail.value) {
+						formUserMail.focus();
+						formUserMail.closest('.form-field').classList.add('warning')
+						return false;
+					}
+		
+					if(!regEmail.test(formUserMail.value)) {
+						formUserMail.focus();
+						formUserMail.closest('.form-field').classList.add('warning')
+						formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+						return false;
+					}
 				})
-	
-				if(!needCheck.checked) {
-					needCheck.focus();
-					return false;
-				}
-	
-				if(!formUserName.value) {
-					formUserName.focus();
-					formUserName.closest('.form-field').classList.add('warning')
-					return false;
-				}
-	
-				if(!formUserProfession.value) {
-					formUserProfession.focus();
-					formUserProfession.closest('.form-field').classList.add('warning')
-					return false;
-				}	
-
-				if(!formUserPosition.value) {
-					formUserPosition.focus();
-					formUserPosition.closest('.form-field').classList.add('warning')
-					return false;
-				}	
-	
-				if(!formUserMail.value) {
-					formUserMail.focus();
-					formUserMail.closest('.form-field').classList.add('warning')
-					return false;
-				}
-	
-				if(!regEmail.test(formUserMail.value)) {
-					formUserMail.focus();
-					formUserMail.closest('.form-field').classList.add('warning')
-					formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
-					return false;
-				}
 			})
 		}
 		break;
@@ -660,7 +662,7 @@ if(bodyClass) {
 				LayerCloseClicker();
 			})
 
-			const formOpener = document.querySelector('.button__icon-download');
+			const formOpeners = document.querySelectorAll('.open');
 			const formSubmitButton = document.querySelector('.form-submit');
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
@@ -672,11 +674,12 @@ if(bodyClass) {
 				layerClose('newsLetter');
 			});
 
-			formOpener.addEventListener('click' , (event) => {
-				event.preventDefault();
-				layerOpen('newsLetter');
-
-			});
+			formOpeners.forEach((item) => {
+				item.addEventListener('click' , (event) => {
+					event.preventDefault();
+					layerOpen('newsLetter');
+				});
+			})
 
 			formSubmitButton.addEventListener('click' , (event) => {
 				event.preventDefault();
