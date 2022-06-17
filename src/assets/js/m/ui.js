@@ -114,6 +114,15 @@
 				subCommonFunction();
 			break;
 
+			case 'media':
+				headerTitle.innerHTML = '미디어전략';
+				subCommonFunction();
+			break;
+
+			case 'about':
+				headerTitle.innerHTML = 'ABOUT';
+				subCommonFunction();
+			break;
 
 			default: 
 				alert('페이지 오류');
@@ -164,22 +173,36 @@
 	
 	//dropdown
 	const dropBox = document.querySelectorAll('.drop-box');
-	const dropBoxItem = document.querySelectorAll('.drop-box__wrap a');
-	
+	const dropBoxItem = document.querySelectorAll('.drop-box__wrap p > a');
+
 	dropBox.forEach((item) => {
+		let closestTarget = item.closest('.drop-box');
+
+		document.body.addEventListener('click', () => {
+			if (item.classList.contains('drop-box--active')) {
+				item.classList.remove('drop-box--active');
+			}
+		}, true);
+
 		item.addEventListener('click', () => {
-			if(item.closest('.drop-box').classList.contains('drop-box--active')) {
-				item.closest('.drop-box').classList.remove('drop-box--active')
+			if (!closestTarget.classList.contains('drop-box--active')) {
+				closestTarget.classList.add('drop-box--active');
 			} else {
-				item.closest('.drop-box').classList.add('drop-box--active')
+				closestTarget.classList.remove('drop-box--active');
 			}
 		})
 	})
-	
+
 	dropBoxItem.forEach((item) => {
 		item.addEventListener('click', (event) => {
 			event.preventDefault();
+			let closestTarget = item.closest('.drop-box');
 			item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title').innerHTML = item.innerHTML;
+			if (!closestTarget.classList.contains('drop-box--active')) {
+				closestTarget.classList.add('drop-box--active');
+			} else {
+				closestTarget.classList.remove('drop-box--active');
+			}
 		})
 	})
 	

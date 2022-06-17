@@ -16,8 +16,8 @@
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">사업영역</a>
 					<div class="gnb__wrap">
-						<p><a href="/">캠페인전략</a></p>
-						<p><a href="/">미디어전략</a></p>
+						<p><a href="./campaign.html">캠페인전략</a></p>
+						<p><a href="./media.html">미디어전략</a></p>
 						<p><a href="./creative.html">크리에이티브</a></p>
 						<p><a href="./portfolio.html">포트폴리오</a></p>
 						<p><a href="./awards.html">수상내역</a></p>
@@ -40,10 +40,10 @@
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">플레이디</a>
 					<div class="gnb__wrap">
-						<p><a href="/">ABOUT</a></p>
+						<p><a href="./about.html">ABOUT</a></p>
 						<p><a href="./ir.html">IR</a></p>
 						<p><a href="./ethical.html">윤리경영</a></p>
-						<p><a href="/">ESG</a></p>
+						<p><a href="./esg.html">ESG</a></p>
 					</div>
 				</div>
 				<div class="gnb__item">

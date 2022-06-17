@@ -1638,27 +1638,34 @@ input::placeholder {
   margin-bottom: 10px;
 
   .drop-box__title {
-    margin-top: 30px;
-    margin-right: 25px;
-    padding: 0;
-    width: 75px;
-    height: 30px;
-    line-height: 24px;
-    border: none;
+    margin-top: 16px;
+    margin-right: 10px;
+    padding: 15px;
+    width: 105px;
+    line-height: 1.5;
+    border: 1px solid #ffffff;
   }
 
   .drop-box__title::before {
     right: 32px;
-    top: 5px;
+    top: 22px;
   }
 }
 
+.drop-box--type2.drop-box--active  .drop-box__title {
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color:  #EEEEEE;
+}
+
 .drop-box--type2.drop-box--active .drop-box__wrap {
-  top: 40px;
-  left: -15px;
-  width: 90px;
-  border-radius: 6px;
-  border-width: 1px 1px 1px 1px;
+  top: 45px;
+  left: 0;
+  width: 105px;
+  padding: 0 15px 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-width: 0 1px 1px 1px;
   z-index: 9;
   box-sizing: border-box;
 
