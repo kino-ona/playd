@@ -405,7 +405,6 @@
 		const formSubmitOpen = document.querySelector('.ethical .sub-content__title--link')
 		const formSubmitClose = document.querySelector('.ethical .close');
 		const formSubmitClose2 = document.querySelector('.ethical .layer__button');
-		
 
 		sublist.forEach(item => {
 			item.addEventListener('click' , () => {
@@ -672,6 +671,67 @@
 		});
 
 
+		const formSubmit = document.querySelector('.report-detail .form-submit--wide');
+		const formSubmitOpen = document.querySelectorAll('.report-detail .slide__download')
+		const formSubmitClose = document.querySelector('.report-detail .layer__wrap--wide .close');
+		const formUserName = document.querySelector('.report-detail #user-name');
+		const formUserPosition = document.querySelector('.report-detail #user-position');
+		const formUserMail = document.querySelector('.report-detail #user-mail');
+		const needCheck = document.querySelector('.report-detail #sub-checkbox--personal');
+		const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+		formSubmitOpen.forEach(item => {
+			item.addEventListener('click' , (event) => {
+				event.preventDefault();
+				layerOpen('report');
+			})
+		})
+
+		formSubmit.addEventListener('click' , (event) => {
+			event.preventDefault();
+			document.querySelectorAll('.form-field').forEach((item) => {
+				item.classList.remove('warning');
+			})
+
+			if(!needCheck.checked) {
+				needCheck.focus();
+				return false;
+			}
+
+			if(!formUserName.value) {
+				formUserName.focus();
+				formUserName.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!formUserPosition.value) {
+				formUserPosition.focus();
+				formUserPosition.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+
+			if(!formUserMail.value) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				return false;
+			}
+
+			if(!regEmail.test(formUserMail.value)) {
+				formUserMail.focus();
+				formUserMail.closest('.form-field').classList.add('warning')
+				formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+				return false;
+			}
+
+			layerClose('report');
+		})
+
+		console.log(formSubmitClose);
+
+		formSubmitClose.addEventListener('click' , () => {
+			layerClose('report');
+		})
 	}
 
 	if(bodyClass === 'column') {
@@ -857,6 +917,31 @@
 				slidesOffsetAfter: 60,
 			});
 		}
+
+		const sublist = document.querySelectorAll('.sub-head-slide__item')
+		const categoryItem = document.querySelectorAll('.accordian__item');
+
+		sublist.forEach(item => {
+			item.addEventListener('click' , event => {
+				let chapter = item.classList[1].split('--')[1];
+
+				event.preventDefault();
+		
+				sublist.forEach(targets => {
+					if(targets.classList.contains('sub-list__item--active')) targets.classList.remove('sub-list__item--active')
+				})
+
+				categoryItem.forEach( targets => {
+					targets.classList.remove('accordian__item--active');
+				})
+				
+				item.classList.add('sub-list__item--active');
+
+				document.querySelector('.accordian__item--' + chapter).classList.add('accordian__item--active');
+				
+			})
+		})
+
 	}
 
 	if(bodyClass === 'creative') {

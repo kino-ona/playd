@@ -160,6 +160,11 @@
     max-width: 100%;;
     transform: translate(0 ,0);
     border-radius: 0;
+
+    .close {
+      right: 25px;
+      top: 25px;
+    }
   }
 
   .tab-fixed {
@@ -391,16 +396,6 @@
       opacity: 0;
       width: 0;
       height: 0;
-    }
-  }
-
-  .layer {
-    &__head {
-      padding: 25px;
-    }
-
-    &__content {
-      padding: 0 25px 50px;
     }
   }
 

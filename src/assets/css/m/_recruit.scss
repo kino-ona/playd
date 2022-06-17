@@ -282,9 +282,16 @@
     margin-left: 10px;
   }
 
-  .drop-box--type2 {
-    width: 101px;
-    margin-left: calc(100% - 76px);
+  .drop-box--type2 .drop-box__wrap {
+    left: calc(100% - 94px)
+  }
+
+  .drop-box--type2 .drop-box__title {
+    margin-left: calc(100% - 94px)
+  }
+
+  .drop-box--type2 .drop-box__title::before {
+    right: 7px;
   }
 
   .relate-content {

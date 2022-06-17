@@ -1,3 +1,68 @@
+<!--220617 start-->
+<div class="layer__body popup report" id="report" aria-hidden="true" role="dialog">
+	<div class="layer__wrap layer__wrap--wide">
+		<div class="layer__close">
+			<button class="close"><span>close</span></button>
+		</div>
+		<div class="layer__inner">
+			<div class="layer__head">
+				<p class="content__title">PlayD 트렌드 리포트 다운로드</p>
+				<p class="content__description">
+					간단한 정보를 입력하시면 플레이디 리포트를 빠르게<br>
+					받아보실 수 있습니다.
+				</p>
+			</div>
+			<div class="layer__content">
+				<div class="content__text">
+					<form>
+						<legend>플레이디 트렌드 리포트 다운로드 신청폼</legend>
+						<div class="form-field">
+							<label for="user-name" class="input-box-info__label input-box-info__label--necessary">이름</label>
+							<input type="text" id="user-name"  class="input-box-info__input" name="" placeholder="이름을 입력해 주세요.">
+							<p class="form-warning">이름을 입력해주세요.</p>
+						</div>
+						<div class="form-field">
+							<label for="user-position" class="input-box-info__label input-box-info__label--necessary">직업</label>
+							<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직업을 입력해 주세요.">
+							<p class="form-warning">직업을 입력해 주세요.</p>
+						</div>
+						<div class="form-field">
+							<label for="user-mail" class="input-box-info__label input-box-info__label--necessary">이메일 주소</label>
+							<input type="text" id="user-mail"  class="input-box-info__input" name="" placeholder="이메일 주소를 입력해 주세요.">
+							<p class="form-warning">이메일 주소를 입력해 주세요.</p>
+						</div>
+						<div class="form-field">
+							<label for="user-position" class="input-box-info__label">직급</label>
+							<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직급을 입력해 주세요.">
+						</div>
+						<div class="form-field">
+							<label for="user-company" class="input-box-info__label">회사명(소속)</label>
+							<input type="text" id="user-company" class="input-box-info__input" name="" placeholder="회사명을 입력해 주세요.">
+						</div>
+						<div class="form-field">
+							<label for="user-team" class="input-box-info__label">부서(팀명)</label>
+							<input type="text" id="user-team" class="input-box-info__input" name="" placeholder="부서를 입력해 주세요.">
+						</div>
+						<div class="sub-checkboxs">
+							<label for="sub-checkbox--personal" class="sub-checkbox__label">
+								<input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input" checked>
+								<span>개인정보 수집 및 이용동의</span>
+							</label>
+						</div>
+						<p class="form-description">
+							입력하신 이름, 직업, 이메일 주소, 직급, 회사명
+							(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 
+							보유,이용기간 동안 보관 및 이용됩니다.
+						</p>
+					</form>
+				</div>
+				<button type="submit" class="button layer__button form-submit--wide">리포트 다운로드</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--220617 end-->
+
 <footer class="footer">
  <section class="footer__banner banner">
 		<div class="banner__content">
@@ -50,6 +115,7 @@
 		</nav>
 	</div>
 </footer>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="@@webroot/assets/js/m/countUp.js"></script>
 <script src="@@webroot/assets/js/m/swiper.min.js"></script>

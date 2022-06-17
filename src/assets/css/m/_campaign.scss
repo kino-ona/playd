@@ -8,7 +8,7 @@
     &__image {
       display: block;
       padding-top: 100%;
-      border-radius: 6;
+      border-radius: 6px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -31,13 +31,24 @@
       margin-top: 33px;
     }
 
-    &__list li {
+    &__list li button {
       position: relative;
       margin-bottom: 15px;
       color: #ffffff;
       font-size: 14px;
       line-height: 1;
       @include FontDL;
+    }
+
+    &__list li::after {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-left: 7.5px;
+      border-right: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      transform: rotate(-45deg);
+      content: '';
     }
 
     &__list .numbering {
@@ -65,13 +76,18 @@
     }
   }
 
-  .sub-head-slide__item--black {
-    .sub-head-slide__list li, 
+  .sub-head-slide__box--black {
+    .sub-head-slide__list li button, 
     .sub-head-slide__type {
       color: #000000;
     }
     .sub-head-slide__list p::after {
       background-color: #000000;
+    }
+
+    .sub-head-slide__list li::after {
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
     }
 
   }
