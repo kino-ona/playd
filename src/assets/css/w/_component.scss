@@ -682,16 +682,6 @@ input[type="file"] {
 }
 
 .warning {
-	textarea + .form-warning::before {
-		display: inline-block;
-		width: 16px;
-		height: 16px;
-		padding-right: 8px;
-		background: url('../../images/w/common/icons/icon_warning.png') 0 0 no-repeat;
-		background-size: contain;
-		transform: translateY(2px);
-		content:'';
-	}
 
 	&::before {
 		display: inline-block;
@@ -719,7 +709,31 @@ input[type="file"] {
 		font-size: 12px;
 		letter-spacing: -.2px;
 	}
-	
+
+	textarea + .form-warning::before {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		padding-right: 6px;
+		background: url('../../images/w/common/icons/icon_form-warning.png') 0 0 no-repeat;
+		background-size: contain;
+		transform: translateY(6px);
+		content:'';
+	}
+
+	&.form-field::before {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		bottom: 60px;
+		width: 16px;
+		height: 16px;
+		padding-right: 8px;
+		background: url('../../images/w/common/icons/icon_form-warning.png') 0 0 no-repeat;
+		background-size: contain;
+		transform: translateY(2px);
+		content:'';
+	}
 }
 
 
