@@ -944,8 +944,7 @@
 			swiper.on('slideChange', function (e) {
 				stateBarFill.style.width = stateBarWidth/6 * (swiper.realIndex+1) + 'px';
 				console.log(stateBarWidth/6 * swiper.realIndex);
-
-		})
+			})
 		}
 	}
 
