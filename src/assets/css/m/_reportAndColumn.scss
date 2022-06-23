@@ -412,3 +412,15 @@
   }
 }
 
+.report-detail {
+  .layer {
+    &__head {
+      padding: 25px 25px 0 25px;
+    }
+
+    &__content {
+      padding: 25px 25px 40px
+    }
+  }
+}
+

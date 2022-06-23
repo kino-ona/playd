@@ -4,6 +4,7 @@
 		<span class="burger-sticks"></span>
 		<span class="burger-sticks"></span>
 	</button>
+	<!--220623 수정 start-->
 	<div class="header__inner header__inner--full">
 		<h1 class="header__title">
 			<a href="./index.html" class="logo logo__default"><span class="a11y">플레이디</span></a>
@@ -54,7 +55,8 @@
 					</div>
 				</div>
 			</div>
-			<p class="gnb__button"><a href="./contact.html" class="gnb__button--link font--bd">CONTACT</a></p>
+			<p class="gnb__button"><a href="./contact.html" class="gnb__button--link">CONTACT</a></p>
 		</nav>
 	</div>
+	<!--220623 수정 end-->
 </header>

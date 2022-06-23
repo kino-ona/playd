@@ -116,9 +116,15 @@
 	</div>
 </footer>
 
+<!--220623 수정 start-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="@@webroot/assets/js/m/countUp.js"></script>
 <script src="@@webroot/assets/js/m/swiper.min.js"></script>
 <script src="@@webroot/assets/js/m/ui.js"></script>
+<script src="@@webroot/assets/js/m/jquery-1.12.4.min.js"></script>
+
+<!--220623 수정 end-->
+
+
 
 

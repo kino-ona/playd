@@ -42,6 +42,28 @@
     background-size: contain;
     z-index: 9;
   }
+
+  .gnb__button {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 25px 25px;
+    background: #ffffff;
+  }
+
+  .gnb__button--link {
+    display: block;
+    width: 80px;
+    height: 80px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #EA2126;
+    border-radius: 50%;
+    font-weight: 600;
+  }
 }
 
 .sub-page--active {
@@ -211,46 +233,61 @@
   transition: all .2s ease-out;
   z-index: 9;
 
+  &__list {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+
   &__list--link {
     display: block;
     position: relative;
     padding-left: 25px;
-    height: 68px;
-    line-height: 68px;
-  }
-  &__list--link::after {
-    // position: absolute;
-    // top: 26px;
-    // right: 26px;
-    // width: 10px;
-    // height: 10px;
-    // border-width: 0 2px 2px 0;
-    // border-style: solid;
-    // border-color: #000000;
-    // box-sizing: border-box;
-    // transform: rotate(45deg);
-    // content: '';
+    font-size: 30px;
+    @include FontBD;
   }
 
   &__wrap {
-    // overflow: hidden;
-    // height: 0;
-    // padding: 0;
-    padding: 20px;
-    background-color: #FAFAFA;
+    padding: 12px 25px;
+    position: relative;
   }
 
   &__wrap p {
     display: inline-block;
+    position: relative;
+    margin-left: 10px;
+  }
+
+  &__wrap p:nth-child(1), 
+  &__item:nth-child(1) &__wrap p:nth-child(4) {
+    margin-left: 0;
+  }
+
+  &__wrap p + p::before {
+    display: inline-block;
+    position: absolute;
+    left: -13px;
+    top: 12px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #000000;
+    content: '';
+  }
+
+  &__item:nth-child(1) p:nth-child(4)::before {
+    display: none;
   }
 
   &__wrap a {
     display: block;
-    // margin-top: 20px;
     margin-right: 10px;
     font-size: 16px;
     line-height: 25px;
     letter-spacing: -.3px;
+  }
+
+  .gnb__item + .gnb__item {
+    margin-top: 30px;
   }
 
   &__item--active .gnb__wrap {
@@ -268,19 +305,7 @@
   }
 
   &__button {
-    padding: 25px 25px 100px;
-  }
-
-  &__button--link {
-    display: block;
-    height: 50px;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 50px;
-    text-align: center;
-    background-color: #EA2126;
-    border-radius: 4px;
-    
+    display: none;
   }
 }
 
@@ -1598,7 +1623,7 @@ form legend {
   li  {
     display: inline-block;
     position: relative;
-    width: 32.3%;
+    width: 49%;
     margin-top: 30px;
     padding-top: 60px;
     text-align: center;
@@ -1609,20 +1634,16 @@ form legend {
   li img {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 25px;
     width: 50px;
     transform: translate(-50%, 0);
   }
 
-  li.sms,
-  li.url {
-    width: 33%;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  li.sms {
-    margin-left: 15%;
+  li span {
+    position: absolute;
+    top: 50%;
+    left: 64px;
+    margin-top: -16px;
   }
 }
 
@@ -1674,4 +1695,13 @@ input::placeholder {
     color: #666666;
     @include FontDL;
   }
+}
+
+.share-popup {
+  .content__title {
+    font-size: 16px;
+    @include FontBD; 
+  }
+
+
 }

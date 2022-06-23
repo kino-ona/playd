@@ -31,7 +31,11 @@
       margin-top: 33px;
     }
 
-    &__list li button {
+    &__list li {
+      margin-top: 15px;
+    }
+
+    &__list li a {
       position: relative;
       margin-bottom: 15px;
       color: #ffffff;
@@ -45,9 +49,11 @@
       width: 6px;
       height: 6px;
       margin-left: 7.5px;
+      margin-top: 6px;
       border-right: 1px solid #ffffff;
       border-bottom: 1px solid #ffffff;
       transform: rotate(-45deg);
+      vertical-align: top;
       content: '';
     }
 
@@ -63,21 +69,13 @@
       line-height: 1;
     }
 
-    &__list p::after {
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: #ffffff;
-      content: '';
-    }
-
     .swiper-slide:first-child {
       margin-left: 25px;
     }
   }
 
   .sub-head-slide__box--black {
-    .sub-head-slide__list li button, 
+    .sub-head-slide__list li a, 
     .sub-head-slide__type {
       color: #000000;
     }
@@ -174,47 +172,50 @@
     }
 
     &__section--countersection {
+      display: flex;
       padding: 10px;
       background-color: #FAFAFA;
     }
 
     &__section--countersection .diagram__phase {
-      background-image: repeating-linear-gradient(0deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px), repeating-linear-gradient(90deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px), repeating-linear-gradient(180deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px), repeating-linear-gradient(270deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px);
-      background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
-      background-position: 0 0, 0 0, 100% 0, 0 100%;
-      background-repeat: no-repeat;
-      border-radius: 6px;
+      width: 50%;
+      padding-top: 70px;
+      padding-left: 15px;
+      padding-bottom: 20px;
+      background-color: #ffffff;
+      line-height: 20px;
+    }
+
+    &__section--countersection .diagram__icon {
+      left: 15px;
+    }
+
+    &__section--countersection .phase__title {
+      line-height: 1;;
     }
 
     &__section--remarked {
       padding: 10px;
-      background-color: #FAFAFA;
+      background: transparent;
     }
 
     &__section--remarked .diagram__phase {
-      padding-bottom: 10px;
-      background-image: repeating-linear-gradient(0deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px), repeating-linear-gradient(90deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px), repeating-linear-gradient(180deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px), repeating-linear-gradient(270deg, #666666, #666666 1px, transparent 1px, transparent 5px, #666666 5px);
-      background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
-      background-position: 0 0, 0 0, 100% 0, 0 100%;
-      background-repeat: no-repeat;
-      border-radius: 6px;
+      padding-bottom: 20px;
+      background: transparent;
     }
 
     &__phase section .item {
       position: relative;
       width: calc(100% + 44px);
-      height: 40px;
-      margin-left: -59px;
       color: #666666;
       font-size: 14px;
-      line-height: 40px;
-      text-align: center;
-      background: #ffffff;
+      line-height: 1;
+      text-align: left;
       border-radius: 6px;
     }
 
     &__phase section .item + .item {
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     &__list--listed .diagram__phase {
@@ -265,15 +266,13 @@
     }
 
     &__icon--arrow {
-      margin-top: 5px;
-      margin-bottom: 5px;
       text-align: center;
     }
 
     &__icon--arrow::after {
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
       background: url('../../../assets/images/m/sub/icon_arrow_down.png') center center no-repeat;
       background-size: contain;
       content: '';
@@ -281,22 +280,24 @@
 
     &__icon--countersection {
       text-align: center;
+      margin-top: 30px;
+      vertical-align: middle;
     }
 
     &__icon--countersection::after {
       display: inline-block;
-      width: 20px;
-      height: 20px;
-      background: url('../../../assets/images/m/sub/icon_arrow_down.png') center center no-repeat;
+      width: 15px;
+      height: 15px;
+      background: url('../../../assets/images/m/sub/icon_arrow_left.png') center center no-repeat;
       background-size: contain;
       content: '';
     }
 
     &__icon--countersection::before {
       display: inline-block;
-      width: 20px;
-      height: 20px;
-      background: url('../../../assets/images/m/sub/icon_arrow_up.png') center center no-repeat;
+      width: 15px;
+      height: 15px;
+      background: url('../../../assets/images/m/sub/icon_arrow_right.png') center center no-repeat;
       background-size: contain;
       content: '';
     }

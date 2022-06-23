@@ -105,6 +105,7 @@
 
     .button__wrap {
       width: 100%;
+      padding-top: 30px;
     }
 
     .button__lined-black {
@@ -147,7 +148,7 @@
 
   .list-content--half {
     display: inline-block;
-    width: calc(50% - 10px);
+    width: calc(50% - 7px);
   }
 
   .list-content--half + .list-content--half {

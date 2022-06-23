@@ -156,7 +156,7 @@
 		if (body.classList.contains('open-gnb')) {
 			body.classList.remove('open-gnb');
 		} else {
-			gnb.classList.add('open-gnb');
+			gnb.classList.add('gnb--open');
 			body.classList.add('open-gnb');
 		}
 	})
@@ -401,6 +401,9 @@
 				})
 
 				document.querySelector('.sub-list__item--' + item.dataset.content).classList.add('sub-list__item--active');
+
+				window.scrollTo({top:	document.querySelector('.sub-list__item--' + item.dataset.content).offsetTop -62, behavior:'smooth'});
+			
 			
 				if(document.querySelector('.sub-container--guideline').classList.contains('content--active')) {
 					document.querySelector('.sub-container--guideline .sub-list-category__item--' + item.dataset.content).classList.add('sub-list-category__item--active');
@@ -883,31 +886,19 @@
 				slidesOffsetAfter: 60,
 			});
 		}
-
-		const sublist = document.querySelectorAll('.sub-head-slide__item')
 		const categoryItem = document.querySelectorAll('.accordian__item');
 
-		sublist.forEach(item => {
-			item.addEventListener('click' , event => {
-				let chapter = item.classList[1].split('--')[1];
+		categoryItem.forEach(item => {
+			item.addEventListener('click' , () => {
 
-				event.preventDefault();
+				categoryItem.forEach(targets => {
+					if(targets.classList.contains('accordian__item--active')) targets.classList.remove('accordian__item--active');
+				})
+				
+				item.classList.add('accordian__item--active');
 		
-				sublist.forEach(targets => {
-					if(targets.classList.contains('sub-list__item--active')) targets.classList.remove('sub-list__item--active')
-				})
-
-				categoryItem.forEach( targets => {
-					targets.classList.remove('accordian__item--active');
-				})
-				
-				item.classList.add('sub-list__item--active');
-
-				document.querySelector('.accordian__item--' + chapter).classList.add('accordian__item--active');
-				
 			})
 		})
-
 	}
 
 	if(bodyClass === 'creative') {
