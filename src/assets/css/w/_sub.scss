@@ -1232,6 +1232,17 @@
   .form-submit.submit--active {
 		background-color: #000000 !important;
 	}
+
+  #user-when-from,
+  #user-when-to {
+    width: calc(50% - 18px);
+  }
+
+  .user-date {
+    display: inline-block;
+    padding: 0 6px;
+    vertical-align: middle;
+  }
 }
 
 .sub-container[data-content="新 윤리경영 원칙"] {
