@@ -63,13 +63,16 @@
 </div>
 <!--220617 end-->
 
+
+<!--220627 수정 start-->
+
 <footer class="footer">
  <section class="footer__banner banner">
 		<div class="banner__content">
 			<p class="banner__title font--md">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
 			<div class="button__wrap">
 				<a href="#" class="button__square button__lined-white font--bd">프로젝트 문의</a>
-				<a href="#" class="button__square button__filled-white font--bd">회사소개서 다운로드</a>
+				<a href="#" class="button__square button__filled-white font--bd">회사 소개서 다운로드</a>
 			</div>
 		</div>
 	</section>
@@ -84,10 +87,10 @@
 				<div class="footer__wrap footer__wrap--line">
 					<p><a href="#">윤리신고</a></p>
 					<p><a href="#">뉴스레터</a></p>
-					<p><a href="#">오시는길</a></p>
-					<p class="footer__line--last"><a href="#">무료광고진단</a></p>
+					<p><a href="#">오시는 길</a></p>
+					<p class="footer__line--last"><a href="#">무료 광고 진단</a></p>
 				</div>
-				<div class="footer__wrap--line"><p class="footer__line--last"><a href="#" class="font--bd ">개인정보처리방침</a></p></div>
+				<div class="footer__wrap--line"><p class="footer__line--last"><a href="#" class="font--bd ">개인 정보처리 방침</a></p></div>
 			</ul>
 			<nav class="footer__nav--right">
 				<a href="#" class=""><img src="../assets/images/m/common/logo_naver.png" /><span class="a11y">네이버</span></a>
@@ -101,7 +104,7 @@
 		<ul class="footer__util">
 			<li>(주)플레이디</li>
 			<li>대표자 : 이준용 | 사업자등록번호 : 129-86-43885</li>
-			<li>주소 : 경기도 성남시 분당구 황새울로 359번길 11, 5층</li>
+			<li>주소 : 경기도 성남시 분당구 황새울로 359번 길 11, 5층</li>
 			<li>이메일 : <a href="mailto:master@playd.com">master@playd.com</a></li>
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
@@ -116,14 +119,17 @@
 	</div>
 </footer>
 
-<!--220623 수정 start-->
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="@@webroot/assets/js/m/countUp.js"></script>
 <script src="@@webroot/assets/js/m/swiper.min.js"></script>
 <script src="@@webroot/assets/js/m/ui.js"></script>
-<script src="@@webroot/assets/js/m/jquery-1.12.4.min.js"></script>
+<script src="@@webroot/assets/js/jquery-1.12.4.min.js"></script>
 
-<!--220623 수정 end-->
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="@@webroot/assets/js/datepicker.js"></script>
+
+<!--220627 수정 end-->
 
 
 
