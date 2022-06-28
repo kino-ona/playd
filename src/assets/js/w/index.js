@@ -153,8 +153,6 @@ anime1 = () => {
     }
 
     setTimeout((delay) => {
-    
-
       if (areaReach <= elemT) {
         area.classList.add('approached');
         areaHead.style.cssText = `top: ${elemT}px; left: ${wdP}px; bottom: auto;`

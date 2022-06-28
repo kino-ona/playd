@@ -241,6 +241,7 @@ window.addEventListener('load', () => {
 		});
 	});
 
+
 	//dropdown
 	const dropBox = document.querySelectorAll('.drop-box');
 	const dropBoxItem = document.querySelectorAll('.drop-box__wrap p > a');
@@ -271,6 +272,7 @@ window.addEventListener('load', () => {
 			if (!activeBoolean) { closestTarget.classList.add('drop-box--active'); } else { closestTarget.classList.remove('drop-box--active'); }
 		})
 	})
+
 });
 
 

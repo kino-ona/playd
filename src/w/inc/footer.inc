@@ -3,7 +3,7 @@
 		<p class="banner__title">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
 		<div class="button__wrap">
 			<a href="#" class="button button__radius button__lined-white">프로젝트 문의하기</a>
-			<a href="#" class="button button__radius button__filled-white">회사소개서 다운로드</a>
+			<a href="#" class="button button__radius button__filled-white">회사 소개서 다운로드</a><!-- 20220628 //-->
 		</div>
 	</div>
 </section>
@@ -14,8 +14,8 @@
 			<ul class="footer__nav">
 				<li><a href="#">윤리신고</a></li>
 				<li><a href="#">뉴스레터</a></li>
-				<li><a href="#">오시는길</a></li>
-				<li><a href="#">무료광고진단</a></li>
+				<li><a href="#">오시는 길</a></li><!-- 20220628 //-->
+				<li><a href="#">무료 광고 진단</a></li><!-- 20220628 //-->
 				<li><a href="#">개인정보처리방침</a></li>
 			</ul>
 			<nav class="footer__nav--right">
@@ -92,15 +92,15 @@
                 <li class="sub-checkbox__list">
                   <label for="sub-checkbox--personal" class="sub-checkbox__label">
                     <input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input">
-                    <span><i></i>개인정보 수집 및 이용에 동의합니다.</span>
+                    <span><i></i>개인 정보 수집 및 이용에 동의합니다.</span><!-- 20220628 //-->
                   </label>
                 </li>
               </ol>
 							<p class="form-description">
 								입력하신 이름, 직업, 이메일 주소, 직급, 회사명
-								(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 
-								보유,이용기간 동안 보관 및 이용됩니다.
-							</p>
+								(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인 정보를 수집 시에 동의 받은 개인 정보 
+								보유, 이용 기간 동안 보관 및 이용됩니다.
+							</p><!-- 20220628 //-->
 						</div>
 					</form>
 				</div>
@@ -126,7 +126,8 @@
 
 <script src="@@webroot/assets/js/w/swiper.min.js"></script>
 <script src="@@webroot/assets/js/w/ui.js"></script>
-
+<!-- s 20220628 -->
 <script src="@@webroot/assets/js/jquery-1.12.4.min.js"></script>
 <script src="@@webroot/assets/js/jquery-ui-1.13.1.js"></script>
 <script src="@@webroot/assets/js/datepicker.js"></script>
+<!--// e 20220628 -->
