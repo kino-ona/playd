@@ -1783,8 +1783,25 @@
   }
 
   .list-content__image {
+    position: relative;
     height: 230px;
     margin-bottom: 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: {
+        image: url('../../../assets/images/w/common/dummy_default.jpg');
+        size: cover;
+        position: 0 0;
+        repeat: no-repeat;
+      }
+      z-index: -1;
+    }
   }
 
   .list-content__head {
@@ -2220,7 +2237,25 @@
   }
 
   .list-content__image {
+    position: relative;
     height: 230px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: {
+        image: url('../../../assets/images/w/common/dummy_default.jpg');
+        size: cover;
+        position: 0 0;
+        repeat: no-repeat;
+      }
+      z-index: -1;
+    }
   }
 
   .list-content__head {
