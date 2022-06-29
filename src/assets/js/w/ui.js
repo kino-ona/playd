@@ -789,16 +789,17 @@ if(bodyClass) {
 		break;
 
 		case 'campaign':{
-			const visualUls = document.querySelectorAll('.visual__text');
+			const visuals = document.querySelectorAll('.visual .image');
 			const visualLists = document.querySelectorAll('.visual__text li');
+			
+			window.addEventListener('load', () => {
+				visuals.forEach((item) => {item.classList.add('loaded')});
+				visualLists.forEach((item) => {item.classList.add('loaded')});
+			})
 
 			visualLists.forEach((item) => {
-				item.addEventListener('mouseenter', () => {
-					item.classList.add('hovered');
-				})
-				item.addEventListener('mouseleave', () => {
-					item.classList.remove('hovered');
-				})
+				item.addEventListener('mouseenter', () => { item.classList.add('hovered'); })
+				item.addEventListener('mouseleave', () => { item.classList.remove('hovered'); })
 			})
 		}
 		break;
