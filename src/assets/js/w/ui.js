@@ -244,20 +244,22 @@ window.addEventListener('load', () => {
 
 	//dropdown
 	const dropBox = document.querySelectorAll('.drop-box');
+	const dropBoxTitle = document.querySelectorAll('.drop-box__title');
 	const dropBoxItem = document.querySelectorAll('.drop-box__wrap p > a');
+	let dropdownActiveBoolean;
 
-	dropBox.forEach((item) => {
-		let closestTarget = item.closest('.drop-box');
+	dropBoxTitle.forEach((item) => {
+		let closestTarget = item.parentNode;
 
 		document.body.addEventListener('click', () => {
-			if (item.classList.contains('drop-box--active')) { item.classList.remove('drop-box--active'); }
+			if (closestTarget.classList.contains('drop-box--active')) { closestTarget.classList.remove('drop-box--active'); }
 		}, true);
 
 		item.addEventListener('click', (event) => {
-			event.preventDefault();
-			let activeBoolean = item.classList.contains('drop-box--active');
+			event.preventDefault();			
+			dropdownActiveBoolean = closestTarget.classList.contains('drop-box--active');
 
-			if (!activeBoolean) { item.classList.add('drop-box--active'); } else { item.classList.remove('drop-box--active'); }
+			if (!dropdownActiveBoolean) { closestTarget.classList.add('drop-box--active'); } else { closestTarget.classList.remove('drop-box--active'); }
 		});
 	})
 
@@ -266,17 +268,17 @@ window.addEventListener('load', () => {
 		
 		item.addEventListener('click', (event) => {
 			event.preventDefault();
-			let activeBoolean = closestTarget.classList.contains('drop-box--active');
+			dropdownActiveBoolean = closestTarget.classList.contains('drop-box--active');
 
-			item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title .drop-box__text').innerHTML = item.innerHTML;
-			if (!activeBoolean) { closestTarget.classList.add('drop-box--active'); } else { closestTarget.classList.remove('drop-box--active'); }
+			item.closest('.drop-box__wrap').parentNode.querySelector('.drop-box__title .drop-box__text').innerHTML = item.innerHTML;
+			if (!dropdownActiveBoolean) { closestTarget.classList.add('drop-box--active'); } else { closestTarget.classList.remove('drop-box--active'); }
 		})
 	})
 
 });
 
 
-// Input * Form * Swiper
+//Input * Form * Swiper
 const bodyClass = document.querySelector('body').classList[0];
 
 if(bodyClass) {
@@ -289,7 +291,7 @@ if(bodyClass) {
 			
 	const ButtonCloses = document.querySelectorAll('.close');
 
-	// File-Attaching Button
+	//File-Attaching Button
 	const InputFileAttaching = () => {
 		if (formFileButton === null) return;
 		else formFileButton.addEventListener('change', () => {
@@ -300,7 +302,7 @@ if(bodyClass) {
 		});
 	}
 
-	// Necessary Check
+	//Necessary Check
 	const CheckboxNeededCheck = () => {
 		if (needCheck === null) return;
 		else needCheck.addEventListener('change', () => {
@@ -308,7 +310,7 @@ if(bodyClass) {
 		})	
 	}
 
-	// All .close UI
+	//All .close UI
 	const LayerCloseClicker = () => {
 		if (ButtonCloses === null) return;
 		else ButtonCloses.forEach((item) => {
@@ -422,7 +424,7 @@ if(bodyClass) {
 
 		case 'ethical':{
 
-			// File-Attaching Button
+			//File-Attaching Button
 			const InputFileAttaching = () => {
 				if (formFileButton === null) return;
 				else formFileButton.addEventListener('change', () => {
@@ -433,7 +435,7 @@ if(bodyClass) {
 				});
 			}
 
-			// Necessary Check
+			//Necessary Check
 			const CheckboxNeededCheck = () => {
 				if (needCheck === null) return;
 				else needCheck.addEventListener('change', () => {
@@ -441,7 +443,7 @@ if(bodyClass) {
 				})
 			}
 
-			// All .close UI
+			//All .close UI
 			const LayerCloseClicker = () => {
 				if (ButtonCloses === null) return;
 				else ButtonCloses.forEach((item) => {
@@ -782,6 +784,21 @@ if(bodyClass) {
 						areaContImgs[i].classList.add('slidein');
 					}
 				}
+			})
+		}
+		break;
+
+		case 'campaign':{
+			const visualUls = document.querySelectorAll('.visual__text');
+			const visualLists = document.querySelectorAll('.visual__text li');
+
+			visualLists.forEach((item) => {
+				item.addEventListener('mouseenter', () => {
+					item.classList.add('hovered');
+				})
+				item.addEventListener('mouseleave', () => {
+					item.classList.remove('hovered');
+				})
 			})
 		}
 		break;
