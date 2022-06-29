@@ -593,7 +593,7 @@
 
 .footer-bottom {
   flex-basis: auto;
-  margin: 0 25px;
+  // margin: 0 25px;
 }
 
 .logo {
@@ -860,6 +860,7 @@
 		display: inline-block;
     height: 38px;
     padding: 4px 15px;
+    margin-bottom: 5px;
 		color: #666666;
 		line-height: 30px;
 		font-size: 14px;
@@ -1305,7 +1306,19 @@
 }
 
 .list-content {
+  &__cover {
+    border-radius: 6px;
+    overflow: hidden;
+    background: {
+      image: url('../../../assets/images/w/common/dummy_default.jpg');
+      size: cover;
+      position: 0 0;
+      repeat: no-repeat;
+    }
+  }
   &__image {
+    width: 100%;
+    position: relative;
     border-radius: 6px;
     background-size: cover;
     background-position: center center;
