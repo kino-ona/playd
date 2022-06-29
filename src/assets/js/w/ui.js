@@ -271,7 +271,7 @@ window.addEventListener('load', () => {
 			dropdownActiveBoolean = closestTarget.classList.contains('drop-box--active');
 
 			item.closest('.drop-box__wrap').parentNode.querySelector('.drop-box__title .drop-box__text').innerHTML = item.innerHTML;
-			if (!dropdownActiveBoolean) { closestTarget.classList.add('drop-box--active'); } else { closestTarget.classList.remove('drop-box--active'); }
+			closestTarget.classList.remove('drop-box--active');
 		})
 	})
 
