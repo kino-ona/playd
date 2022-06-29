@@ -3273,45 +3273,13 @@
     flex-basis: 100%;
     flex-shrink: 0;
     position: relative;
-    
-    &::after {
-      z-index: -1;
-      position: absolute;
-      top: calc(100% - 95px);
-      left: -50px;
-      right: -50px;
-      height: 395px;
-      border-radius: 10px;
-      content: '';
-      background-color: #FAFAFA;
-    }
-  }
-
-  .sub-content__inner > p {
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-    @include FontMD;
-  }
-
-  .sub-content__inner > p {
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-    @include FontMD;
-  }
-
-  .sub-content__wrap {
-    padding: 0 50px 50px;
-    @include FlexRow($w: wrap);
-    background-color: #FAFAFA;
   }
 
   .sub-content__label {
     width: 100%;
     flex-basis: 100%;
     flex-shrink: 0;
-    margin: 0 auto 50px;
+    margin: 0 auto 25px;
     @include FlexRow($jc: center, $w: wrap);
     flex-direction: column;
     font-size: 18px;
@@ -3324,14 +3292,74 @@
     @include FontBD;
   }
 
-  .sub-content__box {
-    height: 225px;
-    flex-basis: calc(25% - 15px);
-    padding: 40px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    border-radius: 10px;
-    border-top: 10px solid #EA2126;
+  [data-section="매체 전문 조직 소개"] {
+    margin-bottom: 235px;
+
+    h3 {
+      position: relative;
+    }
+
+    h3 .image-block {	
+      border-radius: 0;
+      overflow: visible;
+      z-index: -1;
+      position: absolute;
+      top: calc(100% - 30.5px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .sub-content__inner {
+      position: relative;
+      padding: 50px;
+      background-color: #FAFAFA;
+    }
+
+    .sub-content__inner .sub-content__label {
+      position: absolute;
+      top: calc(100% + 25px);
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 0;
+    }
+
+    .sub-content__inner .sub-content__label .sub-content__label-bottom {
+      background-color: #999999;
+    }
+
+    .sub-content__inner .image-block {	
+      border-radius: 0;
+      overflow: visible;
+      z-index: -1;
+      position: absolute;
+      top: calc(100% - 10px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .sub-content__box {
+      height: 200px;
+      flex-basis: calc(25% - 10px);
+      padding: 35px 40px 20px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      border-radius: 10px;
+      border-top: 10px solid #EA2126;
+    }
+
+    .sub-content__inner > p {
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+      @include FontMD;
+    }
+  
+    .sub-content__wrap {
+      box-sizing: border-box;
+      width: 100%;
+      @include FlexRow;
+      flex-direction: row;
+    }
   }
 
   .sub-content__label-bottom {
@@ -3525,22 +3553,25 @@
     display: block;
   }
 
-  .sub-content__wrap {
-    margin-top: 40px;
-    margin-bottom: 60px;
-    @include FlexRow;
-    flex-direction: column;
+  [data-section="주요 제휴 매체사"] {
+      
+    .sub-content__wrap {
+      margin-top: 40px;
+      margin-bottom: 60px;
+      @include FlexRow;
+      flex-direction: column;
 
-    p {
-      font-size: 18px;
-      @include FontBD;
-      margin-bottom: 20px;
-    }
+      > .sub-content__slogan {
+        font-size: 18px;
+        @include FontBD;
+        margin-bottom: 20px;
+      }
 
-    .image-block {
-      padding: 45px 110px;
-      background-color: #fff;
-      border-radius: 10px;
+      .image-block {
+        padding: 45px 110px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
     }
   }
 }
