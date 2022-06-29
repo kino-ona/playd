@@ -10,8 +10,9 @@
     padding: 135px 25px 0;
 
     &__title {
-      position: absolute;
+      position: relative;
       z-index: 999;
+      opacity: 1;
     }
 
     &__title::before {
@@ -30,13 +31,14 @@
   
   .visual {
     position: relative;
-    margin-top: 244px;
+    margin-top: 144px;
     margin-bottom: 110px;
     padding: 0 70px;
     transition: all 1s cubic-bezier(.455,.03,.515,.955);
    
     &__wrap {
       position: relative;
+      width: 165px;
       margin-left: 22px;
       margin-bottom: 11px;
       transition: transform 0.3s ease, opacity 2s ease;
@@ -62,7 +64,7 @@
       background-position: center center;
       background-size: cover;
       border-radius: 5px;
-      transition: all 1s cubic-bezier(.455,.03,.515,.955);
+      transition: height 1s cubic-bezier(.455,.03,.515,.955);
 
     }
 
@@ -80,6 +82,7 @@
     }
 
     &__description {
+      width: 240px;
       font-size: 14px;
       letter-spacing: -1.0px;
       @include FontDL;
@@ -88,6 +91,7 @@
     &__box {
       display: none;
       transform: translate(0, 100%);
+      background: #ffffff;
     }
 
     &__type {
@@ -130,10 +134,11 @@
   .visual--active {
     .visual {
       margin-top: 0;
+      margin-bottom: 0;
       padding: 0;
     }
     .sub-header__title {
-      display: none;
+      opacity: 0;
     }
 
     .visual__wrap {
@@ -145,13 +150,15 @@
 
     .visual__box {
       display: block;
+      position: absolute;
+      margin-top: -242px;
       transform: translateY(0);
       transition: .85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .visual__image {
       height: 360px;
-      margin: 0 -25px;
+      margin: 240px -25px 0;
       border-radius: 0;
     }
   }
@@ -176,96 +183,26 @@
     }
 
     &--history {
-      margin: 0 0 0 25px;
+      margin: 0;
+      padding: 50px 0 0 25px;
+      background: #FAFAFA;
     }
 
-    &--goal {
-      position: relative;
-      background-color: #FAFAFA;
-      padding: 42px 0 57px;
-    }
-
-    &--goal::before {
-      position:absolute;
-      top:0;
-      left: -25px;
-      width: 25px;
-      height: 100%;
-      background-color: #FAFAFA;
-      content: '';
-    }
-
-    &--goal::after {
-      position:absolute;
-      top:0;
-      right: -25px;
-      width: 25px;
-      height: 100%;
-      background-color: #FAFAFA;
-      content: '';
-    }
-
-    &--goal img {
-      margin-top: 20px;
-      margin-bottom: 40px;
-    }
-
-    &--goal a {
-      display: block;
-      width: 100%;
-      height: 50px;
-      background: #000000;
-      color: #ffffff;
-      font-size: 16px;
-      line-height: 50px;
-      border-radius: 4px;
-      text-align: center;
-      @include FontBD;
-    }
-
-    &--goal a::after {
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      margin-left: 10px;
-      background: url('../../../assets/images/m/sub/icon_download_line.png') center center no-repeat;
-      background-size: contain;
-      vertical-align: middle;
-      margin-top: -5px;
-      content: '';
-    }
-
-    &--description  {
-      position: relative;
+    &--do {
       margin-top: 50px;
     }
 
-    &--description img {
-      position: absolute;
-      left: 0;
-      width: 106px;
-      margin-top: 30px;
+    &--client {
+      margin-top: 50px;
     }
 
-    &--description .sub-content__wrap {
-      margin-top: 30px;
-      margin-left: 130px;
-    }
-
-    &--description .sub-content__wrap p {
+    &--client img {
       margin-top: 20px;
-      color: #666666;
-      font-size: 14px;
-      @include FontDL;
+      margin-bottom: 75px;
     }
 
-    &--description .sub-content__wrap p span {
-      display: block;
-      color: #000000;
-      font-size: 14px;
-      @include FontBD;
-    }
   }
+
 
   .sub-slide {
     margin-top: 40px;
@@ -393,10 +330,55 @@
     }
 
     &__type {
+      margin-bottom: 30px;
       color: #999999;
       font-size: 14px;
+      line-height: 1 !important;
       text-align: left !important;
       @include FontDL;
+    }
+  }
+
+  .sub-content-list {
+    margin-top: 40px;
+
+    &__item {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      padding-top: 100%;
+      background-position: center center;
+      background-size: contain;
+
+    }
+
+    &__wrap {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      z-index: 9;
+    }
+
+    h4 {
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      @include FontBasicSans; 
+    }
+
+    p {
+      margin-top: 10px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 200;
+      @include FontBasicSans; 
+    }
+
+    .sub-content-list__item + .sub-content-list__item {
+      h4, p {
+        color: #000000
+      }
     }
   }
 }
