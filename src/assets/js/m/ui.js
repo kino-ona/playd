@@ -124,6 +124,11 @@
 				subCommonFunction();
 			break;
 
+			case 'personal':
+				headerTitle.innerHTML = '개인정보처리방침';
+				subCommonFunction();
+			break;
+
 			default: 
 				alert('페이지 오류');
 		}
@@ -953,6 +958,19 @@
 				console.log(stateBarWidth/6 * swiper.realIndex);
 			})
 		}
+	}
+
+	if(bodyClass === 'personal') {
+		const categoryItem = document.querySelectorAll('.term_anchor li a');
+		categoryItem.forEach(item => {
+			item.addEventListener('click', (event) => {
+				event.preventDefault();
+				console.log(item.dataset.content)
+				window.scrollTo({top:	document.querySelector('.term_anchor__item--' + item.dataset.content).offsetTop -50, behavior:'smooth'});
+			})
+
+		})
+		
 	}
 
 }) ()

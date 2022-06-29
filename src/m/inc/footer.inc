@@ -55,7 +55,7 @@
 							(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인 정보를 수집 시에 동의 받은 개인 정보
 							보유, 이용 기간 동안 보관 및 이용됩니다.
 						</p>
-						<!--220627 수정 end-->
+						<!--220627 수정 end -->
 					</form>
 				</div>
 				<button type="submit" class="button layer__button form-submit--wide">리포트 다운로드</button>
@@ -92,8 +92,10 @@
 					<p><a href="#">오시는 길</a></p>
 					<p class="footer__line--last"><a href="#">무료 광고 진단</a></p>
 				</div>
-				<div class="footer__wrap--line"><p class="footer__line--last"><a href="#" class="font--bd ">개인 정보처리 방침</a></p></div>
-			</ul>
+				<!--220629 수정-->
+				<div class="footer__wrap--line"><p class="footer__line--last"><a href="./personal.html" class="font--bd ">개인 정보처리 방침</a></p></div>
+			</div>
+				<!--220629 수정-->
 			<nav class="footer__nav--right">
 				<a href="#" class=""><img src="../assets/images/m/common/logo_naver.png" /><span class="a11y">네이버</span></a>
 				<a href="#" class=""><img src="../assets/images/m/common/logo_instagram.png" /><span class="a11y">인스타그램</span></a>
