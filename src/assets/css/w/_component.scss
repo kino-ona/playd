@@ -1207,6 +1207,18 @@ input[type="file"] {
 	position: relative;
 	cursor: pointer;
 
+	&::before {
+		position: absolute;
+		top: 22.5px;
+		right: 30px;
+		width: 10px;
+		height: 10px;
+		transform: rotate(45deg);
+		border-right: 1.5px solid #000000;
+		border-bottom: 1.5px solid #000000;
+		content: '';
+	}
+
 	&__title {
 		height: 60px;
 		padding: 17px 25px;
@@ -1216,18 +1228,6 @@ input[type="file"] {
 		font-size: 18px;
 		color: #666666;
 		@include FontDL;
-
-		&::before {
-			position: absolute;
-			top: 22.5px;
-			right: 30px;
-			width: 10px;
-			height: 10px;
-			transform: rotate(45deg);
-			border-right: 1.5px solid #000000;
-			border-bottom: 1.5px solid #000000;
-			content: '';
-		}
 	}
 
 	&__text {	
@@ -1261,7 +1261,7 @@ input[type="file"] {
 		border-bottom-left-radius: 0;
 	}
 
-	&--active &__title::before {
+	&--active::before {
 		top: 26.5px;
 		transform: rotate(225deg);
 	}
@@ -1279,7 +1279,6 @@ input[type="file"] {
 
 .list-select.drop-box {
 	margin-right: -25px;
-	padding: 15px 60px 15px 25px;
 	border: 1px solid transparent;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -1288,7 +1287,7 @@ input[type="file"] {
 	.list-select__title {
 		height: auto;
     width: 65px;
-		padding: 0;
+		padding: 15px 60px 15px 25px;
     box-sizing: content-box;
 		border: 0;
     border-width: 1px 1px 0 1px;
