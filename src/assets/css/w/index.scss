@@ -186,21 +186,23 @@ $elemT: 150px;
 
     &__info {
 			opacity: 0;
-
       position: absolute;
       right: calc(100% + 45px);
       bottom: 8px;
       transform: translateY(-50%);
+      @include FontBasicSans;
       font-size: 26px;
-      @include FontBD;
+      line-height: 26px;
+      font-weight: 600;
     }
 
     &__info--unit {
       position: absolute;
-      right: -20px;
-      bottom: 2px;
-      font-size: 20px;
+      right: -22.5px;
+      bottom: 1.5px;
       @include FontDL;
+      font-size: 20px;
+      line-height: 26px;
     }
 
     &__bar {

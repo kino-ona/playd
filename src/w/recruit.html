@@ -22,13 +22,13 @@
     <div class="sub-header">
       <h2 class="sub-header__title"><span class="sub-header__label">채용</span>디지털 마케팅 시장에서 <br>함께 <strong>성장할 플레이어</strong>를 기다립니다.</h2>
       <div class="sub-tabs">
-        <a href="#" class="sub-tabs__item sub-tabs__item--active">상시채용</a>
+        <a href="#" class="sub-tabs__item">상시채용</a>
         <a href="#" class="sub-tabs__item">채용공고</a>
-        <a href="#" class="sub-tabs__item">채용프로세스</a>
+        <a href="#" class="sub-tabs__item sub-tabs__item--active">채용프로세스</a>
       </div>
     </div>
 
-    <div class="sub-container sub-container--located" data-content="상시채용">
+    <div class="sub-container" data-content="상시채용">
       <div class="accordian">
         <div class="accordian__item">
           <div class="accordian__title"><a href="#">퍼포먼스마케팅AE</a></div>
@@ -124,10 +124,11 @@
           <div class="search-item">
             <div class="drop-box">
               <div class="drop-box__title">
-                <p>전체 직군</p>
+                <p class="drop-box__text">전체 직군</p> <!-- 20220623 //-->
               </div>
               <div class="drop-box__wrap">
                 <div>
+                  <p><a href="#">전체</a></p> <!-- 20220623 //-->
                   <p><a href="#">마케팅</a></p>
                   <p><a href="#">영업</a></p>
                   <p><a href="#">개발</a></p>
@@ -140,10 +141,11 @@
           <div class="search-item">
             <div class="drop-box">
               <div class="drop-box__title">
-                <p>경력사항</p>
+                <p class="drop-box__text">경력사항</p> <!-- 20220623 //-->
               </div>
               <div class="drop-box__wrap">
                 <div>
+                  <p><a href="#">전체</a></p> <!-- 20220623 //-->
                   <p><a href="#">신입</a></p>
                   <p><a href="#">경력</a></p>
                 </div>  
@@ -153,10 +155,11 @@
           <div class="search-item">
             <div class="drop-box">
               <div class="drop-box__title">
-                <p>고용 형태</p>
+                <p class="drop-box__text">고용 형태</p> <!-- 20220623 //-->
               </div>
               <div class="drop-box__wrap">
                 <div>
+                  <p><a href="#">전체</a></p> <!-- 20220623 //-->
                   <p><a href="#">정규직</a></p>
                   <p><a href="#">계약직</a></p>
                 </div>  
@@ -233,40 +236,31 @@
       </div>
     </div>
 
-    <div class="sub-container" data-content="채용프로세스">
+    <div class="sub-container sub-container--located" data-content="채용프로세스">
+      <!-- 20220623 s -->
       <div class="diagram">
-        <p class="diagram__title">신입</p>
+        <p class="diagram__title"><strong>신입</strong></p>
         <ol class="diagram__list">
-          <li class="diagram__phase"><span class="phase">01</span><span class="phase__title">지원서 접수</span></li>
-          <li class="diagram__phase"><span class="phase">02</span><span class="phase__title">서류 검토</span></li>
-          <li class="diagram__phase"><span class="phase">03</span><span class="phase__title">1차 면접</span></li>
-          <li class="diagram__phase"><span class="phase">04</span><span class="phase__title">2차 면접</span></li>
-          <li class="diagram__phase"><span class="phase">05</span><span class="phase__title">인턴 근무 및 최종평가 <br>(2개월)</span></li>
-          <li class="diagram__phase diagram__phase--final"><span class="phase">06</span><strong class="phase__title phase__title--final">최종합격</strong></li>
+          <li class="diagram__phase" data-phase="1"><span class="phase">01</span><span class="phase__title">지원서 접수</span></li>
+          <li class="diagram__phase" data-phase="2"><span class="phase">02</span><span class="phase__title">서류 검토</span></li>
+          <li class="diagram__phase" data-phase="3"><span class="phase">03</span><span class="phase__title">1차 면접</span></li>
+          <li class="diagram__phase" data-phase="4"><span class="phase">04</span><span class="phase__title">2차 면접</span></li>
+          <li class="diagram__phase" data-phase="5"><span class="phase">05</span><span class="phase__title">인턴십<br>(2개월)</span></li>
+          <li class="diagram__phase" data-phase="6"><span class="phase">06</span><span class="phase__title"><strong>최종합격<br>(수습기간 3개월)</strong></span></li>
         </ol>
       </div>
       <div class="diagram">
-        <p class="diagram__title">신입<span>(성과제)</span></p>
+        <p class="diagram__title"><strong>경력</strong><br>(정규직)</p>
         <ol class="diagram__list">
-          <li class="diagram__phase"><span class="phase">01</span><span class="phase__title">지원서 접수</span></li>
-          <li class="diagram__phase"><span class="phase">02</span><span class="phase__title">서류 검토</span></li>
-          <li class="diagram__phase"><span class="phase">03</span><span class="phase__title">1차 면접</span></li>
-          <li class="diagram__phase"><span class="phase">04</span><span class="phase__title">2차 면접</span></li>
-          <li class="diagram__phase diagram__phase--mid"><span class="phase">05</span><span class="phase__title phase__title--mid">인턴 근무 및 최종평가 <br>(2개월)<i>계약직 근무 후 <br>근무 평가</i></span></li>
-          <li class="diagram__phase diagram__phase--final"><span class="phase">06</span><strong class="phase__title phase__title--final">최종합격</strong></li>
+          <li class="diagram__phase" data-phase="1"><span class="phase">01</span><span class="phase__title">지원서 접수</span></li>
+          <li class="diagram__phase" data-phase="2"><span class="phase">02</span><span class="phase__title">서류 검토</span></li>
+          <li class="diagram__phase" data-phase="3"><span class="phase">03</span><span class="phase__title">1차 면접</span></li>
+          <li class="diagram__phase" data-phase="4"><span class="phase">04</span><span class="phase__title">2차 면접</span></li>
+          <li class="diagram__phase" data-phase="5"><span class="phase">05</span><span class="phase__title">처후협의</span></li>
+          <li class="diagram__phase" data-phase="6"><span class="phase">06</span><span class="phase__title"><strong>최종합격<br>(수습기간 3개월)</strong></span></li>
         </ol>
       </div>
-      <div class="diagram">
-        <p class="diagram__title">경력<span>(정규직)</span></p>
-        <ol class="diagram__list">
-          <li class="diagram__phase"><span class="phase">01</span><span class="phase__title">지원서 접수</span></li>
-          <li class="diagram__phase"><span class="phase">02</span><span class="phase__title">서류 검토</span></li>
-          <li class="diagram__phase"><span class="phase">03</span><span class="phase__title">1차 면접</span></li>
-          <li class="diagram__phase"><span class="phase">04</span><span class="phase__title">2차 면접</span></li>
-          <li class="diagram__phase"><span class="phase">05</span><span class="phase__title">인턴 근무 및 최종평가 <br>(2개월)</span></li>
-          <li class="diagram__phase diagram__phase--final"><span class="phase">06</span><strong class="phase__title phase__title--final">최종합격</strong></li>
-        </ol>
-      </div>
+      <!--// 20220623 e -->
       <div class="button__wrap">
         <a href="#" type="button" class="button button__large button__filled-black">입사지원</a> <!-- 20220617 //-->
       </div>
