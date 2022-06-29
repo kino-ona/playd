@@ -248,7 +248,8 @@ window.addEventListener('load', () => {
 	dropBox.forEach((item) => {
 		let closestTarget = item.closest('.drop-box');
 
-		document.body.addEventListener('click', () => {
+		document.body.addEventListener('click', (event) => {
+			console.log(event.target)
 			if (item.classList.contains('drop-box--active')) { item.classList.remove('drop-box--active'); }
 		}, true);
 

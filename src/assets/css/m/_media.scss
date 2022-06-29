@@ -14,8 +14,8 @@
     margin: 0 25px;
 
     &__inner {
-      margin-top: -24px;
-      padding: 25px;
+      margin-top: -60px;
+      padding: 60px 25px 1px;
       border-radius: 6px;
       background-color: #FAFAFA;
       z-index: -1;
@@ -24,7 +24,7 @@
         flex-basis: 100%;
         flex-grow: 0;
         margin-top: 10px;
-        padding: 25px;
+        padding: 30px 25px 45px;
         background: #ffffff;
         border-radius: 6px;
       }
@@ -36,6 +36,8 @@
       color: #000000;
       font-size: 14px;
       letter-spacing: -.2px;
+      text-align: center;
+      @include FontMD;
     }
 
     &__wrap {
@@ -55,6 +57,7 @@
     &__top {
       position: relative;
       margin: 0 auto;
+      padding-bottom: 40px;
       text-align: center;
       color: #ffffff;
       font-size: 14px;
@@ -67,6 +70,19 @@
         width: 1px;
         height: 20px;
         border-right: 1px dotted #DDDDDD;
+        content: '';
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 30px;
+        height: 40px;
+        margin-left: -15px;
+        background: url('../../../assets/images/m/sub/icon_arrow_up_down.png') 0 0 no-repeat;
+        background-size: contain;
         content: '';
       }
 
@@ -88,6 +104,30 @@
         background-color: #EA2126;
         border-radius: 25px;
         @include FontBD;
+      }
+    }
+
+    &__bottom {
+      position: relative;
+      padding: 15px;
+      margin: 40px 25px 0;
+      color: #ffffff;
+      border-radius: 50px;
+      background-color: #999999;
+      text-align: center;
+      @include FontBD;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        width: 30px;
+        height: 40px;
+        margin-left: -15px;
+        background: url('../../../assets/images/m/sub/icon_arrow_up_down.png') 0 0 no-repeat;
+        background-size: contain;
+        content: '';
       }
     }
 
@@ -120,6 +160,11 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #FAFAFA;
+
+    p {
+      font-size: 14px;
+      margin: 5px 25px 30px;
+    }
 
     .sub-content__title {
       margin: 0 25px;

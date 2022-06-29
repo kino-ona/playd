@@ -17,7 +17,7 @@
 				<div class="gnb__item">
 					<a href="/" role="button" class="gnb__list--link font--bd">사업영역</a>
 					<div class="gnb__wrap">
-						<p><a href="./campaign.html">캠페인전략</a></p>
+						<p><a href="./campaign.html">캠페인 전략</a></p><!--220627 수정-->
 						<p><a href="./media.html">미디어전략</a></p>
 						<p><a href="./creative.html">크리에이티브</a></p>
 						<p><a href="./portfolio.html">포트폴리오</a></p>
@@ -35,7 +35,7 @@
 					<div class="gnb__wrap">
 						<p><a href="./letter.html">뉴스레터</a></p>
 						<p><a href="./report.html">리포트</a></p>
-						<p><a href="./column.html">광고컬럼</a></p>
+						<p><a href="./column.html">광고 칼럼</a></p><!--220627 수정-->
 					</div>
 				</div>
 				<div class="gnb__item">
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 				<div class="gnb__item">
-					<a href="/" role="button" class="gnb__list--link font--bd">인재채용</a>
+					<a href="/" role="button" class="gnb__list--link font--bd">인재 채용</a><!--220627 수정-->
 					<div class="gnb__wrap">
 						<p><a href="./recruit.html">채용</a></p>
 						<p><a href="./welfare.html">복리후생</a></p>

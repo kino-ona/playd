@@ -46,14 +46,16 @@
 						<div class="sub-checkboxs">
 							<label for="sub-checkbox--personal" class="sub-checkbox__label">
 								<input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input" checked>
-								<span>개인정보 수집 및 이용동의</span>
+								<span>개인 정보 수집 및 이용에 동의합니다.</span>	<!--220627 수정 -->
 							</label>
 						</div>
-						<p class="form-description">
+						<!--220627 수정 start-->
+						<p class="form-description"> 
 							입력하신 이름, 직업, 이메일 주소, 직급, 회사명
-							(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인정보를 수집시에 동의 받은 개인정보 
-							보유,이용기간 동안 보관 및 이용됩니다.
+							(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인 정보를 수집 시에 동의 받은 개인 정보
+							보유, 이용 기간 동안 보관 및 이용됩니다.
 						</p>
+						<!--220627 수정 end-->
 					</form>
 				</div>
 				<button type="submit" class="button layer__button form-submit--wide">리포트 다운로드</button>
@@ -124,9 +126,9 @@
 <script src="@@webroot/assets/js/m/countUp.js"></script>
 <script src="@@webroot/assets/js/m/swiper.min.js"></script>
 <script src="@@webroot/assets/js/m/ui.js"></script>
-<script src="@@webroot/assets/js/jquery-1.12.4.min.js"></script>
 
-<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="@@webroot/assets/js/jquery-1.12.4.min.js"></script>
+<script src="@@webroot/assets/js/jquery-ui-1.13.1.js"></script>
 <script src="@@webroot/assets/js/datepicker.js"></script>
 
 <!--220627 수정 end-->

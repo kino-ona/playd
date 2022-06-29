@@ -226,6 +226,10 @@
       @include FontMD
     }
 
+    .declaration-list__sub-title + .declaration-list__sub-list {
+      margin-top: 10px;
+    }
+
     &__sub-list {
       padding-top: 15px;
       padding-left: 11px;

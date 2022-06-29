@@ -1,42 +1,158 @@
 .about {
     background: #ffffff;
 
-    .sub-container {
-      margin: 40px 0 75px;
+  .sub-container {
+    margin: 40px 0 75px;
+  }
+
+  .sub-header {
+    position: relative;
+    padding: 135px 25px 0;
+
+    &__title {
+      position: absolute;
+      z-index: 999;
     }
+
+    &__title::before {
+      display: inline-block;
+      position: absolute;
+      left: -50px;
+      background-color: #EA2126;
+      width: 80px;
+      height: 50px;
+      margin-top: -26px;
+      border-radius: 40px;
+      z-index: -1;
+      content: '';
+    }
+  }
   
   .visual {
     position: relative;
-    height: 740px;
-    margin: 40px -25px 0;
-    background-position: center center;
-    background-size: cover;
-    color: #ffffff;
-
+    margin-top: 244px;
+    margin-bottom: 110px;
+    padding: 0 70px;
+    transition: all 1s cubic-bezier(.455,.03,.515,.955);
+   
     &__wrap {
-      position: absolute;
-      bottom: 65px;
-      left: 25px;
+      position: relative;
+      margin-left: 22px;
+      margin-bottom: 11px;
+      transition: transform 0.3s ease, opacity 2s ease;
+
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        left: -22px;
+        width: 2px;
+        height: 100%;
+        background-color: #EA2126;
+        content: '';
+      }
     }
 
-    &__type {
-      font-size: 14px;
-      font-weight: 600;
-      @include FontBasicSans; 
+    &__image {
+      display: block;
+      height: 225px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-origin: padding-box;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 5px;
+      transition: all 1s cubic-bezier(.455,.03,.515,.955);
+
     }
 
     &__title {
+      font-size: 12px;
+      font-weight: bold;
+      @include FontBasicSans; 
+    }
+
+    &__sub-title {
       margin-top: 5px;
+      margin-bottom: 10px;
       font-size: 20px;
-      line-height: 30px;
-      @include FontBD; 
+      @include FontBD;
     }
 
     &__description {
-      margin-top: 20px;
       font-size: 14px;
-      letter-spacing: -.6px;
+      letter-spacing: -1.0px;
       @include FontDL;
+    }
+
+    &__box {
+      display: none;
+      transform: translate(0, 100%);
+    }
+
+    &__type {
+      color: #EA2126;
+      font-size: 14px;
+      @include FontBD;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      width: 220px;
+      height: 50px;
+      margin-top: 30px;
+      margin-bottom: -30px;
+      padding-right: 20px;
+      text-align: center;
+      line-height: 50px;
+      color: #ffffff;
+      background-color: #EA2126;
+      border-radius: 4px;
+      box-sizing: border-box;
+      @include FontBD;
+    }
+
+    a::after {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      width: 25px;
+      height: 25px;
+      margin-top: -12px;
+      background: url('../../../assets/images/m/sub/icon_download_line.png') 0 0 no-repeat;
+      background-size: contain;
+      content: '';
+    }
+  }
+
+  .visual--active {
+    .visual {
+      margin-top: 0;
+      padding: 0;
+    }
+    .sub-header__title {
+      display: none;
+    }
+
+    .visual__wrap {
+      position: absolute;
+      transform: translateY(-200%);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity .3s ease;
+    }
+
+    .visual__box {
+      display: block;
+      transform: translateY(0);
+      transition: .85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .visual__image {
+      height: 360px;
+      margin: 0 -25px;
+      border-radius: 0;
     }
   }
 
@@ -47,7 +163,8 @@
     &__type {
       color: #EA2126;
       font-size: 14px;
-      @include FontMD;
+      font-weight: bold;
+      @include FontBasicSans;
     }
 
     &__title {
@@ -245,5 +362,41 @@
   .swiper-slide-active .sub-slide__year {
     color: #EA2126;
     font-weight: bold;
+  }
+
+  .content-list {
+    margin: 40px -10px -10px;
+
+    li {
+      display: inline-block;
+      width: calc(50% - 22px);
+      height: 110px;
+      margin: 10px;
+      padding: 15px;
+      background-color: #FAFAFA;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    p {
+      text-align: right;
+      line-height: 40px;
+    }
+    span {
+      display: inline-block;
+      padding-right: 5px;
+      color: #EA2126;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1;
+      @include FontBasicSans; 
+    }
+
+    &__type {
+      color: #999999;
+      font-size: 14px;
+      text-align: left !important;
+      @include FontDL;
+    }
   }
 }

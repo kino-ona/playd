@@ -8,8 +8,7 @@
   }
 
   .sub-tabs {
-    height: 40px;
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .sub-tabs__wrap {
@@ -103,8 +102,7 @@
     padding-top: 15px;
   }
 
-  .tab-fixed {
-    .search-list {
+  .tab-fixed.sub-tabs {
       position: fixed;
       top: 55px;
       left: 0;
@@ -113,10 +111,6 @@
       margin: 0;
       z-index: 9;
       background-color: #ffffff;
-    }
-    .sub-content {
-      padding-top: 70px;
-    }
   }
 }
 

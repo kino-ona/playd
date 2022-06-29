@@ -65,12 +65,12 @@
 			break;
 
 			case 'column':
-				headerTitle.innerHTML = '광고칼럼';
+				headerTitle.innerHTML = '광고 칼럼';
 				subCommonFunction();
 			break;
 
 			case 'column-detail':
-				headerTitle.innerHTML = '광고칼럼';
+				headerTitle.innerHTML = '광고 칼럼';
 				subCommonFunction();
 			break;
 
@@ -100,7 +100,7 @@
 			break;
 
 			case 'campaign':
-				headerTitle.innerHTML = '캠페인전략';
+				headerTitle.innerHTML = '캠페인 전략';
 				subCommonFunction();
 			break;
 
@@ -517,14 +517,16 @@
 			layerClose('newsLetter');
 		})
 
-		const tabOffsetTop = document.querySelector('.search-list').offsetTop - (document.querySelector('.search-list').clientHeight + 13);
+		const tabOffsetTop = document.querySelector('.sub-tabs').offsetTop - (document.querySelector('.sub-tabs').clientHeight + 13);
 		window.addEventListener('scroll', () => {
 			let sct = window.pageYOffset;
 		
 			if(sct > tabOffsetTop) {
-				document.querySelector('.wrap').classList.add('tab-fixed');
+				document.querySelector('.sub-tabs').classList.add('tab-fixed');
+				document.querySelector('.sub-content').style.marginTop = "70px";
 			}else {
-				document.querySelector('.wrap').classList.remove('tab-fixed');
+				document.querySelector('.sub-tabs').classList.remove('tab-fixed');
+				document.querySelector('.sub-content').style.marginTop = "0";
 			}
 		})
 	}
@@ -912,6 +914,24 @@
 	}
 
 	if(bodyClass === 'about') {
+
+		window.addEventListener('scroll', () => {
+			let sct = window.pageYOffset;
+			let threshold = 10;
+
+			if(sct > 10) {
+				document.querySelector('.sub-tab-content').classList.add('visual--active')
+				document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/m/sub/img_about_visual_color.png')";
+
+			}
+
+			if(sct == 0) {
+				document.querySelector('.sub-tab-content').classList.remove('visual--active')
+				document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/m/sub/img_about_visual.png')";
+			}
+			
+		})
+
 		if(document.querySelectorAll('.sub-slide .swiper-slide').length > 1) {
 			const stateBar = document.querySelector('.state-bar');
 			const stateBarFill = document.querySelector('.state-bar--fill');
@@ -919,10 +939,6 @@
 
 			const swiper = new Swiper('.sub-slide ', {
 				slidesPerView: 1.05,
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
 				observer: true,
 				observeParents: true,
 				on:{
