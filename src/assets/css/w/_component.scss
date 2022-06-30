@@ -652,7 +652,7 @@ input[type="file"] {
 }
 
 .sub-content__warning {
-	margin-top: 90px;
+	margin-top: 130px;
 	margin-bottom: 75px;
 	text-align: center;
 
@@ -1980,11 +1980,7 @@ input[type="file"] {
 			top: 0;
 			width: 30px;
 			height: 30px;
-			opacity: .6;
-
-			&:hover {
-				opacity: 1;
-			}
+			opacity: 1;
 
 			&::before, &::after {
 				height: 24px;

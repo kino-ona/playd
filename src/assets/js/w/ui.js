@@ -825,21 +825,23 @@ if(bodyClass) {
 
 		case 'about':{
 
+			const header = document.querySelector('.sub-header');
+			const targetImage = document.querySelector('.visual__image');
+			const targetBox = document.querySelector('.visual__box');
+
 			window.addEventListener('scroll', () => {
 				let sct = window.pageYOffset;
-				let threshold = 10;
 	
-				if(sct > 10) {
-					document.querySelector('.sub-header').classList.add('visual--active')
-					document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/w/sub/img_about_visual_color.png')";
-	
+				if(sct > 50) {
+					header.classList.add('approached');
+					targetImage.style.transformOrigin = `bottom left`;
+					targetBox.style.transitionDelay = `0.5s`;
 				}
-	
-				if(sct == 0) {
-					document.querySelector('.sub-header').classList.remove('visual--active')
-					document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/w/sub/img_about_visual.png')";
+				if(sct === 0) {
+					header.classList.remove('approached');
+					targetImage.style.transformOrigin = `top left`;
+					targetBox.style.transitionDelay = `0s`;
 				}
-				
 			})
 	
 			if(document.querySelectorAll('.sub-slide .swiper-slide').length > 1) {
