@@ -2718,6 +2718,70 @@
       @include FontDL;
     }
   }
+
+  .sub-link {
+    position: relative;
+    padding-left: 91%;
+    font-size: 14px;
+    
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 105px;
+      height: 1px;
+      background-color: #000000;
+      content:'';
+    }
+  }
+
+  .layer__head .content__title {
+    border-bottom: none;
+  }
+
+  .layer__body  {
+    font-size: 14px;
+
+    h3 {
+      font-size: 15px;
+      padding-bottom: 20px;
+      line-height: 1.2;
+      @include FontBD;
+    }
+
+    h4 {
+      padding-bottom: 13px;
+      @include FontMD;
+    }
+
+    .content__title {
+      font-size: 16px;
+    }
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    ul > li > ul > li {
+      padding-bottom: 6px;
+      padding-left: 24px;
+    }
+
+    .rule-content {
+      margin-bottom: 40px;
+    }
+
+    .rule {
+      margin-bottom: 40px;
+    }
+
+    .layer__button {
+      margin-top: 40px;
+      max-width: 93%;
+    }
+  }
 }
 
 /* AWARDS */

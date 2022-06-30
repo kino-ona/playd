@@ -256,6 +256,67 @@
     border-bottom: 1px solid #000000;
   }
 
+  .layer__content {
+    padding: 0 25px 0;
+  }
+
+  .layer__wrap {
+    font-size: 14px;
+
+    h3 {
+      font-size: 15px;
+      padding-bottom: 10px;
+      line-height: 1.2;
+      @include FontBD;
+    }
+
+    h4 {
+      padding-bottom: 6.5px;
+      @include FontMD;
+    }
+
+    .content__title {
+      font-size: 16px;
+    }
+
+    p {
+      padding-bottom: 10px;
+    }
+
+    ul > li > ul > li {
+      padding-bottom: 3px;
+      padding-left: 12px;
+    }
+
+    .rule-content {
+      margin-bottom: 20px;
+    }
+
+    .rule {
+      margin-bottom: 20px;
+    }
+  }
+
+  .layer__content {
+    overflow: scroll;
+    height: 280px;
+  }
+
+  .layer__head {
+    padding: 31px 25px 18px;
+  }
+
+  .layer__button {
+    width: calc(100% - 50px);
+    height: 40px;
+    margin: 20px 25px;
+    line-height: 40px;
+    border-radius: 4px;
+    background-color: #EA2126;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
 }
 
 .ir-detail { 

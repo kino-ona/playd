@@ -811,6 +811,9 @@
 
 	if(bodyClass === 'ir') {
 		const tableTabLi = 	document.querySelectorAll('.table-tab ul li');
+		const formSubmitOpen = document.querySelector('.sub-link');
+		const formSubmitClose = document.querySelector('.layer__close');
+		const formSubmitCloseCorfirm = document.querySelector('.layer__button');
 
 		document.querySelector('.sub-container--announcement').classList.add('content--active')
 		
@@ -848,6 +851,21 @@
 
 			})
 		})
+
+
+		formSubmitOpen.addEventListener('click' , (event) => {
+			event.preventDefault();
+			layerOpen('DisclosureInformation');
+		})
+
+		formSubmitClose.addEventListener('click' , () => {
+			layerClose('DisclosureInformation');
+		})
+
+		formSubmitCloseCorfirm.addEventListener('click' , () => {
+			layerClose('DisclosureInformation');
+		})
+
 	}
 
 	if(bodyClass === 'ir-detail') {

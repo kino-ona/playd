@@ -804,6 +804,24 @@ if(bodyClass) {
 		}
 		break;
 
+		case 'ir': {
+			const formSubmitOpen = document.querySelector('.sub-link');
+			const formSubmitClose = document.querySelector('.layer__close');
+			const formSubmitCloseCorfirm = document.querySelector('.layer__button');
+			
+			formSubmitOpen.addEventListener('click' , (event) => {
+				event.preventDefault();
+				layerOpen('DisclosureInformation');
+			})
+	
+			formSubmitClose.addEventListener('click' , () => {
+				layerClose('DisclosureInformation');
+			})
+	
+			formSubmitCloseCorfirm.addEventListener('click' , () => {
+				layerClose('DisclosureInformation');
+			})
+		}
 
 		case 'about':{
 
