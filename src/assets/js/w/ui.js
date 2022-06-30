@@ -804,6 +804,50 @@ if(bodyClass) {
 		}
 		break;
 
+
+		case 'about':{
+
+			window.addEventListener('scroll', () => {
+				let sct = window.pageYOffset;
+				let threshold = 10;
+	
+				if(sct > 10) {
+					document.querySelector('.sub-header').classList.add('visual--active')
+					document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/w/sub/img_about_visual_color.png')";
+	
+				}
+	
+				if(sct == 0) {
+					document.querySelector('.sub-header').classList.remove('visual--active')
+					document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/w/sub/img_about_visual.png')";
+				}
+				
+			})
+	
+			if(document.querySelectorAll('.sub-slide .swiper-slide').length > 1) {
+				const stateBar = document.querySelector('.state-bar');
+				const stateBarFill = document.querySelector('.state-bar--fill');
+				let stateBarWidth = stateBar.clientWidth;
+	
+				const swiper = new Swiper('.sub-slide ', {
+					slidesPerView: 2.15,
+					spaceBetween: 160,
+					observer: true,
+					observeParents: true,
+					on:{
+						init:function() {
+							stateBarFill.style.width = stateBarWidth/6 * 2 + 'px';
+						}
+					}
+				});
+	
+				swiper.on('slideChange', function(e) {
+					stateBarFill.style.width = stateBarWidth/6 * (swiper.realIndex + 2) + 'px';
+				})
+			}
+		}
+		break;
+
 		default: break;
 	}
 }
