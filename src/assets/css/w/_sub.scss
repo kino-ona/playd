@@ -4437,14 +4437,14 @@
   .swiper-button-next { background: url('../../../assets/images/w/sub/icon_about_next.png') center center no-repeat; }
 
   .state-bar {
-    width: auto;
+    width: 180%;
     height: 4px;
     position: relative;
     top: 95px;
     background: #DDDDDD;
 
     &--fill {
-      width: 0;
+      width: 10%;
       height: 4px;
       background: #EA2126;
       transition: .3s all ease-in-out;
@@ -4456,7 +4456,7 @@
   }
 
   .swiper-slide-prev {
-    opacity: .2;
+    opacity: 0;
   }
 
   .swiper-slide-active .sub-slide__year,

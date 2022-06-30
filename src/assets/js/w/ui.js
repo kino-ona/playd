@@ -851,18 +851,19 @@ if(bodyClass) {
 	
 				const swiper = new Swiper('.sub-slide ', {
 					slidesPerView: 2.15,
-					spaceBetween: 160,
+					spaceBetween: 0,
 					observer: true,
 					observeParents: true,
+					loop: true,
 					on:{
 						init:function() {
-							stateBarFill.style.width = stateBarWidth/6 * 2 + 'px';
+							// stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * 2 + 'px';
 						}
 					}
 				});
 	
 				swiper.on('slideChange', function(e) {
-					stateBarFill.style.width = stateBarWidth/6 * (swiper.realIndex + 2) + 'px';
+					// stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * (swiper.realIndex + 0) + 'px';
 				})
 			}
 		}
