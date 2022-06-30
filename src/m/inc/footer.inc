@@ -65,6 +65,13 @@
 </div>
 <!--220617 end-->
 
+<!--220629 수정 start-->
+<div class="top-button">
+	<a href="/"><span class="a11y">위로가기</span></a>
+</div>
+
+<!--220629 수정 end-->
+
 
 <!--220627 수정 start-->
 
