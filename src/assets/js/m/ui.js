@@ -253,7 +253,6 @@
 //go-top-button
 	window.addEventListener('scroll', () => {
 		let sct = window.pageYOffset;
-		console.log(sct);
 
 		if(sct > 700) {
 			document.querySelector('.top-button').style.display="block";
@@ -455,6 +454,30 @@
 
 		formSubmitClose2.addEventListener('click' , () => {
 			layerClose('termAgreePrivacy');
+		})
+
+		document.querySelector('.compensation').addEventListener('click', (event) => {
+			event.preventDefault();
+			document.querySelectorAll('.sub-tabs__box p a').forEach(item => {item.classList.remove('sub-tabs__item--active')});
+			document.querySelector('.sub-tabs__box p:nth-child(2) a').classList.add('sub-tabs__item--active');
+
+			document.querySelectorAll('.sub-container').forEach(item => {item.classList.remove('content--active')})
+			document.querySelector('.sub-container--guideline').classList.add('content--active');
+
+			document.querySelectorAll('.sub-list__item').forEach(item => {item.classList.remove('sub-list__item--active')})
+			document.querySelector('.sub-list__item--chapter-6').classList.add('sub-list__item--active');
+
+			document.querySelectorAll('.sub-list-category__box p a').forEach(item => {item.classList.remove('sub-list-category__item--active')});
+			document.querySelector('.sub-list-category__box p:nth-child(6) a').classList.add('sub-list-category__item--active');
+
+			window.scrollTo({top:document.querySelector('#compensation').offsetTop -70, behavior:'smooth'});
+
+			 
+		})
+
+		document.querySelector('.more').addEventListener('click', (event) => {
+			event.preventDefault();
+			layerOpen('termAgreePrivacy');
 		})
 	}
 

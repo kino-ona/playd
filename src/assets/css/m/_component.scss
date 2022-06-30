@@ -482,7 +482,7 @@
 
   &__nav--right {
     position: absolute;
-    bottom: -40px;
+    bottom: 50px;
   }
 
   &__nav--right img {
@@ -1556,6 +1556,7 @@ form legend {
   &__list {
     float: left;
     margin: 0 30px;
+    height: 100%;
   }
 
   &__wrap {

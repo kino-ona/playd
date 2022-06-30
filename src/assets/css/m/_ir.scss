@@ -40,7 +40,7 @@
   }
 
   .notice-list {
-    margin: 0 25px 40px;
+    margin: -30px 25px 40px;
     border-top: 1px solid #000000;
 
     &__link {
@@ -103,6 +103,10 @@
 
   .sub-container {
     display: none;
+  }
+
+  .sub-container--disclosure .notice-list{
+    margin: 0 25px 40px
   }
 
   .content--active {
@@ -314,6 +318,7 @@
     margin-top: 20px;
     margin-bottom: 30px;
     padding-bottom: 50px;
+    padding-right: 25px;
     background: #FAFAFA;
     padding-left: 25px;
 
