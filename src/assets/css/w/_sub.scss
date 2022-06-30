@@ -85,6 +85,7 @@
     display: none;
   }
   .sub-container--located {
+    position: relative;
     display: block;
     transition: none;
   }
@@ -2720,10 +2721,10 @@
   }
 
   .sub-link {
-    position: relative;
-    padding-left: 91%;
+    position: absolute;
+    top: -90px;
+    right: 0;
     font-size: 14px;
-    
 
     &::after {
       display: inline-block;
