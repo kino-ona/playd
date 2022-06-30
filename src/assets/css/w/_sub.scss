@@ -4285,22 +4285,21 @@
       transition: all .8s cubic-bezier(.455,.03,.515,.955);
     }
 
-    &__image {
-      display: block;
-      width: 100vw;
+    &__image {	
+      width: 40vw;
       height: 1050px;
       position: absolute;
       left: 0;
       top: 0;
       background: {
-        position: left 75% center;
-        size: cover;
+        position: left 45% top 0%;
+        size: 140%;
         repeat: no-repeat;
         origin: padding-box;
       }
 	    -webkit-filter: grayscale(100%);
       transform-origin: top left;
-      transform: scale(0.45, 0.45);
+      // transform: scale(0.45, 0.45);
       transition: all .8s cubic-bezier(.455,.03,.515,.955), -webkit-filter .25s ease;
     }
   }
@@ -4332,12 +4331,14 @@
     }
 
     .visual__image {
+      width: 100vw;
       height: 700px;
 	    -webkit-filter: grayscale(0);
       background: {
+        size: 100%;
         position: left 0% center;
       }
-      transform: scale(1, 1);
+      // transform: scale(1, 1);
     }
   }
 
@@ -4348,31 +4349,30 @@
     margin-right: auto;
 
     &[data-content="History"] {
+      padding-bottom: 150px;
       max-width: 100vw;
       position: relative;
-      border: 1px solid red;
       background-color: #FAFAFA;
-      height: 1000px;
+      height: 1050px;
+      overflow: hidden;
 
       .sub-content__inner {
         content: '';
-        width: 100vw;
-        padding: 150px 0 0 0%;
+        // max-width: 100%;
+        max-width: 1200px;
+        overflow: visible;
+        margin-left: auto;
+        margin-right: auto;
+        // padding: 150px 0 0 18.75%;
+        padding-top: 150px;
       }
-    }
-
-    &[data-content="What We Do"] {
-      // margin-top: 150px;
-    }
-
-    &[data-content="Clients"] {
-      // margin-top: 150px;
     }
   }
 
   .sub-slide {
     margin-top: 20px;
     position: relative;
+    overflow: visible;
 
     &__year {
       margin-bottom: 67.5px;
@@ -4451,6 +4451,14 @@
     }
   }
 
+  .sub-slide__slides  {
+    transition: opacity .3s ease-in-out;
+  }
+
+  .swiper-slide-prev {
+    opacity: .2;
+  }
+
   .swiper-slide-active .sub-slide__year,
   .swiper-slide-next .sub-slide__year {
     color: #EA2126;
@@ -4515,8 +4523,12 @@
         size: cover;
         repeat: no-repeat;
       }
-      border-radius: 10px;
       color: #000000;
+      border-radius: 10px;
+
+      & + .sub-content-list__item {
+        color: #ffffff;
+      }
     }
 
     &__wrap {
