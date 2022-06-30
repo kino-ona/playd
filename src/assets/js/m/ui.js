@@ -1002,6 +1002,7 @@
 //layerPopup
 let isOpen = false;
 const layerOpen = (layerId) =>{
+	if(document.querySelector('#' + layerId) == null) return;
 	let curPos = window.pageYOffset;
 	console.log(curPos);
 	document.documentElement.classList.add("noscroll");
@@ -1021,6 +1022,7 @@ const layerOpen = (layerId) =>{
 }
 
 const layerClose = (layerId) => {
+	if(document.querySelector('#' + layerId) == null) return;
 	let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
 	document.querySelector('#' + layerId).classList.remove("is-visible");
 	document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');

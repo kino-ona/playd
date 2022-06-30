@@ -855,6 +855,7 @@ if(bodyClass) {
 //layerPopup
 let isOpen = false;
 const layerOpen = (layerId) =>{
+	if(document.querySelector('#' + layerId) == null) return;
 	let curPos = window.pageYOffset;
 	document.documentElement.classList.add("noscroll");
 	document.querySelector('#' + layerId).classList.add("is-visible");
@@ -871,6 +872,7 @@ const layerOpen = (layerId) =>{
 	}, 50);
 }
 const layerClose = (layerId) => {
+	if(document.querySelector('#' + layerId) == null) return;
 	let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
 	document.querySelector('#' + layerId).classList.remove("is-visible");
 	document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
