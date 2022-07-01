@@ -869,6 +869,17 @@ if(bodyClass) {
 		}
 		break;
 
+		case 'personal' : {
+			const categoryItem = document.querySelectorAll('.term-anchor li a');
+			categoryItem.forEach(item => {
+				item.addEventListener('click', (event) => {
+					event.preventDefault();
+					console.log('b');
+					window.scrollTo({top:	document.querySelector('.term-anchor__item--' + item.dataset.content).offsetTop -50, behavior:'smooth'});
+				})
+			})
+		}
+
 		default: break;
 	}
 }

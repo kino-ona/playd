@@ -1026,12 +1026,11 @@
 	}
 
 	if(bodyClass === 'personal') {
-		const categoryItem = document.querySelectorAll('.term_anchor li a');
+		const categoryItem = document.querySelectorAll('.term-anchor li a');
 		categoryItem.forEach(item => {
 			item.addEventListener('click', (event) => {
 				event.preventDefault();
-				console.log(item.dataset.content)
-				window.scrollTo({top:	document.querySelector('.term_anchor__item--' + item.dataset.content).offsetTop -50, behavior:'smooth'});
+				window.scrollTo({top:	document.querySelector('.term-anchor__item--' + item.dataset.content).offsetTop -50, behavior:'smooth'});
 			})
 
 		})

@@ -16,7 +16,7 @@
 				<li><a href="#">뉴스레터</a></li>
 				<li><a href="#">오시는 길</a></li><!-- 20220628 //-->
 				<li><a href="#">무료 광고 진단</a></li><!-- 20220628 //-->
-				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="./personal.html">개인정보처리방침</a></li><!-- 220701 //-->
 			</ul>
 			<nav class="footer__nav--right">
 				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-naver.png" /><span class="a11y">네이버</span></a>
