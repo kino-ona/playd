@@ -907,7 +907,10 @@ if(bodyClass) {
 				});
 	
 				swiper.on('slideChange', function(e) {
-					stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * (swiper.realIndex + 1) + 'px';
+					let targetFill = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * (swiper.realIndex + 1);
+					if (targetFill == 1300) {targetFill = 4000};
+					stateBarFill.style.width = targetFill + 'px';
+					
 				})
 			}
 		}
