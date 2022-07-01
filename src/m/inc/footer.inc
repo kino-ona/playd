@@ -81,7 +81,7 @@
 			<p class="banner__title font--md">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
 			<div class="button__wrap">
 				<a href="#" class="button__square button__lined-white font--bd">프로젝트 문의</a>
-				<a href="#" class="button__square button__filled-white font--bd">회사 소개서 다운로드</a>
+				<a href="../assets/files/PLAYD_Company_Brief.pdf" class="button__square button__filled-white font--bd" download>회사 소개서 다운로드</a><!--220701수정-->
 			</div>
 		</div>
 	</section>
