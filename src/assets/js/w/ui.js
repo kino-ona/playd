@@ -479,7 +479,6 @@ if(bodyClass) {
 			const formSubmitButton = document.querySelector('.form-submit');
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
-			const formUserPosition = document.querySelector('#user-position');
 			const formUserMail = document.querySelector('#user-mail');
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
@@ -516,12 +515,6 @@ if(bodyClass) {
 				if(!formUserProfession.value) {
 					formUserProfession.focus();
 					formUserProfession.closest('.form-field').classList.add('warning')
-					return false;
-				}	
-
-				if(!formUserPosition.value) {
-					formUserPosition.focus();
-					formUserPosition.closest('.form-field').classList.add('warning')
 					return false;
 				}	
 	
@@ -590,27 +583,39 @@ if(bodyClass) {
 				LayerCloseClicker();
 			})
 
-			const formOpeners = document.querySelectorAll('.open')
+			const formOpenersLetterDetil = document.querySelectorAll('#LetterDetil .open');
+			const formOpenersdownloadOpen = document.querySelectorAll('.downloadOpen');
+			const formSubmitButtonnewsLetter = document.querySelector('#newsLetter .form-submit');
+			const formSubmitButtonreportDownload= document.querySelector('#reportDownload .form-submit');
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
-			const formUserPosition = document.querySelector('#user-position');
 			const formUserMail = document.querySelector('#user-mail');
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
-			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
-				layerClose('newsLetter');
-			});
+			
+			const ActionFormOpenersLetterDetil = () => {if (formOpenersLetterDetil === null) {return;}
+			else {formOpenersLetterDetil.forEach((item) => {
+					item.addEventListener('click' , (event) => {
+						event.preventDefault();
+						layerOpen('newsLetter');
+					});
+				})
+			}}
+			ActionFormOpenersLetterDetil();
 
-			formSubmit.addEventListener('click' , () => {
-				layerClose('newsLetter');
-				layerOpen('letterFormSubmitted');
-			});
+			const ActionFormOpenersdownloadOpen = () => {if (formOpenersdownloadOpen === null) {return;}
+			else {formOpenersdownloadOpen.forEach((item) => {
+					item.addEventListener('click' , (event) => {
+						event.preventDefault();
+						layerOpen('reportDownload');
+					});
+				})
+			}}
+			ActionFormOpenersdownloadOpen();
 
-			formOpeners.forEach((item) => {
-				item.addEventListener('click' , (event) => {
+			const ActionFormSubmitButtonnewsLetter = () => {if (formSubmitButtonnewsLetter === null) {return;}
+			else {formSubmitButtonnewsLetter.addEventListener('click' , (event) => {
 					event.preventDefault();
-					layerOpen('newsLetter');
-
 					document.querySelectorAll('.form-field').forEach((item) => {
 						item.classList.remove('warning');
 					})
@@ -631,10 +636,51 @@ if(bodyClass) {
 						formUserProfession.closest('.form-field').classList.add('warning')
 						return false;
 					}	
+		
+					if(!formUserMail.value) {
+						formUserMail.focus();
+						formUserMail.closest('.form-field').classList.add('warning')
+						return false;
+					}
+		
+					if(!regEmail.test(formUserMail.value)) {
+						formUserMail.focus();
+						formUserMail.closest('.form-field').classList.add('warning')
+						formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
+						return false;
+					}
 
-					if(!formUserPosition.value) {
-						formUserPosition.focus();
-						formUserPosition.closest('.form-field').classList.add('warning')
+					layerOpen('letterFormSubmitted');
+
+					document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
+						layerClose('newsLetter');
+						layerClose('letterFormSubmitted');
+					});
+				})
+			}}
+			ActionFormSubmitButtonnewsLetter();
+
+			const ActionFormSubmitButtonreportDownload = () => {if (formSubmitButtonreportDownload === null) {return;}
+			else {formSubmitButtonreportDownload.addEventListener('click' , (event) => {
+					event.preventDefault();
+					document.querySelectorAll('.form-field').forEach((item) => {
+						item.classList.remove('warning');
+					})
+		
+					if(!needCheck.checked) {
+						needCheck.focus();
+						return false;
+					}
+		
+					if(!formUserName.value) {
+						formUserName.focus();
+						formUserName.closest('.form-field').classList.add('warning')
+						return false;
+					}
+		
+					if(!formUserProfession.value) {
+						formUserProfession.focus();
+						formUserProfession.closest('.form-field').classList.add('warning')
 						return false;
 					}	
 		
@@ -651,7 +697,8 @@ if(bodyClass) {
 						return false;
 					}
 				})
-			})
+			}}
+			ActionFormSubmitButtonreportDownload();
 		}
 		break;
 
@@ -666,18 +713,13 @@ if(bodyClass) {
 			const formSubmitButton = document.querySelector('.form-submit');
 			const formUserName = document.querySelector('#user-name');
 			const formUserProfession = document.querySelector('#user-profession');
-			const formUserPosition = document.querySelector('#user-position');
 			const formUserMail = document.querySelector('#user-mail');
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
-
-			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
-				layerClose('newsLetter');
-			});
 
 			formOpeners.forEach((item) => {
 				item.addEventListener('click' , (event) => {
 					event.preventDefault();
-					layerOpen('newsLetter');
+					layerOpen('reportDownload');
 				});
 			})
 
@@ -704,13 +746,7 @@ if(bodyClass) {
 					formUserProfession.focus();
 					formUserProfession.closest('.form-field').classList.add('warning')
 					return false;
-				}	
-
-				if(!formUserPosition.value) {
-					formUserPosition.focus();
-					formUserPosition.closest('.form-field').classList.add('warning')
-					return false;
-				}	
+				}
 	
 				if(!formUserMail.value) {
 					formUserMail.focus();
@@ -725,7 +761,7 @@ if(bodyClass) {
 					return false;
 				}
 
-				layerOpen('letterFormSubmitted');
+				layerClose('reportDownload');
 			})
 		}
 		break;
@@ -822,6 +858,7 @@ if(bodyClass) {
 				layerClose('DisclosureInformation');
 			})
 		}
+		break;
 
 		case 'about':{
 
@@ -884,6 +921,7 @@ if(bodyClass) {
 				})
 			})
 		}
+		break;
 
 		default: break;
 	}
