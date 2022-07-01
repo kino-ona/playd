@@ -1,4 +1,22 @@
 window.addEventListener('load', () => {
+
+	//go-top-button
+	window.addEventListener('scroll', () => {
+		let sct = window.pageYOffset;
+
+		if(sct > 700) {
+			document.querySelector('.top-button').style.display="block";
+			document.querySelector('.top-button a').style.position="fixed";
+			document.querySelector('.top-button a').style.bottom= "60px";
+		} else {
+			document.querySelector('.top-button').style.display="none"
+		}
+	})
+
+	document.querySelector('.top-button').addEventListener('click', (event) => {
+		event.preventDefault();
+		window.scrollTo({top:	0, behavior:'smooth'});
+	})
 	
 	//Header
 	const header = document.querySelector('header#header');
@@ -367,8 +385,6 @@ if(bodyClass) {
 				})
 				document.querySelector('.input-box--file').classList.remove('warning')
 
-				
-
 				if(!needCheck.checked) {
 					needCheck.focus();
 					return false;
@@ -464,6 +480,58 @@ if(bodyClass) {
 				item.addEventListener('click' , (event) => { 
 					layerOpen('termAgreePrivacy');
 				})
+			})
+
+			//Goto
+
+			const targetGoto1 = document.querySelector('[data-content="윤리신고 제도 안내"] .button[data-button="goto"]');
+
+			targetGoto1.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetClassName1 = `sub-list-category-container--located`;
+				const targetClassName2 = `sub-list-category__item--active`;
+
+				document.querySelectorAll('.sub-list-category-container').forEach((item)=>{
+					item.classList.remove(targetClassName1);
+				})
+
+				const listBox1 = document.querySelector('[data-content="윤리경영 신고"] .sub-list-category__box > p:nth-of-type(1) a');
+				const listBox2 = document.querySelector('[data-content="윤리경영 신고"] .sub-list-category__box > p:nth-of-type(2) a');
+
+				document.querySelector('.sub-list-category-container[data-content="제보하기"]').classList.add(targetClassName1);
+				listBox1.classList.remove(targetClassName2);
+				listBox2.classList.add(targetClassName2);
+
+				window.scrollTo({top:	document.querySelector('.sub-tabs').offsetTop -40, behavior:'smooth'});
+			})
+
+			const targetGoto2 = document.querySelector('[data-content="윤리신고 제도 안내"] .sub-content__title--link[data-button="goto"]');
+
+			targetGoto2.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetClassName0 = `sub-container--located`;
+				const targetClassName1 = `sub-tabs__item--active`;
+				const targetClassName2 = `sub-list-category__item--active`;
+
+				document.querySelectorAll('.sub-container').forEach((item)=>{
+					item.classList.remove(targetClassName0);
+				})
+
+				const targetContainer = document.querySelector('.sub-container[data-content="윤리경영 실전 지침"]');
+
+				targetContainer.classList.add(targetClassName0);
+
+				const listBox1 = document.querySelector('.sub-tabs .sub-tabs__item:nth-of-type(2)');
+				const listBox2 = document.querySelector('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p:nth-of-type(6) a');
+
+				document.querySelectorAll('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p a').forEach((item)=>{
+					item.classList.remove(targetClassName2);
+				})
+
+				listBox1.classList.add(targetClassName1);
+				listBox2.classList.add(targetClassName2);
+
+				window.scrollTo({top:	document.querySelector('.sub-tabs').offsetTop -40, behavior:'smooth'});
 			})
 		}
 		break;
@@ -910,7 +978,6 @@ if(bodyClass) {
 					let targetFill = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * (swiper.realIndex + 1);
 					if (targetFill == 1300) {targetFill = 4000};
 					stateBarFill.style.width = targetFill + 'px';
-					
 				})
 			}
 		}
