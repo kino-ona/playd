@@ -984,6 +984,14 @@ if(bodyClass) {
 					stateBarFill.style.width = targetFill + 'px';
 				})
 			}
+
+			const targetFocuses = document.querySelectorAll('.a11y__scroll');
+
+			targetFocuses.forEach((item) => {
+				item.addEventListener('focusin', () => {
+					window.scrollTo({top:	item.parentNode.offsetTop + 400, behavior: 'smooth'});
+				})
+			})
 		}
 		break;
 
