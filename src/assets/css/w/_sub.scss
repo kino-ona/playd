@@ -4604,3 +4604,140 @@
     border-right: 0;
   }
 }
+
+.personal {
+  background: #ffffff;
+
+  .sub-header {
+    &__description {
+      padding-top: 18px;
+    }
+  }
+
+  .private-term {
+    padding: 30px 0 75px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .private-term .term-list > li {
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA;
+  }
+
+  .private-term .term-list h4.term-tit {
+    color: #000;
+    margin-bottom: 30px;
+    @include FontMD;
+  }
+  .private-term .term-list .term-anchor  {
+    width: 100%;
+    margin-right: -6px;
+  }
+  
+  .private-term .term-list .term-anchor li {
+    float: left;
+    width: calc(50% - 21px);
+    margin-right: 6px;
+   
+    background: #EAEAEA;
+  }
+  .private-term .term-list .term-anchor::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    clear: both;
+  }
+
+  .private-term .term-list .term-anchor li a {
+    display: flex;
+    height: 77px;
+    letter-spacing: -1px;
+    padding: 4px 4px 4px 15px;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .private-term .term-list h3.term-tit {
+    font-size: 22px;
+    color: #EA2126;
+    margin-bottom: 30px;
+    @include FontBD;
+  }
+
+  .private-term .term-list dl dt {
+    margin-bottom: 20px;
+    @include FontMD;
+  }
+
+  .private-term .term-list dl dd {
+    padding-left: 24px;
+    margin-bottom: 10px
+  }
+
+  .private-term .term-list .term-box {
+    background: #EAEAEA;
+    padding: 20px;
+  }
+
+  .private-term .term-list .term-txt {
+    margin-bottom: 20px;
+  }
+
+  .private-term .term-list dl dd {
+    padding-left: 24px;
+    margin-bottom: 20px;
+  }
+
+  .private-term .term-list .term-tbl-tit {
+    font-size: 14px;
+    margin-bottom: 15px;
+    @include FontMD;
+  }
+
+  .term_tbl_tit + table {
+    margin-top: 10px;
+  }
+
+  .private-term .term-list table {
+    width: 100%;
+    border-top: 2px solid #EA2126;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .private-term .term-list table tr {
+    border-bottom: 2px solid #dedede;
+  }
+
+  .private-term .term-list table th {
+    width: 20%;
+    min-width: 100px;
+    background: #f6f6f6;
+    border-right: 1px solid #dedede;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .private-term .term-list table th, .private-term .term-list table td {
+    padding: 8px 0;
+  }
+
+  .private-term .term-list table td {
+    width: 80%;
+    padding-left: 30px;
+  }
+
+  .private-term .link_btn {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 26px 0;
+    background: #EA2126;
+    text-align: center;
+    color: #fff;
+  }
+}
+

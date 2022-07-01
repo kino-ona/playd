@@ -1,24 +1,28 @@
 @@include('./inc/pagehead.inc', {
-"webroot": "..",
-"pagetitle": "PLAYD",
+	"webroot": "..",
+	"pagetitle": "PLAYD | 플레이디 | ESG",
 })
 </head>
-
 <body class="personal">
-	<div class="skipnavigation"><a href="#container">본문 바로 가기</a></div>
-	<div class="wrap">
+<div class="skipnavigation"><a href="#container">본문 바로가기</a></div>
 
-		<!-- header -->
-		@@include('./inc/header.inc', {
-		"webroot":"..",
-		"headertype":"header__default",
-		})
-		<!-- //header -->
+<div class="wrap">
 
-		<div class="sub-header">
-			<h2 class="sub-header__title">플레이디는 <span>이용자 권익 보호</span>에<br>최선을 다하고 있습니다.</h2>
-		</div>
+	<!-- header -->
+	@@include('./inc/header.inc', {
+		"webroot": "..",
+		"headertype": "header__sticked",
+		"logotype": "logo__filled",
+		"located": "4",
+	})
+	<!-- //header -->
 
+	<div id="container" class="container">
+
+    <div class="sub-header">
+      <h2 class="sub-header__title"><span class="sub-header__label">개인정보처리방침</span>플레이디는 <strong>이용자 권익 보호</strong>에<br>최선을 다하고 있습니다.</h2>
+    </div>
+    <div class="sub-container">
 		<!--220701 수정 start-->
 		<div class="sub-content">
 			<div class="private-term">
@@ -31,7 +35,7 @@
 						<li>
 							<h4 class="term-tit">회사의 개인정보 처리방침은 다음과 같은 내용을 담고 있습니다.</h4>
 							<ul class="term-anchor">
-								<li><a href="/" data-content="anchor1">1. 수집하는<br>개인정보의 항목 및 수집방법</a></li>
+								<li><a href="/" data-content="anchor1">1. 수집하는 개인정보의 항목 및 수집방법</a></li>
 								<li><a href="/" data-content="anchor2">2. 개인정보의
 										수집 및 이용목적</a></li>
 								<li><a href="/" data-content="anchor3">3. 개인정보의
@@ -232,13 +236,14 @@
 			</div>
 		</div>
 		<!--220701 수정 end-->
+    </div>
 	</div>
+</div>
 
-	<!-- footer -->
-	@@include('./inc/footer.inc', {
-	"webroot":"..",
-	})
-	<!-- //footer -->
+<!-- footer -->
+@@include('./inc/footer.inc', {
+	"webroot": "..",
+})
+<!-- //footer -->
 </body>
-
 </html>
