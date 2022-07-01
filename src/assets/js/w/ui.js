@@ -696,6 +696,8 @@ if(bodyClass) {
 						formUserMail.nextElementSibling.innerHTML = '질못된 입력값입니다';
 						return false;
 					}
+
+					layerClose('reportDownload');
 				})
 			}}
 			ActionFormSubmitButtonreportDownload();
