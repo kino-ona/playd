@@ -45,6 +45,12 @@
 	</div>
 </footer>
 
+<!-- s 20220701 수정 -->
+<div class="top-button">
+	<a href="/"><span class="a11y">위로가기</span></a>
+</div>
+<!--// e 20220701 수정 -->
+
 <!-- 20220701 레이어팝업 삭제 //-->
 
 <script src="@@webroot/assets/js/w/swiper.min.js"></script>
