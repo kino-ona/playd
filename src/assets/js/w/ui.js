@@ -848,7 +848,7 @@ if(bodyClass) {
 				const stateBar = document.querySelector('.state-bar');
 				const stateBarFill = document.querySelector('.state-bar--fill');
 				let stateBarWidth = stateBar.clientWidth + 360;
-				console.log(stateBarWidth)
+				console.log(stateBarWidth);
 	
 				const swiper = new Swiper('.sub-slide ', {
 					slidesPerView: 2,
@@ -856,8 +856,8 @@ if(bodyClass) {
 					observer: true,
 					observeParents: true, 
 					navigation: {
-						nextEl: '.swiper-button-next',
-						prevEl: '.swiper-button-prev',
+						nextEl: '.swiper__navi .swiper__button-next',
+						prevEl: '.swiper__navi .swiper__button-prev',
 					},
 					// loop: true,
 					on:{
