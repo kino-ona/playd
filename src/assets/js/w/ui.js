@@ -847,23 +847,24 @@ if(bodyClass) {
 			if(document.querySelectorAll('.sub-slide .swiper-slide').length > 1) {
 				const stateBar = document.querySelector('.state-bar');
 				const stateBarFill = document.querySelector('.state-bar--fill');
-				let stateBarWidth = stateBar.clientWidth;
+				let stateBarWidth = stateBar.clientWidth + 360;
+				console.log(stateBarWidth)
 	
 				const swiper = new Swiper('.sub-slide ', {
-					slidesPerView: 2.15,
-					spaceBetween: 0,
+					slidesPerView: 2,
+					spaceBetween: 80,
 					observer: true,
 					observeParents: true,
-					loop: true,
+					// loop: true,
 					on:{
 						init:function() {
-							// stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * 2 + 'px';
+							stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) + 'px';
 						}
 					}
 				});
 	
 				swiper.on('slideChange', function(e) {
-					// stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * (swiper.realIndex + 0) + 'px';
+					stateBarFill.style.width = stateBarWidth/(document.querySelectorAll('.sub-slide .swiper-slide').length) * (swiper.realIndex + 1) + 'px';
 				})
 			}
 		}

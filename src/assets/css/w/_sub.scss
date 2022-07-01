@@ -4438,17 +4438,32 @@
   .swiper-button-next { background: url('../../../assets/images/w/sub/icon_about_next.png') center center no-repeat; }
 
   .state-bar {
-    width: 180%;
-    height: 4px;
     position: relative;
+    width: 100%;
+    // width: 180%;
+    // width: calc(100% + 360px);
+    height: 4px;
     top: 95px;
-    background: #DDDDDD;
+    // background: #DDDDDD;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 180%;
+      height: 4px;
+      top: 0;
+      background: #DDDDDD;
+    }
 
     &--fill {
-      width: 10%;
+      // width: 10%;
+      position: relative;
+      width: auto;
       height: 4px;
       background: #EA2126;
       transition: .3s all ease-in-out;
+      z-index: 1;
     }
   }
 
