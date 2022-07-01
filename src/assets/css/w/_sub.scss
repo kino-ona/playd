@@ -4427,43 +4427,69 @@
     }
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 35px;
-    height: 35px;
-    background-size: contain;
+  .swiper__navi {
+    position: absolute;
+    top: -85px;
+    right: 0;
+    width: 120px;
+    height: 50px;
+    @include FlexRow;
   }
 
-  .swiper-button-prev { background: url('../../../assets/images/w/sub/icon_about_prev.png') center center no-repeat; }
-  .swiper-button-next { background: url('../../../assets/images/w/sub/icon_about_next.png') center center no-repeat; }
+  .swiper-button-prev { 
+    background: url('../../../assets/images/w/common/icons/i_swiper_prev.svg') center center no-repeat; 
+    &.swiper-button-disabled {
+      background: url('../../../assets/images/w/common/icons/i_swiper_prev__unable.svg') center center no-repeat; 
+    }
+  }
+
+  .swiper-button-next { 
+    background: url('../../../assets/images/w/common/icons/i_swiper_next.svg') center center no-repeat; 
+    &.swiper-button-disabled {
+      background: url('../../../assets/images/w/common/icons/i_swiper_next__unable.svg') center center no-repeat; 
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    position: static;
+    background-size: contain;
+
+    &::after {
+      content: none;
+    }
+  }
+  
+  .swiper-button-disabled {
+    opacity: 1;
+  }
 
   .state-bar {
-    position: relative;
     width: 100%;
-    // width: 180%;
-    // width: calc(100% + 360px);
     height: 4px;
+    position: relative;
     top: 95px;
-    // background: #DDDDDD;
-    &:before {
+
+    &::before {
       content: '';
-      position: absolute;
-      left: 0;
-      display: block;
       width: 180%;
       height: 4px;
+      position: absolute;
+      left: 0;
       top: 0;
+      display: block;
       background: #DDDDDD;
     }
 
     &--fill {
-      // width: 10%;
-      position: relative;
+      z-index: 1;
       width: auto;
       height: 4px;
-      background: #EA2126;
+      position: relative;
       transition: .3s all ease-in-out;
-      z-index: 1;
+      background: #EA2126;
     }
   }
 

@@ -854,7 +854,11 @@ if(bodyClass) {
 					slidesPerView: 2,
 					spaceBetween: 80,
 					observer: true,
-					observeParents: true,
+					observeParents: true, 
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
 					// loop: true,
 					on:{
 						init:function() {
