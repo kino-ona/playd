@@ -524,6 +524,10 @@ if(bodyClass) {
 				const listBox1 = document.querySelector('.sub-tabs .sub-tabs__item:nth-of-type(2)');
 				const listBox2 = document.querySelector('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p:nth-of-type(6) a');
 
+				document.querySelectorAll('.sub-tabs .sub-tabs__item').forEach((item)=>{
+					item.classList.remove(targetClassName1);
+				})
+
 				document.querySelectorAll('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p a').forEach((item)=>{
 					item.classList.remove(targetClassName2);
 				})
