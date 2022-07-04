@@ -1832,6 +1832,11 @@
     margin-bottom: 15px;
     color: #000000;
     @include ellipse(3);
+    p, span {
+      font-size: 16px !important;
+      @include FontRG;
+      margin: 0 !important;
+    }
   }
 
   .list-content__title--long {
