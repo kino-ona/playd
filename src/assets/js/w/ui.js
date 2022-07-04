@@ -512,30 +512,39 @@ if(bodyClass) {
 				const targetClassName0 = `sub-container--located`;
 				const targetClassName1 = `sub-tabs__item--active`;
 				const targetClassName2 = `sub-list-category__item--active`;
+				const targetClassName3 = `sub-list__item--active`;
 
 				document.querySelectorAll('.sub-container').forEach((item)=>{
 					item.classList.remove(targetClassName0);
 				})
 
 				const targetContainer = document.querySelector('.sub-container[data-content="윤리경영 실전 지침"]');
-
+				
 				targetContainer.classList.add(targetClassName0);
-
-				const listBox1 = document.querySelector('.sub-tabs .sub-tabs__item:nth-of-type(2)');
-				const listBox2 = document.querySelector('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p:nth-of-type(6) a');
-
+				
+				const target1 = document.querySelector('.sub-tabs .sub-tabs__item:nth-of-type(2)');
+				const target2 = document.querySelector('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p:nth-of-type(6) a');
+				const target3 = document.querySelector('.sub-container[data-content="윤리경영 실전 지침"] .sub-list__item--chapter-6 ');
+				
 				document.querySelectorAll('.sub-tabs .sub-tabs__item').forEach((item)=>{
 					item.classList.remove(targetClassName1);
 				})
-
+				
 				document.querySelectorAll('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p a').forEach((item)=>{
 					item.classList.remove(targetClassName2);
 				})
+				
+				
+				document.querySelectorAll('[data-content="윤리경영 실전 지침"] .sub-list__item').forEach((item)=>{
+					item.classList.remove(targetClassName3);
+				})
+				
+				target1.classList.add(targetClassName1);
+				target2.classList.add(targetClassName2);
+				target3.classList.add(targetClassName3);
 
-				listBox1.classList.add(targetClassName1);
-				listBox2.classList.add(targetClassName2);
 
-				window.scrollTo({top:	document.querySelector('.sub-tabs').offsetTop -40, behavior:'smooth'});
+				window.scrollTo({top:	document.querySelector('.sub-tabs').offsetTop + 3400 , behavior:'smooth'});
 			})
 		}
 		break;
@@ -989,7 +998,7 @@ if(bodyClass) {
 
 			targetFocuses.forEach((item) => {
 				item.addEventListener('focusin', () => {
-					window.scrollTo({top:	item.parentNode.offsetTop + 400, behavior: 'smooth'});
+					window.scrollTo({top:	item.parentNode.offsetTop + 400, behavior:'smooth'});
 				})
 			})
 		}
