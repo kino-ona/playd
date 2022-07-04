@@ -209,7 +209,8 @@
 
     &:hover {
       .list-content__description {
-        top: 0;
+        top: -1px;
+        left: -1px;
         z-index: 1;
       }
     }

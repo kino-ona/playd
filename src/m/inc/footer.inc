@@ -1,4 +1,4 @@
-<!--220617 start-->
+<!--220704 start-->
 <div class="layer__body popup report" id="report" aria-hidden="true" role="dialog">
 	<div class="layer__wrap layer__wrap--wide">
 		<div class="layer__close">
@@ -18,30 +18,30 @@
 						<legend>플레이디 트렌드 리포트 다운로드 신청폼</legend>
 						<div class="form-field">
 							<label for="user-name" class="input-box-info__label input-box-info__label--necessary">이름</label>
-							<input type="text" id="user-name"  class="input-box-info__input" name="" placeholder="이름을 입력해 주세요.">
+							<input type="text" id="user-name"  class="input-box-info__input" name="" placeholder="이름을 입력해 주세요."  maxlength="52"><!--220704-->
 							<p class="form-warning">이름을 입력해주세요.</p>
 						</div>
 						<div class="form-field">
 							<label for="user-position" class="input-box-info__label input-box-info__label--necessary">직업</label>
-							<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직업을 입력해 주세요.">
+							<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직업을 입력해 주세요." maxlength="52"><!--220704-->
 							<p class="form-warning">직업을 입력해 주세요.</p>
 						</div>
 						<div class="form-field">
 							<label for="user-mail" class="input-box-info__label input-box-info__label--necessary">이메일 주소</label>
-							<input type="text" id="user-mail"  class="input-box-info__input" name="" placeholder="이메일 주소를 입력해 주세요.">
+							<input type="text" id="user-mail"  class="input-box-info__input" name="" placeholder="이메일 주소를 입력해 주세요." maxlength="320"><!--220704-->
 							<p class="form-warning">이메일 주소를 입력해 주세요.</p>
 						</div>
 						<div class="form-field">
 							<label for="user-position" class="input-box-info__label">직급</label>
-							<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직급을 입력해 주세요.">
+							<input type="text" id="user-position" class="input-box-info__input" name="" placeholder="직급을 입력해 주세요." maxlength="52"><!--220704-->
 						</div>
 						<div class="form-field">
 							<label for="user-company" class="input-box-info__label">회사명(소속)</label>
-							<input type="text" id="user-company" class="input-box-info__input" name="" placeholder="회사명을 입력해 주세요.">
+							<input type="text" id="user-company" class="input-box-info__input" name="" placeholder="회사명을 입력해 주세요." maxlength="52"><!--220704-->
 						</div>
 						<div class="form-field">
 							<label for="user-team" class="input-box-info__label">부서(팀명)</label>
-							<input type="text" id="user-team" class="input-box-info__input" name="" placeholder="부서를 입력해 주세요.">
+							<input type="text" id="user-team" class="input-box-info__input" name="" placeholder="부서를 입력해 주세요." maxlength="52"><!--220704-->
 						</div>
 						<div class="sub-checkboxs">
 							<label for="sub-checkbox--personal" class="sub-checkbox__label">
@@ -63,7 +63,7 @@
 		</div>
 	</div>
 </div>
-<!--220617 end-->
+<!--220704 end-->
 
 <!--220629 수정 start-->
 <div class="top-button">

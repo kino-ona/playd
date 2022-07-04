@@ -90,7 +90,7 @@
 			break;
 
 			case 'techhub':
-				headerTitle.innerHTML = 'TECHHUB';
+				headerTitle.innerHTML = 'Tech HUB';
 				subCommonFunction();
 			break;
 
@@ -962,13 +962,16 @@
 
 		categoryItem.forEach(item => {
 			item.addEventListener('click' , () => {
-
-				categoryItem.forEach(targets => {
-					if(targets.classList.contains('accordian__item--active')) targets.classList.remove('accordian__item--active');
-				})
+				if(!item.classList.contains('accordian__item--active')) {
+					categoryItem.forEach(targets => {
+						if(targets.classList.contains('accordian__item--active')) targets.classList.remove('accordian__item--active');
+					})
+				}else {
+					item.classList.add('accordian__item--active');
+				}
 				
-				item.classList.add('accordian__item--active');
-		
+				
+			
 			})
 		})
 	}
