@@ -81,7 +81,7 @@ html {
 
     &__slogan {
       color: #ffffff;
-      font-size: 14px;
+      font-size: 15px;
       letter-spacing: -.3px;
       line-height: 23px;
     }
@@ -90,7 +90,19 @@ html {
   .button {
     &__link {
       position: absolute;
-      bottom: 35px;
+      bottom: 30px;
+    }
+
+    &__link-sub {
+      bottom: 55px;
+    }
+
+    &__link--black {
+      color: #000000;
+    }
+
+    &__link--black::after {
+      border-color: #000000;
     }
   }
 

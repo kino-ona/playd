@@ -1512,7 +1512,7 @@
               <div class="form-field form-field--mixed">
                 <label for="user-name" class="input-box--info__label input-box--info__label--necessary">제보자 성명</label>
                 <div class="form-field__inner">
-                  <input type="text" id="user-name" class="input-box--info__input" name="" placeholder="이름을 입력해 주세요.">
+                  <input type="text" id="user-name" class="input-box--info__input" name="" placeholder="이름을 입력해 주세요." maxlength="52"><!--220704-->
 									<!-- 220623 수정 start-->
                   <div class="sub-radio">
                     <div class="name-radio">
@@ -1529,15 +1529,15 @@
               </div>
               <div class="form-field">
                 <label for="user-contact" class="input-box--info__label input-box--info__label--necessary">연락처</label>
-                <input type="text" id="user-contact" class="input-box--info__input" name="" placeholder="연락처를 입력해 주세요.">
+                <input type="number" id="user-contact" class="input-box--info__input" name="" placeholder="연락처를 입력해 주세요." maxlength="11"><!--220704-->
               </div>
               <div class="form-field">
                 <label for="user-mail" class="input-box--info__label input-box--info__label--necessary">이메일</label>
-                <input type="text" id="user-mail" class="input-box--info__input" name="" placeholder="이메일을 입력해 주세요.">
+                <input type="text" id="user-mail" class="input-box--info__input" name="" placeholder="이메일을 입력해 주세요." maxlength="320"><!--220704-->
               </div>
               <div class="form-field">
                 <label for="user-password" class="input-box--info__label input-box--info__label--necessary">비밀번호</label>
-                <input type="text" id="user-password" class="input-box--info__input" name="" placeholder="비밀번호를 설정해 주세요.">
+                <input type="password" id="user-password" class="input-box--info__input" name="" placeholder="비밀번호를 설정해 주세요." maxlength="52"><!--220704-->
               </div>
             </div>
           </div>
@@ -1547,11 +1547,11 @@
             <div class="input-box input-box--info">
               <div class="form-field">
                 <label for="user-title" class="input-box--info__label input-box--info__label--necessary">제목</label>
-                <input type="text" id="user-title" class="input-box--info__input" name="" placeholder="제목을 입력해 주세요.">
+                <input type="text" id="user-title" class="input-box--info__input" name="" placeholder="제목을 입력해 주세요." maxlength="52"><!--220704-->
               </div>
               <div class="form-field">
                 <label for="user-where" class="input-box--info__label input-box--info__label--necessary">발생 장소</label>
-                <input type="text" id="user-where" class="input-box--info__input" name="" placeholder="발생장소를 입력해 주세요.">
+                <input type="text" id="user-where" class="input-box--info__input" name="" placeholder="발생장소를 입력해 주세요." maxlength="52"><!--220704-->
               </div>
 							<!--20220627 수정 start-->
               <div class="form-field">
@@ -1563,11 +1563,11 @@
 								<!--20220627 수정 end-->
               <div class="form-field">
                 <label for="user-who" class="input-box--info__label">제보대상 및 제보 대상자와의 관계 (선택)</label>
-                <input type="text" id="user-who" class="input-box--info__input" name="" placeholder=" 예시) 대상 : 플레이디 OO팀 김XX">
+                <input type="text" id="user-who" class="input-box--info__input" name="" placeholder=" 예시) 대상 : 플레이디 OO팀 김XX" maxlength="52"><!--220704-->
               </div>
 							<div class="form-field">
                 <label for="form-detail" class="input-box--info__label input-box--info__label--necessary">제보 내용</label>
-								<textarea id="form-detail" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다."></textarea>
+								<textarea id="form-detail" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다." maxlength="520"></textarea><!--220704-->
 								<div class="input-file">
 									<input type="text" id="form-file-text" placeholder="파일 업로드(RFP 등)" readonly>
 									<div><input type="file" id="form-file-button" name=""><label for="form-file-button">찾아보기</label></div>
@@ -1582,15 +1582,15 @@
             <div class="input-box input-box--info">
               <div class="form-field">
                 <label for="user-witness" class="input-box--info__label"><span class="numbering">01.</span>제보 내용을 알거나, 알 것으로 예상되는 직원이 있다면 기재해 주시기 바랍니다.</label>	<!--220627 수정 -->
-                <input type="text" id="user-witness" class="input-box--info__input" name="" placeholder="직원 성함을 입력해 주세요.">
+                <input type="text" id="user-witness" class="input-box--info__input" name="" placeholder="직원 성함을 입력해 주세요." maxlength="52"><!--220704-->
               </div>
               <div class="form-field">
                 <label for="user-how" class="input-box--info__label"><span class="numbering">02.</span> 제보하신 내용을 어떻게 알게 되셨는지요?</label>
-                <input type="text" id="user-how" class="input-box--info__input" name="" placeholder="예시 ) 나에게 일어난 일, 직접 목격함 등">
+                <input type="text" id="user-how" class="input-box--info__input" name="" placeholder="예시 ) 나에게 일어난 일, 직접 목격함 등" maxlength="52"><!--220704-->
               </div>
 							<div class="form-field">
 								<label for="form-etc" class="input-box--info__label"><span class="numbering">03.</span> 문제를 확인하기 위한 가장 좋은 방법을 아신다면 기재해 주시기 바랍니다.</label>
-								<textarea id="form-etc" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다."></textarea>
+								<textarea id="form-etc" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다."  maxlength="52"></textarea><!--220704-->
 							</div>
             </div>
             
@@ -1628,7 +1628,7 @@
                   <button type="button" class="button button__radius button__filled-grey"><i style="background-image: url(../assets/images/m/sub/icon_speaker.png)"></i>음성 듣기</button>
                   <button type="button" class="button button__radius button__filled-grey"><i style="background-image: url(../assets/images/m/sub/icon_refresh.png)"></i>새로고침</button>
                 </div>
-                <input type="text" placeholder="보안 문자 입력" class="security"/>
+                <input type="text" placeholder="보안 문자 입력" class="security" maxlength="52"><!--220704-->
                 <span class="verification__notification">보안 문자 이미지의 숫자를 보이는 대로<br>입력해 주세요.</span>
               </div>
             </div>
@@ -1645,7 +1645,7 @@
 					<!-- 220623 수정 start-->
 					<div class="check-input__wrap">
 						<p class="check-input__title">이메일 / 비밀번호를 입력해 주세요.</p>
-						<input type="text" id="email" placeholder="이메일을 입력해 주세요." class="check-input__input">
+						<input type="text" id="email" placeholder="이메일을 입력해 주세요." class="check-input__input" maxlength="320"><!--220704-->
 						<input type="password" placeholder="비밀번호를 입력해 주세요." class="check-input__input">
 					</div>
 					<!-- 220623 수정 end -->
@@ -1686,7 +1686,7 @@
 
 						</div>
 						<div class="check-content__comment">
-							<textarea name="" id="" placeholder="댓글을 남겨보세요."></textarea>
+							<textarea name="" id="" placeholder="댓글을 남겨보세요." maxlength="520"></textarea>
 							<a href="/" role="button" class="check-content__button">등록</a>
 						</div>
 					</div>

@@ -246,6 +246,10 @@
     @include FontBD;
   }
 
+  &__link--sub {
+    margin-left: 0 !important;
+  }
+
   &__wrap {
     padding: 12px 25px;
     position: relative;
