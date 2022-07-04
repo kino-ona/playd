@@ -65,7 +65,7 @@
           <div class="sub-input">
             <div class="form-info">
               <label for="form-project_name" class="a11y form-info__label">회사명</label>
-              <input type="text" id="form-project_name" name="" class="form-info__input" placeholder="ex) OO사 신규 회원 확보를 위한 OOO 캠페인 집행.">
+              <input type="text" id="form-project_name" name="" class="form-info__input" maxlength="52" placeholder="ex) OO사 신규 회원 확보를 위한 OOO 캠페인 집행."><!-- 20220704 //-->
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
           <h3 class="sub-content__title">무엇을 도와드리면 될까요?</h3>
           <div class="input-box input-box--file">
             <div class="form-detail-box">
-              <textarea id="form-detail" placeholder="프로젝트에 대한 상세 설명, 캠페인 타깃, 캠페인 진행상태, 고려 중인 매체 등 상세하게 기재해 주시면 내부에서 면밀히 검토 후 정확한 답변을 드릴 수 있습니다."></textarea><!-- 20220628 //-->
+              <textarea id="form-detail" maxlength="520" placeholder="프로젝트에 대한 상세 설명, 캠페인 타깃, 캠페인 진행상태, 고려 중인 매체 등 상세하게 기재해 주시면 내부에서 면밀히 검토 후 정확한 답변을 드릴 수 있습니다."></textarea><!-- 20220628 //--><!-- 20220704 //-->
               <p class="form-warning">입력범위를 초과했습니다.</p>
             </div>
             <div class="input-file">
@@ -141,31 +141,31 @@
           <div class="input-box input-box--info">
             <div class="form-field">
               <label for="user-company" class="input-box--info__label input-box--info__label--necessary">회사명</label>
-              <input type="text" id="user-company" class="input-box--info__input" name="" placeholder="오앤에이크리에이션">
+              <input type="text" id="user-company" class="input-box--info__input" name="" maxlength="52" placeholder="오앤에이크리에이션"><!-- 20220704 //-->
               <p class="form-warning">회사명을 입력해 주세요.</p><!-- 20220628 //-->
             </div>
             <div class="form-field">
               <label for="user-name" class="input-box--info__label input-box--info__label--necessary">담당자 이름</label>
-              <input type="text" id="user-name" class="input-box--info__input" name="" placeholder="홍길동">
+              <input type="text" id="user-name" class="input-box--info__input" name="" maxlength="52" placeholder="홍길동"><!-- 20220704 //-->
               <p class="form-warning">담당자 이름을 입력해 주세요.</p><!-- 20220628 //-->
             </div>
             <div class="form-field">
               <label for="user-position" class="input-box--info__label">직책</label>
-              <input type="text" id="user-position" class="input-box--info__input" name="" placeholder="직책을 입력해 주세요.">
+              <input type="text" id="user-position" class="input-box--info__input" name="" maxlength="52" placeholder="직책을 입력해 주세요."><!-- 20220704 //-->
             </div>
             <div class="form-field">
               <label for="user-number" class="input-box--info__label input-box--info__label--necessary">연락처</label>
-              <input type="number" pattern="\d*" id="user-number" class="input-box--info__input" name="" placeholder="연락처를 입력해 주세요."><!-- 20220701 //--> 
+              <input type="number" pattern="\d*" id="user-number" class="input-box--info__input" name="" maxlength="11" placeholder="연락처를 입력해 주세요."><!-- 20220701 //--><!-- 20220704 //-->
               <p class="form-warning">연락처를 입력해 주세요.</p><!-- 20220628 //-->
             </div>
             <div class="form-field">
               <label for="user-mail" class="input-box--info__label input-box--info__label--necessary">이메일</label>
-              <input type="text" id="user-mail" class="input-box--info__input" name="" placeholder="이메일을 입력해 주세요.">
+              <input type="text" id="user-mail" class="input-box--info__input" name="" maxlength="320" placeholder="이메일을 입력해 주세요."><!-- 20220704 //-->
               <p class="form-warning">이메일을 입력해 주세요.</p><!-- 20220628 //-->
             </div>
             <div class="form-field">
               <label for="user-url" class="input-box--info__label input-box--info__label--necessary">프로젝트 진행할 홈페이지 URL</label>
-              <input type="text" id="user-url" class="input-box--info__input" name="" placeholder="프로젝트 홈페이지 URL 입력해 주세요.">
+              <input type="text" id="user-url" class="input-box--info__input" name="" maxlength="2000" placeholder="프로젝트 홈페이지 URL 입력해 주세요."><!-- 20220704 //-->
               <p class="form-warning">URL을 입력해 주세요.</p><!-- 20220628 //-->
             </div>
           </div>

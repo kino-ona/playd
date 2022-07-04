@@ -35,7 +35,7 @@
 		<div class="sub-container">
 			<div class="search-form">
 				<div class="search-form__wrap">
-					<input type="search" id="insightLetter-search" name="" tabindex="0" placeholder="검색어를 입력하세요."><!-- 20220701 //-->
+					<input type="search" id="insightLetter-search" name="" tabindex="0" maxlength="52" placeholder="검색어를 입력하세요."><!-- 20220701 //--><!-- 20220704 //-->
 					<button type="button" class="button button__icon-search"><div class="a11y">검색</div></button>
 				</div>
 				<div class="search-list">
@@ -131,44 +131,40 @@
 						<div class="input-box input-box--info">
 							<div class="form-field">
 								<label for="user-name" class="input-box--info__label input-box--info__label--necessary">이름</label>
-								<input type="text" id="user-name"  class="input-box--info__input" name="" placeholder="이름을 입력해 주세요.">
+								<input type="text" id="user-name"  class="input-box--info__input" name="" maxlength="52" placeholder="이름을 입력해 주세요."><!-- 20220704 //-->
 								<p class="form-warning">이름을 입력해주세요.</p>
 							</div>
 							<div class="form-field">
 								<label for="user-profession" class="input-box--info__label input-box--info__label--necessary">직업</label>
-								<input type="text" id="user-profession" class="input-box--info__input" name="" placeholder="직업을 입력해 주세요.">
+								<input type="text" id="user-profession" class="input-box--info__input" name="" maxlength="52" placeholder="직업을 입력해 주세요."><!-- 20220704 //-->
 								<p class="form-warning">직업을 입력해 주세요.</p>
 							</div>
 							<div class="form-field">
 								<label for="user-mail" class="input-box--info__label input-box--info__label--necessary">이메일 주소</label>
-								<input type="text" id="user-mail"  class="input-box--info__input" name="" placeholder="이메일 주소를 입력해 주세요.">
+								<input type="text" id="user-mail"  class="input-box--info__input" name="" maxlength="320" placeholder="이메일 주소를 입력해 주세요."><!-- 20220704 //-->
 								<p class="form-warning">이메일 주소를 입력해 주세요.</p>
 							</div>
 							<div class="form-field">
 								<label for="user-position" class="input-box--info__label">직급</label>
-								<input type="text" id="user-position" class="input-box--info__input" name="" placeholder="직급을 입력해 주세요.">
+								<input type="text" id="user-position" class="input-box--info__input" name="" maxlength="52" placeholder="직급을 입력해 주세요."><!-- 20220704 //-->
 							</div>
 							<div class="form-field">
 								<label for="user-company" class="input-box--info__label">회사명(소속)</label>
-								<input type="text" id="user-company" class="input-box--info__input" name="" placeholder="회사명(소속)을 입력해 주세요.">
+								<input type="text" id="user-company" class="input-box--info__input" name="" maxlength="52" placeholder="회사명(소속)을 입력해 주세요."><!-- 20220704 //-->
 							</div>
 							<div class="form-field">
 								<label for="user-team" class="input-box--info__label">부서(팀명)</label>
-								<input type="text" id="user-team" class="input-box--info__input" name="" placeholder="부서(팀명)을 입력해 주세요.">
+								<input type="text" id="user-team" class="input-box--info__input" name="" maxlength="52" placeholder="부서(팀명)을 입력해 주세요."><!-- 20220704 //-->
 							</div>
 							<ol class="sub-checkboxs">
                 <li class="sub-checkbox__list">
                   <label for="sub-checkbox--personal" class="sub-checkbox__label">
                     <input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input">
-                    <span><i></i>개인 정보 수집 및 이용에 동의합니다.</span><!-- 20220628 //-->
+                    <span><i></i>개인 정보 수집 및 이용에 동의합니다.</span>
                   </label>
                 </li>
               </ol>
-							<p class="form-description">
-								입력하신 이름, 직업, 이메일 주소, 직급, 회사명
-								(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인 정보를 수집 시에 동의 받은 개인 정보 
-								보유, 이용 기간 동안 보관 및 이용됩니다.
-							</p><!-- 20220628 //-->
+							<p class="form-description">입력하신 이름, 직업, 이메일 주소, 직급, 회사명(소속), 부서(팀명)은 리포트 다운로드를 위해 3개월간 보관 및 이용됩니다.</p>
 						</div>
 					</form>
 				</div>
