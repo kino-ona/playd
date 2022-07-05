@@ -870,18 +870,18 @@
 		const shareButton = document.querySelector('.sub-content__share');
 		const shareClsoeButton = document.querySelector('.share-popup .close')
 
-		if(document.querySelectorAll('.list-content__slide .swiper-slide').length > 1) {
-			const swiper = new Swiper('.list-content__slide ', {
-				slidesPerView: 1.05,
-				pagination: {
-					el: '.swiper-pagination',
-					type: 'fraction',
-				}
-			});
-		}else {
-			document.querySelector('.list-content__slide .list-content__image').style.marginRight = '25px';
-			document.querySelector('.list-content__slide .list-content__description').style.marginRight = '25px';
-		}
+		// if(document.querySelectorAll('.list-content__slide .swiper-slide').length > 1) {
+		// 	const swiper = new Swiper('.list-content__slide ', {
+		// 		slidesPerView: 1.05,
+		// 		pagination: {
+		// 			el: '.swiper-pagination',
+		// 			type: 'fraction',
+		// 		}
+		// 	});
+		// }else {
+		// 	document.querySelector('.list-content__slide .list-content__image').style.marginRight = '25px';
+		// 	document.querySelector('.list-content__slide .list-content__description').style.marginRight = '25px';
+		// }
 
 		shareButton.addEventListener('click', (event) => {
 			event.preventDefault();
