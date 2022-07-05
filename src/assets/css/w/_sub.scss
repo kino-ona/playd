@@ -233,20 +233,6 @@
     @include FontDL;
     color: #666666;
   }
-  
-  &__meta--view i {
-    width: 25px;
-    height: 25px;
-    margin-top: -1px;
-    margin-right: 5px;
-    display: inline-block;
-    background: {
-      image: url(../../../assets/images/w/common/icons/icon_view.png);
-      size: 100%;
-      repeat: no-repeat;
-      position: center center;
-    }
-  }
 }
   
 .sub-checkboxs {
@@ -1846,6 +1832,11 @@
     margin-bottom: 15px;
     color: #000000;
     @include ellipse(3);
+    p, span {
+      font-size: 16px !important;
+      @include FontRG;
+      margin: 0 !important;
+    }
   }
 
   .list-content__title--long {
