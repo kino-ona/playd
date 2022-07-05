@@ -845,6 +845,10 @@
 	}
 }
 
+.drop-box.drop-box--active .drop-box__title::before{
+  transform: rotate(-135deg);
+}
+
 .sub-tabs {
   display: block;
   overflow: hidden;

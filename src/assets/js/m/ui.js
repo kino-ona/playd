@@ -180,34 +180,32 @@
 	const dropBox = document.querySelectorAll('.drop-box');
 	const dropBoxItem = document.querySelectorAll('.drop-box__wrap p > a');
 
-	dropBox.forEach((item) => {
-		let closestTarget = item.closest('.drop-box');
-
-		document.body.addEventListener('click', () => {
-			if (item.classList.contains('drop-box--active')) {
-				item.classList.remove('drop-box--active');
+	document.body.addEventListener('click', (event) => {
+		let closestTarget = event.target.closest('.drop-box');
+		
+		if(closestTarget){
+			if (closestTarget.classList.contains('drop-box--active')) {
+				closestTarget.classList.remove('drop-box--active')
+			}else {
+				dropBox.forEach((item) => {
+					if (!item.classList.contains('drop-box--active')) {
+						closestTarget.classList.add('drop-box--active')
+					}
+				})
 			}
-		}, true);
+		}
+	}, true);
 
-		item.addEventListener('click', () => {
-			if (!closestTarget.classList.contains('drop-box--active')) {
-				closestTarget.classList.add('drop-box--active');
-			} else {
-				closestTarget.classList.remove('drop-box--active');
-			}
-		})
-	})
+
 
 	dropBoxItem.forEach((item) => {
 		item.addEventListener('click', (event) => {
 			event.preventDefault();
 			let closestTarget = item.closest('.drop-box');
 			item.closest('.drop-box__wrap').parentElement.querySelector('.drop-box__title').innerHTML = item.innerHTML;
-			if (!closestTarget.classList.contains('drop-box--active')) {
-				closestTarget.classList.add('drop-box--active');
-			} else {
-				closestTarget.classList.remove('drop-box--active');
-			}
+		
+			closestTarget.classList.remove('drop-box--active');
+		
 		})
 	})
 	
@@ -396,22 +394,22 @@
 		const formSubmitClose = document.querySelector('.ethical .close');
 		const formSubmitClose2 = document.querySelector('.ethical .layer__button');
 
-		sublist.forEach(item => {
-			item.addEventListener('click' , () => {
-				let chapter = item.classList[1].split('--')[1];
-				sublist.forEach(targets => {
-					if(targets.classList.contains('sub-list__item--active'))targets.classList.remove('sub-list__item--active')
-				})
-
-				categoryItem.forEach( targets => {
-					targets.classList.remove('sub-list-category__item--active');
-				})
-				
-				item.classList.add('sub-list__item--active');
-				document.querySelector('.sub-list-category__item--' + chapter).classList.add('sub-list-category__item--active');
-				
-			})
-		})
+		document.body.addEventListener('click', (event) => {
+			let closestTarget = event.target.closest('.sub-list__item');
+			
+			if(closestTarget){
+				if (closestTarget.classList.contains('sub-list__item--active')) {
+					closestTarget.classList.remove('sub-list__item--active')
+				}else {
+					sublist.forEach((item) => {
+						if (!item.classList.contains('sub-list__item--active')) {
+							closestTarget.classList.add('sub-list__item--active')
+						}
+					})
+				}
+			}
+		}, true);
+	
 
 		categoryItem.forEach(item => {
 			item.addEventListener('click', (event) => {
@@ -991,16 +989,21 @@
 		window.addEventListener('scroll', () => {
 			let sct = window.pageYOffset;
 			let threshold = 10;
+			const visualImage = document.querySelector('.visual__image');
+			const visaulBox = document.querySelector('.visual__box');
 
 			if(sct > 10) {
 				document.querySelector('.sub-tab-content').classList.add('visual--active')
-				document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/m/sub/img_about_visual_color.png')";
-
+				visualImage.style.backgroundImage="url('../assets/images/m/sub/img_about_visual_color.png')";
+				visualImage.style.transformOrigin = `bottom left`;
+				visaulBox.style.transitionDelay = `0.5s`;
 			}
 
 			if(sct == 0) {
 				document.querySelector('.sub-tab-content').classList.remove('visual--active')
-				document.querySelector('.visual__image').style.backgroundImage="url('../assets/images/m/sub/img_about_visual.png')";
+				visualImage.style.backgroundImage="url('../assets/images/m/sub/img_about_visual.png')";
+				visualImage.style.transformOrigin = `top left`;
+				visaulBox.style.transitionDelay = `0s`;
 			}
 			
 		})
@@ -1023,7 +1026,6 @@
 
 			swiper.on('slideChange', function (e) {
 				stateBarFill.style.width = stateBarWidth/6 * (swiper.realIndex+1) + 'px';
-				console.log(stateBarWidth/6 * swiper.realIndex);
 			})
 		}
 	}
