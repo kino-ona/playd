@@ -953,13 +953,13 @@
   }
 
   &__type span {
-	  max-width: 50px;
-    padding: 0 25px;
+	  width: 90px;
+    padding: 0 25px 0 0;
     color: #888888;
     font-size: 18px;
     @include FontDL;
     @include ellipse(1);
-
+    text-align: right;
     &:last-of-type {
       padding-right: 0;
     }
