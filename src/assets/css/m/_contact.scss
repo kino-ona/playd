@@ -179,7 +179,7 @@
   }
 
   .sub-footer {
-    height: 350px;
+    height: 310px;
     margin: 0 25px 75px;
     background: url('../../images/m/sub/img_contact_banner.png') 0 0 no-repeat;
     background-size: cover;
@@ -195,13 +195,19 @@
 
   .sub-advertise {
     &__title {
-      padding-top: 155px;
-      padding-left: 28px;
-      padding-right: 28px;
+      padding-left: 25px;
+      padding-right: 25px;
       color: #ffffff;
       font-size: 19px;
       line-height: 28px;
       @include FontBD;
+    }
+
+    &__icon {
+      padding-top: 100px;
+      padding-left: 25px;
+      width: 62px;
+      line-height: 1;
     }
 
     &__description {

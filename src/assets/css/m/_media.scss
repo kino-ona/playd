@@ -14,18 +14,20 @@
     margin: 0 25px;
 
     &__inner {
-      margin-top: -60px;
-      padding: 60px 25px 1px;
+      margin-top: -10px;
+      padding: 25px 15px 50px;
       border-radius: 6px;
       background-color: #FAFAFA;
+      text-align: center;
       z-index: -1;
 
       .list-content {
-        flex-basis: 100%;
-        flex-grow: 0;
-        margin-top: 10px;
-        padding: 30px 25px 45px;
+        display: inline-block;
+        width: 135px;
+        height: 135px;
+        margin: 5px;
         background: #ffffff;
+        border-radius: 50% !important;
         border-radius: 6px;
       }
     }
@@ -77,11 +79,11 @@
         display: inline-block;
         position: absolute;
         bottom: -5px;
-        left: 50%;
-        width: 30px;
-        height: 40px;
+        left: 50px;
+        width: calc(100% - 75px);
+        height: 60px;
         margin-left: -15px;
-        background: url('../../../assets/images/m/sub/icon_arrow_up_down.png') 0 0 no-repeat;
+        background: url('../../../assets/images/m/sub/icon_arrow_left_right.png') center center no-repeat;
         background-size: contain;
         content: '';
       }
@@ -98,11 +100,14 @@
       }
       span:nth-child(2) {
         display: block;
+        position: relative;
         height: 50px;
-        margin: 0 25px;
+        margin: 0 auto;
+        width: 200px;
         line-height: 50px;
-        background-color: #EA2126;
+        background-color: #999999;
         border-radius: 25px;
+        z-index: 9;
         @include FontBD;
       }
     }
@@ -110,25 +115,12 @@
     &__bottom {
       position: relative;
       padding: 15px;
-      margin: 40px 25px 0;
+      margin: -30px 25px 0;
       color: #ffffff;
       border-radius: 50px;
-      background-color: #999999;
+      background-color: #EA2126;
       text-align: center;
       @include FontBD;
-
-      &::before {
-        display: inline-block;
-        position: absolute;
-        top: -40px;
-        left: 50%;
-        width: 30px;
-        height: 40px;
-        margin-left: -15px;
-        background: url('../../../assets/images/m/sub/icon_arrow_up_down.png') 0 0 no-repeat;
-        background-size: contain;
-        content: '';
-      }
     }
 
     &__description {
@@ -172,12 +164,6 @@
 
     .sub-content__wrap {
       margin: 0 25px;
-    }
-  }
-
-  .sub-content--introduce {
-    .list-content {
-      border-left: 5px solid #EA2126;
     }
   }
 
@@ -251,6 +237,11 @@
     }
 
     &__description {
+      display: flex;
+      height: 135px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       font-size: 14px;
       letter-spacing: -1.2px;
       @include FontDL;

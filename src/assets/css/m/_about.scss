@@ -397,8 +397,10 @@
       width: 100%;
       margin-top: 20px;
       padding-top: 100%;
+      border-radius: 6px;
       background-position: center center;
-      background-size: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
 
     }
 
@@ -418,14 +420,13 @@
     }
 
     p {
-      margin-top: 10px;
       color: #ffffff;
       font-size: 14px;
       font-weight: 200;
       @include FontBasicSans; 
     }
 
-    .sub-content-list__item + .sub-content-list__item {
+    &__item--first {
       h4, p {
         color: #000000
       }
