@@ -55,24 +55,31 @@ window.addEventListener('load', () => {
   let i = 0;
   let colorBg = ['#33dac6','#ffc809','#fb697e','#1682c2', '#42e17b', '#000000', '#9fe0a8', '#000000', '#631ba3', '#84bbec', '#ffa608'];
   
-  visualImage.style.opacity = 1;
-  visual.style.backgroundColor = '#33dac6';
+  visualImages[0].style.opacity = 1;
+  visual.style.backgroundColor = colorBg[0];
 
   const setKv = () => {
     i++;
-    if (i === visualImages.length) {return;}
     visualImages.forEach(() => {
-      visual.style.backgroundColor = colorBg[i];
-      visualImages[i-1].style.opacity = 0;
-      visualImages[i].style.opacity = 1;
-    });
+      if (i === visualImages.length) {
+        visualImages.forEach((item) => {item.style.opacity = 0;})
+        visual.style.backgroundColor = colorBg[0];
+        visualImages[0].style.opacity = 1;
+        i = 0;
+      } else {
+        console.log(i);
+        if(i === 0) {visualImages.forEach((item) => {item.style.opacity = 0;})} else {visualImages[i-1].style.opacity = 0;}
+        visual.style.backgroundColor = colorBg[i];
+        visualImages[i].style.opacity = 1;
+      }
+    })
   };
   
   const stopKv = () => {
     clearInterval(timer);
   }
-  const timer = setInterval(setKv, 900);
-  setTimeout(stopKv, 10000);
+  const timer = setInterval(setKv, 1750);
+  // setTimeout(stopKv, 10000);
 })
 
 //setting min-height to each section needed
