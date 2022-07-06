@@ -4645,13 +4645,15 @@
   background: #ffffff;
 
   .sub-header {
+    margin-bottom: 0;
+
     &__description {
       padding-top: 18px;
     }
   }
 
   .private-term {
-    padding: 30px 0 75px;
+    padding: 0 0 75px;
     box-sizing: border-box;
     font-size: 14px;
   }
@@ -4659,6 +4661,11 @@
   .private-term .term-list > li {
     padding: 20px 0;
     border-top: 1px solid #EAEAEA;
+
+    &:first-of-type {
+      margin-top: 60px;
+      border-top: 0;
+    }
   }
 
   .private-term .term-list h4.term-tit {
