@@ -680,6 +680,12 @@
       background-color: #ffffff;
     }
   }
+
+  .banner__title--logo {
+    width: 107px;
+    height: 26px;
+    display: block;
+  }
 }
 
 .popup.termAgreePrivacy {
@@ -3131,10 +3137,15 @@
   }
 
   .phase__title {
-    max-width: 135px;
     margin: 0;
     display: block;
     @include FontMD;
+    > span {
+      margin-top: 5px;
+      color: #666666;
+      @include FontRG;
+      display: block;
+    }
   }
 
   .phase__description {
@@ -3147,64 +3158,35 @@
 .diagram__icon {
   width: 70px;
   height: 70px;
-  padding: 20px 20px 10px 20px;
 }
 
 .diagram__section {
   @include FlexRow;
 
   .phase__title {
-    margin-top: 15px;
-  }
-  
-  .diagram__icon {
-    padding-bottom: 20px;
+    margin-top: 8px;
   }
 
   &--countersection {
     .diagram__phase:first-child {
-      .diagram__icon {
-        border: 1.5px dashed #666666;
+      padding: 20px 0 20px 70px;
+        border: 1.5px dashed #DDDDDD;
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
         border-right: 0;
-      }
     }
     .diagram__phase:last-child {
-      .diagram__icon {
-        border: 1.5px dashed #666666;
+      padding: 20px 70px 20px 0;
+        border: 1.5px dashed #DDDDDD;
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
         border-left: 0;
-      }
     }
   }
 
   &--remarked {
-
-    .diagram__phase > section {
-      min-width: 270px;
-      height: auto;
-      @include FlexRow;
-      border: 1.5px dashed #666666;
-      border-radius: 60px;
-    }
-
-    p {
-      padding-right: 20px;
-      margin-right: 20px;
-      color: #666666;
-      text-align: left;
-    }
-  }
-
-  &--packed {
-
-    .diagram__phase > section {
-      @include FlexRow;
-      border: 1.5px dashed #666666;
-      border-radius: 60px;
-    }
+    margin-left: -60px;
+    transform: translateY(27.5px)
   }
 
   &--listed {
@@ -3216,11 +3198,28 @@
     
     .diagram__phase > section {
       text-align: left;
+      padding-left: 30px;
     }
 
     .phase__title {
       margin: 0 0 10px 0;
       text-align: left;
+    }
+  }
+
+  &--packed {
+
+    .diagram__phase > section {
+      @include FlexRow($w: wrap);
+      padding: 20px;
+      border: 1.5px dashed #DDDDDD;
+      border-radius: 93px;
+      margin-bottom: 10px;
+
+      .phase__title {
+        flex-basis: 100%;
+        flex-shrink: 0;
+      }
     }
   }
 }
@@ -3269,11 +3268,11 @@
   }
 
   &--countersection {
-    width: 120px;
+    width: 80px;
     height: 1px;
-    padding: 54.5px 60px;
-    border-top: 1.5px dashed #666666;
-    border-bottom: 1.5px dashed #666666;
+    padding: 71.5px 45px;
+    border-top: 1.5px dashed #dddddd;
+    border-bottom: 1.5px dashed #dddddd;
     align-self: flex-start;
 
     i {
@@ -3281,7 +3280,7 @@
       height: inherit;
       display: inline-block;
       position: relative;
-      background-color: #DDDDDD;
+      background-color: #000000;
 
     
       &::before {
@@ -3292,8 +3291,8 @@
         height: 12px;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        border-left: 1.5px solid #DDDDDD;
-        border-bottom: 1.5px solid #DDDDDD;
+        border-left: 1.5px solid #000000;
+        border-bottom: 1.5px solid #000000;
         content: "";
       }
 
@@ -3306,8 +3305,8 @@
         height: 12px;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        border-right: 1.5px solid #DDDDDD;
-        border-top: 1.5px solid #DDDDDD;
+        border-right: 1.5px solid #000000;
+        border-top: 1.5px solid #000000;
         content: "";
       }
     }
