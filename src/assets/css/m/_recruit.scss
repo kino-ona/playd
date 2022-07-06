@@ -390,7 +390,12 @@
     }
 
     .relate-content__type span:nth-child(1) {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 65%;
+      height: 20px;
       color: #888888;
+    
     }
 
     &::after {
