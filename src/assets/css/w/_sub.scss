@@ -945,6 +945,7 @@
     font-size: 26px;
     @include FontMD;
     @include FlexRow;
+
   }
 
   &__type {
@@ -952,10 +953,12 @@
   }
 
   &__type span {
+	  max-width: 50px;
     padding: 0 25px;
     color: #888888;
     font-size: 18px;
     @include FontDL;
+    @include ellipse(1);
 
     &:last-of-type {
       padding-right: 0;
