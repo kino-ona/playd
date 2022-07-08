@@ -4,21 +4,34 @@
 	const visualSrc = document.querySelector('.visual__image .image');
 
 	if(visualSrc) {
-	  const visual = document.querySelectorAll('.visual__image .image');
+		const visual = document.querySelector('.visual');
+	  const visualImages = document.querySelectorAll('.visual__image .image');
   	let i = 0;
+
+		visualImages[0].style.opacity = 1;
 
 		const setKv = () => {
 			i++;
-			visual.forEach(() => {
-				visual[i].classList.add('active');
-			});
+			visualImages.forEach(() => {
+				if (i === visualImages.length) {
+					visualImages.forEach((item) => {item.style.opacity = 0;})
+				
+					visualImages[0].style.opacity = 1;
+					i = 0;
+				} else {
+					if(i === 0) {
+
+					} else {visualImages[i-1].style.opacity = 0;}
+					visualImages[i].style.opacity = 1;
+				}
+			})
 		};
   
 		const stopKv = () => {
 			clearInterval(timer);
 		}
-		const timer = setInterval(setKv, 900);
-		setTimeout(stopKv, 9800);
+		const timer = setInterval(setKv, 1750);
+		// setTimeout(stopKv, 9800);
 	
 		
 		//aos
