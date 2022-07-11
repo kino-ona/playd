@@ -952,7 +952,7 @@ if(bodyClass) {
 			window.addEventListener('scroll', () => {
 				let sct = window.pageYOffset;
 	
-				if(sct > 50) {
+				if(sct > 70) {
 					header.classList.add('approached');
 					targetImage.style.transformOrigin = `bottom left`;
 					targetBox.style.transitionDelay = `0.5s`;
