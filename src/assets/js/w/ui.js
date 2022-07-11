@@ -908,11 +908,11 @@ if(bodyClass) {
 		break;
 
 		case 'campaign':{
-			const visuals = document.querySelectorAll('.visual .image');
+			const visual = document.querySelector('.visual');
 			const visualLists = document.querySelectorAll('.visual__text li');
 			
 			window.addEventListener('load', () => {
-				visuals.forEach((item) => {item.classList.add('loaded')});
+				visual.classList.add('loaded');
 				visualLists.forEach((item) => {item.classList.add('loaded')});
 			})
 
