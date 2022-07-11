@@ -1535,7 +1535,7 @@
               </div>
               <div class="form-field">
                 <label for="user-password" class="input-box--info__label input-box--info__label--necessary">비밀번호</label>
-                <input type="text" id="user-password" class="input-box--info__input" name="" maxlength="320" placeholder="비밀번호를 설정해 주세요."><!-- 20220705 //-->
+                <input type="text" id="user-password" class="input-box--info__input" name="" maxlength="52" placeholder="비밀번호를 설정해 주세요."><!-- 20220711 //-->
               </div>
             </div>
           </div>
@@ -1635,8 +1635,8 @@
         <form action='' id="" class="check-input" style="display: none;">
           <div class="check-input__wrap">
             <p class="check-input__title">이메일 / 비밀번호를 입력해 주세요.</p>
-            <input type="text" placeholder="이메일을 입력해 주세요." class="check-input__input">
-            <input type="password" placeholder="비밀번호를 입력해 주세요." class="check-input__input">
+            <input type="text" maxlength="320" placeholder="이메일을 입력해 주세요." class="check-input__input"><!-- 20220711 //-->
+            <input type="password" maxlength="100" placeholder="비밀번호를 입력해 주세요." class="check-input__input"><!-- 20220711 //-->
           </div>
           <button type="submit" class="check-input__button">접수 내용 확인</button><!-- 20220628 //-->
           <p class="check-input__description">제보 시 등록하셨던 이메일과 비밀번호를 입력하시면 접수 내용을 확인하실 수 있습니다. 비밀번호가 기억나지 않으실 경우 이메일<a href="mailto:clean@playd.com">(clean@playd.com)</a>로 문의하시기 바랍니다.</p><!-- 20220628 //-->
