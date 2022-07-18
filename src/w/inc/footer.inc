@@ -15,7 +15,7 @@
 				<li><a href="#">윤리신고</a></li>
 				<li><a href="#">뉴스레터</a></li>
 				<li><a href="#">오시는 길</a></li><!-- 20220628 //-->
-				<li><a href="#">무료 광고 진단</a></li><!-- 20220628 //-->
+				<li><a href="https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></li><!-- 20220628 //--><!-- 20220718 //--> 
 				<li><a href="./personal.html">개인정보처리방침</a></li><!-- 220701 //-->
 			</ul>
 			<nav class="footer__nav--right">
@@ -36,11 +36,12 @@
 		</ul>
 		<nav class="footer__util--right">
 			<p class="information"><span class="information__title">대표전화</span>1566-3265</p>
+			<!-- 20220718 //
 			<ul class="information__desc">
 				<li>MON - FRI 09 : 00 - 18:00</li>
 				<li>주말, 공휴일 휴무</li>
 				<li>BREAK TIME : 12:30 - 13:30</li>
-			</ul>
+			</ul> -->
 		</nav>
 	</div>
 </footer>

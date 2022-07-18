@@ -683,7 +683,26 @@ $elemT: 150px;
     }
 
     .section__content {
+      position: relative;
       margin-top: 70px;
+    }
+
+    .gragh__index {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      color: #666666;
+      font-size: 16px;
+    }
+
+    .graph--1 .graph__info {
+	    right: calc(100% + 65px);
+
+      &--unit {
+        right: -44.5px;
+        bottom: 0.5px;
+      }
     }
   }
 
@@ -693,7 +712,7 @@ $elemT: 150px;
       animation: $duration1 graphBarIn ease forwards;
     }
 
-    .graph__title, .graph__info { 
+    .graph__title, .graph__info, .gragh__index { 
       animation: $duration2 graphTextIn ease forwards;
     }
 
@@ -706,6 +725,12 @@ $elemT: 150px;
     .graph--3 {
       .graph__bar, .graph__title, .graph__info {
         animation-delay: $duration2*0.5;
+      }
+    }
+
+    .section__content {
+      .gragh__index {
+        animation-delay: $duration2*0.95;
       }
     }
   }
