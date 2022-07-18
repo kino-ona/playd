@@ -97,7 +97,7 @@
 					<p><a href="#">윤리신고</a></p>
 					<p><a href="#">뉴스레터</a></p>
 					<p><a href="#">오시는 길</a></p>
-					<p class="footer__line--last"><a href=" https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></p><!--220718 수정-->
+					<p class="footer__line--last"><a href="https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></p><!--220718 수정-->
 				</div>
 				<!--220629 수정-->
 				<div class="footer__wrap--line"><p class="footer__line--last"><a href="./personal.html" class="font--bd ">개인 정보처리 방침</a></p></div>
