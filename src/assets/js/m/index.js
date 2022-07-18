@@ -46,9 +46,9 @@
 		const options = {
 			duration: 10,
 		}
-		const count1 = new countUp.CountUp(countUp1, 123456, options);
-		const count2 = new countUp.CountUp(countUp2, 3424, options);
-		const count3 = new countUp.CountUp(countUp3, 39342, options);
+		const count1 = new countUp.CountUp(countUp1, 4516, options);
+		const count2 = new countUp.CountUp(countUp2, 2846, options);
+		const count3 = new countUp.CountUp(countUp3, 76840, options);
 		
 	
 		window.addEventListener('scroll', () => {
