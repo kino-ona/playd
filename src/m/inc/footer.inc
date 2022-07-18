@@ -97,7 +97,7 @@
 					<p><a href="#">윤리신고</a></p>
 					<p><a href="#">뉴스레터</a></p>
 					<p><a href="#">오시는 길</a></p>
-					<p class="footer__line--last"><a href="#">무료 광고 진단</a></p>
+					<p class="footer__line--last"><a href=" https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></p><!--220718 수정-->
 				</div>
 				<!--220629 수정-->
 				<div class="footer__wrap--line"><p class="footer__line--last"><a href="./personal.html" class="font--bd ">개인 정보처리 방침</a></p></div>
@@ -111,6 +111,7 @@
 			</nav>
 		</div>
 	</div>
+	<!--220718 수정-->
 	<div class="footer-bottom">
 		<ul class="footer__util">
 			<li>(주)플레이디</li>
@@ -120,14 +121,11 @@
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
 		<nav class="footer__util--right">
-			<p class="information"><span class="information__title">대표전화</span><span class="footer__number numbering">1566-3265</span></p>
 			<ul class="information__desc">
-				<li>MON - FRI 09 : 00 - 18:00</li>
-				<li>주말, 공휴일 휴무</li>
-				<li>BREAK TIME : 12:30 - 13:30</li>
 			</ul>
 		</nav>
 	</div>
+	<!--220718 수정-->
 </footer>
 
 
