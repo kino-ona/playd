@@ -4,11 +4,11 @@
 			<a href="./index.html" class="logo @@logotype"><span class="a11y">플레이디</span></a>
 		</h1>
 		<nav class="nav">
-			<div class="nav__link"><a href="./campaign.html">사업영역</a></div>
-      <div class="nav__link"><a href="./techhub.html">솔루션</a></div>
-      <div class="nav__link"><a href="./letter.html">인사이트</a></div>
-      <div class="nav__link"><a href="./about.html">플레이디</a></div>
-      <div class="nav__link"><a href="./contact.html">CONTACT</a></div>
+			<div @@if (located==='1') { class="nav__link nav__active" } @@if (located!=='1') { class="nav__link" }><a href="./campaign.html">사업영역</a></div>
+      <div @@if (located==='2') { class="nav__link nav__active" } @@if (located!=='2') { class="nav__link" }><a href="./techhub.html">솔루션</a></div>
+      <div @@if (located==='3') { class="nav__link nav__active" } @@if (located!=='3') { class="nav__link" }><a href="./letter.html">인사이트</a></div>
+      <div @@if (located==='4') { class="nav__link nav__active" } @@if (located!=='4') { class="nav__link" }><a href="./about.html">플레이디</a></div>
+      <div @@if (located==='5') { class="nav__link nav__active" } @@if (located!=='5') { class="nav__link" }><a href="./contact.html">CONTACT</a></div>
       <div class="nav__gnb"><a href="#" type="button"><i></i></a></div>
 		</nav>
 	</div>
@@ -80,7 +80,3 @@
 		</ul>
 	</div>
 </div>
-<style>
-.header__sticked .nav .nav__link:nth-child(@@located) a { color: #EA2126; }	
-.header__sticked .nav .nav__link:nth-child(@@located) a::after { content: ''; position: absolute; bottom: -1.5px; left: -10px; right: 0; width: calc(100% + 20px); height: 4px; background-color: #EA2126; }
-</style>
