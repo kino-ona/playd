@@ -4725,7 +4725,7 @@
   }
 
   .private-term {
-    padding: 0 0 75px;
+    padding: 0 0 0;
     box-sizing: border-box;
     font-size: 14px;
   }
@@ -4846,13 +4846,22 @@
   }
 
   .private-term .link_btn {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    padding: 26px 0;
-    background: #EA2126;
+    min-width: 560px;
+    height: 60px;
+    display: inline-block;
+    margin: 40px auto 0;
+    padding: 16px 60px;
+    box-sizing: border-box;
+    background: #000000;
+    border-radius: 5px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
+    font-size: 18px;
+    @include FontDL;
+    white-space: nowrap;
+
+    strong {
+      @include FontBD;
+    }
   }
 }
-
