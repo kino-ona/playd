@@ -115,13 +115,27 @@
     padding-left: 15px;
   }
 
-  .private-term .link_btn {
-    width: 90%;
+  .private-term .button__wrap {
     display: block;
-    margin: 0 auto;
-    padding: 13px 0;
-    background: #EA2126;
+
+  }
+
+  .private-term .button__wrap + .button__wrap {
+    margin-top: 15px;
+  }
+
+  .private-term .link_btn {
+    display: block;
+    width: 100%;
+    padding: 13px 5px;
+    background: #000000;
     text-align: center;
     color: #fff;
+    box-sizing: border-box;
+  }
+
+  .private-term .link_btn strong {
+    display: block;
+    
   }
 }
