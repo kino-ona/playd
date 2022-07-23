@@ -4730,7 +4730,7 @@
     font-size: 14px;
   }
 
-  .private-term .term-list > li {
+  .private-term .term_list > li {
     padding: 20px 0;
     border-top: 1px solid #EAEAEA;
 
@@ -4740,24 +4740,24 @@
     }
   }
 
-  .private-term .term-list h4.term-tit {
+  .private-term .term_list h4.term_tit {
     color: #000;
     margin-bottom: 30px;
     @include FontMD;
   }
-  .private-term .term-list .term-anchor  {
+  .private-term .term_list .term_anchor  {
     width: 100%;
     margin-right: -6px;
   }
   
-  .private-term .term-list .term-anchor li {
+  .private-term .term_list .term_anchor li {
     float: left;
     width: calc(50% - 21px);
     margin-right: 6px;
    
     background: #EAEAEA;
   }
-  .private-term .term-list .term-anchor::after {
+  .private-term .term_list .term_anchor::after {
     content: "";
     display: block;
     width: 100%;
@@ -4765,7 +4765,7 @@
     clear: both;
   }
 
-  .private-term .term-list .term-anchor li a {
+  .private-term .term_list .term_anchor li a {
     display: flex;
     height: 77px;
     letter-spacing: -1px;
@@ -4775,38 +4775,52 @@
     align-items: center;
   }
 
-  .private-term .term-list h3.term-tit {
+  .private-term .term_list h3.term_tit {
     font-size: 22px;
     color: #EA2126;
     margin-bottom: 30px;
     @include FontBD;
   }
 
-  .private-term .term-list dl dt {
+  .private-term .term_list dl dt {
     margin-bottom: 20px;
     @include FontMD;
   }
 
-  .private-term .term-list dl dd {
+  .private-term .term_list dl dd {
     padding-left: 24px;
     margin-bottom: 10px
   }
 
-  .private-term .term-list .term-box {
+  .private-term .term_list .term_box {
     background: #EAEAEA;
     padding: 20px;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    li {
+      width: 50%;
+      float: left;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+    }
   }
 
-  .private-term .term-list .term-txt {
+  .private-term .term_list .term_txt {
     margin-bottom: 20px;
   }
 
-  .private-term .term-list dl dd {
-    padding-left: 24px;
+  .private-term .term_list dl dd {
+    padding-left: 10px;
     margin-bottom: 20px;
+    &:before {
+      display: none;
+    }
   }
 
-  .private-term .term-list .term-tbl-tit {
+  .private-term .term_list .term_tbl_tit {
     font-size: 14px;
     margin-bottom: 15px;
     @include FontMD;
@@ -4816,18 +4830,21 @@
     margin-top: 10px;
   }
 
-  .private-term .term-list table {
+  .private-term .term_list table {
     width: 100%;
     border-top: 2px solid #EA2126;
     margin-bottom: 30px;
     font-size: 14px;
   }
-
-  .private-term .term-list table tr {
-    border-bottom: 2px solid #dedede;
+  .private-term .term_list br {
+    display: none;
   }
 
-  .private-term .term-list table th {
+  .private-term .term_list table tr {
+    border-bottom: 1px solid #dedede;
+  }
+
+  .private-term .term_list table th {
     width: 20%;
     min-width: 100px;
     background: #f6f6f6;
@@ -4836,11 +4853,11 @@
     font-weight: 700;
   }
 
-  .private-term .term-list table th, .private-term .term-list table td {
+  .private-term .term_list table th, .private-term .term_list table td {
     padding: 8px 0;
   }
 
-  .private-term .term-list table td {
+  .private-term .term_list table td {
     width: 80%;
     padding-left: 30px;
   }
