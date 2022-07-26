@@ -1021,6 +1021,11 @@
   .swiper-slide {
     height: inherit;
     border-radius: 10px;
+    background: {
+      position: center;
+      size: contain;
+      repeat: no-repeat;
+    }
   }
 
   .swiper-pagination {
