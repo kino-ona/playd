@@ -94,7 +94,7 @@
 			</p>
 			<div class="footer__nav">
 				<div class="footer__wrap footer__wrap--line">
-					<p><a href="#">윤리신고</a></p>
+					<p><a href="#">윤리위반신고</a></p><!--220726 -->
 					<p><a href="#">뉴스레터</a></p>
 					<p><a href="#">오시는 길</a></p>
 					<p class="footer__line--last"><a href="https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></p><!--220718 수정-->
@@ -116,7 +116,7 @@
 		<ul class="footer__util">
 			<li>(주)플레이디</li>
 			<li>대표자 : 이준용 | 사업자등록번호 : 129-86-43885</li>
-			<li>주소 : 경기도 성남시 분당구 황새울로 359번 길 11, 5층</li>
+			<li>주소 : 경기도 성남시 분당구 황새울로 359번길 11, 5~6층</li><!--220726 -->
 			<li>이메일 : <a href="mailto:master@playd.com">master@playd.com</a></li>
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
