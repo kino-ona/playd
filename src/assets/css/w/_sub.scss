@@ -1719,6 +1719,11 @@
     height: inherit;
     background: linear-gradient(to right, rgba(0, 0, 0, .32), 20%,rgba(0, 0, 0, 0));
   }
+  
+  .sub-header .visual .button {
+    min-width: 200px;
+    font-size: 16px;
+  }
 
   .sub-header .button__wrap {
     margin-top: 40px;
@@ -2056,10 +2061,14 @@
   &__content {
     padding-bottom: 150px;
     overflow: hidden;
-  }
 
-  .article__content .button__wrap {
+    .article__text {
+      margin: 25px 0;
+    }
+    
+    .button__wrap {
     margin-top: 60px;
+    }
   }
 
   .button__large {
@@ -2349,6 +2358,14 @@
 
 .techhub {
   @include subTabLocation;
+
+  .sub-header__label {
+    text-transform: none;
+  }
+
+  .sub-container dl dt {
+    @include FontBD;
+  }
 
   .sub-content {
 
@@ -2651,6 +2668,11 @@
     content: '';
     clear: both;
   }
+
+	.table-content__desc {
+		margin-bottom: 10px;
+		text-align: right;
+	}
 
   table caption {
     display: none;
@@ -3059,8 +3081,11 @@
     color: #EA2126;
   }
 
-  .visual__text--right .visual__text-title {
-    color: #FFA600;
+  .visual__text--right {
+    text-align: right;
+    .visual__text-title {
+      color: #FFA600;
+    }
   }
 
   .accordian {
@@ -3374,6 +3399,12 @@
     box-sizing: border-box;
   }
 
+  .sub-content__wrap + p {
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+  }
+
   .sub-content__inner {
     padding: 0 50px 50px;
     @include FlexRow($w: wrap);
@@ -3479,15 +3510,15 @@
     background-color: #999999;
     border-radius: 52px;
     
-    strong {
+    > strong {
       display: inline-block;
       @include FontBD;
     }
+  }
 
-    span {
-      display: inline-block;
-      @include FontDL; 
-    }
+  .sub-content__label-bottom + .image-block {	
+    top: calc(100% - 105px) !important;
+    transform: translateX(-50%) rotate(180deg) !important;
   }
   
   .sub-content__label-top {
@@ -4082,6 +4113,10 @@
         text-align: left;
         box-sizing: border-box;
         background-color: #fffFFF;
+
+        &:not(:first-of-type) {
+          margin-left: 40px;
+        }
       }
 
       .list-content__item {
@@ -4184,6 +4219,11 @@
         text-align: left;
       }
       background: #ffffff;
+
+      &--center {
+        justify-content: center;
+        text-align: center;
+      }
   
       > * {
         flex: 1;
