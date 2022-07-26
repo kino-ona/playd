@@ -90,7 +90,7 @@
 			break;
 
 			case 'techhub':
-				headerTitle.innerHTML = 'Tech HUB';
+				headerTitle.innerHTML = 'tech HUB';
 				subCommonFunction();
 			break;
 

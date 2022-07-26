@@ -29,7 +29,7 @@
 				<div class="gnb__item">
 					<a href="./techhub.html" role="button" class="gnb__list--link font--bd">솔루션</a>
 					<div class="gnb__wrap">
-						<p><a href="./techhub.html">Tech HUB</a></p>
+						<p><a href="./techhub.html">tech HUB</a></p><!--220726-->
 					</div>
 				</div>
 				<div class="gnb__item">
