@@ -4932,3 +4932,26 @@
     }
   }
 }
+
+.search-form--tower {
+  flex-direction: column;
+  align-items: center;
+
+  .search-form__wrap {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  .search-list {
+    justify-content: center;
+
+    .search-item {
+      max-width: 810px;
+      justify-content: center;
+    }
+  }
+}
+
+.letter .search-form--tower .search-item {
+  justify-content: flex-start;
+}
