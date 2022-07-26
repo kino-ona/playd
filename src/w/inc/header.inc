@@ -21,7 +21,7 @@
 			<div class="navmenu__link"><a href="./awards.html">수상내역</a></div>
 		</div>
 		<div class="navmenu__list">
-			<div class="navmenu__link"><a href="./techhub.html">Tech HUB</a></div>
+			<div class="navmenu__link"><a href="./techhub.html">tech HUB</a></div><!-- 20220726 //-->
 		</div>
 		<div class="navmenu__list">
 			<div class="navmenu__link"><a href="./letter.html">뉴스레터</a></div>
@@ -55,7 +55,7 @@
 		</ul>
 		<ul class="menu">
 			<li class="menu__title"><span>솔루션</span></li>
-			<li class="menu__link"><a href="./techhub.html"><span>Tech HUB</span></a></li>
+			<li class="menu__link"><a href="./techhub.html"><span>tech HUB</span></a></li><!-- 20220726 //-->
 		</ul>
 		<ul class="menu">
 			<li class="menu__title"><span>인사이트</span></li>
