@@ -533,8 +533,7 @@ if(bodyClass) {
 				document.querySelectorAll('[data-content="윤리경영 실전 지침"] .sub-list-category__box > p a').forEach((item)=>{
 					item.classList.remove(targetClassName2);
 				})
-				
-				
+								
 				document.querySelectorAll('[data-content="윤리경영 실전 지침"] .sub-list__item').forEach((item)=>{
 					item.classList.remove(targetClassName3);
 				})
@@ -544,7 +543,7 @@ if(bodyClass) {
 				target3.classList.add(targetClassName3);
 
 
-				window.scrollTo({top:	document.querySelector('.sub-tabs').offsetTop + 3400 , behavior:'smooth'});
+				window.scrollTo({top:	document.querySelector('.sub-tabs').offsetTop + 1905 , behavior:'smooth'});
 			})
 		}
 		break;

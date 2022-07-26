@@ -2,7 +2,7 @@
 	<div class="banner__content">
 		<p class="banner__title">플레이디와 함께 멈추지 않는 성장을 경험하세요.</p>
 		<div class="button__wrap">
-			<a href="#" class="button button__radius button__lined-white">프로젝트 문의하기</a>
+			<a href="#" class="button button__radius button__lined-white">프로젝트 문의</a><!-- 20220726 //-->
 			<a href="#" class="button button__radius button__filled-white">회사 소개서 다운로드</a><!-- 20220628 //-->
 		</div>
 	</div>
@@ -12,14 +12,14 @@
 		<div class="footer-top__inner">
 			<a href="#" class="logo logo__footer"><span class="a11y">플레이디</span></a>
 			<ul class="footer__nav">
-				<li><a href="#">윤리신고</a></li>
+				<li><a href="#">윤리위반신고</a></li><!-- 20220726 //-->
 				<li><a href="#">뉴스레터</a></li>
 				<li><a href="#">오시는 길</a></li><!-- 20220628 //-->
 				<li><a href="https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></li><!-- 20220628 //--><!-- 20220718 //--> 
 				<li><a href="./personal.html">개인정보처리방침</a></li><!-- 220701 //-->
 			</ul>
 			<nav class="footer__nav--right">
-				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-naver.png" /><span class="a11y">네이버</span></a>
+				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-naverblog.png" /><span class="a11y">네이버</span></a><!-- 20220726 //-->
 				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-instagram.png" /><span class="a11y">인스타그램</span></a>
 				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-youtube.png" /><span class="a11y">유투브</span></a>
 				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-facebook.png" /><span class="a11y">페이스북</span></a>
@@ -30,7 +30,7 @@
 		<ul class="footer__util">
 			<li>(주)플레이디</li>
 			<li>대표자 : 이준용 | 사업자등록번호 : 129-86-43885</li>
-			<li>주소 : 경기도 성남시 분당구 황새울로 359번길 11, 5층</li>
+			<li>주소 : 경기도 성남시 분당구 황새울로 359번길 11, 5~6층</li><!-- 20220726 //-->
 			<li>이메일 : <a href="mailto:master@playd.com">master@playd.com</a></li>
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>

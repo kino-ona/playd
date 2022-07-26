@@ -754,6 +754,9 @@ $elemT: 150px;
       overflow: hidden;
       background-position: center center;
       background-size: cover;
+	    -webkit-filter: grayscale(100%);
+	    filter: grayscale(100%);
+      opacity: .5;
     }
   }
 }
