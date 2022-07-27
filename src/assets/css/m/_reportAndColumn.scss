@@ -106,17 +106,17 @@
     display: block;
     position: relative;
     height: 82px;
-    padding: 10px 25px;
-    background: linear-gradient(#EEC7CF, #F5DCE0);
+    padding: 20px 25px 0 100px;
+    background: linear-gradient(#EEC4CD, #F5DCE0);
     box-sizing: border-box;
 
     &::before {
       display: inline;
       position: absolute;
-      right: 20px;
-      bottom: 0;
-      width: 120px;
-      height: 100px;
+      left: 25px;
+      bottom: 12px;
+      width: 60px;
+      height: 60px;
       background: url('../../../assets/images/m/sub/img_footer_report.png') center center no-repeat;
       background-size: contain;
       content: '';
@@ -126,6 +126,7 @@
       color: #000000;
       font-size: 13px;
       line-height: 20px;
+      letter-spacing: -.03em;
     }
 
     &__text {
@@ -133,6 +134,7 @@
       position:relative;
       margin-top: 5px;
       font-size: 12px;
+      letter-spacing: -.03em;
       @include FontMD;
     }
 
