@@ -2250,11 +2250,16 @@
   .sub-content {
     margin-bottom: 20px;
     @include FlexRow($w: wrap, $a: flex-start);
+    justify-content: flex-start;
   }
   
   .list-content {
     flex-basis: calc(33.333% - 20px);
     margin-bottom: 60px;
+    margin-right: 30px;
+    &:nth-child(3) {
+      margin-right: 0;
+    }
     background-color: transparent;
   }
 
