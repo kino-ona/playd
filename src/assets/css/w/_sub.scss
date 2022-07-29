@@ -2107,6 +2107,11 @@
   .swiper-slide {
     height: 600px;
     border-radius: 10px;
+    background: {
+      repeat: no-repeat;
+      position: center center;
+      size: cover;
+    }
   }
 
   .swiper-slide__text {
