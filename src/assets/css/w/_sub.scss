@@ -2262,7 +2262,7 @@
     flex-basis: calc(33.333% - 20px);
     margin-bottom: 60px;
     margin-right: 30px;
-    &:nth-child(3) {
+    &:nth-child(3n) {
       margin-right: 0;
     }
     background-color: transparent;
