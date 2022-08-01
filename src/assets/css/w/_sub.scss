@@ -4969,3 +4969,128 @@
 .letter .search-form--tower .search-item {
   justify-content: flex-start;
 }
+
+.popup.Privacy {
+  .layer__wrap--wide {
+    max-width: 740px;
+  }
+
+  .layer__head {
+    margin-bottom: 40px;
+  }
+
+  .content__title {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .content__text > p {
+    margin-bottom: 25px;
+    display: block;
+    font-size: 16px;
+    @include FontDL;
+  }
+
+  .content__text-wrap {
+    max-width: 100%;
+    padding: 30px 40px 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(250, 250, 250, .9);
+
+    > a {
+      margin-top: 30px;
+      display: block;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+  }
+
+  ul, ol {
+    margin-bottom: 20px;
+  }
+
+  dl {
+    margin-bottom: 10px;
+  }
+
+  ol {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    li:not(:first-of-type) {
+      margin-left: 80px;
+    }
+  }
+
+  .tit {
+    color: #000000;
+    font-size: 16px;
+    @include FontMD;
+
+    span {
+      margin-left: 10px;
+      display: inline-block;
+      font-size: 16px;
+      @include FontDL;
+      color: #666666;
+    }
+  }
+
+  li {
+    font-size: 16px;
+    @include FontDL;
+    color: #666666;
+  }
+
+  li:not(:first-of-type) {
+    margin-top: 4px;
+  }
+
+  dt {
+    margin: 0 0 4px;
+    line-height: inherit;
+  }
+
+  .dd-tit {
+    padding-left: 15px;
+    &::before {
+      content: '';
+    }
+  }
+
+  dd {
+    position: relative;
+    padding-left: 30px;
+    line-height: inherit;
+    color: #666666;
+    &:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      content: '-';
+    }
+
+    a {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  .button__wrap {
+		margin-top: 40px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .layer__button {
+    width: 320px;
+  }
+}
