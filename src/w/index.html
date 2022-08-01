@@ -4,7 +4,7 @@
 })
 <link rel="stylesheet" href="../assets/css/w/index.css">
 </head>
-<body class="main" onload="layerOpen('Privacy')">
+<body class="main">
 <div class="skipnavigation"><a href="#container" tabindex="1">본문 바로가기</a></div>
 
 <div class="wrap">
@@ -292,8 +292,8 @@
 	</div>
 </div>
 
-<!-- s 22020801 -->
-<div class="layer__body popup Privacy" id="Privacy" aria-hidden="true" role="dialog">
+<!-- s 22020801 팝업노출은 8.2일 ~ 8.8일까지 -->
+<div class="layer__body popup main-popup Privacy" id="Privacy" aria-hidden="true" role="dialog">
   <div class="layer__wrap layer__wrap--wide">
     <div class="layer__close">
       <button class="close">close</button>
@@ -355,13 +355,21 @@
 					</div>
         </div>
         <div class="button__wrap">
-          <button class="button layer__button close" onclick="layerClose('Privacy')">닫기</button>
+          <button class="button layer__button close">닫기</button>
         </div>
       </div>
     </div>
+    <div class="layer__checkbox">
+      <form>
+        <label for="checkbox--popup" class="sub-checkbox__label">
+          <input type="checkbox" id="checkbox--popup" name="" class="sub-checkbox__input">
+          <span><i></i>오늘 하루 보지않기</span>
+        </label>
+      </form>
+    </div>
   </div>
 </div>
-<!--// e 22020801 -->
+<!--// e 22020801 팝업노출은 8.2일 ~ 8.8일까지 -->
 
 <!-- footer -->
 @@include('./inc/footer.inc', {

@@ -67,7 +67,6 @@ window.addEventListener('load', () => {
         visualImages[0].style.opacity = 1;
         i = 0;
       } else {
-        console.log(i);
         if(i === 0) {visualImages.forEach((item) => {item.style.opacity = 0;})} else {visualImages[i-1].style.opacity = 0;}
         visual.style.backgroundColor = colorBg[i];
         visualImages[i].style.opacity = 1;
@@ -217,6 +216,7 @@ listItems.forEach(item => {
   });
 })
 
+//a11y tab focus
 const targetArrowBtn = serviceArea.querySelector('.main .box-item--left ');
 
 boxItems.forEach(item => {
@@ -226,35 +226,42 @@ boxItems.forEach(item => {
   item.querySelector('.box__title').addEventListener('!focus', () => {item.classList.remove('item--is-visible');})
 })
 
+//main-popup
+const startDate = new Date('2022/07/01 23:59:59');
+const endDate = new Date('2022/07/29 23:59:59');
+const today = Date.now();
 
-//layerPopup
-let isOpen = false;
-const layerOpen = (layerId) =>{
-	if(document.querySelector('#' + layerId) == null) return;
-	let curPos = window.pageYOffset;
-	document.documentElement.classList.add("noscroll");
-	document.querySelector('#' + layerId).classList.add("is-visible");
-	let layerID = document.querySelector('#' + layerId);
-	layerID.setAttribute('aria-hidden', 'false');
-	if(document.querySelector('[role="dialog"].is-visible') && isOpen == false) {
-		isOpen = true;
-	}
-	const delay = setTimeout( function() {
-		if(!document.documentElement.classList.contains('noscroll')){
-			document.documentElement.classList.add('noscroll');
-		}
-		clearTimeout(delay);
-	}, 50);
-}
-const layerClose = (layerId) => {
-	if(document.querySelector('#' + layerId) == null) return;
-	let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
-	document.querySelector('#' + layerId).classList.remove("is-visible");
-	document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
-	document.documentElement.classList.remove("noscroll");
-	if (document.querySelector('[role="dialog"].is-visible')) {
-		document.documentElement.classList.remove("noscroll");
-		window.scrollTop = curPos;
-		isOpen = false;
-	}
+if (today >= startDate && today <= endDate) {
+  const setCookie = function(name, value, exp) {
+    var date = new Date();
+    date.setTime(date.getTime() + exp*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+  };
+
+  const getCookie = function(name) {
+    var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return value? value[2] : null;
+  };
+
+  if(!getCookie('main-popup--checked')) {
+    layerOpen('Privacy');
+  } 
+
+  document.querySelector('.main-popup .layer__close .close').addEventListener('click', () => {
+    if(document.querySelector('.main-popup #checkbox--popup:checked')) {
+      setCookie('main-popup--checked', "true", 1);
+      layerClose('Privacy');
+    } else {
+      layerClose('Privacy');
+    }
+  });
+
+  document.querySelector('.main-popup .button__wrap .close').addEventListener('click', () => {
+    if(document.querySelector('.main-popup #checkbox--popup:checked')) {
+      setCookie('main-popup--checked', "true", 1);
+      layerClose('Privacy');
+    } else {
+      layerClose('Privacy');
+    }
+  });
 }
