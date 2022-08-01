@@ -1941,10 +1941,11 @@
     flex-shrink: 0;
     box-sizing: border-box;
     background: {
-      size: cover;
+      size: contain;
       position: center center;
       repeat: no-repeat;
     }
+    background-color: rgba(250, 250, 250, .10);
     border-radius: 10px;
     overflow: hidden;
   }
