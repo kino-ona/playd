@@ -452,12 +452,12 @@ if(bodyClass) {
 			}
 
 			//Necessary Check
-			const CheckboxNeededCheck = () => {
-				if (needCheck === null) return;
-				else needCheck.addEventListener('change', () => {
-					needCheck.checked ? formSubmit.classList.add('submit--active') : formSubmit.classList.remove('submit--active');
-				})
-			}
+			// const CheckboxNeededCheck = () => {
+			// 	if (needCheck === null) return;
+			// 	else needCheck.addEventListener('change', () => {
+			// 		needCheck.checked ? formSubmit.classList.add('submit--active') : formSubmit.classList.remove('submit--active');
+			// 	})
+			// }
 
 			//All .close UI
 			const LayerCloseClicker = () => {
@@ -471,7 +471,7 @@ if(bodyClass) {
 			}
 
 			InputFileAttaching();
-			CheckboxNeededCheck();
+			// CheckboxNeededCheck();
 			LayerCloseClicker();
 
 			const popLayers = document.querySelectorAll('.open.sub-content__title--link')
