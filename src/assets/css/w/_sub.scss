@@ -1151,9 +1151,9 @@
   }
 
   .check-content__description  {
-	  flex-basis: 100%; 
-    width: 100%;
-    min-width: 100%;
+	  // flex-basis: 100%; 
+    // width: 100%;
+    // min-width: 100%;
     &.reple_comment {
       position: relative;
       i {
@@ -1215,22 +1215,29 @@
   .check-content__recomment {
     width: 100%;
     margin-top: 25px;
-    padding-top: 25px;
+    // padding-top: 25px;
     padding-left: 30px;
     @include FlexRow($a: flex-start);
     border-top: 1px solid #DDDDDD;
     
     .check-content__description {
+      display: flex;
+      // flex-basis: 100%; 
+      width: 100%;
+      // min-width: 100%;
       padding-top: 25px;
       border-top: 1px solid #DDDDDD;
-      @include FlexRow($a: flex-start);
+      // @include FlexRow($a: flex-start);
       &:first-of-type {
         border-top: 0;
+      }
+      .check-content__sub-text {
+        width: calc(100% - 80px)
       }
     }
 
     .check-content__sub-title {
-      width: 80px;
+      width: 60px;
       padding-left: 20px;
       margin-right: 20px;
       margin-bottom: 0;
