@@ -1156,7 +1156,6 @@
     min-width: 100%;
     &.reple_comment {
       position: relative;
-      padding-left: 20px;
       i {
         position: absolute;
         top: 0;
@@ -1173,38 +1172,10 @@
 
   .check-content__description + .check-content__modify  {
     position: absolute;
-    right: 0;
+    right: 20px;
     width: 100px;
     bottom: 30px;
     text-align: right;
-  }
-
-  .check-content__recomment {
-    width: 100%;
-    margin-top: 25px;
-    padding-top: 25px;
-    padding-left: 25px;
-    @include FlexRow($a: flex-start);
-    border-top: 1px solid #DDDDDD;
-
-    .check-content__sub-title {
-      width: 20px;
-      padding-left: 20px;
-      position: relative;
-
-      i {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        width: 15px;
-        height: 15px;
-        margin-top: 12px;
-        background: url('../../../assets/images/w/common/icons/icon_enter.png') 0 0 no-repeat;
-        background-size: contain;
-        content: '';
-      }
-    }
   }
 
   .check-content__comment  {
@@ -1238,6 +1209,43 @@
       background: transparent;
       border-radius: 5px;
       border: 1px solid #000000;
+    }
+  }
+
+  .check-content__recomment {
+    width: 100%;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-left: 30px;
+    @include FlexRow($a: flex-start);
+    border-top: 1px solid #DDDDDD;
+    
+    .check-content__description {
+      padding-top: 25px;
+      border-top: 1px solid #DDDDDD;
+      @include FlexRow($a: flex-start);
+      &:first-of-type {
+        border-top: 0;
+      }
+    }
+
+    .check-content__sub-title {
+      width: 80px;
+      padding-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 0;
+      position: relative;
+  
+      i {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: url('../../../assets/images/w/common/icons/icon_enter.png') 0 0 no-repeat;
+        background-size: contain;
+      }
     }
   }
 
