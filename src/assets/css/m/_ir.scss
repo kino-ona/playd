@@ -1,6 +1,10 @@
 .ir {
   background: #ffffff;
 
+  .wrap {
+    min-height: 700px;
+  }
+
   .sub-header {
     &__description {
       padding-top: 9px;
@@ -102,7 +106,6 @@
 
   .sub-container {
     display: none;
-    min-height: 600px;
   }
 
   .sub-container--disclosure .notice-list{
