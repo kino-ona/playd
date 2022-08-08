@@ -994,14 +994,12 @@
 
 			if(sct > 10) {
 				document.querySelector('.sub-tab-content').classList.add('visual--active')
-				visualImage.style.backgroundImage="url('../assets/images/m/sub/img_about_visual_color.png')";
 				visualImage.style.transformOrigin = `bottom left`;
 				visaulBox.style.transitionDelay = `0.5s`;
 			}
 
 			if(sct == 0) {
 				document.querySelector('.sub-tab-content').classList.remove('visual--active')
-				visualImage.style.backgroundImage="url('../assets/images/m/sub/img_about_visual.png')";
 				visualImage.style.transformOrigin = `top left`;
 				visaulBox.style.transitionDelay = `0s`;
 			}
