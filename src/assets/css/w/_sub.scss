@@ -2546,6 +2546,9 @@
 
 .container.ir {
   @include subTabLocation;
+  .sub-container {
+    min-height: 600px;
+  }
 
   .drop-box--active .drop-box__title {
     border: 1px solid #DDDDDD
