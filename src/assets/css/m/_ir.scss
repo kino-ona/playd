@@ -1,6 +1,10 @@
 .ir {
   background: #ffffff;
 
+  .sub-container {
+    min-height: 600px;
+  }
+
   .sub-header {
     &__description {
       padding-top: 9px;
