@@ -1574,11 +1574,56 @@
               </div>
 							<div class="form-field">
                 <label for="form-detail" class="input-box--info__label input-box--info__label--necessary">제보 내용</label>
-				<textarea id="form-detail" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다." maxlength="520"></textarea>
-				<div class="input-file">
-					<input type="text" id="form-file-text" placeholder="파일 업로드(증빙자료, 메신저 캡처 등)" readonly><!--220726-->
-					<div><input type="file" id="form-file-button" name=""><label for="form-file-button">찾아보기</label></div>
-				</div>
+								<textarea id="form-detail" placeholder="제보하시는 내용을 육하원칙(누가, 무엇을, 언제, 어디서, 왜, 어떻게)에 따라 작성하여 주시면 보다 신속하게 처리할 수 있습니다." maxlength="520"></textarea>
+								<div class="input-file">
+									<input type="text" id="form-file-text" placeholder="파일 업로드(증빙자료, 메신저 캡처 등)" readonly><!--220726-->
+									<div><input type="file" id="form-file-button" name=""><label for="form-file-button">파일 업로드</label></div><!--220812-->
+								</div>
+								<!--220812 start-->
+								<p class="input-file__info">
+									* 첨부파일형식(jpg, gif, pdf),  용량제한<br>
+									(5mb 이하)
+								</p>
+								<div class="input-file__box">
+									<div class="file-list">
+										<div class="file-list__item">
+											<div class="file-list__title">
+												<p>플레이디내부제보증빙자료플레이디내부제보증빙자료</p>
+												<span>.jpg</span>
+											</div>
+											<button type="button"></button>
+										</div>
+										<div class="file-list__item">
+											<div class="file-list__title">
+												<p>제보 메신저</p>
+												<span>.jpg</span>
+											</div>
+											<button type="button"></button>
+										</div>
+										<div class="file-list__item">
+											<div class="file-list__title">
+												<p>메신저 캡쳐_01</p>
+												<span>.pdf</span>
+											</div>
+											<button type="button"></button>
+										</div>
+										<div class="file-list__item">
+											<div class="file-list__title">
+												<p>메신저 캡쳐_02</p>
+												<span>.pdf</span>
+											</div>
+											<button type="button"></button>
+										</div>
+										<div class="file-list__item">
+											<div class="file-list__title">
+												<p>메신저 캡쳐_03</p>
+												<span>.pdf</span>
+											</div>
+											<button type="button"></button>
+										</div>
+									</div>
+								</div>
+								<!--220812 end-->
               </div>
             </div>
           </div>
