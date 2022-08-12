@@ -36,6 +36,11 @@
 		</ul>
 		<nav class="footer__util--right">
 			<p class="information"><span class="information__title">대표전화</span>1566-3265</p>
+			<!-- 20220812 추가 -->
+			<ul class="information__desc">
+				<li>평일 10:00~17:00</li>
+			</ul>
+			<!--// 20220812 추가 -->
 			<!-- 20220718 //
 			<ul class="information__desc">
 				<li>MON - FRI 09 : 00 - 18:00</li>
