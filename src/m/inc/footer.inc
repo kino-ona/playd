@@ -120,7 +120,11 @@
 			<li>이메일 : <a href="mailto:master@playd.com">master@playd.com</a></li>
 			<li class="copyright">Copyright &copy; PlayD.,Ltd, All rights reserved.</li>
 		</ul>
-		<p class="information"><span class="information__title">대표전화</span><span class="footer__number numbering">1566-3265</span></p>
+		<p class="information"><!--220812 s-->
+			<span class="information__title">대표전화</span>
+			<span class="footer__number numbering">1566-3265</span>
+			<span class="footer__info">평일 10:00~17:00</span>
+		</p><!--220812 e-->
 	</div>
 	<!--220718 수정-->
 </footer>

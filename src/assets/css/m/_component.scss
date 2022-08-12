@@ -578,6 +578,13 @@
   .button__square + .button__square {
     margin-top: 10px;
   }
+
+  &__info {
+    display: block;
+    color: #999999;
+    font-size: 12px;
+    letter-spacing: -.03em;
+  }
 }
 
 .footer-top {
