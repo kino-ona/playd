@@ -141,6 +141,7 @@
     top: 0;
     left: 0;
     right: 0;
+    padding: 0 10px;
     @include FlexRow($w: wrap, $jc: center);
     align-content: center;
     opacity: 0;
@@ -149,6 +150,7 @@
     text-align: center;
     color: #ffffff;
     transition: all $duration3;
+    box-sizing: border-box;
   }
 
   .list-content__info--1 {
