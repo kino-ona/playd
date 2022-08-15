@@ -278,6 +278,93 @@
 
   .input-file {
     @include FlexRow;
+    &__info {
+      padding-top: 10px;
+      color: #888888;
+      font-size: 14px;
+      letter-spacing: -.02em;
+      @include FontDL;
+    }
+  }
+  .file-list {
+    margin-top: 15px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    &__item::before {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: url(../../images/m/sub/icon_attchment.png) center center no-repeat;
+      background-size: 20px;
+      content: '';
+    }
+
+    &__title {
+      display: inline-block;
+      // width: 100%;
+      padding-left: 30px;
+      padding-right: 22px;
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: -.02em;
+      box-sizing: border-box;
+      @include FontDL;
+    }
+
+    &__title p {
+      // max-width: calc(100% - 34px);
+      float: left;
+      // @include ellipse(1);
+    }
+
+    &__title::before {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    button {
+      // position: absolute;
+      // top: 4px;
+      // right: 0;
+      position: relative;
+      width: 15px;
+      height: 15px;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #000000;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        right: 2px;
+        width: 9px;
+        height: 1px;
+        background: #000000;
+        transform: rotate(-45deg);
+        content: '';
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        right: 2px;
+        width: 9px;
+        height: 1px;
+        background: #000000;
+        transform: rotate(-135deg);
+        content: '';
+      }
+    }
   }
 
   #form-file-button + label {
