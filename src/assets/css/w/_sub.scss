@@ -321,9 +321,9 @@
     }
 
     &__title p {
-      // max-width: calc(100% - 34px);
+      max-width: 700px;
       float: left;
-      // @include ellipse(1);
+      @include ellipse(1);
     }
 
     &__title::before {
