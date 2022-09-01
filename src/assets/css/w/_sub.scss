@@ -3110,7 +3110,7 @@
   }
 
   .visual .image {
-
+    max-height: 220px;
     &--basic {
       z-index: 2;
       position: absolute;
@@ -3142,6 +3142,12 @@
 
     &--right .image--first {
       left: 50%;
+    }
+    .image--last {
+      position: relative;
+      max-width: initial;
+      width: 220px;
+      height: 220px;
     }
   }
 

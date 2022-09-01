@@ -37,7 +37,7 @@
 					<div class="gnb__wrap">
 						<p><a href="./letter.html">뉴스레터</a></p>
 						<p><a href="./report.html">리포트</a></p>
-						<p><a href="./column.html">광고 칼럼</a></p><!--220627 수정-->
+						<!-- <p><a href="./column.html">광고 칼럼</a></p>220627 수정 -->
 					</div>
 				</div>
 				<div class="gnb__item">

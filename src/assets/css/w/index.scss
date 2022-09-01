@@ -1,6 +1,24 @@
 @charset "utf-8";
 @import "../mixins";
 
+.header {
+  .navmenu {
+    .navmenu__list:nth-child(3) {
+      .navmenu__link:nth-child(3) {
+        display: none !important;
+      }
+    }
+  }
+}
+.sitemap {
+  .gnb {
+    .menu:nth-child(3) {
+      li:nth-child(4) {
+        display: none !important;
+      }
+    }
+  }
+}
 @mixin FlexRow($w: nowrap, $jc: space-between, $a: center) {
   display: flex;
 	flex-wrap: $w;
