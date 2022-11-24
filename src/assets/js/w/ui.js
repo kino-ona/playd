@@ -436,7 +436,8 @@ if(bodyClass) {
 				layerOpen('formSubmitted');
 			})
 
-			document.querySelector('.showbutton--marketing').addEventListener('click', () => {
+			document.querySelector('.showbutton--marketing').addEventListener('click', (event) => {
+				event.preventDefault();
 				layerOpen('marketing');
 			})
 		}

@@ -271,7 +271,8 @@
 	//form check layerpopup
 	if (bodyClass === 'contact') {
 
-		document.querySelector('.showbutton--marketing').addEventListener('click', () => {
+		document.querySelector('.showbutton--marketing').addEventListener('click', (event) => {
+			event.preventDefault();
 			layerOpen('marketing');
 		})
 
@@ -1060,9 +1061,7 @@ let isOpen = false;
 const layerOpen = (layerId) =>{
 	if(document.querySelector('#' + layerId) == null) return;
 	let curPos = window.pageYOffset;
-	console.log(curPos);
 	document.documentElement.classList.add("noscroll");
-	document.querySelector('body').classList.add('open-modal')
 	document.querySelector('#' + layerId).classList.add("is-visible");
 	let layerID = document.querySelector('#' + layerId);
 	layerID.setAttribute('aria-hidden', 'false');
@@ -1076,14 +1075,11 @@ const layerOpen = (layerId) =>{
 		clearTimeout(delay);
 	}, 50);
 }
-
 const layerClose = (layerId) => {
 	if(document.querySelector('#' + layerId) == null) return;
 	let curPos = -(parseInt(document.querySelector(".popup").pageYOffset));
 	document.querySelector('#' + layerId).classList.remove("is-visible");
 	document.querySelector('#' + layerId).setAttribute('aria-hidden', 'true');
-	document.querySelector('body').classList.remove('open-modal')
-
 	document.documentElement.classList.remove("noscroll");
 	if (document.querySelector('[role="dialog"].is-visible')) {
 		document.documentElement.classList.remove("noscroll");
