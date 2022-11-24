@@ -270,6 +270,19 @@
 
 	//form check layerpopup
 	if (bodyClass === 'contact') {
+
+		document.querySelector('.showbutton--marketing').addEventListener('click', () => {
+			layerOpen('marketing');
+		})
+
+		document.querySelector('.marketing .close').addEventListener('click', () => {
+			layerClose('marketing');
+		})
+
+		document.querySelector('.layer__footer button').addEventListener('click', () => {
+			layerClose('marketing');
+		})
+
 		const formSubmit = document.querySelector('.contact .form-submit');
 		const formSubmitClose = document.querySelector('.contact .close_btn');
 		const formUserCompany  = document.querySelector('.contact #user-company');

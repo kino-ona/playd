@@ -216,7 +216,7 @@
               <input type="checkbox" id="sub-checkbox--marketing" name="" class="sub-checkbox__input">
               <span><i></i>[선택] 플레이디 마케팅 수신에 동의합니다.</span>
             </label>
-            <a href="#" class="button button__sub-checkbox" type="button">전문 보기</a><!-- 20220727 //-->
+            <a href="#" class="button button__sub-checkbox showbutton--marketing" type="button">내용보기</a><!-- 20221124 //-->
           </li>
         </ul>
         <div class="button__wrap">
@@ -273,6 +273,35 @@
     </div>
   </div>
 </div>
+<!--221124 start-->
+<div class="layer__body popup marketing" id="marketing" aria-hidden="true" role="dialog">
+  <div class="layer__wrap layer__wrap--wide">
+    <div class="layer__close">
+      <button class="close">close</button>
+    </div>
+    <div class="layer__inner">
+      <div class="layer__head">
+        <p class="content__title">플레이디 마케팅 수신 동의</p>
+      </div>
+      <div class="layer__content">
+        <div class="content__text">
+					<p>
+            (주)PlayD가 제공하는 광고·마케팅·트렌드 관련 서비스 및 광고 상품 소개,<br>
+            경품 행사, 이벤트 등의 마케팅 정보를 제공<br>
+            (이메일, SMS, 뉴스레터, 카카오톡 등)합니다.<br>
+            회원 탈퇴 시 또는 동의 철회 시까지 보유·이용합니다.<br>
+            본 마케팅 정보 수신에 대한 동의를 거부할 수 있으나 일부 서비스 이용 및<br>
+            각종 광고, 할인, 이벤트 등 서비스 제공이 제한될 수 있습니다.
+					</p>
+        </div>
+        <div class="button__wrap">
+          <button class="button layer__button close">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--221124 end-->
 
 <!-- footer -->
 @@include('./inc/footer.inc', {
