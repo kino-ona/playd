@@ -501,9 +501,9 @@
 			})
 		})
 
-		formSubmitOpen.addEventListener('click' , () => {
-			layerOpen('newsLetter');
-		})
+		// formSubmitOpen.addEventListener('click' , () => {
+		// 	layerOpen('newsLetter');
+		// })
 		
 		needCheck.addEventListener('change', () => {
 			if(needCheck.checked) {

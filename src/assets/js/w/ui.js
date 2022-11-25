@@ -562,18 +562,18 @@ if(bodyClass) {
 			const formUserMail = document.querySelector('#user-mail');
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
-			formSubmit.addEventListener('click' , () => {
-				layerOpen('newsLetter');
-			});
+			// formSubmit.addEventListener('click' , () => {
+			// 	layerOpen('newsLetter');
+			// });
 
 			document.querySelector('#letterFormSubmitted .layer__button.close').addEventListener('click' , () => {
 				layerClose('newsLetter');
 			});
 
-			formOpener.addEventListener('click' , (event) => {
-				event.preventDefault();
-				layerOpen('newsLetter');
-			});
+			// formOpener.addEventListener('click' , (event) => {
+			// 	event.preventDefault();
+			// 	layerOpen('newsLetter');
+			// });
 
 			formSubmitButton.addEventListener('click' , (event) => {
 				event.preventDefault();
