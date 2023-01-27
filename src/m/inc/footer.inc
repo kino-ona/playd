@@ -46,13 +46,13 @@
 						<div class="sub-checkboxs">
 							<label for="sub-checkbox--personal" class="sub-checkbox__label">
 								<input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input" checked>
-								<span>개인 정보 수집 및 이용에 동의합니다.</span>	<!--220627 수정 -->
+								<span>개인정보 수집 및 이용에 동의합니다.</span>	<!--220627 수정 -->
 							</label>
 						</div>
 						<!--220627 수정 start-->
 						<p class="form-description"> 
 							입력하신 이름, 직업, 이메일 주소, 직급, 회사명
-							(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인 정보를 수집 시에 동의 받은 개인 정보
+							(소속), 부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보
 							보유, 이용 기간 동안 보관 및 이용됩니다.
 						</p>
 						<!--220627 수정 end -->
@@ -100,7 +100,7 @@
 					<p class="footer__line--last"><a href="https://sensen.techhub.co.kr/apply/diagnosis">무료 광고 진단</a></p><!--220718 수정-->
 				</div>
 				<!--220629 수정-->
-				<div class="footer__wrap--line"><p class="footer__line--last"><a href="./personal.html" class="font--bd ">개인 정보처리 방침</a></p></div>
+				<div class="footer__wrap--line"><p class="footer__line--last"><a href="./personal.html" class="font--bd ">개인정보처리 방침</a></p></div>
 			</div>
 				<!--220629 수정-->
 			<nav class="footer__nav--right">
