@@ -241,7 +241,6 @@ window.addEventListener('load', () => {
 		
 		const ClickToScroll = () => {
 			abTtargetItem[i] = parseFloat(sublistItemTitles[i].offsetTop - 90);
-			// console.log(abTtargetItem[i]); ---> [1089, 978, 867, 756, 645, 534]
 			window.scrollTo({ top: abTtargetItem[i], behavior: "smooth" });
 		}
 
@@ -812,7 +811,6 @@ if(bodyClass) {
 
 			formSubmitButton.addEventListener('click' , (event) => {
 				event.preventDefault();
-				console.log('b');
 
 				document.querySelectorAll('.form-field').forEach((item) => {
 					item.classList.remove('warning');
@@ -972,7 +970,6 @@ if(bodyClass) {
 				const stateBar = document.querySelector('.state-bar');
 				const stateBarFill = document.querySelector('.state-bar--fill');
 				let stateBarWidth = stateBar.clientWidth + 360;
-				console.log(stateBarWidth);
 	
 				const swiper = new Swiper('.sub-slide ', {
 					slidesPerView: 2,
@@ -1013,7 +1010,6 @@ if(bodyClass) {
 			categoryItem.forEach(item => {
 				item.addEventListener('click', (event) => {
 					event.preventDefault();
-					console.log('b');
 					window.scrollTo({top:	document.querySelector('.term-anchor__item--' + item.dataset.content).offsetTop -50, behavior:'smooth'});
 				})
 			})

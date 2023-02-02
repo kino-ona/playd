@@ -760,8 +760,6 @@
 			layerClose('report');
 		})
 
-		console.log(formSubmitClose);
-
 		formSubmitClose.addEventListener('click' , () => {
 			layerClose('report');
 		})

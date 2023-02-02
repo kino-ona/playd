@@ -18,6 +18,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" content="kt그룹 디지털마케팅 대행사 플레이디는 고객 성장에 필요한 모든 마케팅 서비스를 제공합니다" />
   <meta name="twitter:title" content="PlayD" />
+  <meta http-equiv="Cache-Control" content="No-Cache"/><!--230202-->
   <link rel="icon" href="@@webroot/assets/images/common/favicon.png" sizes="32x32" />
   <link rel="icon" href="@@webroot/assets/images/common/favicon.png" sizes="192x192" />
   <link rel="apple-touch-icon" href="" />
