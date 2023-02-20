@@ -21,6 +21,8 @@
     "gulp-cached": "^1.1.1",
     "gulp-dependents": "^1.2.5",
     "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
     "gulp-noop": "^1.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",

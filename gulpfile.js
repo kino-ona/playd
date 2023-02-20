@@ -14,12 +14,14 @@ const
 		html: 'src/**/*.html',
 		css: 'src/assets/css/**/*.scss',
 		js: 'src/assets/js/**/*.js',
+		img: 'src/assets/images/**/*.{jpg,gif,png,svg}',
 		inc: 'src/**/inc/*.inc'
 	},
 	dist = {
 		html: 'dist/',
 		css: 'dist/assets/css',
-		js: 'dist/assets/js'
+		js: 'dist/assets/js',
+		img: 'dist/assets/images'
 	},
 
 	// modules
@@ -39,6 +41,8 @@ const
 	autoprefixer  = require('gulp-autoprefixer'),
 	browsersync   = require('browser-sync').create(),
 	del           = require('del'),
+	imagemin      = require('gulp-imagemin'),
+	newer         = require('gulp-newer'),
 	sourcemaps    = devBuild ? require('gulp-sourcemaps') : null;
 
 const onError = (err) => console.log(err);
@@ -111,11 +115,35 @@ function copyJs() {
 	});
 }
 
+// image
+function image(done) {
+	return src(paths.img)
+		.pipe(newer(dist.img))
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.mozjpeg({quality: 75, progressive: true}),
+			imagemin.optipng({optimizationLevel: 1}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: false},
+					{cleanupIDs: false}
+				]
+			})
+		], {
+			verbose: true
+		}
+		))
+		.pipe(dest(dist.img)),
+	done();
+}
+exports.image = image;
+
 // watch
 function watchs(done) {
 	watch([paths.html, paths.inc], copyHtml);
 	watch(paths.css, compileScss);
 	watch(paths.js, copyJs);
+	watch(paths.img, image);
 	watch([paths.html, paths.inc]).on('change', () => {
 		browsersync.reload();
 	});
@@ -124,9 +152,9 @@ function watchs(done) {
 
 // clean
 function clean(done) {
-	del.sync(['dist/*']);
+	del.sync(['dist/**/*', '!dist/assets', 'dist/assets/**', '!dist/assets/fonts', '!dist/assets/files', '!dist/path/**', '!dist/path.html']);
 	done();
 }
 
 exports.clean = clean;
-exports.default = series(copyHtml, compileScss, copyJs, server, watchs);
+exports.default = series(image, copyHtml, compileScss, copyJs, server, watchs);
