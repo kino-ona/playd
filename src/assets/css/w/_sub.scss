@@ -1157,13 +1157,16 @@
   }
 
   .sub-content {
-    @include FlexRow($w: wrap, $a: flex-start);
+    // @include FlexRow($w: wrap, $a: flex-start);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
   }
   
   .list-content {
-    flex-basis: calc(33.333% - 10px);
+    // flex-basis: calc(33.333% - 10px);
     padding: 40px;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
   }
 
   .list-content__icon {
@@ -3376,6 +3379,10 @@
     flex-basis: content;
     flex-direction: column;
     text-align: center;
+  }
+
+  .diagram__icon {
+    margin-right: 0;
   }
 
   .phase__title {
