@@ -2226,7 +2226,34 @@
     }
     
     .button__wrap {
-    margin-top: 60px;
+      margin-top: 60px;
+    }
+
+    .file__wrap {
+      border-top: 1px solid #dddddd;
+      margin-top: 60px;
+      padding-top: 30px;
+    }
+
+    .file__download {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .file__download img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+
+    .file__download a {
+      font-size: 16px;
+      padding: 4px 0 0 5px;
+      max-width: 1200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
