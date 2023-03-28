@@ -2220,7 +2220,9 @@
   &__content {
     padding-bottom: 150px;
     overflow: hidden;
-
+		.inner {
+			min-height: 300px;
+		}
     .article__text {
       margin: 25px 0;
     }
