@@ -252,7 +252,13 @@
     min-width: 232px;
     margin-bottom: 10px;
     flex-shrink: 0;
-  } 
+  }
+
+  &--route {
+    .sub-checkbox__item {
+      min-width: 192px;
+    }
+  }
 }
 
 .input-box {
