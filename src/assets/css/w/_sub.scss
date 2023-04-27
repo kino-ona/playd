@@ -3032,7 +3032,7 @@
 .awards {
 
   .sub-content {
-    @include FlexRow($w: wrap, $a: flex-start);
+    @include FlexRow($w: wrap, $a: stretch);
   }
   
   .list-content {
