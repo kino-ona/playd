@@ -375,6 +375,8 @@ if(bodyClass) {
 			const formUserMail = document.querySelector('#user-mail');
 			const formUserUrl = document.querySelector('#user-url');
 			const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+
+			const etcTextarea = document.querySelector(".input-box--textarea");//20230509
 			
 			formSubmit.addEventListener('click' , (event) => {
 				event.preventDefault();
@@ -434,6 +436,11 @@ if(bodyClass) {
 
 				layerOpen('formSubmitted');
 			})
+
+			//20230509
+			document.querySelector(".input__checkbox-label--etc").addEventListener('click', () => {
+				etcTextarea.classList.toggle("open");
+			});
 
 			document.querySelector('.showbutton--marketing').addEventListener('click', (event) => {
 				event.preventDefault();

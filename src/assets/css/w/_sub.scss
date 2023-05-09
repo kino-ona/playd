@@ -267,6 +267,27 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: #FAFAFA;
+
+  //20230509
+  &--textarea {
+  margin-top: 10px;
+  display: none;
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      box-sizing: border-box;
+      font-size: 18px;
+    
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+
+    &.open {
+      display: block;
+    }
+  }
 }
 
 .input-box--file {

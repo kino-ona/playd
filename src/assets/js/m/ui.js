@@ -297,6 +297,8 @@
 		const needCheck = document.querySelector('.contact #sub-checkbox--personal');
 		const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
+		const etcTextarea = document.querySelector(".input-box--textarea");//20230509
+
 
 		needCheck.addEventListener('change', () => {
 			if(needCheck.checked) {
@@ -368,6 +370,11 @@
 
 			layerOpen('form-popup');
 		})
+
+		//20230509
+		document.querySelector(".input__checkbox-label--etc").addEventListener('click', () => {
+			etcTextarea.classList.toggle("open");
+		});
 
 		formSubmitClose.addEventListener('click' , (event) => {
 			layerClose('form-popup');
