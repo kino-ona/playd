@@ -38,9 +38,7 @@
               <p class="form-warning">이름을 입력해주세요.</p>
             </div>
             <div class="form-field">
-              <label
-                for="user-position"
-                class="input-box-info__label input-box-info__label--necessary"
+              <label for="user-position" class="input-box-info__label"
                 >직업</label
               >
               <input
@@ -83,7 +81,9 @@
               /><!--220704-->
             </div>
             <div class="form-field">
-              <label for="user-company" class="input-box-info__label"
+              <label
+                for="user-company"
+                class="input-box-info__label input-box-info__label--necessary"
                 >회사명(소속)</label
               >
               <input
@@ -115,19 +115,59 @@
                   id="sub-checkbox--personal"
                   name=""
                   class="sub-checkbox__input"
-                  checked
                 />
-                <span>개인정보 수집 및 이용에 동의합니다.</span>
-                <!--220627 수정 -->
+                <span>개인정보 수집 및 이용에 동의합니다.(필수)</span>
               </label>
             </div>
-            <!--220627 수정 start-->
             <p class="form-description">
               입력하신 이름, 직업, 이메일 주소, 직급, 회사명 (소속),
               부서(팀명)은 뉴스레터 발송을 위해 정보주체로부터 개인정보를 수집
               시에 동의 받은 개인정보 보유, 이용 기간 동안 보관 및 이용됩니다.
             </p>
-            <!--220627 수정 end -->
+            <div class="sub-checkboxs">
+              <label for="sub-checkbox--marketing" class="sub-checkbox__label">
+                <input
+                  type="checkbox"
+                  id="sub-checkbox--marketing"
+                  name=""
+                  class="sub-checkbox__input"
+                />
+                <span>마케팅 정보 수집 및 이용에 동의합니다.(선택)</span>
+              </label>
+              <a href="javascript:doDisplay();" class="sub-checkbox_btn"
+                ><span class="a11y">열고닫기</span></a
+              >
+            </div>
+            <p id="marketing-frm" class="form-description __last open">
+              마케팅 및 광고에 활용, 서비스 또는 컨텐츠 정보의 제공, 무료 컨설팅
+              메일 발송을 위해 1년간 보관 및 이용됩니다.
+            </p>
+            <div id="marketing-div" class="marketing-div">
+              <div>
+                <strong
+                  >(주)플레이디에서 수집하는 개인정보의 항목과 수집 및 이용에
+                  대한 목적을 알려드립니다.</strong
+                >
+                <p>1. 수집 및 이용목적</p>
+                <span>마케팅 및 광고에 활용</span>
+                <span>서비스 또는 컨텐츠 정보의 제공</span>
+                <span>무료 컨설팅 메일 발송</span>
+                <span>신규 리포트 발간 소식 안내</span>
+                <p>2. 수집 및 항목</p>
+                <span>필수 : 이름. 이메일 주소, 회사명(소속)</span>
+                <span>선택 : 직업, 직급, 부서(팀명)</span>
+                <p>3. 보유 및 이용 기간</p>
+                <span
+                  >수집·이용 동의일로부터 1년간 보관 및 이용. (단, 정보주체의
+                  삭제 요청 시 삭제)</span
+                >
+                <p class="__last">
+                  ※ 귀하는 개인정보 수집·이용 제공에 동의하지 않을 권리가
+                  있으며, 동의하지 않을 경우 수집 목적에 따른 혜택에 제한이 있을
+                  수 있습니다.
+                </p>
+              </div>
+            </div>
           </form>
         </div>
         <button type="submit" class="button layer__button form-submit--wide">

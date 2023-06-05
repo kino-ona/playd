@@ -1506,11 +1506,15 @@ form legend {
 }
 
 .form-description {
-  margin-top: 25px;
-  padding-bottom: 110px;
+  margin-top: 10px;
+  padding-bottom: 25px;
+	padding-left: 35px;
   color: #888888;
   font-size: 14px;
   line-height: 22px;
+	&.__last {
+		padding-bottom: 110px;
+	}
 }
 
 

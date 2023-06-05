@@ -1203,3 +1203,17 @@ const layerClose = (layerId) => {
     isOpen = false;
   }
 };
+
+var divDisplay = true;
+function doDisplay() {
+  var con = document.getElementById("marketing-div");
+  var frm = document.getElementById("marketing-frm");
+
+  if (con.style.display == "block") {
+    frm.classList.add("open");
+    con.style.display = "none";
+  } else {
+    con.style.display = "block";
+    frm.classList.remove("open");
+  }
+}
