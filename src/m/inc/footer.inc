@@ -117,6 +117,7 @@
                   class="sub-checkbox__input"
                 />
                 <span>개인정보 수집 및 이용에 동의합니다.(필수)</span>
+                <a href="./personal.html" target="_blank">전문 보기</a>
               </label>
             </div>
             <p class="form-description">

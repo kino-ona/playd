@@ -465,6 +465,16 @@
 					top: 5px;
 				}
 			}
+			a:not(.sub-checkbox_btn) {
+				// position: absolute;
+				margin-top: 6px;
+				margin-left: 32px;
+				color: #222BFF;
+				border-bottom: 1px solid #222BFF;
+				font-size: 14px;
+				line-height: 1;
+				letter-spacing: -0.3px;
+			}
 		}
 		.sub-checkbox_btn {
 			position: relative;

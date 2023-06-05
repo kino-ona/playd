@@ -250,7 +250,7 @@
 		justify-content: space-between;
 	}
 	.sub-checkbox__label {
-		width: 100%;
+		// width: 100%;
 		a {
 			text-decoration: underline;
 		}
@@ -262,7 +262,7 @@
 		height: 30px;
 		&::before {
 			position: absolute;
-			top: 0;
+			top: 5px;
 			right: 0;
 			width: 10px;
 			height: 10px;
@@ -271,6 +271,12 @@
 			border-right: 1.5px solid #000000;
 			border-bottom: 1.5px solid #000000;
 			content: "";
+		}
+		&.open {
+			&:before {
+				-webkit-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+			}
 		}
 	}
 	.form-description {
@@ -630,6 +636,16 @@
   @include FontDL;
   color: #000000;
   text-align: center;
+}
+
+.button__sub-checkbox {
+	margin-left: 8px;
+	font-size: 18px;
+	line-height: inherit;
+	@include FontRG;
+	color: #055BFF;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 /* CONTACT */

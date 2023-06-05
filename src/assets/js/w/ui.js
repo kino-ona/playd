@@ -1277,12 +1277,15 @@ var divDisplay = true;
 function doDisplay() {
   var con = document.getElementById("marketing-div");
   var frm = document.getElementById("marketing-frm");
+  var frbtm = document.querySelector(".sub-checkbox_btn");
 
   if (con.style.display == "block") {
     frm.classList.add("open");
+    frbtm.classList.remove("open");
     con.style.display = "none";
   } else {
     con.style.display = "block";
     frm.classList.remove("open");
+    frbtm.classList.add("open");
   }
 }
