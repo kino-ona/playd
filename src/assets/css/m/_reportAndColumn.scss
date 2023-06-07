@@ -453,8 +453,10 @@
 .report-detail {
 	.layer__wrap {
 		.sub-checkboxs {
+			position: relative;
 			display: flex;
 			align-items: flex-start;
+			flex-direction: column;
 			span {
 				display: inline-block;
 				line-height: 24px;
@@ -466,7 +468,6 @@
 				}
 			}
 			a:not(.sub-checkbox_btn) {
-				// position: absolute;
 				margin-top: 6px;
 				margin-left: 32px;
 				color: #222BFF;
@@ -477,7 +478,8 @@
 			}
 		}
 		.sub-checkbox_btn {
-			position: relative;
+			position: absolute;
+			right: 0;
 			display: flex;
 			margin-top: 4px;
 			width: 30px;
@@ -494,6 +496,13 @@
 				border-bottom: 1.5px solid #000000;
 				content: "";
 			}
+			&.open {
+				&:before {
+					top: 8px;
+					-webkit-transform: rotate(-135deg);
+					transform: rotate(-135deg);
+				}
+			}
 		}
 		#marketing-frm {
 			display: none;
@@ -503,7 +512,7 @@
 		}
 		.marketing-div {
 			display: none;
-			margin-top: 20px;
+			margin-top: 10px;
 			padding-bottom: 110px;
 			> div {
 				padding: 25px;

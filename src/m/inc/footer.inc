@@ -116,9 +116,9 @@
                   name=""
                   class="sub-checkbox__input"
                 />
-                <span>개인정보 수집 및 이용에 동의합니다.(필수)</span>
-                <a href="./personal.html" target="_blank">전문 보기</a>
+                <span>[필수] 개인 정보 수집 및 이용에 동의합니다</span>
               </label>
+              <a href="./personal.html" target="_blank">전문 보기</a>
             </div>
             <p class="form-description">
               입력하신 이름, 직업, 이메일 주소, 직급, 회사명 (소속),
@@ -133,7 +133,7 @@
                   name=""
                   class="sub-checkbox__input"
                 />
-                <span>마케팅 정보 수집 및 이용에 동의합니다.(선택)</span>
+                <span>[선택] 마케팅 정보 수집 및 이용에 동의<br />합니다</span>
               </label>
               <a href="javascript:doDisplay();" class="sub-checkbox_btn"
                 ><span class="a11y">열고닫기</span></a
