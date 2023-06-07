@@ -38,20 +38,6 @@
               <p class="form-warning">이름을 입력해주세요.</p>
             </div>
             <div class="form-field">
-              <label for="user-position" class="input-box-info__label"
-                >직업</label
-              >
-              <input
-                type="text"
-                id="user-position"
-                class="input-box-info__input"
-                name=""
-                placeholder="직업을 입력해 주세요."
-                maxlength="52"
-              /><!--220704-->
-              <p class="form-warning">직업을 입력해 주세요.</p>
-            </div>
-            <div class="form-field">
               <label
                 for="user-mail"
                 class="input-box-info__label input-box-info__label--necessary"
@@ -68,19 +54,6 @@
               <p class="form-warning">이메일 주소를 입력해 주세요.</p>
             </div>
             <div class="form-field">
-              <label for="user-position" class="input-box-info__label"
-                >직급</label
-              >
-              <input
-                type="text"
-                id="user-position"
-                class="input-box-info__input"
-                name=""
-                placeholder="직급을 입력해 주세요."
-                maxlength="52"
-              /><!--220704-->
-            </div>
-            <div class="form-field">
               <label
                 for="user-company"
                 class="input-box-info__label input-box-info__label--necessary"
@@ -92,6 +65,33 @@
                 class="input-box-info__input"
                 name=""
                 placeholder="회사명을 입력해 주세요."
+                maxlength="52"
+              /><!--220704-->
+            </div>
+            <div class="form-field">
+              <label for="user-position" class="input-box-info__label"
+                >직업</label
+              >
+              <input
+                type="text"
+                id="user-position"
+                class="input-box-info__input"
+                name=""
+                placeholder="직업을 입력해 주세요."
+                maxlength="52"
+              /><!--220704-->
+              <p class="form-warning">직업을 입력해 주세요.</p>
+            </div>
+            <div class="form-field">
+              <label for="user-position" class="input-box-info__label"
+                >직급</label
+              >
+              <input
+                type="text"
+                id="user-position"
+                class="input-box-info__input"
+                name=""
+                placeholder="직급을 입력해 주세요."
                 maxlength="52"
               /><!--220704-->
             </div>
