@@ -177,6 +177,31 @@
     line-height: inherit;
     letter-spacing: inherit;
   }
+
+  &__table {
+    margin-bottom: 100px;
+    text-align: center;
+    border-top: 2px solid #000000;
+
+    tr {
+      th {
+        padding: 22px 84px;
+        border-bottom: 1px solid #000000;
+        font-size: 18px;
+      }
+      
+      td {
+        padding: 22px 84px;
+        border-bottom: 1px solid #DDDDDD;
+        font-size: 16px;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 .list-content {
@@ -4501,11 +4526,41 @@
       max-width: 550px;
       position: relative;
       @include imgContentIn(1);
+      overflow: visible;
       transition: all $duration2 ease;
       
       &:last-of-type {
         margin-top: 185px;
         margin-bottom: 0;
+      }
+
+      .button__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 10px;
+  
+        .button {
+          margin: 0;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      
+      &:nth-of-type(1) {
+        
+        .button__wrap {
+          .button {
+            flex: 1;
+          }
+          
+          &--social {
+            .button {
+              flex: unset;
+            }
+          }
+        }
       }
     }
 

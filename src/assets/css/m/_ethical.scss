@@ -5,6 +5,28 @@
     &__description {
       padding-top: 9px;
     }
+
+    .ethical__download {
+      position: relative;
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-position: under;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        width: 5px;
+        height: 5px;
+        margin-top: -3.5px;
+        border-top: 1.5px solid #000000;
+        border-right: 1.5px solid #000000;
+        transform: rotate(45deg);
+      }
+    }
   }
 
   .sub-container {

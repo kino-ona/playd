@@ -650,6 +650,7 @@ input[type="file"] {
 }
 
 .sub-header {
+	position: relative;
 	margin-bottom: 80px;
 
   &__label {
@@ -686,6 +687,30 @@ input[type="file"] {
     line-height: 30px;
     @include FontMD;
   }
+
+	.ethical__download {
+		position: absolute;
+		top: 125px;
+		right: 0;
+		margin-right: 12px;
+		padding-right: 8px;
+		font-size: 18px;
+		text-decoration: underline;
+		text-underline-position: under;
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -10px;
+			width: 8px;
+			height: 8px;
+			margin-top: -3.5px;
+			border-top: 1.5px solid #000000;
+			border-right: 1.5px solid #000000;
+			transform: rotate(45deg);
+		}
+	}
 }
 
 .sub-tabs {
