@@ -179,7 +179,15 @@
     &__table {
       margin-bottom: 50px;
       border-top: 1px solid #000000;
+			&.etc_bottom {
+				margin-bottom: 10px;
+				padding-bottom: 50px;
+			}
     }
+		&__table--desc {
+			font-size: 14px;
+			color: #666666;
+		}
 
     .table__container {
       margin: 0 25px;

@@ -183,6 +183,10 @@
     text-align: center;
     border-top: 2px solid #000000;
 
+		&.etc_bottom {
+			margin-bottom: 10px;
+		}
+
     tr {
       th {
         padding: 22px 84px;
@@ -202,6 +206,10 @@
       }
     }
   }
+	&__table--desc {
+		margin-bottom: 100px;
+		color: #666666;
+	}
 }
 
 .list-content {
