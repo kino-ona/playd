@@ -117,6 +117,10 @@
 .letter-detail {
   background: #ffffff;
 
+	.head_numbering {
+		font-size: 16px;
+    font-weight: 600;
+	}
   .sub-content {
     &__head {
       padding-top: 95px;
