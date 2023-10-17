@@ -654,7 +654,7 @@ if (bodyClass) {
           });
 
           const targetContainer = document.querySelector(
-            '.sub-container[data-content="윤리경영 실전 지침"]'
+            '.sub-container[data-content="윤리경영 실천 지침"]'
           );
 
           targetContainer.classList.add(targetClassName0);
@@ -663,10 +663,10 @@ if (bodyClass) {
             ".sub-tabs .sub-tabs__item:nth-of-type(2)"
           );
           const target2 = document.querySelector(
-            '[data-content="윤리경영 실전 지침"] .sub-list-category__box > p:nth-of-type(6) a'
+            '[data-content="윤리경영 실천 지침"] .sub-list-category__box > p:nth-of-type(6) a'
           );
           const target3 = document.querySelector(
-            '.sub-container[data-content="윤리경영 실전 지침"] .sub-list__item--chapter-6 '
+            '.sub-container[data-content="윤리경영 실천 지침"] .sub-list__item--chapter-6 '
           );
 
           document
@@ -677,7 +677,7 @@ if (bodyClass) {
 
           document
             .querySelectorAll(
-              '[data-content="윤리경영 실전 지침"] .sub-list-category__box > p a'
+              '[data-content="윤리경영 실천 지침"] .sub-list-category__box > p a'
             )
             .forEach((item) => {
               item.classList.remove(targetClassName2);
@@ -685,7 +685,7 @@ if (bodyClass) {
 
           document
             .querySelectorAll(
-              '[data-content="윤리경영 실전 지침"] .sub-list__item'
+              '[data-content="윤리경영 실천 지침"] .sub-list__item'
             )
             .forEach((item) => {
               item.classList.remove(targetClassName3);
