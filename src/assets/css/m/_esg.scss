@@ -182,6 +182,9 @@
 			&.etc_bottom {
 				margin-bottom: 10px;
 				padding-bottom: 50px;
+				& + .etc_bottom {
+					margin-top: -10px;
+				}
 			}
     }
 		&__table--desc {
