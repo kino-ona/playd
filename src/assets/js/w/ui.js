@@ -539,12 +539,12 @@ if (bodyClass) {
             etcTextarea.classList.toggle("open");
           });
 
-        document
-          .querySelector(".showbutton--marketing")
-          .addEventListener("click", (event) => {
-            event.preventDefault();
-            layerOpen("marketing");
-          });
+        // document
+        //   .querySelector(".showbutton--marketing")
+        //   .addEventListener("click", (event) => {
+        //     event.preventDefault();
+        //     layerOpen("marketing");
+        //   });
       }
       break;
 
