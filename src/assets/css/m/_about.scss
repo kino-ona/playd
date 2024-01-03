@@ -268,6 +268,10 @@
       margin-bottom: 75px;
     }
 
+		&--corevalue {
+			padding-bottom: 50px;
+		}
+
   }
 
 
@@ -449,4 +453,31 @@
       }
     }
   }
+
+	.list-content {
+		position: relative;
+		padding-top: 15px;
+
+		&__label {
+			display: inline-block;
+			position: absolute;
+		}
+
+		&__label span {
+			font-size: 14px;
+		}
+
+		&__title {
+			padding-left: 25px;
+			font-size: 14px;
+			@include FontMD;
+		}
+
+		&__description {
+			padding-left: 25px;
+			color: #666666;
+			font-size: 14px;
+			@include FontDL;
+		}
+	}
 }

@@ -4696,6 +4696,12 @@
       overflow: hidden;
     }
 
+		&__label {
+			&--aloned {
+				margin-bottom: 0;
+			}
+		}
+
     .sub-header__title {
       z-index: 99;
       padding: 85px 0 0 65px;
@@ -5170,6 +5176,41 @@
   .logo-list__item:nth-of-type(4n) {
     border-right: 0;
   }
+
+	.list-content-wrap {
+		display: flex;
+		column-gap: 15px;
+	}
+
+	.list-content {
+		flex: 1;
+		padding: 40px;
+
+		&__label {
+			padding-left: 38px;
+			margin-bottom: 40px;
+			position: relative;
+			color: #ea2126;
+
+			.numbering {
+				position: absolute;
+				left: 0;
+				@include FontBasicSans;
+				letter-spacing: 0;
+				font-size: 18px;
+				line-height: 1;
+				font-weight: 600;
+				top: 50%;
+				@include transform(translateY(-50%));
+			}
+		}
+
+		&__title {
+			margin-bottom: 5px;
+			font-size: 16px;
+			@include FontMD;
+		}
+	}
 }
 
 .personal {
