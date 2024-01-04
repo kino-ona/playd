@@ -461,6 +461,7 @@
 		&__label {
 			display: inline-block;
 			position: absolute;
+			margin-top: 3px;
 		}
 
 		&__label span {
@@ -469,7 +470,7 @@
 
 		&__title {
 			padding-left: 25px;
-			font-size: 14px;
+			font-size: 16px;
 			@include FontMD;
 		}
 
