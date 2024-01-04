@@ -262,7 +262,7 @@
     if (sct > 700) {
       document.querySelector(".top-button").style.display = "block";
       document.querySelector(".top-button a").style.position = "fixed";
-      document.querySelector(".top-button a").style.bottom = "20px";
+      document.querySelector(".top-button a").style.bottom = "5px";
     } else {
       document.querySelector(".top-button").style.display = "none";
     }

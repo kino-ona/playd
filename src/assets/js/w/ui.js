@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
     if (sct > 700) {
       document.querySelector(".top-button").style.display = "block";
       document.querySelector(".top-button a").style.position = "fixed";
-      document.querySelector(".top-button a").style.bottom = "60px";
+      document.querySelector(".top-button a").style.bottom = "25px";
     } else {
       document.querySelector(".top-button").style.display = "none";
     }
