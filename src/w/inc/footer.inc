@@ -21,8 +21,7 @@
 			<nav class="footer__nav--right">
 				<a href="https://blog.naver.com/playd_log" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-naverblog.png" /><span class="a11y">네이버</span></a><!-- 20220726 //-->
 				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-instagram.png" /><span class="a11y">인스타그램</span></a>
-				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-youtube.png" /><span class="a11y">유투브</span></a>
-				<a href="#" class="sns-link"><img src="../assets/images/w/common/icons/footer_sns-facebook.png" /><span class="a11y">페이스북</span></a>
+				<a href="#" class="sns-link sns-link--platter"><img src="../assets/images/w/common/icons/footer_sns-platter.png" /><span class="a11y">플레터</span></a><!-- 20240126 -->
 			</nav>
 		</div>
 	</div>

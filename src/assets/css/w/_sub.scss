@@ -3470,6 +3470,10 @@
 
   .accordian {
     margin-top: 40px;
+
+    .sub-content {
+      align-items: stretch;
+    }
   }
 
   .accordian__title a {

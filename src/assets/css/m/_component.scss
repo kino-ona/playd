@@ -487,6 +487,13 @@
   &__nav--right {
     position: absolute;
     bottom: 50px;
+
+    .platter {
+      img {
+        width: 58px;
+        height: 24px;
+      }
+    }
   }
 
   &__nav--right img {

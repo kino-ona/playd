@@ -251,18 +251,12 @@
             >인스타그램</span
           ></a
         >
-        <a href="#" class=""
-          ><img src="../assets/images/m/common/logo_youtube.png" /><span
+        <a href="#" class="platter"
+          ><img src="../assets/images/m/common/logo_platter.png" /><span
             class="a11y"
-            >유투브</span
+            >플레터</span
           ></a
-        >
-        <a href="#" class=""
-          ><img src="../assets/images/m/common/logo_facebook.png" /><span
-            class="a11y"
-            >페이스북</span
-          ></a
-        >
+        ><!-- 20240126 -->
       </nav>
     </div>
   </div>

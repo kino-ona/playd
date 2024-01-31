@@ -525,6 +525,7 @@ $duration3: 0.2s;
 
 	&__util--right {
 		margin-left: auto;
+		margin-right: 9px;
 	}
 
 	.copyright {
@@ -541,6 +542,11 @@ $duration3: 0.2s;
 		height: 25px;
 		margin-left: 20px;
 		opacity: 0.4;
+
+		&--platter {
+			width: 58px;
+			height: 25px;
+		}
 	}
 
 	.information {
