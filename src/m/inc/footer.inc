@@ -251,7 +251,7 @@
             >인스타그램</span
           ></a
         >
-        <a href="#" class="platter"
+        <a href="https://pletter.stibee.com/" target="_blank" class="platter"
           ><img src="../assets/images/m/common/logo_platter.png" /><span
             class="a11y"
             >플레터</span
@@ -293,3 +293,23 @@
 <script src="@@webroot/assets/js/datepicker.js"></script>
 
 <!--220627 수정 end-->
+
+<!-- Footer Logscript  Start -------------------------------------------------------------------------------------------------------->	
+<!--------- 삭제 금지 : PlayD TERA Log Script v1.2 -->
+<script>
+var _nSA=(function(_g,_s,_p,_d,_i,_h){ 
+ if(_i.wgc!=_g){_i.wgc=_g;_i.wrd=(new Date().getTime());
+ var _sc=_d.createElement('script');_sc.src=_p+'//sas.techhub.co.kr/'+_s+'gc='+_g+'&rd='+_i.wrd;
+ var _sm=_d.getElementsByTagName('script')[0];_sm.parentNode.insertBefore(_sc, _sm);} return _i;
+})('TR9947105674','sa-w.js?',location.protocol,document,window._nSA||{},location.hostname);
+</script>
+<!--------- 삭제 금지 : PlayD TERA Log Script v1.2 -->
+<!-- 채널톡 -->
+<script>
+  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+
+  ChannelIO('boot', {
+    "pluginKey": "3c1abb65-3b7e-4562-a85e-6ca7f57d0c15"
+  });
+</script>
+<!-- Footer Logscript  END -------------------------------------------------------------------------------------------------------->

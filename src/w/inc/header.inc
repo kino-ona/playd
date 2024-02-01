@@ -79,4 +79,8 @@
 			<li class="menu__title"><a href="./contact.html"><span>Contact</span></a></li>
 		</ul>
 	</div>
+
+	<div class="pletter-button">
+		<a href="https://pletter.stibee.com/" target="_blank"><img src="../assets/images/w/common/logo_pletter.png" alt="플레터 바로가기"><span class="a11y">플레터 바로가기</span></a>
+	</div>
 </div>

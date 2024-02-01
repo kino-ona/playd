@@ -46,19 +46,24 @@
   .gnb__button {
     display: block;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 0 25px 25px;
+    bottom: 100px;
+    right: 30px;
+    // padding: 0 25px 25px;
     background: #ffffff;
+		&.gnb__contact {
+			background: transparent;
+		}
   }
 
   .gnb__button--link {
-    display: block;
-    width: 80px;
-    height: 80px;
+    display: flex;
+		align-items: center;
+		justify-content: center;
+    width: 44px;
+    height: 44px;
     color: #ffffff;
-    font-size: 14px;
-    line-height: 80px;
+    font-size: 12px;
+    line-height: 1.2;
     text-align: center;
     background-color: #EA2126;
     border-radius: 50%;
@@ -311,6 +316,15 @@
   &__button {
     display: none;
   }
+	.pletter__button {
+		margin: 40px 25px 0;
+		padding-top: 30px;
+		border-top: 1px solid #DDDDDD;
+		> p {
+			padding-bottom: 10px;
+			font-size: 14px;
+		}
+	}
 }
 
 .card-box {

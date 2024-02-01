@@ -56,8 +56,12 @@
 						<p><a href="./welfare.html">복리후생</a></p>
 					</div>
 				</div>
+				<div class="pletter__button">
+					<p>PLAYD 뉴스레터 P’letter 구독 신청</p>
+					<a href="https://pletter.stibee.com/" target="_blank"><img src="../assets/images/m/common/btn_pletter.png" alt="플레터 바로가기"></a>
+				</div>
 			</div>
-			<p class="gnb__button"><a href="./contact.html" class="gnb__button--link">CONTACT</a></p>
+			<p class="gnb__button gnb__contact"><a href="./contact.html" class="gnb__button--link">상담<br>문의</a></p>
 		</nav>
 	</div>
 	<!--220704 수정 end-->

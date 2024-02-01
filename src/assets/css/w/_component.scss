@@ -646,6 +646,20 @@ input[type="file"] {
     content:'';
   }
 }
+.pletter-button {
+	display: none;
+	position: fixed;
+	bottom: 90px;
+	right: 105px;
+	z-index: 9999;
+	width: 110px;
+	height: 56px;
+}
+.sitemap.sitemap__is-visible {
+	.pletter-button {
+		display: block;
+	}
+}
 
 /** LAYOUTS AND COMMON **/
 
