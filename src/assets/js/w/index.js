@@ -228,8 +228,8 @@ boxItems.forEach(item => {
 
 //main-popup
 
-const startDate = new Date('2022/08/01 23:59:59');
-const endDate = new Date('2022/08/08 23:59:59');
+const startDate = new Date('2024/03/13 23:59:59');
+const endDate = new Date('2024/03/29 10:00:00');
 const today = Date.now();
 
 if (today >= startDate && today <= endDate) {
@@ -245,24 +245,24 @@ if (today >= startDate && today <= endDate) {
   };
 
   if(!getCookie('main-popup--checked')) {
-    layerOpen('Privacy');
+    layerOpen('Notice');
   } 
 
   document.querySelector('.main-popup .layer__close .close').addEventListener('click', () => {
     if(document.querySelector('.main-popup #checkbox--popup:checked')) {
       setCookie('main-popup--checked', "true", 1);
-      layerClose('Privacy');
+      layerClose('Notice');
     } else {
-      layerClose('Privacy');
+      layerClose('Notice');
     }
   });
 
   document.querySelector('.main-popup .button__wrap .close').addEventListener('click', () => {
     if(document.querySelector('.main-popup #checkbox--popup:checked')) {
       setCookie('main-popup--checked', "true", 1);
-      layerClose('Privacy');
+      layerClose('Notice');
     } else {
-      layerClose('Privacy');
+      layerClose('Notice');
     }
   });
 }
