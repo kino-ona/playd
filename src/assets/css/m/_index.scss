@@ -422,6 +422,11 @@ html {
 		border-radius: 5px;
 		// text-decoration: underline;
 	}
+	.layer__footer {
+		button {
+			margin-top: 10px;
+		}
+	}
 	.layer__wrap {
 		height: auto;
 	}
@@ -451,7 +456,7 @@ html {
         display: block;
         margin-bottom: 15px;
       }
-      em {
+      a {
         display: inline;
         text-decoration: underline;
 				line-height: 1.4;
