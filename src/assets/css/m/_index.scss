@@ -407,6 +407,90 @@ html {
 
 }
 
+.popup.main-popup.Notice {
+	.layer__close .close::before, 
+	.layer__close .close::after {
+		background-color: #000;
+	}
+	.map_link {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 2px 5px;
+		margin-top: 3px;
+		font-size: 11px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		// text-decoration: underline;
+	}
+	.layer__wrap {
+		height: auto;
+	}
+	.layer__head {
+		padding-bottom: 15px;
+		border-bottom: 1px solid #DDDDDD;
+	}
+	.sub-checkbox__label {
+		margin-left: 0;
+		margin-top: 20px;
+		.sub-checkbox__input + span {
+			color: #000;
+			font-size: 14px;
+		}
+  }
+  .layer__wrap--wide {
+    max-width: 600px;
+  }
+  .content__main-title {
+    font-size: 16px;
+  }
+  .layer__content {
+		max-height: 50vh;
+		padding-top: 20px;
+    p {
+      > span {
+        display: block;
+        margin-bottom: 15px;
+      }
+      em {
+        display: inline;
+        text-decoration: underline;
+				line-height: 1.4;
+      }
+    }
+  }
+  .content__text-wrap {
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    ul {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      dl {
+        padding-left: 3.1%;
+        margin-top: 5px;
+        dd {
+          padding-left: 3.2%;
+          &.dott {
+            display: flex;
+            &:before {
+              content: '- ';
+              display: inline-flex;
+              margin-right: 8px;
+              padding-left: 3.2%;
+            }
+          }
+        }
+      }
+    }
+    .tit {
+			display: block;
+      font-family:'NS BD';
+			color: #000;
+    }
+  }
+}
+
 
 
 

@@ -74,9 +74,8 @@
     });
   }
 
-  const startDate = new Date("2022/08/01 23:59:59");
-
-  const endDate = new Date("2022/08/08 23:59:59");
+	const startDate = new Date('2024/03/13 23:59:59');
+	const endDate = new Date('2024/03/29 10:00:00');
 
   const today = Date.now();
 
