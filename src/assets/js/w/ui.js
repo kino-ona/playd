@@ -470,7 +470,7 @@ if (bodyClass) {
           /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
         const etcTextarea = document.querySelector(".input-box--textarea"); //20230509
-
+        
         formSubmit.addEventListener("click", (event) => {
           event.preventDefault();
 
@@ -539,12 +539,19 @@ if (bodyClass) {
             etcTextarea.classList.toggle("open");
           });
 
-        // document
-        //   .querySelector(".showbutton--marketing")
-        //   .addEventListener("click", (event) => {
-        //     event.preventDefault();
-        //     layerOpen("marketing");
-        //   });
+        document
+          .querySelector(".showbutton--marketing")
+          .addEventListener("click", (event) => {
+            event.preventDefault();
+            layerOpen("marketing");
+          });
+
+        document
+          .querySelector(".showbutton--personal")
+          .addEventListener("click", (event) => {
+            event.preventDefault();
+            layerOpen("personalTerms");
+          });
       }
       break;
 

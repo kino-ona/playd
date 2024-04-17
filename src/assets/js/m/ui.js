@@ -275,12 +275,30 @@
 
   //form check layerpopup
   if (bodyClass === "contact") {
-    // document
-    //   .querySelector(".showbutton--marketing")
-    //   .addEventListener("click", (event) => {
-    //     event.preventDefault();
-    //     layerOpen("marketing");
-    //   });
+    document
+      .querySelector(".showbutton--personal")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        layerOpen("personalTerms");
+      });
+    document
+      .querySelector(".showbutton--marketing")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        layerOpen("marketing");
+      });
+
+    document
+      .querySelector(".personalTerms .close")
+      .addEventListener("click", () => {
+        layerClose("personalTerms");
+      });
+
+    document
+      .querySelector(".personalTerms .layer__footer button")
+      .addEventListener("click", () => {
+        layerClose("personalTerms");
+      });
 
     document
       .querySelector(".marketing .close")
@@ -289,7 +307,7 @@
       });
 
     document
-      .querySelector(".layer__footer button")
+      .querySelector(".marketing .layer__footer button")
       .addEventListener("click", () => {
         layerClose("marketing");
       });

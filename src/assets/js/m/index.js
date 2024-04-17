@@ -54,9 +54,9 @@
     const options = {
       duration: 10,
     };
-    const count1 = new countUp.CountUp(countUp1, 5675, options); //20230424
-    const count2 = new countUp.CountUp(countUp2, 2657, options); //20230424
-    const count3 = new countUp.CountUp(countUp3, 76305, options); //20230424
+    const count1 = new countUp.CountUp(countUp1, 5443, options); //20240417
+    const count2 = new countUp.CountUp(countUp2, 2200, options); //20240417
+    const count3 = new countUp.CountUp(countUp3, 5225, options); //20240417
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > boxoffsetTop) {
