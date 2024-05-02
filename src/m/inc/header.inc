@@ -15,15 +15,18 @@
 			</p>
 			<div class="gnb__list">
 				<div class="gnb__item">
+					<a href="./portfolio.html" role="button" class="gnb__list--link font--bd">포트폴리오</a>
+				</div>
+				<div class="gnb__item">
 					<a href="./campaign.html" role="button" class="gnb__list--link font--bd">사업영역</a>
 					<div class="gnb__wrap">
 						<div class="gnb__box">
 							<p><a href="./campaign.html">캠페인 전략</a></p><!--220627 수정-->
 							<p><a href="./media.html">미디어전략</a></p>
 							<p><a href="./creative.html">크리에이티브</a></p>
+							<p><a href="./awards.html">수상내역</a></p>
 						</div>
-						<p class="gnb__link--sub"><a href="./portfolio.html">포트폴리오</a></p>
-						<p><a href="./awards.html">수상내역</a></p>
+						<!--<p class="gnb__link--sub"><a href="./portfolio.html">포트폴리오</a></p>--> <!-- 2024.05.02 -->
 					</div>
 				</div>
 				<div class="gnb__item">

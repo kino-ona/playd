@@ -222,38 +222,17 @@
                   <label for="sub-checkbox--personal" class="sub-checkbox__label">
                     <input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input">
                     <span><i></i>[필수] 개인정보 수집 및 이용에 동의합니다.</span>
-										<a href="./personal.html" target="_blank" class="button button__sub-checkbox">전문보기</a>
+										<a href="#" target="_blank" class="button button__sub-checkbox open__personal">전문보기</a>
                   </label>
                 </li>
-								<li>
-									<p class="form-description open">입력하신 이름, 직업, 이메일 주소, 직급, 회사명(소속), 부서(팀명)은 리포트 다운로드를 위해 1년간 보관 및 이용됩니다.</p><!--20230424-->
-								</li>
               </ol>
 							<ol class="sub-checkboxs">
                 <li class="sub-checkbox__list">
-                  <label for="sub-checkbox--marketing" class="sub-checkbox__label">
-                    <input type="checkbox" id="sub-checkbox--marketing" name="" class="sub-checkbox__input">
-                    <span><i></i>[선택] 마케팅 정보 수집 및 이용에 동의합니다.</span>
-                  </label>
-									<a href="javascript:doDisplay();" class="sub-checkbox_btn"><span class="a11y">열고닫기</span></a>
-                </li>
-								<li>
-									<p id="marketing-frm" class="form-description open">마케팅 및 광고에 활용, 서비스 또는 컨텐츠 정보의 제공, 무료 컨설팅 메일 발송을 위해 1년간 보관 및 이용됩니다.</p>
-									<div id="marketing-div" class="marketing-div">
-										<strong>(주)플레이디에서 수집하는 개인정보의 항목과 수집 및 이용에 대한 목적을 알려드립니다.</strong>
-										<p>1. 수집 및 이용목적</p>
-										<span>마케팅 및 광고에 활용</span>
-										<span>서비스 또는 컨텐츠 정보의 제공</span>
-										<span>무료 컨설팅 메일 발송</span>
-										<span>신규 리포트 발간 소식 안내</span>
-										<p>2. 수집 및 항목</p>
-										<span>필수 : 이름. 이메일 주소, 회사명(소속)</span>
-										<span>선택 : 직업, 직급, 부서(팀명)</span>
-										<p>3. 보유 및 이용 기간</p>
-										<span>수집·이용 동의일로부터 1년간 보관 및 이용. (단, 정보주체의 삭제 요청 시 삭제)</span>
-										<p class="__last">※ 귀하는 개인정보 수집·이용 제공에 동의하지 않을 권리가 있으며, 동의하지 않을 경우 수집 목적에 따른 혜택에 
-											제한이 있을 수 있습니다.</p>
-									</div>
+									<label for="sub-checkbox--marketing" class="sub-checkbox__label">
+										<input type="checkbox" id="sub-checkbox--marketing" name="" class="sub-checkbox__input">
+										<span><i></i>[선택] 광고성 정보 수집에 동의합니다.</span>
+										<a href="#" target="_blank" class="button button__sub-checkbox open__marketing">전문보기</a>
+									</label>
 								</li>
               </ol>
 						</div>
@@ -267,6 +246,94 @@
 	</div>
 </div>
 <!--// 20220628 e -->
+
+<!-- 2024.05.02 -->
+<div class="layer__body popup personalPopup" id="personalPopup" aria-hidden="true" role="dialog">
+  <div class="layer__wrap layer__wrap--wide">
+    <div class="layer__close">
+      <button class="closePopup">close</button>
+    </div>
+    <div class="layer__inner">
+      <div class="layer__head">
+        <p class="content__title">개인정보 수집 및 이용동의</p>
+      </div>
+      <div class="layer__content">
+        <div class="content__text">
+					<p>
+            <span>1.</span>
+            <span>
+              처리하는 개인정보의 항목<br>
+              - 이름, 이메일 주소, 회사명, 직군, 직급, 부서명
+            </span>
+					</p>
+          <p>
+            <span>2.</span>
+            <span>
+              개인정보의 수집·이용 목적<br>
+							- PlayD는 자체 발간 트렌드 리포트 제공을 목적으로 개인정보를 수집하여 처리하고 있습니다.
+            </span>
+          </p>
+          <p>
+            <span>3.</span>
+            <span>
+              개인정보의 보유 및 이용기간<br>
+							- 수집된 개인정보는 1년 간 보유하며, 1년 이후에는 지체없이 파기합니다.<br>
+							(단, 정보주체의 파기 요청이 있는 경우 즉시 파기합니다.)
+            </span>
+          </p>
+        </div>
+        <div class="button__wrap">
+          <button class="button layer__button closePopup">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 2024.05.02 -->
+
+<!-- 2024.05.02 -->
+<div class="layer__body popup marketingPopup" id="marketingPopup" aria-hidden="true" role="dialog">
+  <div class="layer__wrap layer__wrap--wide">
+    <div class="layer__close">
+      <button class="closePopup">close</button>
+    </div>
+    <div class="layer__inner">
+      <div class="layer__head">
+        <p class="content__title">광고성 정보 수신 동의</p>
+      </div>
+      <div class="layer__content">
+        <div class="content__text">
+					<p>
+            <span>1.</span>
+            <span>
+              수집하는 항목<br>
+              - 이름, 이메일 주소, 회사명
+            </span>
+					</p>
+          <p>
+            <span>2.</span>
+            <span>
+              수집·이용 목적<br>
+							- 플레이디 뉴스레터, 무료 컨설팅, 마케팅 정보 등 광고·마케팅과 관련된 전자적 전송 매체를 발송하는데 개인정보를 활용합니다.
+            </span>
+          </p>
+          <p>
+            <span>3.</span>
+            <span>
+              보유 및 이용기간<br>
+              - 수집된 정보는 2년 간 보유하며, 2년마다 수신동의 여부를 확인합니다.<br>
+              - 별도의 수신거부 의사 표현이 있는 경우 보유한 정보를 파기합니다.
+            </span>
+          </p>
+        </div>
+        <div class="button__wrap">
+          <button class="button layer__button closePopup">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 2024.05.02 -->
 
 <!-- footer -->
 @@include('./inc/footer.inc', {

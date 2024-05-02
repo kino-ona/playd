@@ -91,7 +91,7 @@ window.addEventListener("load", () => {
     });
 
     item.addEventListener("mouseenter", () => {
-      if (itemIdx > 4) {
+      if (itemIdx > 5 || itemIdx === 1) {
         navmenu.style.top = 0;
       } else {
         targetNavLink.classList.add("located");
@@ -997,6 +997,12 @@ if (bodyClass) {
         const formUserName = document.querySelector("#user-name");
         const formUserProfession = document.querySelector("#user-profession");
         const formUserMail = document.querySelector("#user-mail");
+
+        const openPersonal = document.querySelector('.open__personal');
+        const closePersonal = document.querySelectorAll('.popup.personalPopup .closePopup');
+        const openMarketing = document.querySelector('.open__marketing');
+        const closeMarketing = document.querySelectorAll('.popup.marketingPopup .closePopup');
+
         const regEmail =
           /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 
@@ -1046,6 +1052,32 @@ if (bodyClass) {
 
           layerClose("reportDownload");
         });
+
+        // 2024.05.02
+        openPersonal.addEventListener("click", (event) => {
+          event.preventDefault();
+          layerOpen('personalPopup');
+        });
+
+        closePersonal.forEach((item) => {
+          item.addEventListener("click", (event) => {
+            event.preventDefault();
+            layerClose('personalPopup');
+          });
+        });
+
+        openMarketing.addEventListener("click", (event) => {
+          event.preventDefault();
+          layerOpen('marketingPopup');
+        });
+
+        closeMarketing.forEach((item) => {
+          item.addEventListener("click", (event) => {
+            event.preventDefault();
+            layerClose('marketingPopup');
+          });
+        });
+        // //2024.05.02
       }
       break;
 

@@ -4,6 +4,7 @@
 			<a href="./index.html" class="logo @@logotype"><span class="a11y">플레이디</span></a>
 		</h1>
 		<nav class="nav">
+      <div @@if (located==='6') { class="nav__link nav__active" } @@if (located!=='6') { class="nav__link" }><a href="./portfolio.html">포트폴리오</a></div><!-- 2024.05.02 -->
 			<div @@if (located==='1') { class="nav__link nav__active" } @@if (located!=='1') { class="nav__link" }><a href="./campaign.html">사업영역</a></div>
       <div @@if (located==='2') { class="nav__link nav__active" } @@if (located!=='2') { class="nav__link" }><a href="./techhub.html">솔루션</a></div>
       <div @@if (located==='3') { class="nav__link nav__active" } @@if (located!=='3') { class="nav__link" }><a href="./letter.html">인사이트</a></div>
@@ -13,11 +14,12 @@
 		</nav>
 	</div>
 	<div class="navmenu">
+		<div class="navmenu__list" style="display:none;" tabindex="-1"></div>><!-- 2024.05.02 -->
 		<div class="navmenu__list">
 			<div class="navmenu__link"><a href="./campaign.html">캠페인 전략</a></div>
 			<div class="navmenu__link"><a href="./media.html">미디어 전략</a></div> <!-- 20220615 -->
 			<div class="navmenu__link"><a href="./creative.html">크리에이티브</a></div> <!-- 20220615 -->
-			<div class="navmenu__link"><a href="./portfolio.html">포트폴리오</a></div>
+			<!--<div class="navmenu__link"><a href="./portfolio.html">포트폴리오</a></div>--> <!-- 2024.05.02 -->
 			<div class="navmenu__link"><a href="./awards.html">수상내역</a></div>
 		</div>
 		<div class="navmenu__list">
@@ -46,11 +48,14 @@
 	</div>
 	<div class="gnb">
 		<ul class="menu">
+			<li class="menu__title"><a href="./portfolio.html"><span>포트폴리오</span></a></li>
+		</ul>
+		<ul class="menu">
 			<li class="menu__title"><span>사업영역</span></li>
 			<li class="menu__link"><a href="./campaign.html"><span>캠페인전략</span></a></li>
 			<li class="menu__link"><a href="./media.html"><span>미디어전략</span></a></li> <!-- 20220615 -->
 			<li class="menu__link"><a href="./creative.html"><span>크리에이티브</span></a></li> <!-- 20220615 -->
-			<li class="menu__link"><a href="./portfolio.html"><span>포트폴리오</span></a></li>
+			<!--<li class="menu__link"><a href="./portfolio.html"><span>포트폴리오</span></a></li>--> <!-- 2024.05.02 -->
 			<li class="menu__link"><a href="./awards.html"><span>수상내역</span></a></li>
 		</ul>
 		<ul class="menu">
