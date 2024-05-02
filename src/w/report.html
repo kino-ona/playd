@@ -222,7 +222,7 @@
                   <label for="sub-checkbox--personal" class="sub-checkbox__label">
                     <input type="checkbox" id="sub-checkbox--personal" name="" class="sub-checkbox__input">
                     <span><i></i>[필수] 개인정보 수집 및 이용에 동의합니다.</span>
-										<a href="#" target="_blank" class="button button__sub-checkbox open__personal">전문보기</a>
+										<a href="#" onclick="layerOpen('personalPopup');" class="button button__sub-checkbox open__personal">전문보기</a><!-- 2024.05.02 -->
                   </label>
                 </li>
               </ol>
@@ -231,7 +231,7 @@
 									<label for="sub-checkbox--marketing" class="sub-checkbox__label">
 										<input type="checkbox" id="sub-checkbox--marketing" name="" class="sub-checkbox__input">
 										<span><i></i>[선택] 광고성 정보 수집에 동의합니다.</span>
-										<a href="#" target="_blank" class="button button__sub-checkbox open__marketing">전문보기</a>
+										<a href="#" onclick="layerOpen('marketingPopup');" class="button button__sub-checkbox open__marketing">전문보기</a><!-- 2024.05.02 -->
 									</label>
 								</li>
               </ol>
@@ -251,7 +251,7 @@
 <div class="layer__body popup personalPopup" id="personalPopup" aria-hidden="true" role="dialog">
   <div class="layer__wrap layer__wrap--wide">
     <div class="layer__close">
-      <button class="closePopup">close</button>
+      <button class="closePopup" onclick="layerClose('personalPopup');">close</button>
     </div>
     <div class="layer__inner">
       <div class="layer__head">
@@ -283,7 +283,7 @@
           </p>
         </div>
         <div class="button__wrap">
-          <button class="button layer__button closePopup">확인</button>
+          <button class="button layer__button closePopup" onclick="layerClose('personalPopup');">확인</button>
         </div>
       </div>
     </div>
@@ -295,7 +295,7 @@
 <div class="layer__body popup marketingPopup" id="marketingPopup" aria-hidden="true" role="dialog">
   <div class="layer__wrap layer__wrap--wide">
     <div class="layer__close">
-      <button class="closePopup">close</button>
+      <button class="closePopup" onclick="layerClose('marketingPopup');">close</button>
     </div>
     <div class="layer__inner">
       <div class="layer__head">
@@ -327,7 +327,7 @@
           </p>
         </div>
         <div class="button__wrap">
-          <button class="button layer__button closePopup">확인</button>
+          <button class="button layer__button closePopup" onclick="layerClose('marketingPopup');">확인</button>
         </div>
       </div>
     </div>

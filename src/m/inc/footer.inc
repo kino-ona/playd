@@ -108,7 +108,7 @@
                 />
                 <span>[필수] 개인 정보 수집 및 이용에 동의합니다</span>
               </label>
-              <a href="#" target="_blank" class="open__personal">전문 보기</a><!-- 2024.05.02 -->
+              <a href="#" onclick="layerOpen('personalPopup');" class="open__personal">전문 보기</a><!-- 2024.05.02 -->
             </div>
             <p class="form-description"></p>
             <div class="sub-checkboxs">
@@ -121,7 +121,7 @@
                 />
                 <span>[선택] 광고성 정보 수집에 동의합니다.</span>
               </label>
-                <a href="#" target="_blank" class="open__marketing">전문 보기</a><!-- 2024.05.02 -->
+                <a href="#" onclick="layerOpen('marketingPopup');" class="open__marketing">전문 보기</a><!-- 2024.05.02 -->
             </div>
           </form>
         </div>
@@ -136,7 +136,7 @@
 <div class="layer__body popup personalPopup" id="personalPopup" aria-hidden="false" role="dialog">
 	<div class="layer__wrap">
 		<div class="layer__close">
-			<button class="closePopup"><span>close</span></button>
+			<button class="closePopup" onclick="layerClose('personalPopup');"><span>close</span></button>
 		</div>
 		<div class="layer__inner">
 			<div class="layer__head">
@@ -171,7 +171,7 @@
 				</div>
 			</div>
 			<div class="layer__footer">
-				<button type="button" class="closePopup">확인</button>
+				<button type="button" class="closePopup" onclick="layerClose('personalPopup');">확인</button>
 			</div>
 		</div>
 	</div>
@@ -182,7 +182,7 @@
 <div class="layer__body popup marketingPopup" id="marketingPopup" aria-hidden="false" role="dialog">
 	<div class="layer__wrap">
 		<div class="layer__close">
-			<button class="closePopup"><span>close</span></button>
+			<button class="closePopup" onclick="layerClose('marketingPopup');"><span>close</span></button>
 		</div>
 		<div class="layer__inner">
 			<div class="layer__head">
@@ -217,7 +217,7 @@
 				</div>
 			</div>
 			<div class="layer__footer">
-				<button type="button" class="closePopup">확인</button>
+				<button type="button" class="closePopup" onclick="layerClose('marketingPopup');">확인</button>
 			</div>
 		</div>
 	</div>
