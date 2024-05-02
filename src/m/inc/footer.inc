@@ -1,10 +1,5 @@
 <!--220704 start-->
-<div
-  class="layer__body popup report"
-  id="report"
-  aria-hidden="true"
-  role="dialog"
->
+<div class="layer__body popup report" id="report" aria-hidden="true" role="dialog">
   <div class="layer__wrap layer__wrap--wide">
     <div class="layer__close">
       <button class="close"><span>close</span></button>
@@ -13,8 +8,7 @@
       <div class="layer__head">
         <p class="content__title">PlayD 트렌드 리포트 다운로드</p>
         <p class="content__description">
-          간단한 정보를 입력하시면 플레이디 리포트를 빠르게<br />
-          받아보실 수 있습니다.
+          간단한 정보를 입력하시면 플레이디 리포트를 빠르게<br />받아보실 수 있습니다.
         </p>
       </div>
       <div class="layer__content">
@@ -22,11 +16,7 @@
           <form>
             <legend>플레이디 트렌드 리포트 다운로드 신청폼</legend>
             <div class="form-field">
-              <label
-                for="user-name"
-                class="input-box-info__label input-box-info__label--necessary"
-                >이름</label
-              >
+              <label for="user-name" class="input-box-info__label input-box-info__label--necessary" >이름</label >
               <input
                 type="text"
                 id="user-name"
@@ -142,6 +132,98 @@
     </div>
   </div>
 </div>
+<!-- 2024.05.02 -->
+<div class="layer__body popup personalPopup" id="personalPopup" aria-hidden="false" role="dialog">
+	<div class="layer__wrap">
+		<div class="layer__close">
+			<button class="closePopup"><span>close</span></button>
+		</div>
+		<div class="layer__inner">
+			<div class="layer__head">
+				<p class="content__main-title">개인정보 수집 및 이용 동의</p>
+			</div>
+			<div class="layer__content">
+				<div class="content__text">
+					<div class="content__wrap">
+						<p>
+							<span>1.</span>
+							<span>
+								처리하는 개인정보의 항목<br>
+								- 이름, 이메일 주소, 회사명, 직군, 직급, 부서명
+							</span>
+						</p>
+						<p>
+							<span>2.</span>
+							<span>
+								개인정보의 수집·이용 목적<br>
+								- PlayD는 자체 발간 트렌드 리포트 제공을 목적으로 개인정보를 수집하여 처리하고 있습니다.
+							</span>
+						</p>	
+						<p>
+							<span>3.</span>
+							<span>
+								개인정보의 보유 및 이용기간<br>
+								- 수집된 개인정보는 1년 간 보유하며, 1년 이후에는 지체없이 파기합니다.<br>
+								(단, 정보주체의 파기 요청이 있는 경우 즉시 파기합니다.)
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="layer__footer">
+				<button type="button" class="closePopup">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 2024.05.02 -->
+
+<!-- 2024.05.02 -->
+<div class="layer__body popup marketingPopup" id="marketingPopup" aria-hidden="false" role="dialog">
+	<div class="layer__wrap">
+		<div class="layer__close">
+			<button class="closePopup"><span>close</span></button>
+		</div>
+		<div class="layer__inner">
+			<div class="layer__head">
+				<p class="content__main-title">광고성 정보 수신 동의</p>
+			</div>
+			<div class="layer__content">
+				<div class="content__text">
+					<div class="content__wrap">
+						<p>
+							<span>1.</span>
+							<span>
+								수집하는 항목<br>
+								- 이름, 이메일 주소, 회사명
+							</span>
+						</p>
+						<p>
+							<span>2.</span>
+							<span>
+								수집·이용 목적<br>
+								- 플레이디 뉴스레터, 무료 컨설팅, 마케팅 정보 등 광고·마케팅과 관련된 전자적 전송 매체를 발송하는데 개인정보를 활용합니다.
+							</span>
+						</p>	
+						<p>
+							<span>3.</span>
+							<span>
+								보유 및 이용기간<br>
+								- 수집된 정보는 2년 간 보유하며, 2년마다 수신동의 여부를 확인합니다.<br>
+								- 별도의 수신거부 의사 표현이 있는 경우 보유한 정보를 파기합니다.
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="layer__footer">
+				<button type="button" class="closePopup">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 2024.05.02 -->
+
 <!--220704 end-->
 
 <!--220629 수정 start-->

@@ -14,7 +14,7 @@
 		</nav>
 	</div>
 	<div class="navmenu">
-		<div class="navmenu__list" style="display:none;" tabindex="-1"></div>><!-- 2024.05.02 -->
+		<div class="navmenu__list" style="display:none;" tabindex="-1"></div><!-- 2024.05.02 -->
 		<div class="navmenu__list">
 			<div class="navmenu__link"><a href="./campaign.html">캠페인 전략</a></div>
 			<div class="navmenu__link"><a href="./media.html">미디어 전략</a></div> <!-- 20220615 -->
