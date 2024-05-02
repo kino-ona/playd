@@ -1103,6 +1103,13 @@
         }
       }
     }
+
+    // 2024.05.02
+    &.report {
+      .content__text {
+        padding-bottom: 100px;
+      }
+    }
 	}
 	
 	&__wrap {
