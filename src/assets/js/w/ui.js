@@ -1153,6 +1153,19 @@ if (bodyClass) {
         });
       }
       break;
+		
+		case "creative":
+			if (document.querySelectorAll(".swiper-slide").length > 1) {
+				const swiper = new Swiper("#swiper", {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					observer: true,
+					observeParents: true,
+					// loop: true,
+				});
+			}
+
+			break;
 
     case "about":
       {
