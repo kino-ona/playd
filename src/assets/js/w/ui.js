@@ -1156,11 +1156,16 @@ if (bodyClass) {
 		
 		case "creative":
 			if (document.querySelectorAll(".swiper-slide").length > 1) {
-				const swiper = new Swiper("#swiper", {
+				const swiper = new Swiper("#creative_swiper", {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					observer: true,
 					observeParents: true,
+					pagination: {
+						el: ".swiper-pagination",
+						type: "bullets",
+						clickable: true,
+					},
 					// loop: true,
 				});
 			}

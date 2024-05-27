@@ -1116,14 +1116,27 @@
 
   if (bodyClass === "creative") {
     if (
-      document.querySelectorAll(".sub-head-slide__slide .swiper-slide").length >
+      document.querySelectorAll(".swiper-slide").length >
       1
     ) {
-      const swiper = new Swiper(".sub-head-slide__slide ", {
-        slidesPerView: 1.4,
-        spaceBetween: 20,
-        slidesOffsetAfter: 60,
-      });
+      // const swiper = new Swiper(".sub-head-slide__slide ", {
+      //   slidesPerView: 1.4,
+      //   spaceBetween: 20,
+      //   slidesOffsetAfter: 60,
+      // });
+
+			const swiper = new Swiper("#creative_swiper", {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				observer: true,
+				observeParents: true,
+				pagination: {
+					el: ".swiper-pagination",
+					type: "bullets",
+					clickable: true,
+				},
+				// loop: true,
+			});
     }
   }
 
