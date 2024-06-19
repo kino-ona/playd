@@ -60,6 +60,7 @@
 
 <script src="@@webroot/assets/js/w/swiper.min.js"></script>
 <script src="@@webroot/assets/js/w/ui.js"></script>
+<script src="@@webroot/assets/js/w/mui.js"></script>
 <!-- s 20220628 -->
 <script src="@@webroot/assets/js/jquery-1.12.4.min.js"></script>
 <script src="@@webroot/assets/js/jquery-ui-1.13.1.js"></script>

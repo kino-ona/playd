@@ -97,7 +97,7 @@ function compileScss() {
 			.pipe(sourcemaps ? sourcemaps.init() : noop())
 			.pipe(sass(options).on('error', sass.logError))
 			.pipe(autoprefixer())
-			.pipe(sourcemaps ? sourcemaps.write() : noop())
+			// .pipe(sourcemaps ? sourcemaps.write() : noop())
 			.pipe(dest(dist.css))
 			.pipe(browsersync.reload({ stream: true }));
 		resolve();

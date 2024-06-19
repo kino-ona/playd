@@ -438,15 +438,15 @@
     });
   }
 
-  if (bodyClass === "ethical") {
+  if (bodyClass === "ethical" || bodyClass === "personal") {
     const sublist = document.querySelectorAll(".sub-list__item");
     const categoryItem = document.querySelectorAll(".sub-list-category__item");
     const declarationList = document.querySelectorAll(".sub-content");
     const formSubmitOpen = document.querySelector(
-      ".ethical .sub-content__title--link"
+      "." + bodyClass + " .sub-content__title--link"
     );
-    const formSubmitClose = document.querySelector(".ethical .close");
-    const formSubmitClose2 = document.querySelector(".ethical .layer__button");
+    const formSubmitClose = document.querySelector("." + bodyClass + " .close");
+    const formSubmitClose2 = document.querySelector("." + bodyClass + " .layer__button");
 
     document.body.addEventListener(
       "click",
