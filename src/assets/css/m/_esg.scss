@@ -1,6 +1,13 @@
 .esg {
   background: #ffffff;
 
+	.more {
+		display: inline-block;
+		border-bottom: 1px solid #000;
+		font-size: 14px;
+		font-family: "NS MD", "Malgun Gothic", Dotum, "돋움", AppleGothicNeoSD, "Apple SD 산돌고딕 Neo", "굴림", arial, sans-serif !important;
+	}
+
   .sub-header-description {
     margin: 40px 25px 0; 
 
@@ -117,11 +124,21 @@
     &__label {
       position: relative;
       margin: 0 25px 40px; 
-      padding: 15px;
+      padding: 10px 15px;
       background-color: #EA2126;
       color: #ffffff;
       text-align: center;
       border-radius: 50px;
+			&.label-first {
+				max-width: 100px;
+				margin-left: auto;
+				margin-right: auto
+			}
+			&.label-second {
+				max-width: 240px;
+				margin-left: auto;
+				margin-right: auto
+			}
     }
 
     &__label::before {
@@ -137,6 +154,9 @@
       background-repeat: no-repeat;
       content: '';
     }
+		&__label.label-nodot::after {
+			display: none;
+		}
 
     &__label p {
       display: inline-block;
@@ -154,6 +174,8 @@
     }
 
     h3 {
+			display: flex;
+			justify-content: space-between;
       font-size: 16px;
       @include FontBD;
     }
@@ -264,7 +286,7 @@
     padding-bottom: 20px;
 
     &__title {
-      margin-bottom: 4px;
+      margin-bottom: 10px;
       font-size: 16px;
       @include FontBD;
     }
@@ -331,11 +353,16 @@
     background-color: #FAFAFA;
 
     .list-content__title {
+			display: flex;
+			justify-content: space-between;
       position: inherit;
       width: auto;
       color: #000000;
       margin-bottom: 15px;
       @include FontBD;
+			.more {
+				font-size: 13px;
+			}
     } 
 
     .list-content {
@@ -359,6 +386,4 @@
       @include FontDL;
     }
   }
-
-
 }
